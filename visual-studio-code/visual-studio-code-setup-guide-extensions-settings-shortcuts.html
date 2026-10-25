@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Microsoft developer tools, explained — DevTools Journal demo build. This demo is intentionally noindex/nofollow.">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts">
+  <meta property="og:type" content="article">
+  <meta name="generator" content="DevTools Journal demo generator">
+
+  <script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "BlogPosting", "headline": "Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts", "description": "Visual Studio Code has become the default editor for millions of developers because it is free, fast, and endlessly customizable. But a fresh VS Code install is", "image": "https://tse1.mm.bing.net/th?q=visual%20studio%20code%20editor%20laptop&w=474&h=274&c=7", "datePublished": "2026-08-02", "dateModified": "2026-08-02", "wordCount": 637, "author": {"@type": "Organization", "name": "DevTools Journal"}, "publisher": {"@type": "Organization", "name": "DevTools Journal"} }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header class="site-header">
+      <div class="site-header__container">
+        <button class="site-header__hamburger" aria-label="Open menu"
+                aria-expanded="false" data-site-action-trigger="navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <a class="site-header__logo" href="../">DevTools Journal</a>
+      </div>
+    </header>
+    <div class="site-actions" aria-hidden="true">
+      <div class="site-actions__backdrop"></div>
+      <nav class="site-actions__panel" aria-label="Main navigation">
+        <div class="site-actions__top">
+          <p class="site-actions__title">Menu</p>
+          <button class="site-actions__close" data-close-site-actions aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="site-actions__menu">
+          <li><a href="../">Home</a></li>
+      <li><a href="../category/visual-studio/">Visual Studio</a></li>
+      <li><a href="../category/visual-studio-code/">Visual Studio Code</a></li>
+      <li><a href="../category/visual-studio-mac/">Visual Studio for Mac</a></li>
+      <li><a href="../category/dotnet/">.NET</a></li>
+      <li><a href="../category/dotnet-framework/">.NET Framework</a></li>
+      <li><a href="../category/aspnet-core/">ASP.NET Core</a></li>
+      <li><a href="../category/csharp/">C#</a></li>
+      <li><a href="../category/fsharp/">F#</a></li>
+      <li><a href="../category/typescript/">TypeScript</a></li>
+      <li><a href="../category/microsoft-build-tools/">Microsoft Build Tools</a></li>
+      <li><a href="../category/msbuild/">MSBuild</a></li>
+        </ul>
+      </nav>
+    </div>
+    <main id="main" class="site-main">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=visual%20studio%20code%20editor%20laptop&w=474&h=274&c=7" alt="Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts</h1>
+            <p class="article-header__excerpt">Visual Studio Code has become the default editor for millions of developers because it is free, fast, and endlessly customizable. But a fresh VS Code install is intentionally bare: the real productivity comes from a deliberate setup of extensions, workspace settings, keybindings, and profiles that match your stack.</p>
+            <div class="article-header__footer">
+              <a href="../category/visual-studio-code/" class="article-header__meta article-header__meta-tag-primary" rel="tag">Visual Studio Code</a>
+              <span class="article-header__meta article-header__meta--date">August 2, 2026</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section">
+        <div class="container">
+          <div class="article-content">
+          <p>Visual Studio Code has become the default editor for millions of developers because it is free, fast, and endlessly customizable. But a fresh VS Code install is intentionally bare: the real productivity comes from a deliberate setup of extensions, workspace settings, keybindings, and profiles that match your stack.</p>
+          <p>This guide walks through a complete, practical VS Code setup in 2026. We cover the extensions worth installing first, how to organize settings with profiles, the built-in features most people overlook, and the keyboard shortcuts that save the most time. Whether you write C#, TypeScript, Python, or Go, this setup gives you a professional baseline in under an hour.</p>
+          
+          <h2>Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Product name</strong></td><td>Visual Studio Code</td></tr>
+              <tr><td><strong>Developer</strong></td><td>Microsoft (open source, MIT)</td></tr>
+              <tr><td><strong>Platforms</strong></td><td>Windows, macOS, Linux, Web</td></tr>
+              <tr><td><strong>License</strong></td><td>Free for all use</td></tr>
+              <tr><td><strong>Extension ecosystem</strong></td><td>Visual Studio Code Marketplace</td></tr>
+              <tr><td><strong>First release</strong></td><td>April 2015</td></tr>
+              <tr><td><strong>Update cadence</strong></td><td>Monthly releases</td></tr>
+              <tr><td><strong>Profiles feature</strong></td><td>Per-language/workload setups</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h2>What Is Visual Studio Code?</h2>
+          <p>Visual Studio Code is a lightweight, open-source code editor built on Electron with a TypeScript core. Unlike full IDEs, VS Code ships minimal and gains its power through a marketplace of tens of thousands of extensions that add language support, debuggers, themes, and tool integrations.</p>
+          <p>Its architecture separates the editor shell from the language services, which means features like IntelliSense, go-to-definition, and refactoring arrive through the Language Server Protocol. That design keeps the editor fast while giving every language the same polished editing experience.</p>
+          <h2>Essential Extensions for Any Stack</h2>
+          <figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=visual%20studio%20code%20editor%20laptop&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts" style="border-radius:9px"></figure>
+          <!-- ADSLOT:article_mid_300x250 -->
+          <p>Start with a small, high-value set rather than installing everything at once. These extensions earn their place in nearly every setup:</p>
+          <ul>
+              <li>Language packs: C# Dev Kit, Python (Pylance), ESLint and Prettier for JavaScript/TypeScript, Go, Rust Analyzer</li>
+              <li>GitLens: blame annotations, history, and worktree awareness inside the editor</li>
+              <li>Error Lens: inline diagnostics so you never miss a warning</li>
+              <li>Remote Development pack: SSH, WSL, and Dev Containers support</li>
+              <li>Docker: container management, image builds, and compose file IntelliSense</li>
+              <li>REST Client or Thunder Client: API testing without leaving the editor</li>
+              <li>TODO Tree: collects TODO and FIXME comments into a single view</li>
+              <li>Path Intellisense: autocompletes file paths in imports</li>
+            </ul>
+          <p>Add extras only when a concrete task demands them. Every extension adds startup cost and potential conflicts, so audit your installed list occasionally and disable what you no longer use.</p>
+          <h2>Organize Everything with Profiles</h2>
+          <p>Profiles, now a mature VS Code feature, let you bundle extensions, settings, keybindings, and UI state into named sets that you can switch between instantly. Create a C# profile with the .NET toolchain, a web profile with React and Playwright extensions, and a writing profile with Markdown tools.</p>
+          <p>Profiles sync through your GitHub account, so a new machine reproduces your entire setup in minutes. For teams, export a profile as a GitHub Gist and share the link in onboarding docs: new hires get the organization's standard environment with one click.</p>
+          <h2>Settings Worth Changing on Day One</h2>
+          <p>The defaults are conservative; these changes make the editor feel sharper for daily coding:</p>
+          <ul>
+              <li>files.autoGuessEncoding: true, to reduce encoding surprises</li>
+              <li>editor.formatOnSave: true, with a formatter pinned per language</li>
+              <li>editor.renderWhitespace: boundary, to expose stray spaces</li>
+              <li>editor.minimap.enabled: false, for a calmer editing surface</li>
+              <li>explorer.confirmDelete/confirmDragAndDrop: false, fewer dialogs</li>
+              <li>workbench.editor.enablePreview: false, so files stay open when clicked</li>
+            </ul>
+          <pre><code>{
+  &quot;editor.formatOnSave&quot;: true,
+  &quot;editor.renderWhitespace&quot;: &quot;boundary&quot;,
+  &quot;editor.minimap.enabled&quot;: false,
+  &quot;files.trimTrailingWhitespace&quot;: true
+}</code></pre>
+          <h2>Shortcuts That Pay Off Immediately</h2>
+          <p>Keyboard fluency is where VS Code pays back the most time. Learn these ten first: Ctrl+P opens any file by name, Ctrl+Shift+F searches across the workspace, Ctrl+D selects the next occurrence of the current word, Alt+Up/Down moves lines, Ctrl+/ toggles comments, Ctrl+B toggles the sidebar, Ctrl+` toggles the terminal, F12 goes to definition, Shift+Alt+F formats the document, and Ctrl+K Ctrl+S opens the full keybindings editor.</p>
+          <p>Open the Keyboard Shortcuts editor and search for commands you repeat with the mouse. Rebinding five or six of them to keys you can hit blind compounds into hours saved every month, and the built-in shortcut cheat sheets for Windows, macOS, and Linux are printable.</p>
+          <h2>Conclusion</h2>
+          <p>A disciplined VS Code setup is less about installing many extensions and more about choosing the right few, organizing them into profiles, and committing a handful of shortcuts to memory. Start with the essential list above, keep your settings in source control or a synced profile, and prune regularly. Within a week the editor will feel tailor-made for your stack.</p>
+          <h2>Frequently Asked Questions</h2>
+          <h3>Is Visual Studio Code the same as Visual Studio?</h3>
+          <p>No. Visual Studio Code is a lightweight, cross-platform, open-source editor extended via plugins. Visual Studio is a full Windows IDE with heavyweight project systems, designers, and enterprise features. Microsoft offers both, and many developers use each for different work.</p>
+          <h3>How much does VS Code cost?</h3>
+          <p>VS Code is free for private and commercial use. The underlying OSS code is MIT licensed, and the Microsoft-branded build with the marketplace is free to download.</p>
+          <h3>How do I sync my setup across machines?</h3>
+          <p>Enable Settings Sync (Turn on Settings Sync from the gear menu) and sign in with GitHub or Microsoft. Extensions, settings, keybindings, and profiles sync automatically between your devices.</p>
+          <h3>Can VS Code run in the browser?</h3>
+          <p>Yes. vscode.dev provides a browser-based editor for local and cloud repositories, and GitHub Codespaces delivers full containerized VS Code environments in the cloud with your settings applied.</p>
+          <h3>Which extensions slow VS Code down?</h3>
+          <p>Linters and language servers that index huge repos, multiple competing formatters, and old unmaintained extensions are the usual culprits. Run the command Help: Startup Performance and disable extensions you rarely use to keep startup fast.</p>
+          </div>
+        </div>
+      </div>
+      <section class="related-posts section">
+        <div class="container">
+          <h2 class="section-title">You might also like</h2>
+          <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card data-publish-offset="1800000" data-published="false">
+            <a href="../visual-studio-code/vs-code-vs-visual-studio-which-microsoft-ide-fits-your-workflow.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=two%20monitors%20code%20comparison&w=474&h=274&c=7" loading="lazy"
+                     alt="VS Code vs Visual Studio: Which Microsoft IDE Fits Your Workflow?">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../visual-studio-code/vs-code-vs-visual-studio-which-microsoft-ide-fits-your-workflow.html" class="post-card__content-link">
+                <h2 class="post-card__title">VS Code vs Visual Studio: Which Microsoft IDE Fits Your Workflow?</h2>
+                <p class="post-card__excerpt">Microsoft ships two tools with almost the same name and very different philosophies. Visual Studio is a full integrated development environment: heavyweight project systems, design&hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date" data-dynamic-date></span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card data-publish-offset="9000000" data-published="false">
+            <a href="../visual-studio-code/debugging-in-vs-code-launch-json-breakpoints-advanced-tips.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=debugging%20code%20breakpoint%20monitor&w=474&h=274&c=7" loading="lazy"
+                     alt="Debugging in VS Code: launch.json, Breakpoints, and Advanced Tips">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../visual-studio-code/debugging-in-vs-code-launch-json-breakpoints-advanced-tips.html" class="post-card__content-link">
+                <h2 class="post-card__title">Debugging in VS Code: launch.json, Breakpoints, and Advanced Tips</h2>
+                <p class="post-card__excerpt">VS Code's debugger is one of its best features and one of its least explored. Beyond F5 lies a configuration system (launch.json) that reproduces any runtime environment, breakpoin&hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date" data-dynamic-date></span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card  data-published="true">
+            <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=visual%20studio%202026%20IDE&w=474&h=274&c=7" loading="lazy"
+                     alt="Visual Studio 2026 Review: Features, Performance, and Upgrade Guide">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__content-link">
+                <h2 class="post-card__title">Visual Studio 2026 Review: Features, Performance, and Upgrade Guide</h2>
+                <p class="post-card__excerpt">Visual Studio 2026 is the newest major release of Microsoft's flagship integrated development environment, and it represents the most significant redesign of the product in years. &hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/visual-studio/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio</a>
+                <span class="post-card__meta post-card__meta--date">July 14, 2026</span>
+              </div>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+    </main>
+<footer class="site-footer"><nav class="site-footer__nav"><a href="../">Home</a><a href="../page/dmca.html">DMCA</a><a href="../page/contact.html">Contact</a><a href="../page/privacy-policy.html">Privacy Policy</a><a href="../page/copyright.html">Copyright</a></nav><div class="site-footer__copyright">Copyright &copy; 2026 DevTools Journal</div></footer>
+  </div>
+  <script src="../assets/kutukdev/js/main.js"></script>
+  <script src="../assets/kutukdev/js/demo-schedule.js"></script>
+</body>
+</html>

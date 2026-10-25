@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>.NET Framework End of Support Dates: Planning Your Migration Timeline</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Microsoft developer tools, explained — DevTools Journal demo build. This demo is intentionally noindex/nofollow.">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content=".NET Framework End of Support Dates: Planning Your Migration Timeline">
+  <meta property="og:type" content="article">
+  <meta name="generator" content="DevTools Journal demo generator">
+
+  <script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "BlogPosting", "headline": ".NET Framework End of Support Dates: Planning Your Migration Timeline", "description": ".NET Framework will not receive a dramatic sunset announcement; it ages with Windows itself. That makes end-of-support planning deceptively easy to postpone and", "image": "https://tse1.mm.bing.net/th?q=calendar%20planning%20deadline%20office&w=474&h=274&c=7", "datePublished": "2026-10-25", "dateModified": "2026-10-25", "wordCount": 568, "author": {"@type": "Organization", "name": "DevTools Journal"}, "publisher": {"@type": "Organization", "name": "DevTools Journal"} }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header class="site-header">
+      <div class="site-header__container">
+        <button class="site-header__hamburger" aria-label="Open menu"
+                aria-expanded="false" data-site-action-trigger="navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <a class="site-header__logo" href="../">DevTools Journal</a>
+      </div>
+    </header>
+    <div class="site-actions" aria-hidden="true">
+      <div class="site-actions__backdrop"></div>
+      <nav class="site-actions__panel" aria-label="Main navigation">
+        <div class="site-actions__top">
+          <p class="site-actions__title">Menu</p>
+          <button class="site-actions__close" data-close-site-actions aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="site-actions__menu">
+          <li><a href="../">Home</a></li>
+      <li><a href="../category/visual-studio/">Visual Studio</a></li>
+      <li><a href="../category/visual-studio-code/">Visual Studio Code</a></li>
+      <li><a href="../category/visual-studio-mac/">Visual Studio for Mac</a></li>
+      <li><a href="../category/dotnet/">.NET</a></li>
+      <li><a href="../category/dotnet-framework/">.NET Framework</a></li>
+      <li><a href="../category/aspnet-core/">ASP.NET Core</a></li>
+      <li><a href="../category/csharp/">C#</a></li>
+      <li><a href="../category/fsharp/">F#</a></li>
+      <li><a href="../category/typescript/">TypeScript</a></li>
+      <li><a href="../category/microsoft-build-tools/">Microsoft Build Tools</a></li>
+      <li><a href="../category/msbuild/">MSBuild</a></li>
+        </ul>
+      </nav>
+    </div>
+    <main id="main" class="site-main">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=calendar%20planning%20deadline%20office&w=474&h=274&c=7" alt=".NET Framework End of Support Dates: Planning Your Migration Timeline">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">.NET Framework End of Support Dates: Planning Your Migration Timeline</h1>
+            <p class="article-header__excerpt">.NET Framework will not receive a dramatic sunset announcement; it ages with Windows itself. That makes end-of-support planning deceptively easy to postpone and dangerously easy to miss, because each Framework version's support rides on the Windows lifecycle underneath it.</p>
+            <div class="article-header__footer">
+              <a href="../category/dotnet-framework/" class="article-header__meta article-header__meta-tag-primary" rel="tag">.NET Framework</a>
+              <span class="article-header__meta article-header__meta--date" data-dynamic-date></span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section">
+        <div class="container">
+          <div class="article-content">
+          <p>.NET Framework will not receive a dramatic sunset announcement; it ages with Windows itself. That makes end-of-support planning deceptively easy to postpone and dangerously easy to miss, because each Framework version's support rides on the Windows lifecycle underneath it.</p>
+          <p>This article maps the actual dates that matter, explains how Framework support really works in 2026, shows how to inventory your exposure, and gives a migration timeline template you can defend in a budget meeting. The earlier the inventory starts, the more boring the deadline.</p>
+          
+          <h2>Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Latest Framework</strong></td><td>4.8.1 (April 2022, final version)</td></tr>
+              <tr><td><strong>Support model</strong></td><td>Serviced as a component of Windows</td></tr>
+              <tr><td><strong>Key dependency</strong></td><td>Windows version lifecycles</td></tr>
+              <tr><td><strong>Windows 10 end of support</strong></td><td>October 2025 (with ESU options)</td></tr>
+              <tr><td><strong>Windows 11</strong></td><td>Current Framework support path</td></tr>
+              <tr><td><strong>New features</strong></td><td>None, ever (maintenance only)</td></tr>
+              <tr><td><strong>Modern replacement</strong></td><td>.NET 10 LTS (supported to Nov 2028)</td></tr>
+              <tr><td><strong>Tooling</strong></td><td>.NET Upgrade Assistant (free)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h2>How Framework Support Actually Works</h2>
+          <p>.NET Framework is a Windows component: each version is supported as long as the Windows versions that include or install it. Framework 4.8/4.8.1 ride the servicing of Windows 10, Windows 11, Windows Server 2019/2022/2025, and there is no independent Framework product lifecycle to track.</p>
+          <p>The practical consequence: when a Windows version leaves support, Framework on it leaves with it. Windows 10's end of servicing (October 2025, with paid Extended Security Updates available) removed the comfortable blanket for many desktop fleets; servers generally have more runway but the same logic applies at each lifecycle end.</p>
+          <h2>The Dates That Matter for Your Estate</h2>
+          <figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=calendar%20planning%20deadline%20office&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt=".NET Framework End of Support Dates: Planning Your Migration Timeline" style="border-radius:9px"></figure>
+          <!-- ADSLOT:article_mid_300x250 -->
+          <ul>
+              <li>October 2025: Windows 10 end of servicing; Framework apps on Win10 need ESU or an OS move</li>
+              <li>Ongoing: Windows Server versions exit mainstream and extended support on published lifecycle dates</li>
+              <li>April 2022 (already past): final Framework release (4.8.1); no new runtime features ever</li>
+              <li>November 2028: .NET 10 LTS end of support, the current planning horizon for modernization</li>
+              <li>Vendor-specific: ISV products built on Framework announce their own support ends; track them</li>
+            </ul>
+          <p>Build an internal registry mapping each app to its host OS lifecycle, and you have the real calendar for your estate — Microsoft's dates alone do not tell you when your risk lands.</p>
+          <h2>Inventorying Your Exposure</h2>
+          <p>Discovery beats memory. Scan machines and servers for loaded Framework versions (registry queries, configuration management tools, or Defender inventory), enumerate web apps by their application pools and targetFramework attributes, and ask vendors for their modern .NET roadmaps.</p>
+          <pre><code># quick local inventory
+reg query &quot;HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP&quot; /s | findstr Release
+# .NET apps on a server
+Get-ChildItem C:\inetpub\wwwroot -Filter web.config -Recurse |
+  Select-String targetFramework</code></pre>
+          <p>Score each finding: business criticality, change frequency, dependency risk, and migration cost. The output is a heat map that turns an abstract deadline into an ordered project list.</p>
+          <h2>A Defensible Timeline Template</h2>
+          <p>Quarter 1: inventory + risk scoring; stabilize tests on critical apps; start Upgrade Assistant on the easiest service as a pilot. Quarter 2: migrate shared libraries to multi-target and modernize the pilot's lessons into a runbook. Quarters 3-4: migrate services in business priority order, keeping every release shippable from both runtimes.</p>
+          <p>Year 2: tackle the UI rewrites (WebForms to Razor/Blazor) and vendor replacements as funded projects, not heroic side quests. Each migration ships value early (performance, containers), which keeps executive sponsorship alive — the fuel that long migrations run on.</p>
+          <h2>What Not to Worry About</h2>
+          <p>Running Framework apps on supported Windows keeps receiving security servicing; nothing expires suddenly. Desktop line-of-business apps with low change rates on Windows 11 are fine for years. The pressure points are specific: unsupported OS versions, vendor products ending support, integrations demanding modern security, and teams blocked from using new tooling.</p>
+          <p>Frame the program accordingly: not a fire drill, but portfolio modernization with published milestones. The organizations that struggle are the ones that start the inventory after their OS or vendor forces the question.</p>
+          <h2>Conclusion</h2>
+          <p>Framework end-of-support risk is real but manageable, because the timeline is public and the migration tooling is mature. Start with the inventory, map apps to OS lifecycles, and schedule modernization toward .NET 10 in priority order. Boring, budgeted, done — that is how you want this deadline to feel.</p>
+          <h2>Frequently Asked Questions</h2>
+          <h3>Is .NET Framework being discontinued?</h3>
+          <p>No version is being abruptly killed; 4.8/4.8.1 are serviced as Windows components and ride Windows lifecycles. However, no new features will ever ship, and each Windows version's end of support removes its support blanket.</p>
+          <h3>What happens to apps on Windows 10 after end of servicing?</h3>
+          <p>They keep running but no longer receive OS security patches unless the organization buys Extended Security Updates. Migrating to Windows 11 or modern .NET removes the dependency.</p>
+          <h3>Which Framework versions are still safe to run?</h3>
+          <p>4.8 and 4.8.1 on currently supported Windows versions receive servicing. Older versions (4.7.x and below) should be upgraded to 4.8.1 at minimum.</p>
+          <h3>Does moving to modern .NET remove Windows dependency?</h3>
+          <p>Yes for most app types: ASP.NET Core, console, and services run on Linux and macOS. WPF and WinForms remain Windows-only by design, even on modern .NET.</p>
+          <h3>How do I find all Framework apps in my company?</h3>
+          <p>Combine endpoint inventory tools, registry scans for installed Framework versions, IIS application pool and web.config audits, and vendor questionnaires. Configuration management databases usually hold more than teams expect.</p>
+          </div>
+        </div>
+      </div>
+      <section class="related-posts section">
+        <div class="container">
+          <h2 class="section-title">You might also like</h2>
+          <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card  data-published="true">
+            <a href="../dotnet-framework/dotnet-framework-4-8-1-vs-modern-dotnet-which-runtime.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=legacy%20software%20migration%20computer&w=474&h=274&c=7" loading="lazy"
+                     alt=".NET Framework 4.8.1 vs Modern .NET: Which Runtime Do You Need?">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../dotnet-framework/dotnet-framework-4-8-1-vs-modern-dotnet-which-runtime.html" class="post-card__content-link">
+                <h2 class="post-card__title">.NET Framework 4.8.1 vs Modern .NET: Which Runtime Do You Need?</h2>
+                <p class="post-card__excerpt">Almost a decade after .NET Core launched, teams still ask the same question in architecture reviews: should this project target .NET Framework 4.8.1 or modern .NET? The legacy runt&hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
+                <span class="post-card__meta post-card__meta--date">September 15, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card  data-published="true">
+            <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=visual%20studio%202026%20IDE&w=474&h=274&c=7" loading="lazy"
+                     alt="Visual Studio 2026 Review: Features, Performance, and Upgrade Guide">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__content-link">
+                <h2 class="post-card__title">Visual Studio 2026 Review: Features, Performance, and Upgrade Guide</h2>
+                <p class="post-card__excerpt">Visual Studio 2026 is the newest major release of Microsoft's flagship integrated development environment, and it represents the most significant redesign of the product in years. &hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/visual-studio/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio</a>
+                <span class="post-card__meta post-card__meta--date">July 14, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card  data-published="true">
+            <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=visual%20studio%20code%20editor%20laptop&w=474&h=274&c=7" loading="lazy"
+                     alt="Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__content-link">
+                <h2 class="post-card__title">Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts</h2>
+                <p class="post-card__excerpt">Visual Studio Code has become the default editor for millions of developers because it is free, fast, and endlessly customizable. But a fresh VS Code install is intentionally bare:&hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">August 2, 2026</span>
+              </div>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+    </main>
+<footer class="site-footer"><nav class="site-footer__nav"><a href="../">Home</a><a href="../page/dmca.html">DMCA</a><a href="../page/contact.html">Contact</a><a href="../page/privacy-policy.html">Privacy Policy</a><a href="../page/copyright.html">Copyright</a></nav><div class="site-footer__copyright">Copyright &copy; 2026 DevTools Journal</div></footer>
+  </div>
+  <script src="../assets/kutukdev/js/main.js"></script>
+  <script src="../assets/kutukdev/js/demo-schedule.js"></script>
+</body>
+</html>

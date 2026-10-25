@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>.NET 10 Explained: LTS Features, Support Dates, and Upgrade Path</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Microsoft developer tools, explained — DevTools Journal demo build. This demo is intentionally noindex/nofollow.">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content=".NET 10 Explained: LTS Features, Support Dates, and Upgrade Path">
+  <meta property="og:type" content="article">
+  <meta name="generator" content="DevTools Journal demo generator">
+
+  <script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "BlogPosting", "headline": ".NET 10 Explained: LTS Features, Support Dates, and Upgrade Path", "description": ".NET 10 is Microsoft's eleventh major unified .NET release and its current Long-Term Support (LTS) platform. Shipped on November 11, 2025 alongside C# 14, it ca", "image": "https://tse1.mm.bing.net/th?q=dotnet%20programming%20code%20screen&w=474&h=274&c=7", "datePublished": "2026-09-03", "dateModified": "2026-09-03", "wordCount": 630, "author": {"@type": "Organization", "name": "DevTools Journal"}, "publisher": {"@type": "Organization", "name": "DevTools Journal"} }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header class="site-header">
+      <div class="site-header__container">
+        <button class="site-header__hamburger" aria-label="Open menu"
+                aria-expanded="false" data-site-action-trigger="navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <a class="site-header__logo" href="../">DevTools Journal</a>
+      </div>
+    </header>
+    <div class="site-actions" aria-hidden="true">
+      <div class="site-actions__backdrop"></div>
+      <nav class="site-actions__panel" aria-label="Main navigation">
+        <div class="site-actions__top">
+          <p class="site-actions__title">Menu</p>
+          <button class="site-actions__close" data-close-site-actions aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="site-actions__menu">
+          <li><a href="../">Home</a></li>
+      <li><a href="../category/visual-studio/">Visual Studio</a></li>
+      <li><a href="../category/visual-studio-code/">Visual Studio Code</a></li>
+      <li><a href="../category/visual-studio-mac/">Visual Studio for Mac</a></li>
+      <li><a href="../category/dotnet/">.NET</a></li>
+      <li><a href="../category/dotnet-framework/">.NET Framework</a></li>
+      <li><a href="../category/aspnet-core/">ASP.NET Core</a></li>
+      <li><a href="../category/csharp/">C#</a></li>
+      <li><a href="../category/fsharp/">F#</a></li>
+      <li><a href="../category/typescript/">TypeScript</a></li>
+      <li><a href="../category/microsoft-build-tools/">Microsoft Build Tools</a></li>
+      <li><a href="../category/msbuild/">MSBuild</a></li>
+        </ul>
+      </nav>
+    </div>
+    <main id="main" class="site-main">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=dotnet%20programming%20code%20screen&w=474&h=274&c=7" alt=".NET 10 Explained: LTS Features, Support Dates, and Upgrade Path">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">.NET 10 Explained: LTS Features, Support Dates, and Upgrade Path</h1>
+            <p class="article-header__excerpt">.NET 10 is Microsoft's eleventh major unified .NET release and its current Long-Term Support (LTS) platform. Shipped on November 11, 2025 alongside C# 14, it carries three years of free support through November 14, 2028, making it the version every production workload should be planning to adopt.</p>
+            <div class="article-header__footer">
+              <a href="../category/dotnet/" class="article-header__meta article-header__meta-tag-primary" rel="tag">.NET</a>
+              <span class="article-header__meta article-header__meta--date">September 3, 2026</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section">
+        <div class="container">
+          <div class="article-content">
+          <p>.NET 10 is Microsoft's eleventh major unified .NET release and its current Long-Term Support (LTS) platform. Shipped on November 11, 2025 alongside C# 14, it carries three years of free support through November 14, 2028, making it the version every production workload should be planning to adopt.</p>
+          <p>This deep dive covers what makes .NET 10 special: the new file-based apps model that turns C# into a scripting language, runtime and JIT performance gains, ASP.NET Core and Entity Framework Core 10 improvements, and the practical upgrade path from .NET 8 or 9. If you are choosing where to standardize for the next three years, start here.</p>
+          
+          <h2>Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Product name</strong></td><td>.NET 10</td></tr>
+              <tr><td><strong>Release date</strong></td><td>November 11, 2025</td></tr>
+              <tr><td><strong>Support type</strong></td><td>Long-Term Support (LTS)</td></tr>
+              <tr><td><strong>End of support</strong></td><td>November 14, 2028</td></tr>
+              <tr><td><strong>Companion language</strong></td><td>C# 14</td></tr>
+              <tr><td><strong>Minimum supported</strong></td><td>.NET 8 and .NET 9 can upgrade in place</td></tr>
+              <tr><td><strong>Platforms</strong></td><td>Windows, macOS, Linux, containers, arm64 native</td></tr>
+              <tr><td><strong>Flagship features</strong></td><td>File-based apps, extension members, runtime perf</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h2>What Is .NET 10?</h2>
+          <p>.NET 10 is the unified, cross-platform successor to .NET Framework, covering web APIs, desktop apps, cloud services, machine learning, and mobile apps through one SDK and one runtime family. As an LTS release it is the version Microsoft guarantees for three years, which is why enterprises standardize on LTS releases like 8 and 10 rather than the yearly Short-Term Support versions.</p>
+          <p>Every November a new major .NET ships, alternating STS (18 months of support) and LTS (36 months). .NET 10 lands exactly three years after .NET 8's LTS, and Microsoft's own guidance positions it as the migration target for anyone still on .NET 8 or 9.</p>
+          <h2>File-Based Apps: C# as a Scripting Language</h2>
+          <figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=dotnet%20programming%20code%20screen&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt=".NET 10 Explained: LTS Features, Support Dates, and Upgrade Path" style="border-radius:9px"></figure>
+          <!-- ADSLOT:article_mid_300x250 -->
+          <p>The most talked-about .NET 10 feature is file-based apps. You can now run a single .cs file directly with dotnet run, no csproj or solution required. SDK and NuGet references are declared with # directives at the top of the file, and a shebang line makes the file executable like a shell script on Linux and macOS.</p>
+          <pre><code>#!/usr/bin/env dotnet
+#:sdk Microsoft.NET.Sdk.Web
+#:package Microsoft.EntityFrameworkCore.Sqlite@10.0.0
+
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+app.MapGet(&quot;/&quot;, () =&gt; &quot;Hello from a single file!&quot;);
+app.Run();</code></pre>
+          <p>When a prototype outgrows one file, dotnet project convert turns it into a full project. This flow makes C# competitive with Python and Node for quick automation, dev scripts, and small tools, without giving up the strong typing and performance of .NET.</p>
+          <h2>C# 14 Highlights</h2>
+          <p>.NET 10 pairs with C# 14, whose theme is removing boilerplate. Extension blocks let you group extension methods, static extensions, and brand-new extension properties for a receiver type in one place. The field keyword gives property accessors direct access to a compiler-generated backing field, eliminating trivial backing fields across the codebase.</p>
+          <pre><code>public static class StringExtensions
+{
+    extension(string value)
+    {
+        public bool IsBlank =&gt; string.IsNullOrWhiteSpace(value);
+        public string Truncate(int max) =&gt;
+            value.Length &lt;= max ? value : value[..max];
+    }
+}</code></pre>
+          <p>Additional C# 14 features include null-conditional assignment, parameters modifiers in lambdas, and partial constructors and events, all aimed at library authors and large codebases.</p>
+          <h2>Runtime, ASP.NET Core, and EF Core Improvements</h2>
+          <p>The JIT delivers steady gains in loop optimization, inlining, and devirtualization, and the runtime trims allocation overhead in common paths. ASP.NET Core 10 adds Minimal API validation built in, OpenAPI 3.1 support, and faster JSON serialization with System.Text.Json refinements that respect source-generated contracts.</p>
+          <p>Entity Framework Core 10 introduces complex types as first-class value objects, improved JSON column mapping, and LINQ translation improvements that reduce client-side evaluation. For teams running containers, the Microsoft official images are smaller and start faster on .NET 10 base layers.</p>
+          <h2>Upgrade Path from .NET 8 or 9</h2>
+          <p>Most projects upgrade in under an hour: update the TargetFramework to net10.0, refresh package versions, and build. The .NET Upgrade Assistant analyzes dependencies and flags breaking changes, while the API compatibility analyzers catch platform-specific issues at compile time. Binary compatibility means your NuGet references built for .NET 8 or 9 usually just work.</p>
+          <pre><code># Upgrade checklist (terminal)
+dotnet --info                 # confirm SDK 10 installed
+# edit csproj: &lt;TargetFramework&gt;net10.0&lt;/TargetFramework&gt;
+dotnet outdated               # spot stale packages
+dotnet build                  # fix analyzer warnings
+dotnet test                   # verify behavior</code></pre>
+          <p>Common friction points are obsolete APIs removed after .NET 8, System.Text.Json strictness changes, and native dependencies needing arm64 builds. Each has straightforward fixes documented in the official release notes, and side-by-side SDK installs mean you can always rebuild with the old SDK in an emergency.</p>
+          <h2>Conclusion</h2>
+          <p>.NET 10 earns its LTS badge: a modern scripting story, a more expressive C# 14, real runtime wins, and three years of guaranteed support. For teams on .NET 8, it is the destination Microsoft designed for; for teams on .NET 9, it is a low-risk hop. Standardize on .NET 10 now and your next three years of maintenance get easier with every release.</p>
+          <h2>Frequently Asked Questions</h2>
+          <h3>What is the difference between .NET 10 and .NET Framework?</h3>
+          <p>.NET 10 is the modern cross-platform runtime (Windows, macOS, Linux) with yearly releases. .NET Framework is the legacy Windows-only runtime, frozen at version 4.8.1, supported only for servicing. New development should target .NET 10.</p>
+          <h3>How long will .NET 10 be supported?</h3>
+          <p>.NET 10 is an LTS release supported for three years from release: November 11, 2025 through November 14, 2028, with monthly security and reliability patches.</p>
+          <h3>Can I upgrade directly from .NET 8 to .NET 10?</h3>
+          <p>Yes. Most projects change the TargetFramework to net10.0 and rebuild. Use the .NET Upgrade Assistant for dependency analysis, and review breaking-change notes for APIs removed since .NET 8.</p>
+          <h3>Do file-based apps replace csproj projects?</h3>
+          <p>No. They complement them. File-based apps are ideal for scripts, prototypes, and small tools; convert to a project with dotnet project convert when you need tests, packaging, or multiple files.</p>
+          <h3>Is .NET 10 free for commercial use?</h3>
+          <p>Yes. .NET is free and open source under the MIT license, including commercial use. Optional paid support is available through Microsoft support plans and LTS servicing agreements.</p>
+          </div>
+        </div>
+      </div>
+      <section class="related-posts section">
+        <div class="container">
+          <h2 class="section-title">You might also like</h2>
+          <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card data-publish-offset="2700000" data-published="false">
+            <a href="../dotnet/migrating-from-dotnet-framework-to-dotnet-10-step-by-step-plan.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=software%20migration%20roadmap%20planning&w=474&h=274&c=7" loading="lazy"
+                     alt="Migrating from .NET Framework to .NET 10: A Practical Step-by-Step Plan">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../dotnet/migrating-from-dotnet-framework-to-dotnet-10-step-by-step-plan.html" class="post-card__content-link">
+                <h2 class="post-card__title">Migrating from .NET Framework to .NET 10: A Practical Step-by-Step Plan</h2>
+                <p class="post-card__excerpt">Every .NET Framework codebase faces the same eventual question: when and how do we move to modern .NET? With .NET 10 as the current LTS supported through November 2028, the destina&hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date" data-dynamic-date></span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card  data-published="true">
+            <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=visual%20studio%202026%20IDE&w=474&h=274&c=7" loading="lazy"
+                     alt="Visual Studio 2026 Review: Features, Performance, and Upgrade Guide">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__content-link">
+                <h2 class="post-card__title">Visual Studio 2026 Review: Features, Performance, and Upgrade Guide</h2>
+                <p class="post-card__excerpt">Visual Studio 2026 is the newest major release of Microsoft's flagship integrated development environment, and it represents the most significant redesign of the product in years. &hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/visual-studio/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio</a>
+                <span class="post-card__meta post-card__meta--date">July 14, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card  data-published="true">
+            <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=visual%20studio%20code%20editor%20laptop&w=474&h=274&c=7" loading="lazy"
+                     alt="Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__content-link">
+                <h2 class="post-card__title">Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts</h2>
+                <p class="post-card__excerpt">Visual Studio Code has become the default editor for millions of developers because it is free, fast, and endlessly customizable. But a fresh VS Code install is intentionally bare:&hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">August 2, 2026</span>
+              </div>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+    </main>
+<footer class="site-footer"><nav class="site-footer__nav"><a href="../">Home</a><a href="../page/dmca.html">DMCA</a><a href="../page/contact.html">Contact</a><a href="../page/privacy-policy.html">Privacy Policy</a><a href="../page/copyright.html">Copyright</a></nav><div class="site-footer__copyright">Copyright &copy; 2026 DevTools Journal</div></footer>
+  </div>
+  <script src="../assets/kutukdev/js/main.js"></script>
+  <script src="../assets/kutukdev/js/demo-schedule.js"></script>
+</body>
+</html>

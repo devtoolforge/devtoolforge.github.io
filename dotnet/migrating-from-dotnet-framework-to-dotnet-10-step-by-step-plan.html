@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Migrating from .NET Framework to .NET 10: A Practical Step-by-Step Plan</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Microsoft developer tools, explained — DevTools Journal demo build. This demo is intentionally noindex/nofollow.">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Migrating from .NET Framework to .NET 10: A Practical Step-by-Step Plan">
+  <meta property="og:type" content="article">
+  <meta name="generator" content="DevTools Journal demo generator">
+
+  <script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "BlogPosting", "headline": "Migrating from .NET Framework to .NET 10: A Practical Step-by-Step Plan", "description": "Every .NET Framework codebase faces the same eventual question: when and how do we move to modern .NET? With .NET 10 as the current LTS supported through Novemb", "image": "https://tse1.mm.bing.net/th?q=software%20migration%20roadmap%20planning&w=474&h=274&c=7", "datePublished": "2026-10-25", "dateModified": "2026-10-25", "wordCount": 582, "author": {"@type": "Organization", "name": "DevTools Journal"}, "publisher": {"@type": "Organization", "name": "DevTools Journal"} }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header class="site-header">
+      <div class="site-header__container">
+        <button class="site-header__hamburger" aria-label="Open menu"
+                aria-expanded="false" data-site-action-trigger="navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <a class="site-header__logo" href="../">DevTools Journal</a>
+      </div>
+    </header>
+    <div class="site-actions" aria-hidden="true">
+      <div class="site-actions__backdrop"></div>
+      <nav class="site-actions__panel" aria-label="Main navigation">
+        <div class="site-actions__top">
+          <p class="site-actions__title">Menu</p>
+          <button class="site-actions__close" data-close-site-actions aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="site-actions__menu">
+          <li><a href="../">Home</a></li>
+      <li><a href="../category/visual-studio/">Visual Studio</a></li>
+      <li><a href="../category/visual-studio-code/">Visual Studio Code</a></li>
+      <li><a href="../category/visual-studio-mac/">Visual Studio for Mac</a></li>
+      <li><a href="../category/dotnet/">.NET</a></li>
+      <li><a href="../category/dotnet-framework/">.NET Framework</a></li>
+      <li><a href="../category/aspnet-core/">ASP.NET Core</a></li>
+      <li><a href="../category/csharp/">C#</a></li>
+      <li><a href="../category/fsharp/">F#</a></li>
+      <li><a href="../category/typescript/">TypeScript</a></li>
+      <li><a href="../category/microsoft-build-tools/">Microsoft Build Tools</a></li>
+      <li><a href="../category/msbuild/">MSBuild</a></li>
+        </ul>
+      </nav>
+    </div>
+    <main id="main" class="site-main">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=software%20migration%20roadmap%20planning&w=474&h=274&c=7" alt="Migrating from .NET Framework to .NET 10: A Practical Step-by-Step Plan">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">Migrating from .NET Framework to .NET 10: A Practical Step-by-Step Plan</h1>
+            <p class="article-header__excerpt">Every .NET Framework codebase faces the same eventual question: when and how do we move to modern .NET? With .NET 10 as the current LTS supported through November 2028, the destination is settled; what teams need is a migration plan that ships value continuously instead of a frightening big-bang rewrite.</p>
+            <div class="article-header__footer">
+              <a href="../category/dotnet/" class="article-header__meta article-header__meta-tag-primary" rel="tag">.NET</a>
+              <span class="article-header__meta article-header__meta--date" data-dynamic-date></span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section">
+        <div class="container">
+          <div class="article-content">
+          <p>Every .NET Framework codebase faces the same eventual question: when and how do we move to modern .NET? With .NET 10 as the current LTS supported through November 2028, the destination is settled; what teams need is a migration plan that ships value continuously instead of a frightening big-bang rewrite.</p>
+          <p>This guide lays out a field-proven, incremental path: readiness assessment, dependency untangling, the mechanical upgrade with the .NET Upgrade Assistant, platform-specific rewrites for the genuinely hard parts, and the cutover checklist. Follow it and the migration becomes a series of small, low-risk pull requests.</p>
+          
+          <h2>Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Source runtime</strong></td><td>.NET Framework 4.x (Windows)</td></tr>
+              <tr><td><strong>Target runtime</strong></td><td>.NET 10 LTS (Nov 2025 - Nov 2028)</td></tr>
+              <tr><td><strong>Key tool</strong></td><td>.NET Upgrade Assistant + analyzers</td></tr>
+              <tr><td><strong>Typical mechanical time</strong></td><td>Hours to days per service</td></tr>
+              <tr><td><strong>Hard parts</strong></td><td>WebForms, WCF server, Workflow, third-party DLLs</td></tr>
+              <tr><td><strong>Strategy</strong></td><td>Strangler Fig: increment by increment</td></tr>
+              <tr><td><strong>Biggest win</strong></td><td>Performance + Linux containers + future safety</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h2>Phase 1: Assess Before You Touch Code</h2>
+          <p>Inventory the solution: project types, target frameworks, NuGet dependencies, third-party binaries, and platform APIs. The .NET Portability Analyzer and binary analysis tools report API surface usage against .NET 10, producing the risk report that drives scoping.</p>
+          <p>Classify each dependency: available as a modern NuGet (easy), needs a version bump (routine), unsupported with a replacement (redesign), or frozen binary without .NET 10 support (the real blockers). Most teams discover the hard blockers are fewer than feared and cluster in one or two subsystems.</p>
+          <h2>Phase 2: Untangle and Stabilize</h2>
+          <figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=software%20migration%20roadmap%20planning&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Migrating from .NET Framework to .NET 10: A Practical Step-by-Step Plan" style="border-radius:9px"></figure>
+          <!-- ADSLOT:article_mid_300x250 -->
+          <p>Before the platform switch, do the refactorings that pay off on any platform: convert packages.config to PackageReference, centralize shared settings into Directory.Build.props, add missing tests around critical behavior, and split god-solutions so each service migrates independently.</p>
+          <p>Move shared libraries to multi-target (net48;net10.0) so both worlds consume the same code during the transition. This single trick unlocks the incremental strategy: new development happens on .NET 10 while the legacy shell keeps working.</p>
+          <h2>Phase 3: The Mechanical Upgrade</h2>
+          <p>Run the .NET Upgrade Assistant (Visual Studio extension or dotnet CLI tool) on each project: it retargets the TFM to net10.0, upgrades packages, applies analyzer fixes for obsolete APIs, and reports the remaining work items with links to guidance.</p>
+          <pre><code>dotnet tool install -g upgrade-assistant
+upgrade-assistant upgrade MyApp.sln --target-framework net10.0
+# then:
+dotnet build   # fix remaining analyzer findings
+dotnet test    # verify behavior parity</code></pre>
+          <p>Expect most console, class library, Windows Forms, WPF, and ASP.NET Core-style projects to move in hours. Budget real engineering time for the four known islands: WebForms UIs, WCF server implementations, Workflow Foundation, and apps pinned to COM-heavy or 32-bit native dependencies.</p>
+          <h2>Phase 4: Rewrite the Hard Islands Deliberately</h2>
+          <ul>
+              <li>WCF server: extract the service contracts, reimplement with ASP.NET Core (CoreWCF for drop-in compatibility, or gRPC/REST where clients can change)</li>
+              <li>WebForms pages: rewrite views in Razor Pages or Blazor; the business layer usually ports unchanged, so treat it as a UI replacement project</li>
+              <li>Workflow Foundation: model the workflows as plain C# state machines or a modern workflow engine; keep the logic, replace the host</li>
+              <li>Frozen third-party DLLs: isolate behind an adapter interface and run that one dependency in a sidecar Windows service or container while sourcing a replacement</li>
+            </ul>
+          <p>Each island is its own scoped project with its own estimate. None of them should block migrating the other 90 percent of the system.</p>
+          <h2>Phase 5: Cutover, Verify, and Improve</h2>
+          <p>Cutover per service: deploy to staging, run parity tests against recorded traffic or golden files, watch application insights dashboards through one business cycle, then flip production. Keep the Framework build shippable until the new version has soaked, and keep the rollback path real, not theoretical.</p>
+          <p>After cutover, collect the dividends deliberately: containerize on Linux images, enable trimming or AOT where deployment size matters, and adopt C# 14 and .NET 10 runtime features. Teams routinely report double-digit throughput gains and dramatically smaller deployments with zero additional code.</p>
+          <h2>Conclusion</h2>
+          <p>Migrating Framework to .NET 10 is not a rewrite; it is a sequenced upgrade with proven tooling for the mechanical 80 percent and deliberate mini-projects for the hard 20. Start with the assessment this week, multi-target your shared libraries next sprint, and let the strangler pattern carry your system to the LTS everyone else is heading toward.</p>
+          <h2>Frequently Asked Questions</h2>
+          <h3>How long does a Framework to .NET 10 migration take?</h3>
+          <p>A typical service with few legacy dependencies migrates in days. Whole applications dominated by WebForms or WCF take longer because those subsystems are redesigns, but they can proceed incrementally after the core moves.</p>
+          <h3>Will my NuGet packages work on .NET 10?</h3>
+          <p>Most packages support modern .NET through .NET Standard or net10.0 targets. The Upgrade Assistant flags incompatible packages and the ecosystem usually provides supported replacements for the rest.</p>
+          <h3>Can we migrate gradually, service by service?</h3>
+          <p>Yes, and you should. Multi-target shared libraries, migrate independent services first, and use adapters or CoreWCF to bridge legacy boundaries during the transition.</p>
+          <h3>What happens to WCF services?</h3>
+          <p>WCF server code has no direct .NET 10 equivalent in the BCL. CoreWCF provides a compatible hosting path, while many teams use the migration as the chance to move to gRPC or REST contracts.</p>
+          <h3>Is the migration worth it if our Framework app works fine?</h3>
+          <p>Usually yes for anything still evolving: performance, Linux containers, modern language features, and the safety of an actively supported runtime. Truly frozen apps can wait, but track dependency end-of-support dates.</p>
+          </div>
+        </div>
+      </div>
+      <section class="related-posts section">
+        <div class="container">
+          <h2 class="section-title">You might also like</h2>
+          <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card  data-published="true">
+            <a href="../dotnet/dotnet-10-explained-lts-features-support-dates-upgrade-path.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=dotnet%20programming%20code%20screen&w=474&h=274&c=7" loading="lazy"
+                     alt=".NET 10 Explained: LTS Features, Support Dates, and Upgrade Path">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../dotnet/dotnet-10-explained-lts-features-support-dates-upgrade-path.html" class="post-card__content-link">
+                <h2 class="post-card__title">.NET 10 Explained: LTS Features, Support Dates, and Upgrade Path</h2>
+                <p class="post-card__excerpt">.NET 10 is Microsoft's eleventh major unified .NET release and its current Long-Term Support (LTS) platform. Shipped on November 11, 2025 alongside C# 14, it carries three years of&hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">September 3, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card  data-published="true">
+            <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=visual%20studio%202026%20IDE&w=474&h=274&c=7" loading="lazy"
+                     alt="Visual Studio 2026 Review: Features, Performance, and Upgrade Guide">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__content-link">
+                <h2 class="post-card__title">Visual Studio 2026 Review: Features, Performance, and Upgrade Guide</h2>
+                <p class="post-card__excerpt">Visual Studio 2026 is the newest major release of Microsoft's flagship integrated development environment, and it represents the most significant redesign of the product in years. &hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/visual-studio/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio</a>
+                <span class="post-card__meta post-card__meta--date">July 14, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card  data-published="true">
+            <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=visual%20studio%20code%20editor%20laptop&w=474&h=274&c=7" loading="lazy"
+                     alt="Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__content-link">
+                <h2 class="post-card__title">Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts</h2>
+                <p class="post-card__excerpt">Visual Studio Code has become the default editor for millions of developers because it is free, fast, and endlessly customizable. But a fresh VS Code install is intentionally bare:&hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">August 2, 2026</span>
+              </div>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+    </main>
+<footer class="site-footer"><nav class="site-footer__nav"><a href="../">Home</a><a href="../page/dmca.html">DMCA</a><a href="../page/contact.html">Contact</a><a href="../page/privacy-policy.html">Privacy Policy</a><a href="../page/copyright.html">Copyright</a></nav><div class="site-footer__copyright">Copyright &copy; 2026 DevTools Journal</div></footer>
+  </div>
+  <script src="../assets/kutukdev/js/main.js"></script>
+  <script src="../assets/kutukdev/js/demo-schedule.js"></script>
+</body>
+</html>

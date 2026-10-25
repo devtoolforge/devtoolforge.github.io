@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSBuild Explained: Properties, Items, Targets, and Tasks</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Microsoft developer tools, explained — DevTools Journal demo build. This demo is intentionally noindex/nofollow.">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="MSBuild Explained: Properties, Items, Targets, and Tasks">
+  <meta property="og:type" content="article">
+  <meta name="generator" content="DevTools Journal demo generator">
+
+  <script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "BlogPosting", "headline": "MSBuild Explained: Properties, Items, Targets, and Tasks", "description": "Every time dotnet build runs, MSBuild is the engine underneath: reading project files, resolving dependencies, and orchestrating thousands of tasks. Yet most .N", "image": "https://tse1.mm.bing.net/th?q=build%20automation%20engineering%20blueprint&w=474&h=274&c=7", "datePublished": "2026-10-24", "dateModified": "2026-10-24", "wordCount": 613, "author": {"@type": "Organization", "name": "DevTools Journal"}, "publisher": {"@type": "Organization", "name": "DevTools Journal"} }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header class="site-header">
+      <div class="site-header__container">
+        <button class="site-header__hamburger" aria-label="Open menu"
+                aria-expanded="false" data-site-action-trigger="navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <a class="site-header__logo" href="../">DevTools Journal</a>
+      </div>
+    </header>
+    <div class="site-actions" aria-hidden="true">
+      <div class="site-actions__backdrop"></div>
+      <nav class="site-actions__panel" aria-label="Main navigation">
+        <div class="site-actions__top">
+          <p class="site-actions__title">Menu</p>
+          <button class="site-actions__close" data-close-site-actions aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="site-actions__menu">
+          <li><a href="../">Home</a></li>
+      <li><a href="../category/visual-studio/">Visual Studio</a></li>
+      <li><a href="../category/visual-studio-code/">Visual Studio Code</a></li>
+      <li><a href="../category/visual-studio-mac/">Visual Studio for Mac</a></li>
+      <li><a href="../category/dotnet/">.NET</a></li>
+      <li><a href="../category/dotnet-framework/">.NET Framework</a></li>
+      <li><a href="../category/aspnet-core/">ASP.NET Core</a></li>
+      <li><a href="../category/csharp/">C#</a></li>
+      <li><a href="../category/fsharp/">F#</a></li>
+      <li><a href="../category/typescript/">TypeScript</a></li>
+      <li><a href="../category/microsoft-build-tools/">Microsoft Build Tools</a></li>
+      <li><a href="../category/msbuild/">MSBuild</a></li>
+        </ul>
+      </nav>
+    </div>
+    <main id="main" class="site-main">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=build%20automation%20engineering%20blueprint&w=474&h=274&c=7" alt="MSBuild Explained: Properties, Items, Targets, and Tasks">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">MSBuild Explained: Properties, Items, Targets, and Tasks</h1>
+            <p class="article-header__excerpt">Every time dotnet build runs, MSBuild is the engine underneath: reading project files, resolving dependencies, and orchestrating thousands of tasks. Yet most .NET developers treat csproj files as opaque incantations. Understanding MSBuild's four core concepts, properties, items, targets, and tasks, turns project files from magic into a programmable build system you control.</p>
+            <div class="article-header__footer">
+              <a href="../category/msbuild/" class="article-header__meta article-header__meta-tag-primary" rel="tag">MSBuild</a>
+              <span class="article-header__meta article-header__meta--date">October 24, 2026</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section">
+        <div class="container">
+          <div class="article-content">
+          <p>Every time dotnet build runs, MSBuild is the engine underneath: reading project files, resolving dependencies, and orchestrating thousands of tasks. Yet most .NET developers treat csproj files as opaque incantations. Understanding MSBuild's four core concepts, properties, items, targets, and tasks, turns project files from magic into a programmable build system you control.</p>
+          <p>This article is the mental model you wish you had on day one: how evaluation differs from execution, why properties and items behave differently, how targets chain through BeforeTargets and AfterTargets, and how to write custom tasks. Debugging build scripts stops being archaeology once this model clicks.</p>
+          
+          <h2>Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Engine</strong></td><td>MSBuild (Microsoft Build Engine)</td></tr>
+              <tr><td><strong>Project format</strong></td><td>XML .csproj / .vbproj / .fsproj / .targets / .props</td></tr>
+              <tr><td><strong>Invoked by</strong></td><td>dotnet build, Visual Studio, Build Tools</td></tr>
+              <tr><td><strong>Core concepts</strong></td><td>Properties, Items, Targets, Tasks</td></tr>
+              <tr><td><strong>Two phases</strong></td><td>Evaluation phase, then execution phase</td></tr>
+              <tr><td><strong>SDK-style projects</strong></td><td>Implicit imports via Sdk attributes</td></tr>
+              <tr><td><strong>Extensibility</strong></td><td>Custom tasks in .NET assemblies</td></tr>
+              <tr><td><strong>Key commands</strong></td><td>msbuild /t:Target /p:Prop=Value</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h2>The Two Phases: Evaluation and Execution</h2>
+          <p>MSBuild processes a project in two distinct phases. During evaluation, it reads the XML top to bottom, imports props and targets, and computes the final tables of properties (name-value pairs) and items (typed lists). During execution, it runs targets, which call tasks, using those tables as inputs.</p>
+          <p>Almost all MSBuild confusion comes from mixing the phases mentally. A property set inside a target does not affect evaluation-time logic that already ran; an item list defined after a target is still fully available at execution time. Once you ask which phase a line belongs to, build file behavior stops being mysterious.</p>
+          <h2>Properties: Build Configuration Values</h2>
+          <figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=build%20automation%20engineering%20blueprint&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="MSBuild Explained: Properties, Items, Targets, and Tasks" style="border-radius:9px"></figure>
+          <!-- ADSLOT:article_mid_300x250 -->
+          <p>Properties are key-value strings that configure the build: TargetFramework, Configuration, OutputPath, Version. Set them in the project file, pass them on the command line with /p:, or import them from Directory.Build.props, which MSBuild automatically applies to every project in a folder tree.</p>
+          <pre><code>&lt;PropertyGroup&gt;
+  &lt;TargetFramework&gt;net10.0&lt;/TargetFramework&gt;
+  &lt;Nullable&gt;enable&lt;/Nullable&gt;
+  &lt;LangVersion&gt;latest&lt;/LangVersion&gt;
+&lt;/PropertyGroup&gt;
+
+&lt;!-- Directory.Build.props applies to the whole repo --&gt;
+&lt;PropertyGroup&gt;
+  &lt;Company&gt;Acme Corp&lt;/Company&gt;
+  &lt;TreatWarningsAsErrors&gt;true&lt;/TreatWarningsAsErrors&gt;
+&lt;/PropertyGroup&gt;</code></pre>
+          <p>Order matters during evaluation: later definitions override earlier ones, and command-line /p: values override everything. Conditional expressions ($(Configuration)=='Release') let properties adapt, but remember the condition is evaluated where the property is declared, in evaluation phase.</p>
+          <h2>Items: Typed Lists of Inputs</h2>
+          <p>Items are lists of things the build works on: Compile (source files), Reference (assemblies), PackageReference, Content. Unlike properties, items are collections with metadata, and they accumulate: Include adds, Remove subtracts, Update modifies metadata.</p>
+          <pre><code>&lt;ItemGroup&gt;
+  &lt;Compile Include=&quot;**/*.cs&quot; Exclude=&quot;bin/**;obj/**&quot; /&gt;
+  &lt;PackageReference Include=&quot;Newtonsoft.Json&quot; Version=&quot;13.0.3&quot; /&gt;
+&lt;/ItemGroup&gt;</code></pre>
+          <p>SDK-style projects define most items implicitly via wildcard globs, which is why modern csproj files are so short. You usually interact with items only to add a package, exclude a file, or copy content to the output, but the full item machinery is available when a custom build step needs inputs.</p>
+          <h2>Targets and Tasks: The Execution Plan</h2>
+          <p>A task is a single unit of build work, an atomic action: compile code, copy a file, run a tool. A target is a named group of tasks that runs as a unit, with declarative dependencies through DependsOnTargets, Inputs, and Outputs for incremental skipping. dotnet build is essentially msbuild /t:Build.</p>
+          <pre><code>&lt;Target Name=&quot;StampBuild&quot; BeforeTargets=&quot;Build&quot;&gt;
+  &lt;PropertyGroup&gt;
+    &lt;BuildStamp&gt;$([System.DateTime]::Now.ToString(yyyyMMddHHmmss))&lt;/BuildStamp&gt;
+  &lt;/PropertyGroup&gt;
+  &lt;WriteLinesToFile File=&quot;$(OutputPath)stamp.txt&quot;
+                    Lines=&quot;Built at $(BuildStamp)&quot; Overwrite=&quot;true&quot; /&gt;
+&lt;/Target&gt;</code></pre>
+          <p>Hook into the pipeline with BeforeTargets and AfterTargets rather than editing imported targets; the built-in Build, CoreCompile, and Publish targets are your extension points. The property functions syntax ($([System.DateTime]::...)) provides surprisingly deep inline logic without custom code.</p>
+          <h2>Custom Tasks and Debugging</h2>
+          <p>When inline logic is not enough, write a custom task: a public class implementing ITask (or deriving from Microsoft.Build.Utilities.Task) in an assembly referenced with UsingTask. The task receives typed parameters, does its work, returns true or false, and logs through the engine for build output.</p>
+          <p>Debugging builds has modern conveniences: msbuild -bl produces a binary log that the MSBuild Structured Log Viewer renders as a searchable timeline of evaluations, property values, and task inputs. For quick questions, msbuild /pp:out.xml flattens all imports into one file showing exactly what the engine sees, which instantly explains where a mystery property came from.</p>
+          <h2>Conclusion</h2>
+          <p>MSBuild is not magic; it is a two-phase XML programming language with four nouns. Learn properties and items as the data model, targets as the schedule, and tasks as the work, and every csproj in your organization becomes readable. Start with Directory.Build.props, add one BeforeTargets customization, open a binary log the next time a build surprises you, and the last mystery of the build file disappears.</p>
+          <h2>Frequently Asked Questions</h2>
+          <h3>What is the difference between a property and an item in MSBuild?</h3>
+          <p>Properties are single name-value strings used for configuration; items are typed collections (like Compile or PackageReference) with per-entry metadata that accumulate through Include/Remove/Update during evaluation.</p>
+          <h3>How does dotnet build relate to MSBuild?</h3>
+          <p>dotnet build is a thin wrapper that invokes MSBuild with the .NET SDK's logic loaded. Anything MSBuild can do, including /t: targets and /p: properties, is available through dotnet msbuild.</p>
+          <h3>Where should shared build settings go?</h3>
+          <p>Directory.Build.props (evaluation-time properties) and Directory.Build.targets (execution-time customization) in a repo root apply automatically to every project beneath that folder.</p>
+          <h3>How do I see why a property has its value?</h3>
+          <p>Run msbuild /pp:preprocessed.xml to flatten all imports, or capture msbuild -bl and open the binary log in the MSBuild Structured Log Viewer to see every property's origin and final value.</p>
+          <h3>Can I write my own MSBuild task?</h3>
+          <p>Yes. Implement Microsoft.Build.Framework.ITask in a .NET assembly, reference it with a UsingTask element, and call it from any target. Parameters map to task properties, and logging flows to the build output.</p>
+          </div>
+        </div>
+      </div>
+      <section class="related-posts section">
+        <div class="container">
+          <h2 class="section-title">You might also like</h2>
+          <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card data-publish-offset="7200000" data-published="false">
+            <a href="../msbuild/custom-msbuild-tasks-and-targets-automate-build-pipeline.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=automation%20gears%20code%20build&w=474&h=274&c=7" loading="lazy"
+                     alt="Custom MSBuild Tasks and Targets: Automate Your Build Pipeline">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../msbuild/custom-msbuild-tasks-and-targets-automate-build-pipeline.html" class="post-card__content-link">
+                <h2 class="post-card__title">Custom MSBuild Tasks and Targets: Automate Your Build Pipeline</h2>
+                <p class="post-card__excerpt">Most teams treat their build as an untouchable sequence configured long ago, then compensate with fragile CI shell scripts. MSBuild offers a better path: custom targets and tasks t&hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date" data-dynamic-date></span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card  data-published="true">
+            <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=visual%20studio%202026%20IDE&w=474&h=274&c=7" loading="lazy"
+                     alt="Visual Studio 2026 Review: Features, Performance, and Upgrade Guide">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__content-link">
+                <h2 class="post-card__title">Visual Studio 2026 Review: Features, Performance, and Upgrade Guide</h2>
+                <p class="post-card__excerpt">Visual Studio 2026 is the newest major release of Microsoft's flagship integrated development environment, and it represents the most significant redesign of the product in years. &hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/visual-studio/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio</a>
+                <span class="post-card__meta post-card__meta--date">July 14, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card  data-published="true">
+            <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=visual%20studio%20code%20editor%20laptop&w=474&h=274&c=7" loading="lazy"
+                     alt="Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__content-link">
+                <h2 class="post-card__title">Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts</h2>
+                <p class="post-card__excerpt">Visual Studio Code has become the default editor for millions of developers because it is free, fast, and endlessly customizable. But a fresh VS Code install is intentionally bare:&hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">August 2, 2026</span>
+              </div>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+    </main>
+<footer class="site-footer"><nav class="site-footer__nav"><a href="../">Home</a><a href="../page/dmca.html">DMCA</a><a href="../page/contact.html">Contact</a><a href="../page/privacy-policy.html">Privacy Policy</a><a href="../page/copyright.html">Copyright</a></nav><div class="site-footer__copyright">Copyright &copy; 2026 DevTools Journal</div></footer>
+  </div>
+  <script src="../assets/kutukdev/js/main.js"></script>
+  <script src="../assets/kutukdev/js/demo-schedule.js"></script>
+</body>
+</html>

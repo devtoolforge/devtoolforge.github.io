@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Studio Build Tools: CI/CD Build Agents Without the Full IDE</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Microsoft developer tools, explained — DevTools Journal demo build. This demo is intentionally noindex/nofollow.">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Visual Studio Build Tools: CI/CD Build Agents Without the Full IDE">
+  <meta property="og:type" content="article">
+  <meta name="generator" content="DevTools Journal demo generator">
+
+  <script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "BlogPosting", "headline": "Visual Studio Build Tools: CI/CD Build Agents Without the Full IDE", "description": "You do not need a 30 GB Visual Studio installation on every build agent. The Visual Studio Build Tools deliver the compilers, MSBuild, SDKs, and workload compon", "image": "https://tse1.mm.bing.net/th?q=server%20room%20build%20pipeline&w=474&h=274&c=7", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "wordCount": 599, "author": {"@type": "Organization", "name": "DevTools Journal"}, "publisher": {"@type": "Organization", "name": "DevTools Journal"} }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header class="site-header">
+      <div class="site-header__container">
+        <button class="site-header__hamburger" aria-label="Open menu"
+                aria-expanded="false" data-site-action-trigger="navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <a class="site-header__logo" href="../">DevTools Journal</a>
+      </div>
+    </header>
+    <div class="site-actions" aria-hidden="true">
+      <div class="site-actions__backdrop"></div>
+      <nav class="site-actions__panel" aria-label="Main navigation">
+        <div class="site-actions__top">
+          <p class="site-actions__title">Menu</p>
+          <button class="site-actions__close" data-close-site-actions aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="site-actions__menu">
+          <li><a href="../">Home</a></li>
+      <li><a href="../category/visual-studio/">Visual Studio</a></li>
+      <li><a href="../category/visual-studio-code/">Visual Studio Code</a></li>
+      <li><a href="../category/visual-studio-mac/">Visual Studio for Mac</a></li>
+      <li><a href="../category/dotnet/">.NET</a></li>
+      <li><a href="../category/dotnet-framework/">.NET Framework</a></li>
+      <li><a href="../category/aspnet-core/">ASP.NET Core</a></li>
+      <li><a href="../category/csharp/">C#</a></li>
+      <li><a href="../category/fsharp/">F#</a></li>
+      <li><a href="../category/typescript/">TypeScript</a></li>
+      <li><a href="../category/microsoft-build-tools/">Microsoft Build Tools</a></li>
+      <li><a href="../category/msbuild/">MSBuild</a></li>
+        </ul>
+      </nav>
+    </div>
+    <main id="main" class="site-main">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=server%20room%20build%20pipeline&w=474&h=274&c=7" alt="Visual Studio Build Tools: CI/CD Build Agents Without the Full IDE">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">Visual Studio Build Tools: CI/CD Build Agents Without the Full IDE</h1>
+            <p class="article-header__excerpt">You do not need a 30 GB Visual Studio installation on every build agent. The Visual Studio Build Tools deliver the compilers, MSBuild, SDKs, and workload components your pipelines need, in a scriptable, license-compliant package that is typically a fraction of the size of the full IDE.</p>
+            <div class="article-header__footer">
+              <a href="../category/microsoft-build-tools/" class="article-header__meta article-header__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+              <span class="article-header__meta article-header__meta--date">October 21, 2026</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section">
+        <div class="container">
+          <div class="article-content">
+          <p>You do not need a 30 GB Visual Studio installation on every build agent. The Visual Studio Build Tools deliver the compilers, MSBuild, SDKs, and workload components your pipelines need, in a scriptable, license-compliant package that is typically a fraction of the size of the full IDE.</p>
+          <p>This guide covers what the Build Tools include, how to install them silently with exactly the workloads your projects require, how to size and maintain CI agents, and how licensing works across Community, Professional, and Enterprise build servers. Ten minutes of reading here saves hours of agent provisioning guesswork.</p>
+          
+          <h2>Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Product</strong></td><td>Visual Studio Build Tools 2026</td></tr>
+              <tr><td><strong>Purpose</strong></td><td>Build .NET/C++ projects without the IDE</td></tr>
+              <tr><td><strong>Install size</strong></td><td>Typically 2-8 GB depending on workloads</td></tr>
+              <tr><td><strong>Scriptable install</strong></td><td>vs_BuildTools.exe --add &lt;workload&gt; --quiet</td></tr>
+              <tr><td><strong>Includes</strong></td><td>MSBuild, Roslyn, .NET SDK, VC++ toolset, NuGet</td></tr>
+              <tr><td><strong>Excludes</strong></td><td>IDE shell, designers, editor</td></tr>
+              <tr><td><strong>Typical hosts</strong></td><td>CI agents, build servers, containers</td></tr>
+              <tr><td><strong>Licensing</strong></td><td>Build servers licensed separately from dev seats</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h2>What Are the Build Tools?</h2>
+          <p>The Visual Studio Build Tools package the same compilers and build engine that power Visual Studio, minus the IDE shell. You get MSBuild, the Roslyn C# and VB compilers, the F# compiler, the .NET SDK, the Visual C++ toolset, NuGet, and workload-selected components such as web targets, desktop SDKs, or Azure libraries.</p>
+          <p>Because everything is invoked from the command line, the Build Tools are the standard choice for CI/CD agents: Azure Pipelines, GitHub Actions self-hosted runners, Jenkins nodes, and Docker build containers. Your pipeline calls MSBuild or dotnet build exactly as it would on a developer machine.</p>
+          <h2>Silent Installation with Exactly What You Need</h2>
+          <figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=server%20room%20build%20pipeline&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Visual Studio Build Tools: CI/CD Build Agents Without the Full IDE" style="border-radius:9px"></figure>
+          <!-- ADSLOT:article_mid_300x250 -->
+          <p>The installer's --add flags select workloads and components, making installs fully scriptable. Identify the smallest workload set that builds your solution by checking each project's target and references, then codify it in your agent provisioning script.</p>
+          <pre><code>vs_BuildTools.exe --quiet --wait --norestart ^
+  --add Microsoft.VisualStudio.Workload.ManagedDesktopBuildTools ^
+  --add Microsoft.VisualStudio.Workload.WebBuildTools ^
+  --add Microsoft.VisualStudio.Workload.VCTools;includeRecommended ^
+  --add Microsoft.Net.Component.4.8.1.SDK</code></pre>
+          <p>Record the exact command in version control next to your agent image or Dockerfile. When a project adds a component (a new targeting pack, a newer Windows SDK), update the provisioning script, not the agent by hand, so every agent stays reproducible.</p>
+          <h2>Sizing and Maintaining CI Agents</h2>
+          <p>Start from the base OS image, install the Build Tools with your workload list, cache the NuGet global packages folder, and snapshot the result (VM image, container layer, or cloud agent template). Expect 2-8 GB for .NET-only agents and considerably more when the C++ toolset or Android/iOS workloads are included.</p>
+          <p>Two maintenance rules prevent classic build-agent rot. First, pin SDK versions with a global.json so agents use the SDK your repo expects, and update that pin deliberately. Second, periodically rebuild agents from the provisioning script rather than patching them in place; drift between agents is the leading cause of builds that pass on one machine and fail on another.</p>
+          <h2>Licensing: Build Servers vs Developer Seats</h2>
+          <p>Build machines require their own licensing treatment. Visual Studio Professional and Enterprise include build server licenses, and for some products the Build Tools themselves are freely installable on build agents; but the rules differ per component and per edition, so verify the current Visual Studio licensing white paper for your mix.</p>
+          <p>In practice: count build agents as part of your Visual Studio licensing footprint, do not assume your developer Community edition covers the CI server, and document the license basis for each agent in your infrastructure repository. Audits always start there.</p>
+          <h2>Build Tools in Containers</h2>
+          <p>For isolated, disposable builds, Microsoft publishes Docker images with the Build Tools preinstalled, and you can bake your own from the installer script inside a mcr.microsoft.com/windows/servercore or server base image. A typical .NET pipeline builds in a container, publishes artifacts to a volume, and discards the container, guaranteeing clean environments per run.</p>
+          <pre><code>FROM mcr.microsoft.com/dotnet/sdk:10.0
+WORKDIR /src
+COPY . .
+RUN dotnet restore
+RUN dotnet publish -c Release -o /out</code></pre>
+          <p>Containers also sidestep version drift entirely: the image tag is the environment. For C++ projects, container images with the VC++ toolset remove the last excuse for works-on-my-agent failures.</p>
+          <h2>Conclusion</h2>
+          <p>The Visual Studio Build Tools are the professional way to provision build capacity: scriptable, lean, and identical to what your developers compile with. Define your workload list once, bake it into images or containers, license agents correctly, and your CI pipeline becomes boring, in the best possible way.</p>
+          <h2>Frequently Asked Questions</h2>
+          <h3>Do I need a Visual Studio license to use the Build Tools?</h3>
+          <p>Developer seats follow normal Visual Studio licensing. Build servers and agents have their own licensing rules defined in the Visual Studio licensing white paper; Professional and Enterprise subscriptions include build server rights, and verify current terms for your edition mix.</p>
+          <h3>Can the Build Tools compile C++?</h3>
+          <p>Yes. Adding the VCTools workload installs the full MSVC compiler toolset, Windows SDK, and related components, enabling C++ builds from MSBuild or the command line without the IDE.</p>
+          <h3>How is this different from installing the .NET SDK?</h3>
+          <p>The .NET SDK alone builds modern .NET apps. The Build Tools add MSBuild with Visual Studio targets, .NET Framework targeting packs, the C++ toolset, and other components that full-framework and mixed solutions require.</p>
+          <h3>Can I install Build Tools on a Docker container?</h3>
+          <p>Yes. Microsoft documents Dockerfile patterns for installing the Build Tools in Windows container images, and publishes prebuilt images for common scenarios.</p>
+          <h3>How do I keep agents at a specific SDK version?</h3>
+          <p>Pin with a global.json file in the repository specifying the SDK version. Agents with multiple SDKs installed will honor the pin, and you update it deliberately per repository.</p>
+          </div>
+        </div>
+      </div>
+      <section class="related-posts section">
+        <div class="container">
+          <h2 class="section-title">You might also like</h2>
+          <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card  data-published="true">
+            <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=visual%20studio%202026%20IDE&w=474&h=274&c=7" loading="lazy"
+                     alt="Visual Studio 2026 Review: Features, Performance, and Upgrade Guide">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__content-link">
+                <h2 class="post-card__title">Visual Studio 2026 Review: Features, Performance, and Upgrade Guide</h2>
+                <p class="post-card__excerpt">Visual Studio 2026 is the newest major release of Microsoft's flagship integrated development environment, and it represents the most significant redesign of the product in years. &hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/visual-studio/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio</a>
+                <span class="post-card__meta post-card__meta--date">July 14, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card  data-published="true">
+            <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=visual%20studio%20code%20editor%20laptop&w=474&h=274&c=7" loading="lazy"
+                     alt="Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__content-link">
+                <h2 class="post-card__title">Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts</h2>
+                <p class="post-card__excerpt">Visual Studio Code has become the default editor for millions of developers because it is free, fast, and endlessly customizable. But a fresh VS Code install is intentionally bare:&hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">August 2, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card  data-published="true">
+            <a href="../visual-studio-mac/visual-studio-for-mac-discontinued-what-happened-alternatives.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=macbook%20developer%20coding%20desk&w=474&h=274&c=7" loading="lazy"
+                     alt="Visual Studio for Mac Is Discontinued: What Happened and What to Use Now">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../visual-studio-mac/visual-studio-for-mac-discontinued-what-happened-alternatives.html" class="post-card__content-link">
+                <h2 class="post-card__title">Visual Studio for Mac Is Discontinued: What Happened and What to Use Now</h2>
+                <p class="post-card__excerpt">Microsoft officially retired Visual Studio for Mac, leaving macOS developers who built with .NET and Xamarin searching for a new home. The retirement did not arrive without warning&hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 19, 2026</span>
+              </div>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+    </main>
+<footer class="site-footer"><nav class="site-footer__nav"><a href="../">Home</a><a href="../page/dmca.html">DMCA</a><a href="../page/contact.html">Contact</a><a href="../page/privacy-policy.html">Privacy Policy</a><a href="../page/copyright.html">Copyright</a></nav><div class="site-footer__copyright">Copyright &copy; 2026 DevTools Journal</div></footer>
+  </div>
+  <script src="../assets/kutukdev/js/main.js"></script>
+  <script src="../assets/kutukdev/js/demo-schedule.js"></script>
+</body>
+</html>

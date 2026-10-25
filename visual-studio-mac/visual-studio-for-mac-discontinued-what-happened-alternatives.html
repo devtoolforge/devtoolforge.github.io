@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Studio for Mac Is Discontinued: What Happened and What to Use Now</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Microsoft developer tools, explained — DevTools Journal demo build. This demo is intentionally noindex/nofollow.">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Visual Studio for Mac Is Discontinued: What Happened and What to Use Now">
+  <meta property="og:type" content="article">
+  <meta name="generator" content="DevTools Journal demo generator">
+
+  <script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "BlogPosting", "headline": "Visual Studio for Mac Is Discontinued: What Happened and What to Use Now", "description": "Microsoft officially retired Visual Studio for Mac, leaving macOS developers who built with .NET and Xamarin searching for a new home. The retirement did not ar", "image": "https://tse1.mm.bing.net/th?q=macbook%20developer%20coding%20desk&w=474&h=274&c=7", "datePublished": "2026-08-19", "dateModified": "2026-08-19", "wordCount": 734, "author": {"@type": "Organization", "name": "DevTools Journal"}, "publisher": {"@type": "Organization", "name": "DevTools Journal"} }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header class="site-header">
+      <div class="site-header__container">
+        <button class="site-header__hamburger" aria-label="Open menu"
+                aria-expanded="false" data-site-action-trigger="navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <a class="site-header__logo" href="../">DevTools Journal</a>
+      </div>
+    </header>
+    <div class="site-actions" aria-hidden="true">
+      <div class="site-actions__backdrop"></div>
+      <nav class="site-actions__panel" aria-label="Main navigation">
+        <div class="site-actions__top">
+          <p class="site-actions__title">Menu</p>
+          <button class="site-actions__close" data-close-site-actions aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="site-actions__menu">
+          <li><a href="../">Home</a></li>
+      <li><a href="../category/visual-studio/">Visual Studio</a></li>
+      <li><a href="../category/visual-studio-code/">Visual Studio Code</a></li>
+      <li><a href="../category/visual-studio-mac/">Visual Studio for Mac</a></li>
+      <li><a href="../category/dotnet/">.NET</a></li>
+      <li><a href="../category/dotnet-framework/">.NET Framework</a></li>
+      <li><a href="../category/aspnet-core/">ASP.NET Core</a></li>
+      <li><a href="../category/csharp/">C#</a></li>
+      <li><a href="../category/fsharp/">F#</a></li>
+      <li><a href="../category/typescript/">TypeScript</a></li>
+      <li><a href="../category/microsoft-build-tools/">Microsoft Build Tools</a></li>
+      <li><a href="../category/msbuild/">MSBuild</a></li>
+        </ul>
+      </nav>
+    </div>
+    <main id="main" class="site-main">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=macbook%20developer%20coding%20desk&w=474&h=274&c=7" alt="Visual Studio for Mac Is Discontinued: What Happened and What to Use Now">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">Visual Studio for Mac Is Discontinued: What Happened and What to Use Now</h1>
+            <p class="article-header__excerpt">Microsoft officially retired Visual Studio for Mac, leaving macOS developers who built with .NET and Xamarin searching for a new home. The retirement did not arrive without warning: support timelines were announced well in advance, Microsoft published a migration guide, and mainstream support wound down through 2024 with final servicing updates ending in 2026.</p>
+            <div class="article-header__footer">
+              <a href="../category/visual-studio-mac/" class="article-header__meta article-header__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+              <span class="article-header__meta article-header__meta--date">August 19, 2026</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section">
+        <div class="container">
+          <div class="article-content">
+          <p>Microsoft officially retired Visual Studio for Mac, leaving macOS developers who built with .NET and Xamarin searching for a new home. The retirement did not arrive without warning: support timelines were announced well in advance, Microsoft published a migration guide, and mainstream support wound down through 2024 with final servicing updates ending in 2026.</p>
+          <p>This article explains why Visual Studio for Mac was discontinued, what the exact support dates mean for teams still running it, and which alternatives now serve .NET development on macOS. The good news is that the macOS .NET story is stronger than ever; it simply lives in different tools today.</p>
+          
+          <h2>Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Product name</strong></td><td>Visual Studio for Mac</td></tr>
+              <tr><td><strong>Status</strong></td><td>Discontinued / retired</td></tr>
+              <tr><td><strong>Final major version</strong></td><td>17.6 (based on MonoDevelop)</td></tr>
+              <tr><td><strong>Retirement announced</strong></td><td>August 2023</td></tr>
+              <tr><td><strong>Mainstream support ended</strong></td><td>August 31, 2024</td></tr>
+              <tr><td><strong>Final servicing ended</strong></td><td>2026</td></tr>
+              <tr><td><strong>Microsoft's suggested path</strong></td><td>VS Code + C# Dev Kit or Visual Studio on Windows</td></tr>
+              <tr><td><strong>Mac .NET today</strong></td><td>VS Code, Rider, command-line .NET SDK</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h2>What Was Visual Studio for Mac?</h2>
+          <p>Visual Studio for Mac was a macOS IDE for .NET development that evolved from Xamarin Studio, which itself descended from the open-source MonoDevelop project. It provided solution management, a Mac-native UI, Xamarin mobile tooling, and debugger support for .NET projects, positioning itself as the way to build iOS and Android apps with C# entirely on a Mac.</p>
+          <p>Despite a loyal user base, the product faced persistent engineering challenges: maintaining a full IDE on top of the aging MonoDevelop codebase while every other Microsoft tool moved to newer foundations. As VS Code's C# tooling matured and the .NET SDK became genuinely cross-platform, the separate Mac IDE duplicated effort that Microsoft could invest elsewhere.</p>
+          <h2>Why Microsoft Discontinued It</h2>
+          <figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=macbook%20developer%20coding%20desk&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Visual Studio for Mac Is Discontinued: What Happened and What to Use Now" style="border-radius:9px"></figure>
+          <!-- ADSLOT:article_mid_300x250 -->
+          <p>Three forces converged. First, the MonoDevelop-derived architecture was expensive to modernize, and features like Roslyn-powered refactoring arrived late compared with Windows. Second, .NET itself became truly cross-platform: the modern .NET SDK runs everywhere, reducing the need for a dedicated Mac IDE. Third, VS Code with the C# Dev Kit now delivers a first-class .NET editing, debugging, and test experience on macOS at a fraction of the maintenance cost.</p>
+          <p>Microsoft's own guidance reflects that shift: the official migration path points developers to Visual Studio Code with the C# Dev Kit extension, or to Visual Studio on Windows via virtual machines and cloud options when the full IDE is essential.</p>
+          <h2>What the Retirement Means for Existing Users</h2>
+          <p>If you still have Visual Studio for Mac installed, the IDE keeps working, but there are no further fixes, security patches, or macOS compatibility updates. Each macOS release risks breaking unmaintained software, so treat continued use as temporary. Solutions and projects open perfectly in the alternatives, because the file formats (csproj, sln) are shared across the ecosystem.</p>
+          <p>Plan the migration in three steps: inventory your extensions and workflows, stand up the replacement tooling on a second machine or account, and move one solution at a time. Most Xamarin and .NET projects migrate in minutes; iOS provisioning and simulator workflows need the most attention.</p>
+          <h2>Best Alternatives on macOS in 2026</h2>
+          <ul>
+              <li>Visual Studio Code + C# Dev Kit: Microsoft's recommended path; solution explorer, debugger, test runner, and NuGet support, free of charge</li>
+              <li>JetBrains Rider: a full commercial IDE with outstanding .NET, Unity, and database tooling; the closest experience to a complete IDE on the Mac</li>
+              <li>Command-line .NET SDK + any editor: dotnet build, dotnet test, and dotnet publish work natively on macOS with no IDE dependency</li>
+              <li>Visual Studio on Windows VMs: Parallels or cloud Windows machines when you need Windows-only designers or enterprise tooling</li>
+              <li>GitHub Codespaces: full containerized dev environments in the cloud, edited from VS Code on the Mac</li>
+            </ul>
+          <p>For most developers the combination of VS Code with C# Dev Kit plus the .NET SDK covers everyday work. Rider remains the favorite for teams that want everything integrated, including profiler, database tools, and Unity support in one window.</p>
+          <h2>Migrating a .NET Solution: Practical Checklist</h2>
+          <p>Install the .NET SDK and confirm dotnet --info runs, open the solution folder in VS Code with C# Dev Kit, and let the solution explorer index projects. Restore NuGet packages, build from the terminal with dotnet build, and run tests with dotnet test. Xamarin.Forms projects should be upgraded to .NET MAUI first, which is a separate but well-documented migration.</p>
+          <p>Recreate your debug configurations in .vscode/launch.json, move code style rules from IDE settings into an .editorconfig file so they apply in any tool, and commit everything. From that point your repository is IDE-agnostic: teammates can choose VS Code, Rider, or a Windows Visual Studio without friction.</p>
+          <h2>Conclusion</h2>
+          <p>Visual Studio for Mac's retirement closed one chapter but not the macOS .NET story. With the modern .NET SDK, VS Code plus C# Dev Kit, and Rider, Mac developers have more capable options today than the retired IDE ever offered. Treat the deadline as an opportunity to modernize: move to .NET 10, adopt editor-agnostic project files, and make your workflow portable across every platform.</p>
+          <h2>Frequently Asked Questions</h2>
+          <h3>Can I still download Visual Studio for Mac?</h3>
+          <p>Existing installations continue to run, but Microsoft no longer distributes or updates the product for new users. The official download pages now redirect to the migration guidance for VS Code and other options.</p>
+          <h3>Will my projects still open after the IDE is retired?</h3>
+          <p>Yes. .NET projects are plain csproj and sln files shared by all tooling. They open in VS Code with C# Dev Kit, Rider, or Visual Studio on Windows without conversion.</p>
+          <h3>What should Xamarin mobile developers use now?</h3>
+          <p>Upgrade Xamarin projects to .NET MAUI, then develop on macOS with VS Code plus MAUI workloads or Rider. Visual Studio on Windows remains the most complete MAUI development environment.</p>
+          <h3>Is JetBrains Rider free?</h3>
+          <p>Rider is a paid product, but JetBrains offers free licenses for students, teachers, open-source projects, and non-commercial use, plus a free trial for evaluation.</p>
+          <h3>Does .NET really run natively on Apple Silicon?</h3>
+          <p>Yes. The .NET SDK and runtime ship native arm64 builds for Apple Silicon, and Visual Studio Code, C# Dev Kit, and Rider all run natively on M-series Macs with excellent performance.</p>
+          </div>
+        </div>
+      </div>
+      <section class="related-posts section">
+        <div class="container">
+          <h2 class="section-title">You might also like</h2>
+          <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card  data-published="true">
+            <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=visual%20studio%202026%20IDE&w=474&h=274&c=7" loading="lazy"
+                     alt="Visual Studio 2026 Review: Features, Performance, and Upgrade Guide">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__content-link">
+                <h2 class="post-card__title">Visual Studio 2026 Review: Features, Performance, and Upgrade Guide</h2>
+                <p class="post-card__excerpt">Visual Studio 2026 is the newest major release of Microsoft's flagship integrated development environment, and it represents the most significant redesign of the product in years. &hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/visual-studio/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio</a>
+                <span class="post-card__meta post-card__meta--date">July 14, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card  data-published="true">
+            <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=visual%20studio%20code%20editor%20laptop&w=474&h=274&c=7" loading="lazy"
+                     alt="Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__content-link">
+                <h2 class="post-card__title">Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts</h2>
+                <p class="post-card__excerpt">Visual Studio Code has become the default editor for millions of developers because it is free, fast, and endlessly customizable. But a fresh VS Code install is intentionally bare:&hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">August 2, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true" data-demo-card  data-published="true">
+            <a href="../dotnet/dotnet-10-explained-lts-features-support-dates-upgrade-path.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=dotnet%20programming%20code%20screen&w=474&h=274&c=7" loading="lazy"
+                     alt=".NET 10 Explained: LTS Features, Support Dates, and Upgrade Path">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../dotnet/dotnet-10-explained-lts-features-support-dates-upgrade-path.html" class="post-card__content-link">
+                <h2 class="post-card__title">.NET 10 Explained: LTS Features, Support Dates, and Upgrade Path</h2>
+                <p class="post-card__excerpt">.NET 10 is Microsoft's eleventh major unified .NET release and its current Long-Term Support (LTS) platform. Shipped on November 11, 2025 alongside C# 14, it carries three years of&hellip;</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">September 3, 2026</span>
+              </div>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+    </main>
+<footer class="site-footer"><nav class="site-footer__nav"><a href="../">Home</a><a href="../page/dmca.html">DMCA</a><a href="../page/contact.html">Contact</a><a href="../page/privacy-policy.html">Privacy Policy</a><a href="../page/copyright.html">Copyright</a></nav><div class="site-footer__copyright">Copyright &copy; 2026 DevTools Journal</div></footer>
+  </div>
+  <script src="../assets/kutukdev/js/main.js"></script>
+  <script src="../assets/kutukdev/js/demo-schedule.js"></script>
+</body>
+</html>
