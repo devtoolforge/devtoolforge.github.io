@@ -14,13 +14,14 @@
   <meta property="og:title" content=".NET Framework — DevTools Journal">
   <meta property="og:description" content="Articles, guides, and how-tos filed under .NET Framework.">
   <meta property="og:url" content="https://devtoolforge.github.io/category/dotnet-framework/">
-  <meta property="og:image" content="../../assets/kutukdev/images/icon128.png">
+  <meta property="og:image" content="https://devtoolforge.github.io/assets/kutukdev/images/icon128.png">
+  <meta property="og:image:alt" content=".NET Framework — DevTools Journal">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content=".NET Framework — DevTools Journal">
   <meta name="twitter:description" content="Articles, guides, and how-tos filed under .NET Framework.">
-  <meta name="twitter:image" content="../../assets/kutukdev/images/icon128.png">
+  <meta name="twitter:image" content="https://devtoolforge.github.io/assets/kutukdev/images/icon128.png">
     <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
@@ -32,9 +33,53 @@
   <link rel="preload" as="style" href="../../assets/kutukdev/css/style.css">
   <link rel="stylesheet" href="../../assets/kutukdev/css/style.css">
   <link rel="preconnect" href="https://tse1.mm.bing.net">
-  <style>:root{--ghost-accent-color:#e60073;}
-  .site-footer .nav-secondary__menu{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:center;gap:.5rem 1.75rem;list-style:none;margin:0 0 .75rem;padding:0}
-  .site-footer .nav-secondary__menu-item{display:inline-block;margin:0}</style>
+  <style>
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:400;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-italic.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:600;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600italic.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:700;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700italic.woff2') format('woff2')}
+    :root {
+      --kutak--font-family--base:'Source Sans Pro',Helvetica,sans-serif;
+      --kutak--font-family--headings:'Source Sans Pro',Helvetica,sans-serif;
+      --kutak--font-family--elements:'Source Sans Pro',Helvetica,sans-serif;
+      --kutak--font-weight--base:400;
+      --kutak--font-weight--base-bold:700;
+      --kutak--font-weight--headings:700;
+      --kutak--font-weight--headings-small:600;
+      --kutak--font-weight--elements:600;
+    }
+  </style>
+  <style>:root {--ghost-accent-color: #e60073;}</style>
+  <style>
+.capital{text-transform: capitalize;}
+    select {
+      padding:0;border:none;border-right:2px solid var(--kutak--color--border);
+      border-radius:var(--kutak--radius--s);outline:none;width:fit-content;
+      padding-right: 0.3rem;padding-left:0.5rem;text-align: center;text-transform: capitalize;
+      appearance:button;color:#fff;background-color:var(--kutak--color--primary);
+      background-image: none;line-height: 1.4;height: 2.7rem;
+      font-weight:var(--kutak--font-weight--elements);font-size: var(--kutak--font-size--2xs)
+    }
+    select option{border-radius: 5px;}
+
+    .hide{display:none;visibility:hidden}
+    .popbox{position:fixed;top:0;left:0;bottom:0;width:100%;z-index:1000000}
+    .pop-content{display:block;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;box-shadow:0 3px 20px 0 rgba(0,0,0,.5)}
+    .popcontent{padding:20px;background:#fff;border-radius:5px;overflow:hidden}
+    .pop-overlay{position:absolute;top:0;left:0;bottom:0;width:100%;z-index:1;background:rgb(255 255 255 / 93%)}
+    .popbox-close-button{position:absolute;width:28px;height:28px;line-height:28px;text-align:center;top:-14px;right:-14px;color:#c82333;background-color:#fff;box-shadow:0 -1px 1px 0 rgba(0,0,0,.2);border:none;border-radius:50%;cursor:pointer;font-size:28px;font-weight:700;padding:0}
+    .flowbox{position:relative;overflow:hidden}
+    @media screen and (max-width:840px){.pop-content{width:90%;height:auto;top:30% !important}.popcontent img{height:auto}}
+    .image-parent{max-width: 40px;}
+    .dimage{display: block;margin-left: auto;margin-right: auto;width: 100%;height: auto;}
+    .ddimage{display: block;margin-left: auto;margin-right: auto;max-width: 100%;height: auto;}
+    .img-caption{text-align:center}
+    .mynav{display:inline-block;border:1px solid #e60073;border-radius:3px;padding:5px;margin-bottom:5px;}
+    p::first-letter{text-transform: capitalize;}
+  .table-scroll{overflow-x:auto}
+  </style>
   <script type="application/ld+json">
   { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/dotnet-framework/", "url": "https://devtoolforge.github.io/category/dotnet-framework/", "name": ".NET Framework" } }] }
   </script>
@@ -44,7 +89,7 @@
   <div class="site" id="site">
     <header id="site-header" class="site-header">
   <span class="site-header__bg"></span>
-  <div class="site-header__container">
+  <div class="site-header__container container">
     <button class="site-header__hamburger" data-site-action-trigger="navigation"
             aria-label="Open Menu" aria-expanded="false"
             aria-controls="site-actions-navigation">
@@ -57,7 +102,7 @@
   <div class="site-actions">
     <span class="site-actions__backdrop" data-close-site-actions></span>
     <span class="site-actions__bg"></span>
-    <div class="site-actions__container">
+    <div class="site-actions__container container">
       <div id="site-actions-navigation" class="site-actions__navigation">
 <nav class="nav-secondary">
   <ul class="nav-secondary__menu">
@@ -84,15 +129,15 @@
   </div>
 </header>
     <main id="main" class="site-main">
-      <header class="page-header section" data-section="first">
-        <div class="container">
-          <h1 class="page-header__title">.NET Framework</h1>
-          <p class="page-header__desc">Articles, guides, and how-tos filed under .NET Framework.</p>
-        </div>
-      </header>
-      <section class="section">
-        <div class="container">
-          <div class="posts-feed" data-layout-grid="columns">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <section class="site-content section">
+        <h1 class="category-title">.NET Framework</h1>
+        <div class="posts-feed" data-layout-grid="columns">
           <article class="post-card post" data-layout="vertical"
                    data-has-featured-image="true">
             <a href="../../dotnet-framework/understanding-4-8-1-and-support-status-a-practical-deep-dive.html" class="post-card__media" tabindex="-1">
@@ -333,1450 +378,1167 @@
               </div>
             </div>
           </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/machine-config-and-server-settings-troubleshooting-10-fixes-for-everyday.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=machine.config%20and%20server%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Machine.config and server settings Troubleshooting: 10 Fixes for Everyday Problems">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/machine-config-and-server-settings-troubleshooting-10-fixes-for-everyday.html" class="post-card__content-link">
-                <h2 class="post-card__title">Machine.config and server settings Troubleshooting: 10 Fixes for Everyday Problems</h2>
-                <p class="post-card__excerpt">Today's deep dive: Machine.config and server settings in .NET Framework — machine-wide settings that silently shape Framework apps. A server's machine.config can explain behavior t…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">October 12, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/the-gac-setup-configuration-and-optimization-with-real-examples.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=the%20gac%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="The gac: Setup, Configuration, and Optimization (With Real Examples)">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/the-gac-setup-configuration-and-optimization-with-real-examples.html" class="post-card__content-link">
-                <h2 class="post-card__title">The gac: Setup, Configuration, and Optimization (With Real Examples)</h2>
-                <p class="post-card__excerpt">Today's deep dive: The gac in .NET Framework — the global assembly cache for machine-wide shared assemblies. Understanding it explains many legacy dependency mysteries. Teams that …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">October 11, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/binding-redirects-migration-guide-move-without-breaking-anything.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=binding%20redirects%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Binding redirects Migration Guide: Move Without Breaking Anything">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/binding-redirects-migration-guide-move-without-breaking-anything.html" class="post-card__content-link">
-                <h2 class="post-card__title">Binding redirects Migration Guide: Move Without Breaking Anything</h2>
-                <p class="post-card__excerpt">Today's deep dive: Binding redirects in .NET Framework — runtime assembly version unification in app.config. They resolve the classic Could not load file or assembly version mismat…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">October 10, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/mastering-strong-naming-from-basics-to-advanced.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=strong%20naming%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Mastering Strong naming: From Basics to Advanced">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/mastering-strong-naming-from-basics-to-advanced.html" class="post-card__content-link">
-                <h2 class="post-card__title">Mastering Strong naming: From Basics to Advanced</h2>
-                <p class="post-card__excerpt">Today's deep dive: Strong naming in .NET Framework — signed assemblies with identity used by Framework tooling. Some legacy partners and installers still require strong names. Team…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">October 9, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/packages-config-vs-packagereference-essentials-12-tips-that-save-hours.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=packages.config%20vs%20packagereference%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Packages.config vs packagereference Essentials: 12 Tips That Save Hours">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/packages-config-vs-packagereference-essentials-12-tips-that-save-hours.html" class="post-card__content-link">
-                <h2 class="post-card__title">Packages.config vs packagereference Essentials: 12 Tips That Save Hours</h2>
-                <p class="post-card__excerpt">Today's deep dive: Packages.config vs packagereference in .NET Framework — the old and new NuGet manifest styles. PackageReference unifies dependency management with modern restore…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">October 8, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/the-smart-way-to-master-ef6-vs-ef-core.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=ef6%20vs%20ef%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="The Smart Way to master Ef6 vs ef core">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/the-smart-way-to-master-ef6-vs-ef-core.html" class="post-card__content-link">
-                <h2 class="post-card__title">The Smart Way to master Ef6 vs ef core</h2>
-                <p class="post-card__excerpt">Today's deep dive: Ef6 vs ef core in .NET Framework — the mature Framework ORM versus the modern cross-platform EF Core. EF Core brings performance and new databases but behavior d…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">October 6, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/mastering-msbuild-on-framework-projects-from-basics-to-advanced.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=msbuild%20on%20framework%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Mastering Msbuild on framework projects: From Basics to Advanced">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/mastering-msbuild-on-framework-projects-from-basics-to-advanced.html" class="post-card__content-link">
-                <h2 class="post-card__title">Mastering Msbuild on framework projects: From Basics to Advanced</h2>
-                <p class="post-card__excerpt">Today's deep dive: Msbuild on framework projects in .NET Framework — classic csproj with explicit includes and targets. These files still build fine; knowing their structure speeds…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">October 5, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/targeting-and-developer-packs-for-beginners-20-things-to-master-first.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=targeting%20and%20developer%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Targeting and developer packs for Beginners: 20 Things to Master First">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/targeting-and-developer-packs-for-beginners-20-things-to-master-first.html" class="post-card__content-link">
-                <h2 class="post-card__title">Targeting and developer packs for Beginners: 20 Things to Master First</h2>
-                <p class="post-card__excerpt">Today's deep dive: Targeting and developer packs in .NET Framework — targeting packs for building against a Framework version. Build machines need the matching developer pack or th…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">October 4, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/mastering-runtime-repair-from-basics-to-advanced.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=runtime%20repair%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Mastering Runtime repair: From Basics to Advanced">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/mastering-runtime-repair-from-basics-to-advanced.html" class="post-card__content-link">
-                <h2 class="post-card__title">Mastering Runtime repair: From Basics to Advanced</h2>
-                <p class="post-card__excerpt">Today's deep dive: Runtime repair in .NET Framework — fixing corrupted Framework installations on servers. A broken runtime explains random FileLoadException storms. Teams that tak…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">October 3, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/servicing-via-windows-update-setup-configuration-and-optimization.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=servicing%20via%20windows%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Servicing via windows update: Setup, Configuration, and Optimization">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/servicing-via-windows-update-setup-configuration-and-optimization.html" class="post-card__content-link">
-                <h2 class="post-card__title">Servicing via windows update: Setup, Configuration, and Optimization</h2>
-                <p class="post-card__excerpt">Today's deep dive: Servicing via windows update in .NET Framework — how Framework patches arrive through OS servicing. Patch cadence is tied to Patch Tuesday and server update ring…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">October 2, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/getting-started-with-32-bit-and-64-bit-considerations.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=32-bit%20and%2064-bit%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Getting Started with 32-bit and 64-bit considerations">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/getting-started-with-32-bit-and-64-bit-considerations.html" class="post-card__content-link">
-                <h2 class="post-card__title">Getting Started with 32-bit and 64-bit considerations</h2>
-                <p class="post-card__excerpt">Today's deep dive: 32-bit and 64-bit considerations in .NET Framework — platform target and prefer-32-bit behaviors. Memory limits and native interop depend on these flags. Teams t…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">October 1, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/the-smart-way-to-optimize-com-interop.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=com%20interop%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="The Smart Way to optimize Com interop">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/the-smart-way-to-optimize-com-interop.html" class="post-card__content-link">
-                <h2 class="post-card__title">The Smart Way to optimize Com interop</h2>
-                <p class="post-card__excerpt">Today's deep dive: Com interop in .NET Framework — calling legacy COM components from Framework apps. Many enterprise line-of-business apps still depend on COM. Teams that take it …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 30, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/getting-started-with-app-domains-vs-modern-isolation.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=app%20domains%20vs%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Getting Started with App domains vs modern isolation">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/getting-started-with-app-domains-vs-modern-isolation.html" class="post-card__content-link">
-                <h2 class="post-card__title">Getting Started with App domains vs modern isolation</h2>
-                <p class="post-card__excerpt">Today's deep dive: App domains vs modern isolation in .NET Framework — AppDomain is Framework-only; modern .NET uses processes or AssemblyLoadContext. Isolation designs must change…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 29, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/5-legacy-debugging-best-practices-every-developer-should-know.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=legacy%20debugging%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="5 Legacy debugging Best Practices Every Developer Should Know">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/5-legacy-debugging-best-practices-every-developer-should-know.html" class="post-card__content-link">
-                <h2 class="post-card__title">5 Legacy debugging Best Practices Every Developer Should Know</h2>
-                <p class="post-card__excerpt">Today's deep dive: Legacy debugging in .NET Framework — debugging Framework apps with modern and classic tooling. Older apps still deserve modern debugging productivity. Teams that…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 28, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/performance-comparisons-the-missing-manual.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=performance%20comparisons%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Performance comparisons: The Missing Manual">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/performance-comparisons-the-missing-manual.html" class="post-card__content-link">
-                <h2 class="post-card__title">Performance comparisons: The Missing Manual</h2>
-                <p class="post-card__excerpt">Today's deep dive: Performance comparisons in .NET Framework — measuring Framework vs modern .NET on the same workload. Upgrades often yield free throughput and memory wins. Teams …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 27, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/visual-studio-support-matrix-a-complete-guide-for-2026.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=visual%20studio%20support%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Visual studio support matrix: A Complete Guide for 2026">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/visual-studio-support-matrix-a-complete-guide-for-2026.html" class="post-card__content-link">
-                <h2 class="post-card__title">Visual studio support matrix: A Complete Guide for 2026</h2>
-                <p class="post-card__excerpt">Today's deep dive: Visual studio support matrix in .NET Framework — which IDE versions build which Framework targets. Toolchain mismatches cause mysterious build-only failures. Tea…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 25, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/iis-and-asp-net-hosting-vs-com-interop-which-should-you-use.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=iis%20and%20asp.net%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Iis and asp.net hosting vs Com interop: Which Should You Use?">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/iis-and-asp-net-hosting-vs-com-interop-which-should-you-use.html" class="post-card__content-link">
-                <h2 class="post-card__title">Iis and asp.net hosting vs Com interop: Which Should You Use?</h2>
-                <p class="post-card__excerpt">Today's deep dive: Iis and asp.net hosting in .NET Framework — hosting System.Web apps in IIS with app pools. App pool bitness, identity, and pipeline mode shape runtime behavior. …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 24, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/windows-services-on-framework-essentials-8-tips-that-save-hours.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=windows%20services%20on%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Windows services on framework Essentials: 8 Tips That Save Hours">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/windows-services-on-framework-essentials-8-tips-that-save-hours.html" class="post-card__content-link">
-                <h2 class="post-card__title">Windows services on framework Essentials: 8 Tips That Save Hours</h2>
-                <p class="post-card__excerpt">Today's deep dive: Windows services on framework in .NET Framework — ServiceBase-based background apps. Services migrate to Worker Service templates on modern .NET. Teams that take…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 23, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/clickonce-deployment-from-first-steps-to-production-with-real-examples.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=clickonce%20deployment%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Clickonce deployment: From First Steps to Production (With Real Examples)">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/clickonce-deployment-from-first-steps-to-production-with-real-examples.html" class="post-card__content-link">
-                <h2 class="post-card__title">Clickonce deployment: From First Steps to Production (With Real Examples)</h2>
-                <p class="post-card__excerpt">Today's deep dive: Clickonce deployment in .NET Framework — the Framework-era auto-update deployment tech. Still works for Framework; modern .NET supports ClickOnce too. Teams that…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 22, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/getting-started-with-known-migration-blockers.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=known%20migration%20blockers%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Getting Started with Known migration blockers">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/getting-started-with-known-migration-blockers.html" class="post-card__content-link">
-                <h2 class="post-card__title">Getting Started with Known migration blockers</h2>
-                <p class="post-card__excerpt">Today's deep dive: Known migration blockers in .NET Framework — patterns that must be redesigned rather than ported. Spotting blockers early prevents mid-migration despair. Teams t…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 21, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/scaling-staying-on-framework-safely-for-large-projects.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=staying%20on%20framework%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Scaling Staying on framework safely for Large Projects">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/scaling-staying-on-framework-safely-for-large-projects.html" class="post-card__content-link">
-                <h2 class="post-card__title">Scaling Staying on framework safely for Large Projects</h2>
-                <p class="post-card__excerpt">Today's deep dive: Staying on framework safely in .NET Framework — operating legacy apps with minimal risk. Some apps legitimately remain on Framework for years. Teams that take it…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 20, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/getting-started-with-license-and-lifecycle-tracking.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=license%20and%20lifecycle%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Getting Started with License and lifecycle tracking">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/getting-started-with-license-and-lifecycle-tracking.html" class="post-card__content-link">
-                <h2 class="post-card__title">Getting Started with License and lifecycle tracking</h2>
-                <p class="post-card__excerpt">Today's deep dive: License and lifecycle tracking in .NET Framework — knowing exact support end dates for components. Surprises at end of support are avoidable with a calendar. Tea…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 19, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/understanding-testing-legacy-migrations-a-practical-deep-dive.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=testing%20legacy%20migrations%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Understanding Testing legacy migrations: A Practical Deep Dive">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/understanding-testing-legacy-migrations-a-practical-deep-dive.html" class="post-card__content-link">
-                <h2 class="post-card__title">Understanding Testing legacy migrations: A Practical Deep Dive</h2>
-                <p class="post-card__excerpt">Today's deep dive: Testing legacy migrations in .NET Framework — verification strategies for Framework-to-modern ports. Confidence comes from characterizing tests written before th…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 18, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/4-8-1-and-support-status-anatomy-how-the-pieces-fit-together.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=4.8.1%20and%20support%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="4.8.1 and support status Anatomy: How the Pieces Fit Together">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/4-8-1-and-support-status-anatomy-how-the-pieces-fit-together.html" class="post-card__content-link">
-                <h2 class="post-card__title">4.8.1 and support status Anatomy: How the Pieces Fit Together</h2>
-                <p class="post-card__excerpt">Today's deep dive: 4.8.1 and support status in .NET Framework — the final .NET Framework release maintained as part of Windows. It receives servicing and security fixes but no new …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 17, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/a-field-guide-to-modern-net-vs-framework.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=modern%20.net%20vs%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="A Field Guide to Modern .net vs framework">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/a-field-guide-to-modern-net-vs-framework.html" class="post-card__content-link">
-                <h2 class="post-card__title">A Field Guide to Modern .net vs framework</h2>
-                <p class="post-card__excerpt">Today's deep dive: Modern .net vs framework in .NET Framework — the architectural split: side-by-side .NET vs the in-place Windows Framework. Modern .NET gets performance, C# featu…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 16, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/dotnet-framework-4-8-1-vs-modern-dotnet-which-runtime.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=legacy%20software%20migration%20computer&w=474&h=274&c=7" loading="lazy"
-                     alt=".NET Framework 4.8.1 vs Modern .NET: Which Runtime Do You Need?">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/dotnet-framework-4-8-1-vs-modern-dotnet-which-runtime.html" class="post-card__content-link">
-                <h2 class="post-card__title">.NET Framework 4.8.1 vs Modern .NET: Which Runtime Do You Need?</h2>
-                <p class="post-card__excerpt">Almost a decade after .NET Core launched, teams still ask the same question in architecture reviews: should this project target .NET Framework 4.8.1 or modern .NET? The legacy runt…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 15, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/practical-migration-assessment-for-everyday-net-framework-work.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=migration%20assessment%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Practical Migration assessment for Everyday .NET Framework Work">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/practical-migration-assessment-for-everyday-net-framework-work.html" class="post-card__content-link">
-                <h2 class="post-card__title">Practical Migration assessment for Everyday .NET Framework Work</h2>
-                <p class="post-card__excerpt">Today's deep dive: Migration assessment in .NET Framework — scanning a codebase for API and dependency compatibility. An hour of analysis prevents months of blind porting. Teams th…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 14, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/a-field-guide-to-try-convert.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=try-convert%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="A Field Guide to Try-convert">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/a-field-guide-to-try-convert.html" class="post-card__content-link">
-                <h2 class="post-card__title">A Field Guide to Try-convert</h2>
-                <p class="post-card__excerpt">Today's deep dive: Try-convert in .NET Framework — a tool that upgrades project files to SDK-style format. Legacy csproj files become readable and msbuild-compatible with modern bu…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 13, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/debugging-windows-compatibility-pack-a-practical-approach.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=windows%20compatibility%20pack%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Debugging Windows compatibility pack: A Practical Approach">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/debugging-windows-compatibility-pack-a-practical-approach.html" class="post-card__content-link">
-                <h2 class="post-card__title">Debugging Windows compatibility pack: A Practical Approach</h2>
-                <p class="post-card__excerpt">Today's deep dive: Windows compatibility pack in .NET Framework — NuGet packages providing Windows-only APIs on modern .NET. Registry, WMI, and EventLog code ports without immediat…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 12, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/winforms-on-modern-dotnet-vs-windows-compatibility-pack-which-should-you.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=winforms%20on%20modern%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Winforms on modern dotnet vs Windows compatibility pack: Which Should You Use? (With Real Examples)">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/winforms-on-modern-dotnet-vs-windows-compatibility-pack-which-should-you.html" class="post-card__content-link">
-                <h2 class="post-card__title">Winforms on modern dotnet vs Windows compatibility pack: Which Should You Use? (With Real Examples)</h2>
-                <p class="post-card__excerpt">Today's deep dive: Winforms on modern dotnet in .NET Framework — bringing Windows Forms apps forward with the updated designer. Decades of line-of-business UIs can run on the new r…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 11, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/wpf-migration-in-net-framework-setup-tips-and-workflows.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=wpf%20migration%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Wpf migration in .NET Framework: Setup, Tips, and Workflows">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/wpf-migration-in-net-framework-setup-tips-and-workflows.html" class="post-card__content-link">
-                <h2 class="post-card__title">Wpf migration in .NET Framework: Setup, Tips, and Workflows</h2>
-                <p class="post-card__excerpt">Today's deep dive: Wpf migration in .NET Framework — moving XAML desktop apps to the modern runtime. WPF on .NET 10 is actively supported with performance wins. Teams that take it …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 10, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/windows-workflow-foundation-reality-security-and-reliability-best-practi.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=windows%20workflow%20foundation%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Windows workflow foundation reality Security and Reliability Best Practices">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/windows-workflow-foundation-reality-security-and-reliability-best-practi.html" class="post-card__content-link">
-                <h2 class="post-card__title">Windows workflow foundation reality Security and Reliability Best Practices</h2>
-                <p class="post-card__excerpt">Today's deep dive: Windows workflow foundation reality in .NET Framework — WF is not ported to modern .NET. Workflow-based apps need special strategies: stay, replace, or rewrite. …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 9, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/practical-web-forms-reality-for-everyday-net-framework-work.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=web%20forms%20reality%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Practical Web forms reality for Everyday .NET Framework Work">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/practical-web-forms-reality-for-everyday-net-framework-work.html" class="post-card__content-link">
-                <h2 class="post-card__title">Practical Web forms reality for Everyday .NET Framework Work</h2>
-                <p class="post-card__excerpt">Today's deep dive: Web forms reality in .NET Framework — System.Web ASP.NET Web Forms has no direct modern .NET port. The UI model differs fundamentally from Razor-era frameworks. …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 8, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/how-to-learn-wcf-and-corewcf-step-by-step.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=wcf%20and%20corewcf%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="How to learn Wcf and corewcf (Step-by-Step)">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/how-to-learn-wcf-and-corewcf-step-by-step.html" class="post-card__content-link">
-                <h2 class="post-card__title">How to learn Wcf and corewcf (Step-by-Step)</h2>
-                <p class="post-card__excerpt">Today's deep dive: Wcf and corewcf in .NET Framework — moving WCF services; CoreWCF provides a supported subset. Long-lived SOAP contracts can survive with a modern host. Teams tha…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 7, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/app-config-vs-appsettings-pitfalls-what-the-docs-don-t-tell-you.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=app.config%20vs%20appsettings%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="App.config vs appsettings Pitfalls: What the Docs Don't Tell You">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/app-config-vs-appsettings-pitfalls-what-the-docs-don-t-tell-you.html" class="post-card__content-link">
-                <h2 class="post-card__title">App.config vs appsettings Pitfalls: What the Docs Don't Tell You</h2>
-                <p class="post-card__excerpt">Today's deep dive: App.config vs appsettings in .NET Framework — XML configuration on Framework versus JSON layered config on modern .NET. Config migration is mechanical but behavi…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 6, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/practical-machine-config-and-server-settings-for-everyday-net-framework.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=machine.config%20and%20server%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Practical Machine.config and server settings for Everyday .NET Framework Work">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/practical-machine-config-and-server-settings-for-everyday-net-framework.html" class="post-card__content-link">
-                <h2 class="post-card__title">Practical Machine.config and server settings for Everyday .NET Framework Work</h2>
-                <p class="post-card__excerpt">Today's deep dive: Machine.config and server settings in .NET Framework — machine-wide settings that silently shape Framework apps. A server's machine.config can explain behavior t…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 5, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/how-to-optimize-the-gac-step-by-step.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=the%20gac%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="How to optimize The gac (Step-by-Step)">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/how-to-optimize-the-gac-step-by-step.html" class="post-card__content-link">
-                <h2 class="post-card__title">How to optimize The gac (Step-by-Step)</h2>
-                <p class="post-card__excerpt">Today's deep dive: The gac in .NET Framework — the global assembly cache for machine-wide shared assemblies. Understanding it explains many legacy dependency mysteries. Teams that …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 3, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/scaling-binding-redirects-for-large-projects.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=binding%20redirects%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Scaling Binding redirects for Large Projects">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/scaling-binding-redirects-for-large-projects.html" class="post-card__content-link">
-                <h2 class="post-card__title">Scaling Binding redirects for Large Projects</h2>
-                <p class="post-card__excerpt">Today's deep dive: Binding redirects in .NET Framework — runtime assembly version unification in app.config. They resolve the classic Could not load file or assembly version mismat…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 2, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/advanced-strong-naming-techniques-for-2026.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=strong%20naming%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Advanced Strong naming Techniques for 2026">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/advanced-strong-naming-techniques-for-2026.html" class="post-card__content-link">
-                <h2 class="post-card__title">Advanced Strong naming Techniques for 2026</h2>
-                <p class="post-card__excerpt">Today's deep dive: Strong naming in .NET Framework — signed assemblies with identity used by Framework tooling. Some legacy partners and installers still require strong names. Team…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">September 1, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/packages-config-vs-packagereference-essentials-7-tips-that-save-hours.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=packages.config%20vs%20packagereference%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Packages.config vs packagereference Essentials: 7 Tips That Save Hours">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/packages-config-vs-packagereference-essentials-7-tips-that-save-hours.html" class="post-card__content-link">
-                <h2 class="post-card__title">Packages.config vs packagereference Essentials: 7 Tips That Save Hours</h2>
-                <p class="post-card__excerpt">Today's deep dive: Packages.config vs packagereference in .NET Framework — the old and new NuGet manifest styles. PackageReference unifies dependency management with modern restore…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 31, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/ef6-vs-ef-core-setup-configuration-and-optimization.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=ef6%20vs%20ef%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Ef6 vs ef core: Setup, Configuration, and Optimization">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/ef6-vs-ef-core-setup-configuration-and-optimization.html" class="post-card__content-link">
-                <h2 class="post-card__title">Ef6 vs ef core: Setup, Configuration, and Optimization</h2>
-                <p class="post-card__excerpt">Today's deep dive: Ef6 vs ef core in .NET Framework — the mature Framework ORM versus the modern cross-platform EF Core. EF Core brings performance and new databases but behavior d…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 30, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/debugging-msbuild-on-framework-projects-a-practical-approach.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=msbuild%20on%20framework%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Debugging Msbuild on framework projects: A Practical Approach">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/debugging-msbuild-on-framework-projects-a-practical-approach.html" class="post-card__content-link">
-                <h2 class="post-card__title">Debugging Msbuild on framework projects: A Practical Approach</h2>
-                <p class="post-card__excerpt">Today's deep dive: Msbuild on framework projects in .NET Framework — classic csproj with explicit includes and targets. These files still build fine; knowing their structure speeds…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 29, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/targeting-and-developer-packs-migration-guide-move-without-breaking-anyt.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=targeting%20and%20developer%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Targeting and developer packs Migration Guide: Move Without Breaking Anything">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/targeting-and-developer-packs-migration-guide-move-without-breaking-anyt.html" class="post-card__content-link">
-                <h2 class="post-card__title">Targeting and developer packs Migration Guide: Move Without Breaking Anything</h2>
-                <p class="post-card__excerpt">Today's deep dive: Targeting and developer packs in .NET Framework — targeting packs for building against a Framework version. Build machines need the matching developer pack or th…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 28, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/runtime-repair-migration-guide-move-without-breaking-anything.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=runtime%20repair%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Runtime repair Migration Guide: Move Without Breaking Anything">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/runtime-repair-migration-guide-move-without-breaking-anything.html" class="post-card__content-link">
-                <h2 class="post-card__title">Runtime repair Migration Guide: Move Without Breaking Anything</h2>
-                <p class="post-card__excerpt">Today's deep dive: Runtime repair in .NET Framework — fixing corrupted Framework installations on servers. A broken runtime explains random FileLoadException storms. Teams that tak…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 27, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/servicing-via-windows-update-the-missing-manual.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=servicing%20via%20windows%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Servicing via windows update: The Missing Manual">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/servicing-via-windows-update-the-missing-manual.html" class="post-card__content-link">
-                <h2 class="post-card__title">Servicing via windows update: The Missing Manual</h2>
-                <p class="post-card__excerpt">Today's deep dive: Servicing via windows update in .NET Framework — how Framework patches arrive through OS servicing. Patch cadence is tied to Patch Tuesday and server update ring…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 26, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/common-32-bit-and-64-bit-considerations-mistakes-and-how-to-fix-them-wit.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=32-bit%20and%2064-bit%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Common 32-bit and 64-bit considerations Mistakes and How to Fix Them (With Real Examples)">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/common-32-bit-and-64-bit-considerations-mistakes-and-how-to-fix-them-wit.html" class="post-card__content-link">
-                <h2 class="post-card__title">Common 32-bit and 64-bit considerations Mistakes and How to Fix Them (With Real Examples)</h2>
-                <p class="post-card__excerpt">Today's deep dive: 32-bit and 64-bit considerations in .NET Framework — platform target and prefer-32-bit behaviors. Memory limits and native interop depend on these flags. Teams t…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 25, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/20-com-interop-shortcuts-you-will-use-every-day.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=com%20interop%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="20 Com interop Shortcuts You Will Use Every Day">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/20-com-interop-shortcuts-you-will-use-every-day.html" class="post-card__content-link">
-                <h2 class="post-card__title">20 Com interop Shortcuts You Will Use Every Day</h2>
-                <p class="post-card__excerpt">Today's deep dive: Com interop in .NET Framework — calling legacy COM components from Framework apps. Many enterprise line-of-business apps still depend on COM. Teams that take it …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 23, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/scaling-app-domains-vs-modern-isolation-for-large-projects.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=app%20domains%20vs%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Scaling App domains vs modern isolation for Large Projects">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/scaling-app-domains-vs-modern-isolation-for-large-projects.html" class="post-card__content-link">
-                <h2 class="post-card__title">Scaling App domains vs modern isolation for Large Projects</h2>
-                <p class="post-card__excerpt">Today's deep dive: App domains vs modern isolation in .NET Framework — AppDomain is Framework-only; modern .NET uses processes or AssemblyLoadContext. Isolation designs must change…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 22, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/legacy-debugging-the-missing-manual.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=legacy%20debugging%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Legacy debugging: The Missing Manual">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/legacy-debugging-the-missing-manual.html" class="post-card__content-link">
-                <h2 class="post-card__title">Legacy debugging: The Missing Manual</h2>
-                <p class="post-card__excerpt">Today's deep dive: Legacy debugging in .NET Framework — debugging Framework apps with modern and classic tooling. Older apps still deserve modern debugging productivity. Teams that…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 21, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/performance-comparisons-security-and-reliability-best-practices.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=performance%20comparisons%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Performance comparisons Security and Reliability Best Practices">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/performance-comparisons-security-and-reliability-best-practices.html" class="post-card__content-link">
-                <h2 class="post-card__title">Performance comparisons Security and Reliability Best Practices</h2>
-                <p class="post-card__excerpt">Today's deep dive: Performance comparisons in .NET Framework — measuring Framework vs modern .NET on the same workload. Upgrades often yield free throughput and memory wins. Teams …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 20, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/visual-studio-support-matrix-performance-tuning-practical-tips-that-work.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=visual%20studio%20support%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Visual studio support matrix Performance Tuning: Practical Tips That Work">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/visual-studio-support-matrix-performance-tuning-practical-tips-that-work.html" class="post-card__content-link">
-                <h2 class="post-card__title">Visual studio support matrix Performance Tuning: Practical Tips That Work</h2>
-                <p class="post-card__excerpt">Today's deep dive: Visual studio support matrix in .NET Framework — which IDE versions build which Framework targets. Toolchain mismatches cause mysterious build-only failures. Tea…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 19, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/automating-iis-and-asp-net-hosting-tools-scripts-and-workflows.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=iis%20and%20asp.net%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Automating Iis and asp.net hosting: Tools, Scripts, and Workflows">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/automating-iis-and-asp-net-hosting-tools-scripts-and-workflows.html" class="post-card__content-link">
-                <h2 class="post-card__title">Automating Iis and asp.net hosting: Tools, Scripts, and Workflows</h2>
-                <p class="post-card__excerpt">Today's deep dive: Iis and asp.net hosting in .NET Framework — hosting System.Web apps in IIS with app pools. App pool bitness, identity, and pipeline mode shape runtime behavior. …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 18, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/what-s-new-in-windows-services-on-framework-for-2026.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=windows%20services%20on%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="What's New in Windows services on framework for 2026?">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/what-s-new-in-windows-services-on-framework-for-2026.html" class="post-card__content-link">
-                <h2 class="post-card__title">What's New in Windows services on framework for 2026?</h2>
-                <p class="post-card__excerpt">Today's deep dive: Windows services on framework in .NET Framework — ServiceBase-based background apps. Services migrate to Worker Service templates on modern .NET. Teams that take…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 17, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/automating-clickonce-deployment-tools-scripts-and-workflows.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=clickonce%20deployment%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Automating Clickonce deployment: Tools, Scripts, and Workflows">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/automating-clickonce-deployment-tools-scripts-and-workflows.html" class="post-card__content-link">
-                <h2 class="post-card__title">Automating Clickonce deployment: Tools, Scripts, and Workflows</h2>
-                <p class="post-card__excerpt">Today's deep dive: Clickonce deployment in .NET Framework — the Framework-era auto-update deployment tech. Still works for Framework; modern .NET supports ClickOnce too. Teams that…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 16, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/what-s-new-in-known-migration-blockers-for-2026.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=known%20migration%20blockers%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="What's New in Known migration blockers for 2026?">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/what-s-new-in-known-migration-blockers-for-2026.html" class="post-card__content-link">
-                <h2 class="post-card__title">What's New in Known migration blockers for 2026?</h2>
-                <p class="post-card__excerpt">Today's deep dive: Known migration blockers in .NET Framework — patterns that must be redesigned rather than ported. Spotting blockers early prevents mid-migration despair. Teams t…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 15, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/fix-it-fast-a-staying-on-framework-safely-error-handbook.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=staying%20on%20framework%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Fix It Fast: A Staying on framework safely Error Handbook">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/fix-it-fast-a-staying-on-framework-safely-error-handbook.html" class="post-card__content-link">
-                <h2 class="post-card__title">Fix It Fast: A Staying on framework safely Error Handbook</h2>
-                <p class="post-card__excerpt">Today's deep dive: Staying on framework safely in .NET Framework — operating legacy apps with minimal risk. Some apps legitimately remain on Framework for years. Teams that take it…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 14, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/the-ultimate-license-and-lifecycle-tracking-checklist-for-2026.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=license%20and%20lifecycle%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="The Ultimate License and lifecycle tracking Checklist for 2026">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/the-ultimate-license-and-lifecycle-tracking-checklist-for-2026.html" class="post-card__content-link">
-                <h2 class="post-card__title">The Ultimate License and lifecycle tracking Checklist for 2026</h2>
-                <p class="post-card__excerpt">Today's deep dive: License and lifecycle tracking in .NET Framework — knowing exact support end dates for components. Surprises at end of support are avoidable with a calendar. Tea…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 12, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/8-testing-legacy-migrations-best-practices-every-developer-should-know.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=testing%20legacy%20migrations%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="8 Testing legacy migrations Best Practices Every Developer Should Know">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/8-testing-legacy-migrations-best-practices-every-developer-should-know.html" class="post-card__content-link">
-                <h2 class="post-card__title">8 Testing legacy migrations Best Practices Every Developer Should Know</h2>
-                <p class="post-card__excerpt">Today's deep dive: Testing legacy migrations in .NET Framework — verification strategies for Framework-to-modern ports. Confidence comes from characterizing tests written before th…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 11, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/4-8-1-and-support-status-for-beginners-12-things-to-master-first-with-re.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=4.8.1%20and%20support%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="4.8.1 and support status for Beginners: 12 Things to Master First (With Real Examples)">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/4-8-1-and-support-status-for-beginners-12-things-to-master-first-with-re.html" class="post-card__content-link">
-                <h2 class="post-card__title">4.8.1 and support status for Beginners: 12 Things to Master First (With Real Examples)</h2>
-                <p class="post-card__excerpt">Today's deep dive: 4.8.1 and support status in .NET Framework — the final .NET Framework release maintained as part of Windows. It receives servicing and security fixes but no new …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 10, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/automating-modern-net-vs-framework-tools-scripts-and-workflows.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=modern%20.net%20vs%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Automating Modern .net vs framework: Tools, Scripts, and Workflows">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/automating-modern-net-vs-framework-tools-scripts-and-workflows.html" class="post-card__content-link">
-                <h2 class="post-card__title">Automating Modern .net vs framework: Tools, Scripts, and Workflows</h2>
-                <p class="post-card__excerpt">Today's deep dive: Modern .net vs framework in .NET Framework — the architectural split: side-by-side .NET vs the in-place Windows Framework. Modern .NET gets performance, C# featu…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 9, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/migration-assessment-setup-configuration-and-optimization.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=migration%20assessment%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Migration assessment: Setup, Configuration, and Optimization">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/migration-assessment-setup-configuration-and-optimization.html" class="post-card__content-link">
-                <h2 class="post-card__title">Migration assessment: Setup, Configuration, and Optimization</h2>
-                <p class="post-card__excerpt">Today's deep dive: Migration assessment in .NET Framework — scanning a codebase for API and dependency compatibility. An hour of analysis prevents months of blind porting. Teams th…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 8, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/advanced-try-convert-techniques-for-2026.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=try-convert%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Advanced Try-convert Techniques for 2026">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/advanced-try-convert-techniques-for-2026.html" class="post-card__content-link">
-                <h2 class="post-card__title">Advanced Try-convert Techniques for 2026</h2>
-                <p class="post-card__excerpt">Today's deep dive: Try-convert in .NET Framework — a tool that upgrades project files to SDK-style format. Legacy csproj files become readable and msbuild-compatible with modern bu…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 7, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/windows-compatibility-pack-security-and-reliability-best-practices-with.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=windows%20compatibility%20pack%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Windows compatibility pack Security and Reliability Best Practices (With Real Examples)">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/windows-compatibility-pack-security-and-reliability-best-practices-with.html" class="post-card__content-link">
-                <h2 class="post-card__title">Windows compatibility pack Security and Reliability Best Practices (With Real Examples)</h2>
-                <p class="post-card__excerpt">Today's deep dive: Windows compatibility pack in .NET Framework — NuGet packages providing Windows-only APIs on modern .NET. Registry, WMI, and EventLog code ports without immediat…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 6, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/winforms-on-modern-dotnet-in-net-framework-setup-tips-and-workflows.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=winforms%20on%20modern%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Winforms on modern dotnet in .NET Framework: Setup, Tips, and Workflows">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/winforms-on-modern-dotnet-in-net-framework-setup-tips-and-workflows.html" class="post-card__content-link">
-                <h2 class="post-card__title">Winforms on modern dotnet in .NET Framework: Setup, Tips, and Workflows</h2>
-                <p class="post-card__excerpt">Today's deep dive: Winforms on modern dotnet in .NET Framework — bringing Windows Forms apps forward with the updated designer. Decades of line-of-business UIs can run on the new r…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 5, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/windows-workflow-foundation-reality-setup-configuration-and-optimization.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=windows%20workflow%20foundation%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Windows workflow foundation reality: Setup, Configuration, and Optimization (With Real Examples)">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/windows-workflow-foundation-reality-setup-configuration-and-optimization.html" class="post-card__content-link">
-                <h2 class="post-card__title">Windows workflow foundation reality: Setup, Configuration, and Optimization (With Real Examples)</h2>
-                <p class="post-card__excerpt">Today's deep dive: Windows workflow foundation reality in .NET Framework — WF is not ported to modern .NET. Workflow-based apps need special strategies: stay, replace, or rewrite. …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 4, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/20-web-forms-reality-best-practices-every-developer-should-know.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=web%20forms%20reality%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="20 Web forms reality Best Practices Every Developer Should Know">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/20-web-forms-reality-best-practices-every-developer-should-know.html" class="post-card__content-link">
-                <h2 class="post-card__title">20 Web forms reality Best Practices Every Developer Should Know</h2>
-                <p class="post-card__excerpt">Today's deep dive: Web forms reality in .NET Framework — System.Web ASP.NET Web Forms has no direct modern .NET port. The UI model differs fundamentally from Razor-era frameworks. …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 3, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/wcf-and-corewcf-for-beginners-20-things-to-master-first.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=wcf%20and%20corewcf%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Wcf and corewcf for Beginners: 20 Things to Master First">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/wcf-and-corewcf-for-beginners-20-things-to-master-first.html" class="post-card__content-link">
-                <h2 class="post-card__title">Wcf and corewcf for Beginners: 20 Things to Master First</h2>
-                <p class="post-card__excerpt">Today's deep dive: Wcf and corewcf in .NET Framework — moving WCF services; CoreWCF provides a supported subset. Long-lived SOAP contracts can survive with a modern host. Teams tha…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 2, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/app-config-vs-appsettings-performance-tuning-practical-tips-that-work.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=app.config%20vs%20appsettings%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="App.config vs appsettings Performance Tuning: Practical Tips That Work">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/app-config-vs-appsettings-performance-tuning-practical-tips-that-work.html" class="post-card__content-link">
-                <h2 class="post-card__title">App.config vs appsettings Performance Tuning: Practical Tips That Work</h2>
-                <p class="post-card__excerpt">Today's deep dive: App.config vs appsettings in .NET Framework — XML configuration on Framework versus JSON layered config on modern .NET. Config migration is mechanical but behavi…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">August 1, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/machine-config-and-server-settings-a-complete-guide-for-2026.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=machine.config%20and%20server%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Machine.config and server settings: A Complete Guide for 2026">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/machine-config-and-server-settings-a-complete-guide-for-2026.html" class="post-card__content-link">
-                <h2 class="post-card__title">Machine.config and server settings: A Complete Guide for 2026</h2>
-                <p class="post-card__excerpt">Today's deep dive: Machine.config and server settings in .NET Framework — machine-wide settings that silently shape Framework apps. A server's machine.config can explain behavior t…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">July 31, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/the-gac-troubleshooting-5-fixes-for-everyday-problems.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=the%20gac%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="The gac Troubleshooting: 5 Fixes for Everyday Problems">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/the-gac-troubleshooting-5-fixes-for-everyday-problems.html" class="post-card__content-link">
-                <h2 class="post-card__title">The gac Troubleshooting: 5 Fixes for Everyday Problems</h2>
-                <p class="post-card__excerpt">Today's deep dive: The gac in .NET Framework — the global assembly cache for machine-wide shared assemblies. Understanding it explains many legacy dependency mysteries. Teams that …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">July 30, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/binding-redirects-workflow-organize-build-ship.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=binding%20redirects%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Binding redirects Workflow: Organize, Build, Ship">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/binding-redirects-workflow-organize-build-ship.html" class="post-card__content-link">
-                <h2 class="post-card__title">Binding redirects Workflow: Organize, Build, Ship</h2>
-                <p class="post-card__excerpt">Today's deep dive: Binding redirects in .NET Framework — runtime assembly version unification in app.config. They resolve the classic Could not load file or assembly version mismat…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">July 29, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../dotnet-framework/packages-config-vs-packagereference-the-missing-manual.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=packages.config%20vs%20packagereference%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
-                     alt="Packages.config vs packagereference: The Missing Manual">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../dotnet-framework/packages-config-vs-packagereference-the-missing-manual.html" class="post-card__content-link">
-                <h2 class="post-card__title">Packages.config vs packagereference: The Missing Manual</h2>
-                <p class="post-card__excerpt">Today's deep dive: Packages.config vs packagereference in .NET Framework — the old and new NuGet manifest styles. PackageReference unifies dependency management with modern restore…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/dotnet-framework/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</a>
-                <span class="post-card__meta post-card__meta--date">July 28, 2026</span>
-              </div>
-            </div>
-          </article>
-          </div>
-          
         </div>
       </section>
+      <article class="related-posts">
+        <footer class="article-footer">
+          <h2 class="related-posts__title section-title">Other Posts in .NET Framework</h2>
+          <div class="related-posts__grid grid">
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=machine.config%20and%20server%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Machine.config and server settings Troubleshooting: 10 Fixes for Everyday Problems" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/machine-config-and-server-settings-troubleshooting-10-fixes-for-everyday.html" class="post-card__content-link">
+      <h3 class="post-card__title">Machine.config and server settings Troubleshooting: 10 Fixes for Everyday Problems</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">October 12, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=the%20gac%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="The gac: Setup, Configuration, and Optimization (With Real Examples)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/the-gac-setup-configuration-and-optimization-with-real-examples.html" class="post-card__content-link">
+      <h3 class="post-card__title">The gac: Setup, Configuration, and Optimization (With Real Examples)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">October 11, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=binding%20redirects%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Binding redirects Migration Guide: Move Without Breaking Anything" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/binding-redirects-migration-guide-move-without-breaking-anything.html" class="post-card__content-link">
+      <h3 class="post-card__title">Binding redirects Migration Guide: Move Without Breaking Anything</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">October 10, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=strong%20naming%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Mastering Strong naming: From Basics to Advanced" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/mastering-strong-naming-from-basics-to-advanced.html" class="post-card__content-link">
+      <h3 class="post-card__title">Mastering Strong naming: From Basics to Advanced</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">October 9, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=packages.config%20vs%20packagereference%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Packages.config vs packagereference Essentials: 12 Tips That Save Hours" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/packages-config-vs-packagereference-essentials-12-tips-that-save-hours.html" class="post-card__content-link">
+      <h3 class="post-card__title">Packages.config vs packagereference Essentials: 12 Tips That Save Hours</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">October 8, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=ef6%20vs%20ef%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="The Smart Way to master Ef6 vs ef core" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/the-smart-way-to-master-ef6-vs-ef-core.html" class="post-card__content-link">
+      <h3 class="post-card__title">The Smart Way to master Ef6 vs ef core</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">October 6, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=msbuild%20on%20framework%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Mastering Msbuild on framework projects: From Basics to Advanced" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/mastering-msbuild-on-framework-projects-from-basics-to-advanced.html" class="post-card__content-link">
+      <h3 class="post-card__title">Mastering Msbuild on framework projects: From Basics to Advanced</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">October 5, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=targeting%20and%20developer%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Targeting and developer packs for Beginners: 20 Things to Master First" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/targeting-and-developer-packs-for-beginners-20-things-to-master-first.html" class="post-card__content-link">
+      <h3 class="post-card__title">Targeting and developer packs for Beginners: 20 Things to Master First</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">October 4, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=runtime%20repair%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Mastering Runtime repair: From Basics to Advanced" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/mastering-runtime-repair-from-basics-to-advanced.html" class="post-card__content-link">
+      <h3 class="post-card__title">Mastering Runtime repair: From Basics to Advanced</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">October 3, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=servicing%20via%20windows%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Servicing via windows update: Setup, Configuration, and Optimization" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/servicing-via-windows-update-setup-configuration-and-optimization.html" class="post-card__content-link">
+      <h3 class="post-card__title">Servicing via windows update: Setup, Configuration, and Optimization</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">October 2, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=32-bit%20and%2064-bit%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Getting Started with 32-bit and 64-bit considerations" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/getting-started-with-32-bit-and-64-bit-considerations.html" class="post-card__content-link">
+      <h3 class="post-card__title">Getting Started with 32-bit and 64-bit considerations</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">October 1, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=com%20interop%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="The Smart Way to optimize Com interop" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/the-smart-way-to-optimize-com-interop.html" class="post-card__content-link">
+      <h3 class="post-card__title">The Smart Way to optimize Com interop</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 30, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=app%20domains%20vs%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Getting Started with App domains vs modern isolation" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/getting-started-with-app-domains-vs-modern-isolation.html" class="post-card__content-link">
+      <h3 class="post-card__title">Getting Started with App domains vs modern isolation</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 29, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=legacy%20debugging%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="5 Legacy debugging Best Practices Every Developer Should Know" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/5-legacy-debugging-best-practices-every-developer-should-know.html" class="post-card__content-link">
+      <h3 class="post-card__title">5 Legacy debugging Best Practices Every Developer Should Know</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 28, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=performance%20comparisons%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Performance comparisons: The Missing Manual" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/performance-comparisons-the-missing-manual.html" class="post-card__content-link">
+      <h3 class="post-card__title">Performance comparisons: The Missing Manual</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 27, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=visual%20studio%20support%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Visual studio support matrix: A Complete Guide for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/visual-studio-support-matrix-a-complete-guide-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Visual studio support matrix: A Complete Guide for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 25, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=iis%20and%20asp.net%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Iis and asp.net hosting vs Com interop: Which Should You Use?" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/iis-and-asp-net-hosting-vs-com-interop-which-should-you-use.html" class="post-card__content-link">
+      <h3 class="post-card__title">Iis and asp.net hosting vs Com interop: Which Should You Use?</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 24, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=windows%20services%20on%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Windows services on framework Essentials: 8 Tips That Save Hours" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/windows-services-on-framework-essentials-8-tips-that-save-hours.html" class="post-card__content-link">
+      <h3 class="post-card__title">Windows services on framework Essentials: 8 Tips That Save Hours</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 23, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=clickonce%20deployment%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Clickonce deployment: From First Steps to Production (With Real Examples)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/clickonce-deployment-from-first-steps-to-production-with-real-examples.html" class="post-card__content-link">
+      <h3 class="post-card__title">Clickonce deployment: From First Steps to Production (With Real Examples)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 22, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=known%20migration%20blockers%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Getting Started with Known migration blockers" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/getting-started-with-known-migration-blockers.html" class="post-card__content-link">
+      <h3 class="post-card__title">Getting Started with Known migration blockers</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 21, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=staying%20on%20framework%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Scaling Staying on framework safely for Large Projects" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/scaling-staying-on-framework-safely-for-large-projects.html" class="post-card__content-link">
+      <h3 class="post-card__title">Scaling Staying on framework safely for Large Projects</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 20, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=license%20and%20lifecycle%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Getting Started with License and lifecycle tracking" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/getting-started-with-license-and-lifecycle-tracking.html" class="post-card__content-link">
+      <h3 class="post-card__title">Getting Started with License and lifecycle tracking</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 19, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=testing%20legacy%20migrations%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Understanding Testing legacy migrations: A Practical Deep Dive" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/understanding-testing-legacy-migrations-a-practical-deep-dive.html" class="post-card__content-link">
+      <h3 class="post-card__title">Understanding Testing legacy migrations: A Practical Deep Dive</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 18, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=4.8.1%20and%20support%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="4.8.1 and support status Anatomy: How the Pieces Fit Together" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/4-8-1-and-support-status-anatomy-how-the-pieces-fit-together.html" class="post-card__content-link">
+      <h3 class="post-card__title">4.8.1 and support status Anatomy: How the Pieces Fit Together</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 17, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=modern%20.net%20vs%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="A Field Guide to Modern .net vs framework" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/a-field-guide-to-modern-net-vs-framework.html" class="post-card__content-link">
+      <h3 class="post-card__title">A Field Guide to Modern .net vs framework</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 16, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=legacy%20software%20migration%20computer&w=474&h=274&c=7" loading="lazy"
+         alt=".NET Framework 4.8.1 vs Modern .NET: Which Runtime Do You Need?" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/dotnet-framework-4-8-1-vs-modern-dotnet-which-runtime.html" class="post-card__content-link">
+      <h3 class="post-card__title">.NET Framework 4.8.1 vs Modern .NET: Which Runtime Do You Need?</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 15, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=migration%20assessment%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Practical Migration assessment for Everyday .NET Framework Work" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/practical-migration-assessment-for-everyday-net-framework-work.html" class="post-card__content-link">
+      <h3 class="post-card__title">Practical Migration assessment for Everyday .NET Framework Work</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 14, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=try-convert%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="A Field Guide to Try-convert" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/a-field-guide-to-try-convert.html" class="post-card__content-link">
+      <h3 class="post-card__title">A Field Guide to Try-convert</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 13, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=windows%20compatibility%20pack%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Debugging Windows compatibility pack: A Practical Approach" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/debugging-windows-compatibility-pack-a-practical-approach.html" class="post-card__content-link">
+      <h3 class="post-card__title">Debugging Windows compatibility pack: A Practical Approach</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 12, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=winforms%20on%20modern%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Winforms on modern dotnet vs Windows compatibility pack: Which Should You Use? (With Real Examples)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/winforms-on-modern-dotnet-vs-windows-compatibility-pack-which-should-you.html" class="post-card__content-link">
+      <h3 class="post-card__title">Winforms on modern dotnet vs Windows compatibility pack: Which Should You Use? (With Real Examples)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 11, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=wpf%20migration%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Wpf migration in .NET Framework: Setup, Tips, and Workflows" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/wpf-migration-in-net-framework-setup-tips-and-workflows.html" class="post-card__content-link">
+      <h3 class="post-card__title">Wpf migration in .NET Framework: Setup, Tips, and Workflows</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 10, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=windows%20workflow%20foundation%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Windows workflow foundation reality Security and Reliability Best Practices" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/windows-workflow-foundation-reality-security-and-reliability-best-practi.html" class="post-card__content-link">
+      <h3 class="post-card__title">Windows workflow foundation reality Security and Reliability Best Practices</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 9, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=web%20forms%20reality%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Practical Web forms reality for Everyday .NET Framework Work" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/practical-web-forms-reality-for-everyday-net-framework-work.html" class="post-card__content-link">
+      <h3 class="post-card__title">Practical Web forms reality for Everyday .NET Framework Work</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 8, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=wcf%20and%20corewcf%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="How to learn Wcf and corewcf (Step-by-Step)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/how-to-learn-wcf-and-corewcf-step-by-step.html" class="post-card__content-link">
+      <h3 class="post-card__title">How to learn Wcf and corewcf (Step-by-Step)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 7, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=app.config%20vs%20appsettings%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="App.config vs appsettings Pitfalls: What the Docs Don't Tell You" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/app-config-vs-appsettings-pitfalls-what-the-docs-don-t-tell-you.html" class="post-card__content-link">
+      <h3 class="post-card__title">App.config vs appsettings Pitfalls: What the Docs Don't Tell You</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 6, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=machine.config%20and%20server%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Practical Machine.config and server settings for Everyday .NET Framework Work" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/practical-machine-config-and-server-settings-for-everyday-net-framework.html" class="post-card__content-link">
+      <h3 class="post-card__title">Practical Machine.config and server settings for Everyday .NET Framework Work</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 5, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=the%20gac%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="How to optimize The gac (Step-by-Step)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/how-to-optimize-the-gac-step-by-step.html" class="post-card__content-link">
+      <h3 class="post-card__title">How to optimize The gac (Step-by-Step)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 3, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=binding%20redirects%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Scaling Binding redirects for Large Projects" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/scaling-binding-redirects-for-large-projects.html" class="post-card__content-link">
+      <h3 class="post-card__title">Scaling Binding redirects for Large Projects</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 2, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=strong%20naming%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Advanced Strong naming Techniques for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/advanced-strong-naming-techniques-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Advanced Strong naming Techniques for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 1, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=packages.config%20vs%20packagereference%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Packages.config vs packagereference Essentials: 7 Tips That Save Hours" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/packages-config-vs-packagereference-essentials-7-tips-that-save-hours.html" class="post-card__content-link">
+      <h3 class="post-card__title">Packages.config vs packagereference Essentials: 7 Tips That Save Hours</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 31, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=ef6%20vs%20ef%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Ef6 vs ef core: Setup, Configuration, and Optimization" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/ef6-vs-ef-core-setup-configuration-and-optimization.html" class="post-card__content-link">
+      <h3 class="post-card__title">Ef6 vs ef core: Setup, Configuration, and Optimization</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 30, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=msbuild%20on%20framework%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Debugging Msbuild on framework projects: A Practical Approach" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/debugging-msbuild-on-framework-projects-a-practical-approach.html" class="post-card__content-link">
+      <h3 class="post-card__title">Debugging Msbuild on framework projects: A Practical Approach</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 29, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=targeting%20and%20developer%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Targeting and developer packs Migration Guide: Move Without Breaking Anything" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/targeting-and-developer-packs-migration-guide-move-without-breaking-anyt.html" class="post-card__content-link">
+      <h3 class="post-card__title">Targeting and developer packs Migration Guide: Move Without Breaking Anything</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 28, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=runtime%20repair%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Runtime repair Migration Guide: Move Without Breaking Anything" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/runtime-repair-migration-guide-move-without-breaking-anything.html" class="post-card__content-link">
+      <h3 class="post-card__title">Runtime repair Migration Guide: Move Without Breaking Anything</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 27, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=servicing%20via%20windows%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Servicing via windows update: The Missing Manual" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/servicing-via-windows-update-the-missing-manual.html" class="post-card__content-link">
+      <h3 class="post-card__title">Servicing via windows update: The Missing Manual</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 26, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=32-bit%20and%2064-bit%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Common 32-bit and 64-bit considerations Mistakes and How to Fix Them (With Real Examples)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/common-32-bit-and-64-bit-considerations-mistakes-and-how-to-fix-them-wit.html" class="post-card__content-link">
+      <h3 class="post-card__title">Common 32-bit and 64-bit considerations Mistakes and How to Fix Them (With Real Examples)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 25, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=com%20interop%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="20 Com interop Shortcuts You Will Use Every Day" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/20-com-interop-shortcuts-you-will-use-every-day.html" class="post-card__content-link">
+      <h3 class="post-card__title">20 Com interop Shortcuts You Will Use Every Day</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 23, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=app%20domains%20vs%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Scaling App domains vs modern isolation for Large Projects" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/scaling-app-domains-vs-modern-isolation-for-large-projects.html" class="post-card__content-link">
+      <h3 class="post-card__title">Scaling App domains vs modern isolation for Large Projects</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 22, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=legacy%20debugging%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Legacy debugging: The Missing Manual" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/legacy-debugging-the-missing-manual.html" class="post-card__content-link">
+      <h3 class="post-card__title">Legacy debugging: The Missing Manual</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 21, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=performance%20comparisons%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Performance comparisons Security and Reliability Best Practices" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/performance-comparisons-security-and-reliability-best-practices.html" class="post-card__content-link">
+      <h3 class="post-card__title">Performance comparisons Security and Reliability Best Practices</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 20, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=visual%20studio%20support%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Visual studio support matrix Performance Tuning: Practical Tips That Work" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/visual-studio-support-matrix-performance-tuning-practical-tips-that-work.html" class="post-card__content-link">
+      <h3 class="post-card__title">Visual studio support matrix Performance Tuning: Practical Tips That Work</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 19, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=iis%20and%20asp.net%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Automating Iis and asp.net hosting: Tools, Scripts, and Workflows" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/automating-iis-and-asp-net-hosting-tools-scripts-and-workflows.html" class="post-card__content-link">
+      <h3 class="post-card__title">Automating Iis and asp.net hosting: Tools, Scripts, and Workflows</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 18, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=windows%20services%20on%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="What's New in Windows services on framework for 2026?" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/what-s-new-in-windows-services-on-framework-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">What's New in Windows services on framework for 2026?</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 17, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=clickonce%20deployment%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Automating Clickonce deployment: Tools, Scripts, and Workflows" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/automating-clickonce-deployment-tools-scripts-and-workflows.html" class="post-card__content-link">
+      <h3 class="post-card__title">Automating Clickonce deployment: Tools, Scripts, and Workflows</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 16, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=known%20migration%20blockers%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="What's New in Known migration blockers for 2026?" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/what-s-new-in-known-migration-blockers-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">What's New in Known migration blockers for 2026?</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 15, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=staying%20on%20framework%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Fix It Fast: A Staying on framework safely Error Handbook" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/fix-it-fast-a-staying-on-framework-safely-error-handbook.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fix It Fast: A Staying on framework safely Error Handbook</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 14, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=license%20and%20lifecycle%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="The Ultimate License and lifecycle tracking Checklist for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/the-ultimate-license-and-lifecycle-tracking-checklist-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">The Ultimate License and lifecycle tracking Checklist for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 12, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=testing%20legacy%20migrations%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="8 Testing legacy migrations Best Practices Every Developer Should Know" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/8-testing-legacy-migrations-best-practices-every-developer-should-know.html" class="post-card__content-link">
+      <h3 class="post-card__title">8 Testing legacy migrations Best Practices Every Developer Should Know</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 11, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=4.8.1%20and%20support%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="4.8.1 and support status for Beginners: 12 Things to Master First (With Real Examples)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/4-8-1-and-support-status-for-beginners-12-things-to-master-first-with-re.html" class="post-card__content-link">
+      <h3 class="post-card__title">4.8.1 and support status for Beginners: 12 Things to Master First (With Real Examples)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 10, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=modern%20.net%20vs%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Automating Modern .net vs framework: Tools, Scripts, and Workflows" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/automating-modern-net-vs-framework-tools-scripts-and-workflows.html" class="post-card__content-link">
+      <h3 class="post-card__title">Automating Modern .net vs framework: Tools, Scripts, and Workflows</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 9, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=migration%20assessment%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Migration assessment: Setup, Configuration, and Optimization" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/migration-assessment-setup-configuration-and-optimization.html" class="post-card__content-link">
+      <h3 class="post-card__title">Migration assessment: Setup, Configuration, and Optimization</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 8, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=try-convert%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Advanced Try-convert Techniques for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/advanced-try-convert-techniques-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Advanced Try-convert Techniques for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 7, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=windows%20compatibility%20pack%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Windows compatibility pack Security and Reliability Best Practices (With Real Examples)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/windows-compatibility-pack-security-and-reliability-best-practices-with.html" class="post-card__content-link">
+      <h3 class="post-card__title">Windows compatibility pack Security and Reliability Best Practices (With Real Examples)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 6, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=winforms%20on%20modern%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Winforms on modern dotnet in .NET Framework: Setup, Tips, and Workflows" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/winforms-on-modern-dotnet-in-net-framework-setup-tips-and-workflows.html" class="post-card__content-link">
+      <h3 class="post-card__title">Winforms on modern dotnet in .NET Framework: Setup, Tips, and Workflows</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 5, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=windows%20workflow%20foundation%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Windows workflow foundation reality: Setup, Configuration, and Optimization (With Real Examples)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/windows-workflow-foundation-reality-setup-configuration-and-optimization.html" class="post-card__content-link">
+      <h3 class="post-card__title">Windows workflow foundation reality: Setup, Configuration, and Optimization (With Real Examples)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 4, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=web%20forms%20reality%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="20 Web forms reality Best Practices Every Developer Should Know" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/20-web-forms-reality-best-practices-every-developer-should-know.html" class="post-card__content-link">
+      <h3 class="post-card__title">20 Web forms reality Best Practices Every Developer Should Know</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 3, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=wcf%20and%20corewcf%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Wcf and corewcf for Beginners: 20 Things to Master First" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/wcf-and-corewcf-for-beginners-20-things-to-master-first.html" class="post-card__content-link">
+      <h3 class="post-card__title">Wcf and corewcf for Beginners: 20 Things to Master First</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 2, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=app.config%20vs%20appsettings%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="App.config vs appsettings Performance Tuning: Practical Tips That Work" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/app-config-vs-appsettings-performance-tuning-practical-tips-that-work.html" class="post-card__content-link">
+      <h3 class="post-card__title">App.config vs appsettings Performance Tuning: Practical Tips That Work</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">August 1, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=machine.config%20and%20server%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Machine.config and server settings: A Complete Guide for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/machine-config-and-server-settings-a-complete-guide-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Machine.config and server settings: A Complete Guide for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">July 31, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=the%20gac%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="The gac Troubleshooting: 5 Fixes for Everyday Problems" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/the-gac-troubleshooting-5-fixes-for-everyday-problems.html" class="post-card__content-link">
+      <h3 class="post-card__title">The gac Troubleshooting: 5 Fixes for Everyday Problems</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">July 30, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=binding%20redirects%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Binding redirects Workflow: Organize, Build, Ship" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/binding-redirects-workflow-organize-build-ship.html" class="post-card__content-link">
+      <h3 class="post-card__title">Binding redirects Workflow: Organize, Build, Ship</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">July 29, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=packages.config%20vs%20packagereference%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Packages.config vs packagereference: The Missing Manual" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../dotnet-framework/packages-config-vs-packagereference-the-missing-manual.html" class="post-card__content-link">
+      <h3 class="post-card__title">Packages.config vs packagereference: The Missing Manual</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">July 28, 2026</span>
+    </div>
+  </div>
+</article>
+          </div>
+        </footer>
+      </article>
     </main>
 <footer id="site-footer" class="site-footer" data-theme="highlight">
   <div class="site-footer__content" data-canvas-grid="container">

@@ -23,6 +23,7 @@
   <meta property="og:description" content="Today's deep dive: Object expressions in F# — inline interface implementations without classes. Small adapters and test fakes take three lines. Teams that">
   <meta property="og:url" content="https://devtoolforge.github.io/fsharp/object-expressions-quick-reference-for-busy-developers.html">
   <meta property="og:image" content="https://tse1.mm.bing.net/th?q=object%20expressions%20functional%20programming%20code&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:alt" content="Object expressions Quick Reference for Busy Developers">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -40,9 +41,53 @@
   <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
   <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
   <link rel="preconnect" href="https://tse1.mm.bing.net">
-  <style>:root{--ghost-accent-color:#e60073;}
-  .site-footer .nav-secondary__menu{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:center;gap:.5rem 1.75rem;list-style:none;margin:0 0 .75rem;padding:0}
-  .site-footer .nav-secondary__menu-item{display:inline-block;margin:0}</style>
+  <style>
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:400;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-italic.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:600;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600italic.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:700;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700italic.woff2') format('woff2')}
+    :root {
+      --kutak--font-family--base:'Source Sans Pro',Helvetica,sans-serif;
+      --kutak--font-family--headings:'Source Sans Pro',Helvetica,sans-serif;
+      --kutak--font-family--elements:'Source Sans Pro',Helvetica,sans-serif;
+      --kutak--font-weight--base:400;
+      --kutak--font-weight--base-bold:700;
+      --kutak--font-weight--headings:700;
+      --kutak--font-weight--headings-small:600;
+      --kutak--font-weight--elements:600;
+    }
+  </style>
+  <style>:root {--ghost-accent-color: #e60073;}</style>
+  <style>
+.capital{text-transform: capitalize;}
+    select {
+      padding:0;border:none;border-right:2px solid var(--kutak--color--border);
+      border-radius:var(--kutak--radius--s);outline:none;width:fit-content;
+      padding-right: 0.3rem;padding-left:0.5rem;text-align: center;text-transform: capitalize;
+      appearance:button;color:#fff;background-color:var(--kutak--color--primary);
+      background-image: none;line-height: 1.4;height: 2.7rem;
+      font-weight:var(--kutak--font-weight--elements);font-size: var(--kutak--font-size--2xs)
+    }
+    select option{border-radius: 5px;}
+
+    .hide{display:none;visibility:hidden}
+    .popbox{position:fixed;top:0;left:0;bottom:0;width:100%;z-index:1000000}
+    .pop-content{display:block;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;box-shadow:0 3px 20px 0 rgba(0,0,0,.5)}
+    .popcontent{padding:20px;background:#fff;border-radius:5px;overflow:hidden}
+    .pop-overlay{position:absolute;top:0;left:0;bottom:0;width:100%;z-index:1;background:rgb(255 255 255 / 93%)}
+    .popbox-close-button{position:absolute;width:28px;height:28px;line-height:28px;text-align:center;top:-14px;right:-14px;color:#c82333;background-color:#fff;box-shadow:0 -1px 1px 0 rgba(0,0,0,.2);border:none;border-radius:50%;cursor:pointer;font-size:28px;font-weight:700;padding:0}
+    .flowbox{position:relative;overflow:hidden}
+    @media screen and (max-width:840px){.pop-content{width:90%;height:auto;top:30% !important}.popcontent img{height:auto}}
+    .image-parent{max-width: 40px;}
+    .dimage{display: block;margin-left: auto;margin-right: auto;width: 100%;height: auto;}
+    .ddimage{display: block;margin-left: auto;margin-right: auto;max-width: 100%;height: auto;}
+    .img-caption{text-align:center}
+    .mynav{display:inline-block;border:1px solid #e60073;border-radius:3px;padding:5px;margin-bottom:5px;}
+    p::first-letter{text-transform: capitalize;}
+  .table-scroll{overflow-x:auto}
+  </style>
   <script type="application/ld+json">
   { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/fsharp/object-expressions-quick-reference-for-busy-developers.html" }, "headline": "Object expressions Quick Reference for Busy Developers", "description": "Today's deep dive: Object expressions in F# — inline interface implementations without classes. Small adapters and test fakes take three lines. Teams that take it seriously spend l…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=object%20expressions%20functional%20programming%20code&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-08-25T10:30:00+06:00", "dateModified": "2026-08-25T10:30:00+06:00", "wordCount": 1060, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
   </script>
@@ -60,7 +105,7 @@
   <div class="site" id="site">
     <header id="site-header" class="site-header">
   <span class="site-header__bg"></span>
-  <div class="site-header__container">
+  <div class="site-header__container container">
     <button class="site-header__hamburger" data-site-action-trigger="navigation"
             aria-label="Open Menu" aria-expanded="false"
             aria-controls="site-actions-navigation">
@@ -73,7 +118,7 @@
   <div class="site-actions">
     <span class="site-actions__backdrop" data-close-site-actions></span>
     <span class="site-actions__bg"></span>
-    <div class="site-actions__container">
+    <div class="site-actions__container container">
       <div id="site-actions-navigation" class="site-actions__navigation">
 <nav class="nav-secondary">
   <ul class="nav-secondary__menu">
@@ -109,7 +154,6 @@
       <article class="article post featured">
       <header class="article-header section" data-layout-grid="custom"
               data-theme="highlight" data-section="first" data-has-featured-image="true">
-        <div class="article-header__inner">
           <figure id="img-top" class="article-header__figure">
             <img class="article-header__image" width="1200" height="630"
                  src="https://tse1.mm.bing.net/th?q=object%20expressions%20functional%20programming%20code&w=474&h=274&c=7"
@@ -128,11 +172,9 @@
               <time class="article-header__meta article-header__meta--date" datetime="2026-08-25T10:30:00+06:00">August 25, 2026</time>
             </div>
           </div>
-        </div>
       </header>
       <div class="article-main section" data-canvas-grid="content">
-        <div class="container">
-          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+        <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
           <center>
   <script type="text/javascript">
 	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
@@ -245,15 +287,13 @@
 <p>The big three: treating it as a one-time setup, letting local configuration drift from CI, and skipping documentation for the decisions you make. All three are covered above with concrete fixes.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>Treat this guide as a starting inventory, not a finish line. Re-run the checklist whenever your team, toolchain, or scale changes, and Object expressions will stay an asset instead of becoming archaeology.</p>
-          </div>
         </div>
       </div>
       <footer class="article-footer">
     <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
-      <div class="container">
-        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
-        <div class="related-posts__grid" data-layout-grid="columns">
-          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+      <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+      <div class="related-posts__grid grid">
+        <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
   <picture class="post-card__figure">
     <img class="post-card__image" width="474" height="274"
          src="https://tse1.mm.bing.net/th?q=collections%20modules%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
@@ -349,7 +389,6 @@
     </div>
   </div>
 </article>
-        </div>
       </div>
     </div>
       </footer>

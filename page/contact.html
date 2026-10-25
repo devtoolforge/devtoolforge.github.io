@@ -14,13 +14,14 @@
   <meta property="og:title" content="Contact — DevTools Journal">
   <meta property="og:description" content="Questions, corrections, story ideas, or partnership inquiries are welcome. The fastest way to reach the DevTools Journal team is by email at hello@exa">
   <meta property="og:url" content="https://devtoolforge.github.io/page/contact.html">
-  <meta property="og:image" content="../assets/kutukdev/images/icon128.png">
+  <meta property="og:image" content="https://devtoolforge.github.io/assets/kutukdev/images/icon128.png">
+  <meta property="og:image:alt" content="Contact — DevTools Journal">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contact — DevTools Journal">
   <meta name="twitter:description" content="Questions, corrections, story ideas, or partnership inquiries are welcome. The fastest way to reach the DevTools Journal team is by email at hello@exa">
-  <meta name="twitter:image" content="../assets/kutukdev/images/icon128.png">
+  <meta name="twitter:image" content="https://devtoolforge.github.io/assets/kutukdev/images/icon128.png">
     <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
@@ -32,19 +33,63 @@
   <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
   <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
   <link rel="preconnect" href="https://tse1.mm.bing.net">
-  <style>:root{--ghost-accent-color:#e60073;}
-  .site-footer .nav-secondary__menu{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:center;gap:.5rem 1.75rem;list-style:none;margin:0 0 .75rem;padding:0}
-  .site-footer .nav-secondary__menu-item{display:inline-block;margin:0}</style>
+  <style>
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:400;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-italic.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:600;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600italic.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:700;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700italic.woff2') format('woff2')}
+    :root {
+      --kutak--font-family--base:'Source Sans Pro',Helvetica,sans-serif;
+      --kutak--font-family--headings:'Source Sans Pro',Helvetica,sans-serif;
+      --kutak--font-family--elements:'Source Sans Pro',Helvetica,sans-serif;
+      --kutak--font-weight--base:400;
+      --kutak--font-weight--base-bold:700;
+      --kutak--font-weight--headings:700;
+      --kutak--font-weight--headings-small:600;
+      --kutak--font-weight--elements:600;
+    }
+  </style>
+  <style>:root {--ghost-accent-color: #e60073;}</style>
+  <style>
+.capital{text-transform: capitalize;}
+    select {
+      padding:0;border:none;border-right:2px solid var(--kutak--color--border);
+      border-radius:var(--kutak--radius--s);outline:none;width:fit-content;
+      padding-right: 0.3rem;padding-left:0.5rem;text-align: center;text-transform: capitalize;
+      appearance:button;color:#fff;background-color:var(--kutak--color--primary);
+      background-image: none;line-height: 1.4;height: 2.7rem;
+      font-weight:var(--kutak--font-weight--elements);font-size: var(--kutak--font-size--2xs)
+    }
+    select option{border-radius: 5px;}
+
+    .hide{display:none;visibility:hidden}
+    .popbox{position:fixed;top:0;left:0;bottom:0;width:100%;z-index:1000000}
+    .pop-content{display:block;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;box-shadow:0 3px 20px 0 rgba(0,0,0,.5)}
+    .popcontent{padding:20px;background:#fff;border-radius:5px;overflow:hidden}
+    .pop-overlay{position:absolute;top:0;left:0;bottom:0;width:100%;z-index:1;background:rgb(255 255 255 / 93%)}
+    .popbox-close-button{position:absolute;width:28px;height:28px;line-height:28px;text-align:center;top:-14px;right:-14px;color:#c82333;background-color:#fff;box-shadow:0 -1px 1px 0 rgba(0,0,0,.2);border:none;border-radius:50%;cursor:pointer;font-size:28px;font-weight:700;padding:0}
+    .flowbox{position:relative;overflow:hidden}
+    @media screen and (max-width:840px){.pop-content{width:90%;height:auto;top:30% !important}.popcontent img{height:auto}}
+    .image-parent{max-width: 40px;}
+    .dimage{display: block;margin-left: auto;margin-right: auto;width: 100%;height: auto;}
+    .ddimage{display: block;margin-left: auto;margin-right: auto;max-width: 100%;height: auto;}
+    .img-caption{text-align:center}
+    .mynav{display:inline-block;border:1px solid #e60073;border-radius:3px;padding:5px;margin-bottom:5px;}
+    p::first-letter{text-transform: capitalize;}
+  .table-scroll{overflow-x:auto}
+  </style>
   <script type="application/ld+json">
   { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/page/contact.html", "url": "https://devtoolforge.github.io/page/contact.html", "name": "Contact" } }] }
   </script>
 </head>
-<body class="page-template">
+<body class="home-template">
   <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
   <div class="site" id="site">
     <header id="site-header" class="site-header">
   <span class="site-header__bg"></span>
-  <div class="site-header__container">
+  <div class="site-header__container container">
     <button class="site-header__hamburger" data-site-action-trigger="navigation"
             aria-label="Open Menu" aria-expanded="false"
             aria-controls="site-actions-navigation">
@@ -57,7 +102,7 @@
   <div class="site-actions">
     <span class="site-actions__backdrop" data-close-site-actions></span>
     <span class="site-actions__bg"></span>
-    <div class="site-actions__container">
+    <div class="site-actions__container container">
       <div id="site-actions-navigation" class="site-actions__navigation">
 <nav class="nav-secondary">
   <ul class="nav-secondary__menu">
@@ -84,20 +129,16 @@
   </div>
 </header>
     <main id="main" class="site-main">
-      <header class="page-header section" data-section="first">
-        <div class="container">
-          <h1 class="page-header__title">Contact</h1>
-        </div>
-      </header>
-      <section class="section">
-        <div class="container">
-          <div class="article-content">
+      <article class="article post featured">
+        <div class="article-main section" data-canvas-grid="content">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+            <h1>Contact</h1>
             <p>Questions, corrections, story ideas, or partnership inquiries are welcome. The fastest way to reach the DevTools Journal team is by email at hello@example.com, where we read every message and typically respond within two business days.</p>
             <p>For corrections, include the article URL and the specific passage you believe is inaccurate so we can verify and update promptly. For advertising or sponsorship discussions, put 'Advertising' in the subject line and include a short description of your goals and timeline.</p>
             <p>You can also reach us through our GitHub repository discussions for site and content feedback. We do not provide paid technical support, but community answers are often faster than email.</p>
           </div>
         </div>
-      </section>
+      </article>
     </main>
 <footer id="site-footer" class="site-footer" data-theme="highlight">
   <div class="site-footer__content" data-canvas-grid="container">

@@ -14,13 +14,14 @@
   <meta property="og:title" content="F# — DevTools Journal">
   <meta property="og:description" content="Articles, guides, and how-tos filed under F#.">
   <meta property="og:url" content="https://devtoolforge.github.io/category/fsharp/">
-  <meta property="og:image" content="../../assets/kutukdev/images/icon128.png">
+  <meta property="og:image" content="https://devtoolforge.github.io/assets/kutukdev/images/icon128.png">
+  <meta property="og:image:alt" content="F# — DevTools Journal">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="F# — DevTools Journal">
   <meta name="twitter:description" content="Articles, guides, and how-tos filed under F#.">
-  <meta name="twitter:image" content="../../assets/kutukdev/images/icon128.png">
+  <meta name="twitter:image" content="https://devtoolforge.github.io/assets/kutukdev/images/icon128.png">
     <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
@@ -32,9 +33,53 @@
   <link rel="preload" as="style" href="../../assets/kutukdev/css/style.css">
   <link rel="stylesheet" href="../../assets/kutukdev/css/style.css">
   <link rel="preconnect" href="https://tse1.mm.bing.net">
-  <style>:root{--ghost-accent-color:#e60073;}
-  .site-footer .nav-secondary__menu{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:center;gap:.5rem 1.75rem;list-style:none;margin:0 0 .75rem;padding:0}
-  .site-footer .nav-secondary__menu-item{display:inline-block;margin:0}</style>
+  <style>
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:400;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-italic.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:600;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600italic.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:700;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700italic.woff2') format('woff2')}
+    :root {
+      --kutak--font-family--base:'Source Sans Pro',Helvetica,sans-serif;
+      --kutak--font-family--headings:'Source Sans Pro',Helvetica,sans-serif;
+      --kutak--font-family--elements:'Source Sans Pro',Helvetica,sans-serif;
+      --kutak--font-weight--base:400;
+      --kutak--font-weight--base-bold:700;
+      --kutak--font-weight--headings:700;
+      --kutak--font-weight--headings-small:600;
+      --kutak--font-weight--elements:600;
+    }
+  </style>
+  <style>:root {--ghost-accent-color: #e60073;}</style>
+  <style>
+.capital{text-transform: capitalize;}
+    select {
+      padding:0;border:none;border-right:2px solid var(--kutak--color--border);
+      border-radius:var(--kutak--radius--s);outline:none;width:fit-content;
+      padding-right: 0.3rem;padding-left:0.5rem;text-align: center;text-transform: capitalize;
+      appearance:button;color:#fff;background-color:var(--kutak--color--primary);
+      background-image: none;line-height: 1.4;height: 2.7rem;
+      font-weight:var(--kutak--font-weight--elements);font-size: var(--kutak--font-size--2xs)
+    }
+    select option{border-radius: 5px;}
+
+    .hide{display:none;visibility:hidden}
+    .popbox{position:fixed;top:0;left:0;bottom:0;width:100%;z-index:1000000}
+    .pop-content{display:block;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;box-shadow:0 3px 20px 0 rgba(0,0,0,.5)}
+    .popcontent{padding:20px;background:#fff;border-radius:5px;overflow:hidden}
+    .pop-overlay{position:absolute;top:0;left:0;bottom:0;width:100%;z-index:1;background:rgb(255 255 255 / 93%)}
+    .popbox-close-button{position:absolute;width:28px;height:28px;line-height:28px;text-align:center;top:-14px;right:-14px;color:#c82333;background-color:#fff;box-shadow:0 -1px 1px 0 rgba(0,0,0,.2);border:none;border-radius:50%;cursor:pointer;font-size:28px;font-weight:700;padding:0}
+    .flowbox{position:relative;overflow:hidden}
+    @media screen and (max-width:840px){.pop-content{width:90%;height:auto;top:30% !important}.popcontent img{height:auto}}
+    .image-parent{max-width: 40px;}
+    .dimage{display: block;margin-left: auto;margin-right: auto;width: 100%;height: auto;}
+    .ddimage{display: block;margin-left: auto;margin-right: auto;max-width: 100%;height: auto;}
+    .img-caption{text-align:center}
+    .mynav{display:inline-block;border:1px solid #e60073;border-radius:3px;padding:5px;margin-bottom:5px;}
+    p::first-letter{text-transform: capitalize;}
+  .table-scroll{overflow-x:auto}
+  </style>
   <script type="application/ld+json">
   { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/fsharp/", "url": "https://devtoolforge.github.io/category/fsharp/", "name": "F#" } }] }
   </script>
@@ -44,7 +89,7 @@
   <div class="site" id="site">
     <header id="site-header" class="site-header">
   <span class="site-header__bg"></span>
-  <div class="site-header__container">
+  <div class="site-header__container container">
     <button class="site-header__hamburger" data-site-action-trigger="navigation"
             aria-label="Open Menu" aria-expanded="false"
             aria-controls="site-actions-navigation">
@@ -57,7 +102,7 @@
   <div class="site-actions">
     <span class="site-actions__backdrop" data-close-site-actions></span>
     <span class="site-actions__bg"></span>
-    <div class="site-actions__container">
+    <div class="site-actions__container container">
       <div id="site-actions-navigation" class="site-actions__navigation">
 <nav class="nav-secondary">
   <ul class="nav-secondary__menu">
@@ -84,15 +129,15 @@
   </div>
 </header>
     <main id="main" class="site-main">
-      <header class="page-header section" data-section="first">
-        <div class="container">
-          <h1 class="page-header__title">F#</h1>
-          <p class="page-header__desc">Articles, guides, and how-tos filed under F#.</p>
-        </div>
-      </header>
-      <section class="section">
-        <div class="container">
-          <div class="posts-feed" data-layout-grid="columns">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <section class="site-content section">
+        <h1 class="category-title">F#</h1>
+        <div class="posts-feed" data-layout-grid="columns">
           <article class="post-card post" data-layout="vertical"
                    data-has-featured-image="true">
             <a href="../../fsharp/type-inference-setup-configuration-and-optimization.html" class="post-card__media" tabindex="-1">
@@ -333,1350 +378,1087 @@
               </div>
             </div>
           </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/async-workflows-essentials-10-tips-that-save-hours.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=async%20workflows%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Async workflows Essentials: 10 Tips That Save Hours">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/async-workflows-essentials-10-tips-that-save-hours.html" class="post-card__content-link">
-                <h2 class="post-card__title">Async workflows Essentials: 10 Tips That Save Hours</h2>
-                <p class="post-card__excerpt">Today's deep dive: Async workflows in F# — async { } blocks and Async.StartChild patterns. IO-heavy flows scale without thread explosion. Teams that take it seriously spend less ti…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">October 12, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/the-smart-way-to-secure-type-providers.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=type%20providers%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="The Smart Way to secure Type providers">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/the-smart-way-to-secure-type-providers.html" class="post-card__content-link">
-                <h2 class="post-card__title">The Smart Way to secure Type providers</h2>
-                <p class="post-card__excerpt">Today's deep dive: Type providers in F# — compile-time generated types from data sources. Schema-accurate access to CSV/JSON/OpenAPI with zero runtime cost. Teams that take it seri…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">October 11, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/fsharp-programming-for-beginners-functional-first-dotnet.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=functional%20programming%20abstract%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="F# Programming for Beginners: Functional-First .NET Development">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/fsharp-programming-for-beginners-functional-first-dotnet.html" class="post-card__content-link">
-                <h2 class="post-card__title">F# Programming for Beginners: Functional-First .NET Development</h2>
-                <p class="post-card__excerpt">F# is .NET's functional-first language: succinct, type-inferred, and designed to make correct programs the shortest programs. While C# optimizes for ubiquity, F# optimizes for expr…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">October 11, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/units-of-measure-workflow-organize-build-ship.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=units%20of%20measure%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Units of measure Workflow: Organize, Build, Ship">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/units-of-measure-workflow-organize-build-ship.html" class="post-card__content-link">
-                <h2 class="post-card__title">Units of measure Workflow: Organize, Build, Ship</h2>
-                <p class="post-card__excerpt">Today's deep dive: Units of measure in F# — compile-time numeric units (m, s, USD). Unit mistakes become compile errors instead of production math bugs. Teams that take it seriousl…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">October 9, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/10-giraffe-web-apps-best-practices-every-developer-should-know.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=giraffe%20web%20apps%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="10 Giraffe web apps Best Practices Every Developer Should Know">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/10-giraffe-web-apps-best-practices-every-developer-should-know.html" class="post-card__content-link">
-                <h2 class="post-card__title">10 Giraffe web apps Best Practices Every Developer Should Know</h2>
-                <p class="post-card__excerpt">Today's deep dive: Giraffe web apps in F# — functional HTTP handlers on ASP.NET Core. Routing and handlers compose as plain functions. Teams that take it seriously spend less time …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">October 8, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/level-up-your-f-skills-with-fable-for-frontend.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=fable%20for%20frontend%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Level Up Your F# Skills with Fable for frontend">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/level-up-your-f-skills-with-fable-for-frontend.html" class="post-card__content-link">
-                <h2 class="post-card__title">Level Up Your F# Skills with Fable for frontend</h2>
-                <p class="post-card__excerpt">Today's deep dive: Fable for frontend in F# — F# compiling to JavaScript for web apps. One language spans server and browser with shared types. Teams that take it seriously spend l…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">October 7, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/fscheck-property-testing-a-complete-guide-for-2026.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=fscheck%20property%20testing%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Fscheck property testing: A Complete Guide for 2026">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/fscheck-property-testing-a-complete-guide-for-2026.html" class="post-card__content-link">
-                <h2 class="post-card__title">Fscheck property testing: A Complete Guide for 2026</h2>
-                <p class="post-card__excerpt">Today's deep dive: Fscheck property testing in F# — generative tests asserting properties over random inputs. Invariants get verified across hundreds of cases per run. Teams that t…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">October 6, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/interop-with-csharp-for-beginners-a-practical-introduction.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=interop%20with%20csharp%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Interop with csharp for Beginners: A Practical Introduction">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/interop-with-csharp-for-beginners-a-practical-introduction.html" class="post-card__content-link">
-                <h2 class="post-card__title">Interop with csharp for Beginners: A Practical Introduction</h2>
-                <p class="post-card__excerpt">Today's deep dive: Interop with csharp in F# — calling F# from C# and back. Mixed solutions leverage both languages where each shines. Teams that take it seriously spend less time …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">October 5, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/ionide-setup-migration-guide-move-without-breaking-anything.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=ionide%20setup%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Ionide setup Migration Guide: Move Without Breaking Anything">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/ionide-setup-migration-guide-move-without-breaking-anything.html" class="post-card__content-link">
-                <h2 class="post-card__title">Ionide setup Migration Guide: Move Without Breaking Anything</h2>
-                <p class="post-card__excerpt">Today's deep dive: Ionide setup in F# — VS Code tooling for F#: build, hints, and REPL integration. A full F# IDE runs free on any platform. Teams that take it seriously spend less…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">October 4, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/fsx-scripting-a-complete-guide-for-2026.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=fsx%20scripting%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Fsx scripting: A Complete Guide for 2026">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/fsx-scripting-a-complete-guide-for-2026.html" class="post-card__content-link">
-                <h2 class="post-card__title">Fsx scripting: A Complete Guide for 2026</h2>
-                <p class="post-card__excerpt">Today's deep dive: Fsx scripting in F# — F# scripts executed with dotnet fsi. Data exploration and build utilities without project scaffolding. Teams that take it seriously spend l…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">October 3, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/advanced-fantomas-formatting-techniques-for-2026.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=fantomas%20formatting%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Advanced Fantomas formatting Techniques for 2026">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/advanced-fantomas-formatting-techniques-for-2026.html" class="post-card__content-link">
-                <h2 class="post-card__title">Advanced Fantomas formatting Techniques for 2026</h2>
-                <p class="post-card__excerpt">Today's deep dive: Fantomas formatting in F# — the opinionated F# formatter. The team stops debating whitespace and indentation. Teams that take it seriously spend less time on avo…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">October 2, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/railway-oriented-error-handling-migration-guide-move-without-breaking-an.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=railway-oriented%20error%20handling%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Railway-oriented error handling Migration Guide: Move Without Breaking Anything">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/railway-oriented-error-handling-migration-guide-move-without-breaking-an.html" class="post-card__content-link">
-                <h2 class="post-card__title">Railway-oriented error handling Migration Guide: Move Without Breaking Anything</h2>
-                <p class="post-card__excerpt">Today's deep dive: Railway-oriented error handling in F# — binding Results through pipelines. Happy path stays linear while errors route to a single exit. Teams that take it seriou…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">October 1, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/the-ultimate-collections-modules-checklist-for-2026.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=collections%20modules%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="The Ultimate Collections modules Checklist for 2026">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/the-ultimate-collections-modules-checklist-for-2026.html" class="post-card__content-link">
-                <h2 class="post-card__title">The Ultimate Collections modules Checklist for 2026</h2>
-                <p class="post-card__excerpt">Today's deep dive: Collections modules in F# — List, Seq, Array, Map high-order functions. Data processing replaces imperative loops with declarative pipelines. Teams that take it …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 30, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/object-expressions-cheat-sheet-10-shortcuts-and-commands.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=object%20expressions%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Object expressions Cheat Sheet: 10 Shortcuts and Commands">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/object-expressions-cheat-sheet-10-shortcuts-and-commands.html" class="post-card__content-link">
-                <h2 class="post-card__title">Object expressions Cheat Sheet: 10 Shortcuts and Commands</h2>
-                <p class="post-card__excerpt">Today's deep dive: Object expressions in F# — inline interface implementations without classes. Small adapters and test fakes take three lines. Teams that take it seriously spend l…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 28, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/inheritance-and-when-to-use-it-pitfalls-what-the-docs-don-t-tell-you-wit.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=inheritance%20and%20when%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Inheritance and when to use it Pitfalls: What the Docs Don't Tell You (With Real Examples)">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/inheritance-and-when-to-use-it-pitfalls-what-the-docs-don-t-tell-you-wit.html" class="post-card__content-link">
-                <h2 class="post-card__title">Inheritance and when to use it Pitfalls: What the Docs Don't Tell You (With Real Examples)</h2>
-                <p class="post-card__excerpt">Today's deep dive: Inheritance and when to use it in F# — OO features existing but rarely needed. F# favors composition; OO is available for interop edges. Teams that take it serio…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 27, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/debugging-mutable-regions-done-right-a-practical-approach.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=mutable%20regions%20done%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Debugging Mutable regions done right: A Practical Approach">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/debugging-mutable-regions-done-right-a-practical-approach.html" class="post-card__content-link">
-                <h2 class="post-card__title">Debugging Mutable regions done right: A Practical Approach</h2>
-                <p class="post-card__excerpt">Today's deep dive: Mutable regions done right in F# — encapsulated mutation for performance. The default stays immutable while hot spots can mutate locally. Teams that take it seri…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 26, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/common-domain-modeling-with-types-mistakes-and-how-to-fix-them.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=domain%20modeling%20with%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Common Domain modeling with types Mistakes and How to Fix Them">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/common-domain-modeling-with-types-mistakes-and-how-to-fix-them.html" class="post-card__content-link">
-                <h2 class="post-card__title">Common Domain modeling with types Mistakes and How to Fix Them</h2>
-                <p class="post-card__excerpt">Today's deep dive: Domain modeling with types in F# — making illegal states unrepresentable. Most validation disappears because constructors cannot produce garbage. Teams that take…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 25, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/getting-started-with-giraffe-vs-asp-net-mvc.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=giraffe%20vs%20asp.net%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Getting Started with Giraffe vs asp.net mvc">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/getting-started-with-giraffe-vs-asp-net-mvc.html" class="post-card__content-link">
-                <h2 class="post-card__title">Getting Started with Giraffe vs asp.net mvc</h2>
-                <p class="post-card__excerpt">Today's deep dive: Giraffe vs asp.net mvc in F# — choosing functional handlers or MVC controllers. Teams pick per service; both run on the same ASP.NET Core host. Teams that take i…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 24, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/fake-build-scripts-migration-guide-move-without-breaking-anything.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=fake%20build%20scripts%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Fake build scripts Migration Guide: Move Without Breaking Anything">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/fake-build-scripts-migration-guide-move-without-breaking-anything.html" class="post-card__content-link">
-                <h2 class="post-card__title">Fake build scripts Migration Guide: Move Without Breaking Anything</h2>
-                <p class="post-card__excerpt">Today's deep dive: Fake build scripts in F# — F#-based build automation. Build logic becomes typed, testable code instead of YAML soup. Teams that take it seriously spend less time…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 23, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/fsdocs-and-documentation-workflow-organize-build-ship.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=fsdocs%20and%20documentation%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Fsdocs and documentation Workflow: Organize, Build, Ship">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/fsdocs-and-documentation-workflow-organize-build-ship.html" class="post-card__content-link">
-                <h2 class="post-card__title">Fsdocs and documentation Workflow: Organize, Build, Ship</h2>
-                <p class="post-card__excerpt">Today's deep dive: Fsdocs and documentation in F# — generating docs from F# source and markdown. Docs stay in sync because they compile with the code. Teams that take it seriously …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 22, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/fsharp-style-guides-quick-reference-for-busy-developers.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=fsharp%20style%20guides%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Fsharp style guides Quick Reference for Busy Developers">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/fsharp-style-guides-quick-reference-for-busy-developers.html" class="post-card__content-link">
-                <h2 class="post-card__title">Fsharp style guides Quick Reference for Busy Developers</h2>
-                <p class="post-card__excerpt">Today's deep dive: Fsharp style guides in F# — official style and naming conventions. Consistent style keeps mixed-experience teams reading smoothly. Teams that take it seriously s…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 21, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/migrating-utilities-from-csharp-for-beginners-7-things-to-master-first.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=migrating%20utilities%20from%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Migrating utilities from csharp for Beginners: 7 Things to Master First">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/migrating-utilities-from-csharp-for-beginners-7-things-to-master-first.html" class="post-card__content-link">
-                <h2 class="post-card__title">Migrating utilities from csharp for Beginners: 7 Things to Master First</h2>
-                <p class="post-card__excerpt">Today's deep dive: Migrating utilities from csharp in F# — porting helpers into F# incrementally. New code gains correctness without a rewrite project. Teams that take it seriously…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 20, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/type-inference-from-first-steps-to-production.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=type%20inference%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Type inference: From First Steps to Production">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/type-inference-from-first-steps-to-production.html" class="post-card__content-link">
-                <h2 class="post-card__title">Type inference: From First Steps to Production</h2>
-                <p class="post-card__excerpt">Today's deep dive: Type inference in F# — the compiler deducing types without annotations. Code stays terse while remaining fully statically typed. Teams that take it seriously spe…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 19, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/immutability-by-default-quick-reference-for-busy-developers.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=immutability%20by%20default%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Immutability by default Quick Reference for Busy Developers">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/immutability-by-default-quick-reference-for-busy-developers.html" class="post-card__content-link">
-                <h2 class="post-card__title">Immutability by default Quick Reference for Busy Developers</h2>
-                <p class="post-card__excerpt">Today's deep dive: Immutability by default in F# — values that do not change once created. Whole classes of bugs and locks disappear from your codebase. Teams that take it seriousl…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 17, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/discriminated-unions-demystified-with-real-world-examples.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=discriminated%20unions%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Discriminated unions Demystified with Real-World Examples">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/discriminated-unions-demystified-with-real-world-examples.html" class="post-card__content-link">
-                <h2 class="post-card__title">Discriminated unions Demystified with Real-World Examples</h2>
-                <p class="post-card__excerpt">Today's deep dive: Discriminated unions in F# — types with a fixed set of named cases. Invalid states become unrepresentable; exhaustiveness is compiler-checked. Teams that take it…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 16, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/pattern-matching-a-complete-guide-for-2026.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=pattern%20matching%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Pattern matching: A Complete Guide for 2026">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/pattern-matching-a-complete-guide-for-2026.html" class="post-card__content-link">
-                <h2 class="post-card__title">Pattern matching: A Complete Guide for 2026</h2>
-                <p class="post-card__excerpt">Today's deep dive: Pattern matching in F# — match expressions that destructure data safely. Every case is handled or the compiler complains at build time. Teams that take it seriou…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 15, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/automating-results-over-exceptions-tools-scripts-and-workflows.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=results%20over%20exceptions%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Automating Results over exceptions: Tools, Scripts, and Workflows">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/automating-results-over-exceptions-tools-scripts-and-workflows.html" class="post-card__content-link">
-                <h2 class="post-card__title">Automating Results over exceptions: Tools, Scripts, and Workflows</h2>
-                <p class="post-card__excerpt">Today's deep dive: Results over exceptions in F# — Result&lt;'a,'b&gt; for expected failures. Error paths appear in signatures and are forced through match. Teams that take it seriously …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 14, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/15-function-composition-and-pipes-best-practices-every-developer-should.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=function%20composition%20and%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="15 Function composition and pipes Best Practices Every Developer Should Know">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/15-function-composition-and-pipes-best-practices-every-developer-should.html" class="post-card__content-link">
-                <h2 class="post-card__title">15 Function composition and pipes Best Practices Every Developer Should Know</h2>
-                <p class="post-card__excerpt">Today's deep dive: Function composition and pipes in F# — |&gt;, &gt;&gt;, and &lt;&lt; wiring data through functions. Transformation pipelines read top to bottom like a story. Teams that take it…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 13, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/the-ultimate-modules-and-organization-checklist-for-2026.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=modules%20and%20organization%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="The Ultimate Modules and organization Checklist for 2026">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/the-ultimate-modules-and-organization-checklist-for-2026.html" class="post-card__content-link">
-                <h2 class="post-card__title">The Ultimate Modules and organization Checklist for 2026</h2>
-                <p class="post-card__excerpt">Today's deep dive: Modules and organization in F# — namespaces plus modules for grouping functions. Code organizes around behavior, not class ceremony. Teams that take it seriously…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 12, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/records-anatomy-how-the-pieces-fit-together-in-f.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=records%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Records Anatomy: How the Pieces Fit Together in F#">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/records-anatomy-how-the-pieces-fit-together-in-f.html" class="post-card__content-link">
-                <h2 class="post-card__title">Records Anatomy: How the Pieces Fit Together in F#</h2>
-                <p class="post-card__excerpt">Today's deep dive: Records in F# — immutable data containers with structural equality. Data transformation with copies is explicit and safe. Teams that take it seriously spend less…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 11, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/common-active-patterns-mistakes-and-how-to-fix-them.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=active%20patterns%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Common Active patterns Mistakes and How to Fix Them">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/common-active-patterns-mistakes-and-how-to-fix-them.html" class="post-card__content-link">
-                <h2 class="post-card__title">Common Active patterns Mistakes and How to Fix Them</h2>
-                <p class="post-card__excerpt">Today's deep dive: Active patterns in F# — reusable named patterns, including parameterized ones. Complex matching logic gets a name and gets reused. Teams that take it seriously s…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 10, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/common-computation-expressions-mistakes-and-how-to-fix-them.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=computation%20expressions%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Common Computation expressions Mistakes and How to Fix Them">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/common-computation-expressions-mistakes-and-how-to-fix-them.html" class="post-card__content-link">
-                <h2 class="post-card__title">Common Computation expressions Mistakes and How to Fix Them</h2>
-                <p class="post-card__excerpt">Today's deep dive: Computation expressions in F# — builder syntax for workflows: async, result, custom. Monadic flows (await, error handling) read linearly. Teams that take it seri…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 9, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/async-workflows-demystified-with-real-world-examples.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=async%20workflows%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Async workflows Demystified with Real-World Examples">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/async-workflows-demystified-with-real-world-examples.html" class="post-card__content-link">
-                <h2 class="post-card__title">Async workflows Demystified with Real-World Examples</h2>
-                <p class="post-card__excerpt">Today's deep dive: Async workflows in F# — async { } blocks and Async.StartChild patterns. IO-heavy flows scale without thread explosion. Teams that take it seriously spend less ti…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 8, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/type-providers-workflow-organize-build-ship.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=type%20providers%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Type providers Workflow: Organize, Build, Ship">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/type-providers-workflow-organize-build-ship.html" class="post-card__content-link">
-                <h2 class="post-card__title">Type providers Workflow: Organize, Build, Ship</h2>
-                <p class="post-card__excerpt">Today's deep dive: Type providers in F# — compile-time generated types from data sources. Schema-accurate access to CSV/JSON/OpenAPI with zero runtime cost. Teams that take it seri…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 6, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/units-of-measure-demystified-with-real-world-examples.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=units%20of%20measure%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Units of measure Demystified with Real-World Examples">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/units-of-measure-demystified-with-real-world-examples.html" class="post-card__content-link">
-                <h2 class="post-card__title">Units of measure Demystified with Real-World Examples</h2>
-                <p class="post-card__excerpt">Today's deep dive: Units of measure in F# — compile-time numeric units (m, s, USD). Unit mistakes become compile errors instead of production math bugs. Teams that take it seriousl…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 5, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/understanding-giraffe-web-apps-a-practical-deep-dive.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=giraffe%20web%20apps%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Understanding Giraffe web apps: A Practical Deep Dive">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/understanding-giraffe-web-apps-a-practical-deep-dive.html" class="post-card__content-link">
-                <h2 class="post-card__title">Understanding Giraffe web apps: A Practical Deep Dive</h2>
-                <p class="post-card__excerpt">Today's deep dive: Giraffe web apps in F# — functional HTTP handlers on ASP.NET Core. Routing and handlers compose as plain functions. Teams that take it seriously spend less time …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 4, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/fable-for-frontend-pitfalls-what-the-docs-don-t-tell-you.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=fable%20for%20frontend%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Fable for frontend Pitfalls: What the Docs Don't Tell You">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/fable-for-frontend-pitfalls-what-the-docs-don-t-tell-you.html" class="post-card__content-link">
-                <h2 class="post-card__title">Fable for frontend Pitfalls: What the Docs Don't Tell You</h2>
-                <p class="post-card__excerpt">Today's deep dive: Fable for frontend in F# — F# compiling to JavaScript for web apps. One language spans server and browser with shared types. Teams that take it seriously spend l…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 3, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/fscheck-property-testing-vs-fsx-scripting-which-should-you-use.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=fscheck%20property%20testing%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Fscheck property testing vs Fsx scripting: Which Should You Use?">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/fscheck-property-testing-vs-fsx-scripting-which-should-you-use.html" class="post-card__content-link">
-                <h2 class="post-card__title">Fscheck property testing vs Fsx scripting: Which Should You Use?</h2>
-                <p class="post-card__excerpt">Today's deep dive: Fscheck property testing in F# — generative tests asserting properties over random inputs. Invariants get verified across hundreds of cases per run. Teams that t…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 2, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/getting-started-with-interop-with-csharp.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=interop%20with%20csharp%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Getting Started with Interop with csharp">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/getting-started-with-interop-with-csharp.html" class="post-card__content-link">
-                <h2 class="post-card__title">Getting Started with Interop with csharp</h2>
-                <p class="post-card__excerpt">Today's deep dive: Interop with csharp in F# — calling F# from C# and back. Mixed solutions leverage both languages where each shines. Teams that take it seriously spend less time …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">September 1, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/getting-started-with-ionide-setup.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=ionide%20setup%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Getting Started with Ionide setup">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/getting-started-with-ionide-setup.html" class="post-card__content-link">
-                <h2 class="post-card__title">Getting Started with Ionide setup</h2>
-                <p class="post-card__excerpt">Today's deep dive: Ionide setup in F# — VS Code tooling for F#: build, hints, and REPL integration. A full F# IDE runs free on any platform. Teams that take it seriously spend less…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 31, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/scaling-fsx-scripting-for-large-projects.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=fsx%20scripting%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Scaling Fsx scripting for Large Projects">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/scaling-fsx-scripting-for-large-projects.html" class="post-card__content-link">
-                <h2 class="post-card__title">Scaling Fsx scripting for Large Projects</h2>
-                <p class="post-card__excerpt">Today's deep dive: Fsx scripting in F# — F# scripts executed with dotnet fsi. Data exploration and build utilities without project scaffolding. Teams that take it seriously spend l…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 30, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/the-ultimate-fantomas-formatting-checklist-for-2026.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=fantomas%20formatting%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="The Ultimate Fantomas formatting Checklist for 2026">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/the-ultimate-fantomas-formatting-checklist-for-2026.html" class="post-card__content-link">
-                <h2 class="post-card__title">The Ultimate Fantomas formatting Checklist for 2026</h2>
-                <p class="post-card__excerpt">Today's deep dive: Fantomas formatting in F# — the opinionated F# formatter. The team stops debating whitespace and indentation. Teams that take it seriously spend less time on avo…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 29, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/railway-oriented-error-handling-vs-collections-modules-which-should-you.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=railway-oriented%20error%20handling%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Railway-oriented error handling vs Collections modules: Which Should You Use?">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/railway-oriented-error-handling-vs-collections-modules-which-should-you.html" class="post-card__content-link">
-                <h2 class="post-card__title">Railway-oriented error handling vs Collections modules: Which Should You Use?</h2>
-                <p class="post-card__excerpt">Today's deep dive: Railway-oriented error handling in F# — binding Results through pipelines. Happy path stays linear while errors route to a single exit. Teams that take it seriou…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 28, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/getting-started-with-collections-modules.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=collections%20modules%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Getting Started with Collections modules">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/getting-started-with-collections-modules.html" class="post-card__content-link">
-                <h2 class="post-card__title">Getting Started with Collections modules</h2>
-                <p class="post-card__excerpt">Today's deep dive: Collections modules in F# — List, Seq, Array, Map high-order functions. Data processing replaces imperative loops with declarative pipelines. Teams that take it …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 26, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/object-expressions-quick-reference-for-busy-developers.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=object%20expressions%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Object expressions Quick Reference for Busy Developers">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/object-expressions-quick-reference-for-busy-developers.html" class="post-card__content-link">
-                <h2 class="post-card__title">Object expressions Quick Reference for Busy Developers</h2>
-                <p class="post-card__excerpt">Today's deep dive: Object expressions in F# — inline interface implementations without classes. Small adapters and test fakes take three lines. Teams that take it seriously spend l…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 25, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/inheritance-and-when-to-use-it-for-beginners-12-things-to-master-first.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=inheritance%20and%20when%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Inheritance and when to use it for Beginners: 12 Things to Master First">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/inheritance-and-when-to-use-it-for-beginners-12-things-to-master-first.html" class="post-card__content-link">
-                <h2 class="post-card__title">Inheritance and when to use it for Beginners: 12 Things to Master First</h2>
-                <p class="post-card__excerpt">Today's deep dive: Inheritance and when to use it in F# — OO features existing but rarely needed. F# favors composition; OO is available for interop edges. Teams that take it serio…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 24, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/mutable-regions-done-right-explained-what-it-is-and-how-it-works.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=mutable%20regions%20done%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Mutable regions done right Explained: What It Is and How It Works">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/mutable-regions-done-right-explained-what-it-is-and-how-it-works.html" class="post-card__content-link">
-                <h2 class="post-card__title">Mutable regions done right Explained: What It Is and How It Works</h2>
-                <p class="post-card__excerpt">Today's deep dive: Mutable regions done right in F# — encapsulated mutation for performance. The default stays immutable while hot spots can mutate locally. Teams that take it seri…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 23, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/a-field-guide-to-domain-modeling-with-types.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=domain%20modeling%20with%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="A Field Guide to Domain modeling with types">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/a-field-guide-to-domain-modeling-with-types.html" class="post-card__content-link">
-                <h2 class="post-card__title">A Field Guide to Domain modeling with types</h2>
-                <p class="post-card__excerpt">Today's deep dive: Domain modeling with types in F# — making illegal states unrepresentable. Most validation disappears because constructors cannot produce garbage. Teams that take…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 22, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/giraffe-vs-asp-net-mvc-migration-guide-move-without-breaking-anything.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=giraffe%20vs%20asp.net%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Giraffe vs asp.net mvc Migration Guide: Move Without Breaking Anything">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/giraffe-vs-asp-net-mvc-migration-guide-move-without-breaking-anything.html" class="post-card__content-link">
-                <h2 class="post-card__title">Giraffe vs asp.net mvc Migration Guide: Move Without Breaking Anything</h2>
-                <p class="post-card__excerpt">Today's deep dive: Giraffe vs asp.net mvc in F# — choosing functional handlers or MVC controllers. Teams pick per service; both run on the same ASP.NET Core host. Teams that take i…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 21, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/20-fake-build-scripts-shortcuts-you-will-use-every-day.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=fake%20build%20scripts%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="20 Fake build scripts Shortcuts You Will Use Every Day">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/20-fake-build-scripts-shortcuts-you-will-use-every-day.html" class="post-card__content-link">
-                <h2 class="post-card__title">20 Fake build scripts Shortcuts You Will Use Every Day</h2>
-                <p class="post-card__excerpt">Today's deep dive: Fake build scripts in F# — F#-based build automation. Build logic becomes typed, testable code instead of YAML soup. Teams that take it seriously spend less time…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 20, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/fsdocs-and-documentation-migration-guide-move-without-breaking-anything.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=fsdocs%20and%20documentation%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Fsdocs and documentation Migration Guide: Move Without Breaking Anything">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/fsdocs-and-documentation-migration-guide-move-without-breaking-anything.html" class="post-card__content-link">
-                <h2 class="post-card__title">Fsdocs and documentation Migration Guide: Move Without Breaking Anything</h2>
-                <p class="post-card__excerpt">Today's deep dive: Fsdocs and documentation in F# — generating docs from F# source and markdown. Docs stay in sync because they compile with the code. Teams that take it seriously …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 19, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/fsharp-style-guides-in-f-setup-tips-and-workflows.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=fsharp%20style%20guides%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Fsharp style guides in F#: Setup, Tips, and Workflows">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/fsharp-style-guides-in-f-setup-tips-and-workflows.html" class="post-card__content-link">
-                <h2 class="post-card__title">Fsharp style guides in F#: Setup, Tips, and Workflows</h2>
-                <p class="post-card__excerpt">Today's deep dive: Fsharp style guides in F# — official style and naming conventions. Consistent style keeps mixed-experience teams reading smoothly. Teams that take it seriously s…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 18, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/debugging-migrating-utilities-from-csharp-a-practical-approach.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=migrating%20utilities%20from%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Debugging Migrating utilities from csharp: A Practical Approach">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/debugging-migrating-utilities-from-csharp-a-practical-approach.html" class="post-card__content-link">
-                <h2 class="post-card__title">Debugging Migrating utilities from csharp: A Practical Approach</h2>
-                <p class="post-card__excerpt">Today's deep dive: Migrating utilities from csharp in F# — porting helpers into F# incrementally. New code gains correctness without a rewrite project. Teams that take it seriously…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 17, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/practical-type-inference-for-everyday-f-work.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=type%20inference%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Practical Type inference for Everyday F# Work">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/practical-type-inference-for-everyday-f-work.html" class="post-card__content-link">
-                <h2 class="post-card__title">Practical Type inference for Everyday F# Work</h2>
-                <p class="post-card__excerpt">Today's deep dive: Type inference in F# — the compiler deducing types without annotations. Code stays terse while remaining fully statically typed. Teams that take it seriously spe…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 15, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/understanding-immutability-by-default-a-practical-deep-dive.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=immutability%20by%20default%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Understanding Immutability by default: A Practical Deep Dive">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/understanding-immutability-by-default-a-practical-deep-dive.html" class="post-card__content-link">
-                <h2 class="post-card__title">Understanding Immutability by default: A Practical Deep Dive</h2>
-                <p class="post-card__excerpt">Today's deep dive: Immutability by default in F# — values that do not change once created. Whole classes of bugs and locks disappear from your codebase. Teams that take it seriousl…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 14, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/common-discriminated-unions-mistakes-and-how-to-fix-them.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=discriminated%20unions%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Common Discriminated unions Mistakes and How to Fix Them">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/common-discriminated-unions-mistakes-and-how-to-fix-them.html" class="post-card__content-link">
-                <h2 class="post-card__title">Common Discriminated unions Mistakes and How to Fix Them</h2>
-                <p class="post-card__excerpt">Today's deep dive: Discriminated unions in F# — types with a fixed set of named cases. Invalid states become unrepresentable; exhaustiveness is compiler-checked. Teams that take it…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 13, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/pattern-matching-explained-what-it-is-and-how-it-works.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=pattern%20matching%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Pattern matching Explained: What It Is and How It Works">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/pattern-matching-explained-what-it-is-and-how-it-works.html" class="post-card__content-link">
-                <h2 class="post-card__title">Pattern matching Explained: What It Is and How It Works</h2>
-                <p class="post-card__excerpt">Today's deep dive: Pattern matching in F# — match expressions that destructure data safely. Every case is handled or the compiler complains at build time. Teams that take it seriou…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 12, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/option-over-null-a-complete-guide-for-2026.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=option%20over%20null%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Option over null: A Complete Guide for 2026">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/option-over-null-a-complete-guide-for-2026.html" class="post-card__content-link">
-                <h2 class="post-card__title">Option over null: A Complete Guide for 2026</h2>
-                <p class="post-card__excerpt">Today's deep dive: Option over null in F# — Option&lt;'a&gt; instead of null references. Absence is part of the type signature, visible at call sites. Teams that take it seriously spend …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 11, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/advanced-results-over-exceptions-techniques-for-2026.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=results%20over%20exceptions%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Advanced Results over exceptions Techniques for 2026">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/advanced-results-over-exceptions-techniques-for-2026.html" class="post-card__content-link">
-                <h2 class="post-card__title">Advanced Results over exceptions Techniques for 2026</h2>
-                <p class="post-card__excerpt">Today's deep dive: Results over exceptions in F# — Result&lt;'a,'b&gt; for expected failures. Error paths appear in signatures and are forced through match. Teams that take it seriously …</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 10, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/function-composition-and-pipes-setup-configuration-and-optimization-with.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=function%20composition%20and%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Function composition and pipes: Setup, Configuration, and Optimization (With Real Examples)">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/function-composition-and-pipes-setup-configuration-and-optimization-with.html" class="post-card__content-link">
-                <h2 class="post-card__title">Function composition and pipes: Setup, Configuration, and Optimization (With Real Examples)</h2>
-                <p class="post-card__excerpt">Today's deep dive: Function composition and pipes in F# — |&gt;, &gt;&gt;, and &lt;&lt; wiring data through functions. Transformation pipelines read top to bottom like a story. Teams that take it…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 9, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/modules-and-organization-workflow-organize-build-ship.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=modules%20and%20organization%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Modules and organization Workflow: Organize, Build, Ship">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/modules-and-organization-workflow-organize-build-ship.html" class="post-card__content-link">
-                <h2 class="post-card__title">Modules and organization Workflow: Organize, Build, Ship</h2>
-                <p class="post-card__excerpt">Today's deep dive: Modules and organization in F# — namespaces plus modules for grouping functions. Code organizes around behavior, not class ceremony. Teams that take it seriously…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 8, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/fix-it-fast-a-records-error-handbook.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=records%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Fix It Fast: A Records Error Handbook">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/fix-it-fast-a-records-error-handbook.html" class="post-card__content-link">
-                <h2 class="post-card__title">Fix It Fast: A Records Error Handbook</h2>
-                <p class="post-card__excerpt">Today's deep dive: Records in F# — immutable data containers with structural equality. Data transformation with copies is explicit and safe. Teams that take it seriously spend less…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 7, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/active-patterns-essentials-8-tips-that-save-hours.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=active%20patterns%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Active patterns Essentials: 8 Tips That Save Hours">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/active-patterns-essentials-8-tips-that-save-hours.html" class="post-card__content-link">
-                <h2 class="post-card__title">Active patterns Essentials: 8 Tips That Save Hours</h2>
-                <p class="post-card__excerpt">Today's deep dive: Active patterns in F# — reusable named patterns, including parameterized ones. Complex matching logic gets a name and gets reused. Teams that take it seriously s…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 6, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/computation-expressions-quick-reference-for-busy-developers.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=computation%20expressions%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Computation expressions Quick Reference for Busy Developers">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/computation-expressions-quick-reference-for-busy-developers.html" class="post-card__content-link">
-                <h2 class="post-card__title">Computation expressions Quick Reference for Busy Developers</h2>
-                <p class="post-card__excerpt">Today's deep dive: Computation expressions in F# — builder syntax for workflows: async, result, custom. Monadic flows (await, error handling) read linearly. Teams that take it seri…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 5, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/mastering-async-workflows-from-basics-to-advanced.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=async%20workflows%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Mastering Async workflows: From Basics to Advanced">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/mastering-async-workflows-from-basics-to-advanced.html" class="post-card__content-link">
-                <h2 class="post-card__title">Mastering Async workflows: From Basics to Advanced</h2>
-                <p class="post-card__excerpt">Today's deep dive: Async workflows in F# — async { } blocks and Async.StartChild patterns. IO-heavy flows scale without thread explosion. Teams that take it seriously spend less ti…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 4, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/debugging-type-providers-a-practical-approach.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=type%20providers%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Debugging Type providers: A Practical Approach">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/debugging-type-providers-a-practical-approach.html" class="post-card__content-link">
-                <h2 class="post-card__title">Debugging Type providers: A Practical Approach</h2>
-                <p class="post-card__excerpt">Today's deep dive: Type providers in F# — compile-time generated types from data sources. Schema-accurate access to CSV/JSON/OpenAPI with zero runtime cost. Teams that take it seri…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 3, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true">
-            <a href="../../fsharp/units-of-measure-explained-what-it-is-and-how-it-works.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=units%20of%20measure%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="Units of measure Explained: What It Is and How It Works">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../fsharp/units-of-measure-explained-what-it-is-and-how-it-works.html" class="post-card__content-link">
-                <h2 class="post-card__title">Units of measure Explained: What It Is and How It Works</h2>
-                <p class="post-card__excerpt">Today's deep dive: Units of measure in F# — compile-time numeric units (m, s, USD). Unit mistakes become compile errors instead of production math bugs. Teams that take it seriousl…</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/fsharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</a>
-                <span class="post-card__meta post-card__meta--date">August 2, 2026</span>
-              </div>
-            </div>
-          </article>
-          </div>
-          
         </div>
       </section>
+      <article class="related-posts">
+        <footer class="article-footer">
+          <h2 class="related-posts__title section-title">Other Posts in F#</h2>
+          <div class="related-posts__grid grid">
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=async%20workflows%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Async workflows Essentials: 10 Tips That Save Hours" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/async-workflows-essentials-10-tips-that-save-hours.html" class="post-card__content-link">
+      <h3 class="post-card__title">Async workflows Essentials: 10 Tips That Save Hours</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">October 12, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=type%20providers%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="The Smart Way to secure Type providers" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/the-smart-way-to-secure-type-providers.html" class="post-card__content-link">
+      <h3 class="post-card__title">The Smart Way to secure Type providers</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">October 11, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=functional%20programming%20abstract%20code&w=474&h=274&c=7" loading="lazy"
+         alt="F# Programming for Beginners: Functional-First .NET Development" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/fsharp-programming-for-beginners-functional-first-dotnet.html" class="post-card__content-link">
+      <h3 class="post-card__title">F# Programming for Beginners: Functional-First .NET Development</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">October 11, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=units%20of%20measure%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Units of measure Workflow: Organize, Build, Ship" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/units-of-measure-workflow-organize-build-ship.html" class="post-card__content-link">
+      <h3 class="post-card__title">Units of measure Workflow: Organize, Build, Ship</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">October 9, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=giraffe%20web%20apps%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="10 Giraffe web apps Best Practices Every Developer Should Know" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/10-giraffe-web-apps-best-practices-every-developer-should-know.html" class="post-card__content-link">
+      <h3 class="post-card__title">10 Giraffe web apps Best Practices Every Developer Should Know</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">October 8, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=fable%20for%20frontend%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Level Up Your F# Skills with Fable for frontend" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/level-up-your-f-skills-with-fable-for-frontend.html" class="post-card__content-link">
+      <h3 class="post-card__title">Level Up Your F# Skills with Fable for frontend</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">October 7, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=fscheck%20property%20testing%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Fscheck property testing: A Complete Guide for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/fscheck-property-testing-a-complete-guide-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fscheck property testing: A Complete Guide for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">October 6, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=interop%20with%20csharp%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Interop with csharp for Beginners: A Practical Introduction" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/interop-with-csharp-for-beginners-a-practical-introduction.html" class="post-card__content-link">
+      <h3 class="post-card__title">Interop with csharp for Beginners: A Practical Introduction</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">October 5, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=ionide%20setup%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Ionide setup Migration Guide: Move Without Breaking Anything" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/ionide-setup-migration-guide-move-without-breaking-anything.html" class="post-card__content-link">
+      <h3 class="post-card__title">Ionide setup Migration Guide: Move Without Breaking Anything</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">October 4, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=fsx%20scripting%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Fsx scripting: A Complete Guide for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/fsx-scripting-a-complete-guide-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fsx scripting: A Complete Guide for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">October 3, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=fantomas%20formatting%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Advanced Fantomas formatting Techniques for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/advanced-fantomas-formatting-techniques-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Advanced Fantomas formatting Techniques for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">October 2, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=railway-oriented%20error%20handling%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Railway-oriented error handling Migration Guide: Move Without Breaking Anything" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/railway-oriented-error-handling-migration-guide-move-without-breaking-an.html" class="post-card__content-link">
+      <h3 class="post-card__title">Railway-oriented error handling Migration Guide: Move Without Breaking Anything</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">October 1, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=collections%20modules%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="The Ultimate Collections modules Checklist for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/the-ultimate-collections-modules-checklist-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">The Ultimate Collections modules Checklist for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 30, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=object%20expressions%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Object expressions Cheat Sheet: 10 Shortcuts and Commands" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/object-expressions-cheat-sheet-10-shortcuts-and-commands.html" class="post-card__content-link">
+      <h3 class="post-card__title">Object expressions Cheat Sheet: 10 Shortcuts and Commands</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 28, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=inheritance%20and%20when%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Inheritance and when to use it Pitfalls: What the Docs Don't Tell You (With Real Examples)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/inheritance-and-when-to-use-it-pitfalls-what-the-docs-don-t-tell-you-wit.html" class="post-card__content-link">
+      <h3 class="post-card__title">Inheritance and when to use it Pitfalls: What the Docs Don't Tell You (With Real Examples)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 27, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=mutable%20regions%20done%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Debugging Mutable regions done right: A Practical Approach" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/debugging-mutable-regions-done-right-a-practical-approach.html" class="post-card__content-link">
+      <h3 class="post-card__title">Debugging Mutable regions done right: A Practical Approach</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 26, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=domain%20modeling%20with%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Common Domain modeling with types Mistakes and How to Fix Them" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/common-domain-modeling-with-types-mistakes-and-how-to-fix-them.html" class="post-card__content-link">
+      <h3 class="post-card__title">Common Domain modeling with types Mistakes and How to Fix Them</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 25, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=giraffe%20vs%20asp.net%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Getting Started with Giraffe vs asp.net mvc" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/getting-started-with-giraffe-vs-asp-net-mvc.html" class="post-card__content-link">
+      <h3 class="post-card__title">Getting Started with Giraffe vs asp.net mvc</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 24, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=fake%20build%20scripts%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Fake build scripts Migration Guide: Move Without Breaking Anything" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/fake-build-scripts-migration-guide-move-without-breaking-anything.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fake build scripts Migration Guide: Move Without Breaking Anything</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 23, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=fsdocs%20and%20documentation%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Fsdocs and documentation Workflow: Organize, Build, Ship" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/fsdocs-and-documentation-workflow-organize-build-ship.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fsdocs and documentation Workflow: Organize, Build, Ship</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 22, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=fsharp%20style%20guides%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Fsharp style guides Quick Reference for Busy Developers" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/fsharp-style-guides-quick-reference-for-busy-developers.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fsharp style guides Quick Reference for Busy Developers</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 21, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=migrating%20utilities%20from%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Migrating utilities from csharp for Beginners: 7 Things to Master First" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/migrating-utilities-from-csharp-for-beginners-7-things-to-master-first.html" class="post-card__content-link">
+      <h3 class="post-card__title">Migrating utilities from csharp for Beginners: 7 Things to Master First</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 20, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=type%20inference%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Type inference: From First Steps to Production" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/type-inference-from-first-steps-to-production.html" class="post-card__content-link">
+      <h3 class="post-card__title">Type inference: From First Steps to Production</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 19, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=immutability%20by%20default%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Immutability by default Quick Reference for Busy Developers" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/immutability-by-default-quick-reference-for-busy-developers.html" class="post-card__content-link">
+      <h3 class="post-card__title">Immutability by default Quick Reference for Busy Developers</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 17, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=discriminated%20unions%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Discriminated unions Demystified with Real-World Examples" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/discriminated-unions-demystified-with-real-world-examples.html" class="post-card__content-link">
+      <h3 class="post-card__title">Discriminated unions Demystified with Real-World Examples</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 16, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=pattern%20matching%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Pattern matching: A Complete Guide for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/pattern-matching-a-complete-guide-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Pattern matching: A Complete Guide for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 15, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=results%20over%20exceptions%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Automating Results over exceptions: Tools, Scripts, and Workflows" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/automating-results-over-exceptions-tools-scripts-and-workflows.html" class="post-card__content-link">
+      <h3 class="post-card__title">Automating Results over exceptions: Tools, Scripts, and Workflows</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 14, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=function%20composition%20and%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="15 Function composition and pipes Best Practices Every Developer Should Know" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/15-function-composition-and-pipes-best-practices-every-developer-should.html" class="post-card__content-link">
+      <h3 class="post-card__title">15 Function composition and pipes Best Practices Every Developer Should Know</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 13, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=modules%20and%20organization%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="The Ultimate Modules and organization Checklist for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/the-ultimate-modules-and-organization-checklist-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">The Ultimate Modules and organization Checklist for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 12, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=records%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Records Anatomy: How the Pieces Fit Together in F#" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/records-anatomy-how-the-pieces-fit-together-in-f.html" class="post-card__content-link">
+      <h3 class="post-card__title">Records Anatomy: How the Pieces Fit Together in F#</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 11, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=active%20patterns%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Common Active patterns Mistakes and How to Fix Them" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/common-active-patterns-mistakes-and-how-to-fix-them.html" class="post-card__content-link">
+      <h3 class="post-card__title">Common Active patterns Mistakes and How to Fix Them</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 10, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=computation%20expressions%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Common Computation expressions Mistakes and How to Fix Them" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/common-computation-expressions-mistakes-and-how-to-fix-them.html" class="post-card__content-link">
+      <h3 class="post-card__title">Common Computation expressions Mistakes and How to Fix Them</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 9, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=async%20workflows%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Async workflows Demystified with Real-World Examples" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/async-workflows-demystified-with-real-world-examples.html" class="post-card__content-link">
+      <h3 class="post-card__title">Async workflows Demystified with Real-World Examples</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 8, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=type%20providers%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Type providers Workflow: Organize, Build, Ship" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/type-providers-workflow-organize-build-ship.html" class="post-card__content-link">
+      <h3 class="post-card__title">Type providers Workflow: Organize, Build, Ship</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 6, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=units%20of%20measure%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Units of measure Demystified with Real-World Examples" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/units-of-measure-demystified-with-real-world-examples.html" class="post-card__content-link">
+      <h3 class="post-card__title">Units of measure Demystified with Real-World Examples</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 5, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=giraffe%20web%20apps%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Understanding Giraffe web apps: A Practical Deep Dive" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/understanding-giraffe-web-apps-a-practical-deep-dive.html" class="post-card__content-link">
+      <h3 class="post-card__title">Understanding Giraffe web apps: A Practical Deep Dive</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 4, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=fable%20for%20frontend%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Fable for frontend Pitfalls: What the Docs Don't Tell You" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/fable-for-frontend-pitfalls-what-the-docs-don-t-tell-you.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fable for frontend Pitfalls: What the Docs Don't Tell You</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 3, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=fscheck%20property%20testing%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Fscheck property testing vs Fsx scripting: Which Should You Use?" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/fscheck-property-testing-vs-fsx-scripting-which-should-you-use.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fscheck property testing vs Fsx scripting: Which Should You Use?</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 2, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=interop%20with%20csharp%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Getting Started with Interop with csharp" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/getting-started-with-interop-with-csharp.html" class="post-card__content-link">
+      <h3 class="post-card__title">Getting Started with Interop with csharp</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 1, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=ionide%20setup%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Getting Started with Ionide setup" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/getting-started-with-ionide-setup.html" class="post-card__content-link">
+      <h3 class="post-card__title">Getting Started with Ionide setup</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 31, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=fsx%20scripting%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Scaling Fsx scripting for Large Projects" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/scaling-fsx-scripting-for-large-projects.html" class="post-card__content-link">
+      <h3 class="post-card__title">Scaling Fsx scripting for Large Projects</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 30, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=fantomas%20formatting%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="The Ultimate Fantomas formatting Checklist for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/the-ultimate-fantomas-formatting-checklist-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">The Ultimate Fantomas formatting Checklist for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 29, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=railway-oriented%20error%20handling%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Railway-oriented error handling vs Collections modules: Which Should You Use?" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/railway-oriented-error-handling-vs-collections-modules-which-should-you.html" class="post-card__content-link">
+      <h3 class="post-card__title">Railway-oriented error handling vs Collections modules: Which Should You Use?</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 28, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=collections%20modules%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Getting Started with Collections modules" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/getting-started-with-collections-modules.html" class="post-card__content-link">
+      <h3 class="post-card__title">Getting Started with Collections modules</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 26, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=object%20expressions%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Object expressions Quick Reference for Busy Developers" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/object-expressions-quick-reference-for-busy-developers.html" class="post-card__content-link">
+      <h3 class="post-card__title">Object expressions Quick Reference for Busy Developers</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 25, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=inheritance%20and%20when%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Inheritance and when to use it for Beginners: 12 Things to Master First" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/inheritance-and-when-to-use-it-for-beginners-12-things-to-master-first.html" class="post-card__content-link">
+      <h3 class="post-card__title">Inheritance and when to use it for Beginners: 12 Things to Master First</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 24, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=mutable%20regions%20done%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Mutable regions done right Explained: What It Is and How It Works" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/mutable-regions-done-right-explained-what-it-is-and-how-it-works.html" class="post-card__content-link">
+      <h3 class="post-card__title">Mutable regions done right Explained: What It Is and How It Works</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 23, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=domain%20modeling%20with%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="A Field Guide to Domain modeling with types" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/a-field-guide-to-domain-modeling-with-types.html" class="post-card__content-link">
+      <h3 class="post-card__title">A Field Guide to Domain modeling with types</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 22, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=giraffe%20vs%20asp.net%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Giraffe vs asp.net mvc Migration Guide: Move Without Breaking Anything" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/giraffe-vs-asp-net-mvc-migration-guide-move-without-breaking-anything.html" class="post-card__content-link">
+      <h3 class="post-card__title">Giraffe vs asp.net mvc Migration Guide: Move Without Breaking Anything</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 21, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=fake%20build%20scripts%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="20 Fake build scripts Shortcuts You Will Use Every Day" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/20-fake-build-scripts-shortcuts-you-will-use-every-day.html" class="post-card__content-link">
+      <h3 class="post-card__title">20 Fake build scripts Shortcuts You Will Use Every Day</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 20, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=fsdocs%20and%20documentation%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Fsdocs and documentation Migration Guide: Move Without Breaking Anything" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/fsdocs-and-documentation-migration-guide-move-without-breaking-anything.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fsdocs and documentation Migration Guide: Move Without Breaking Anything</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 19, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=fsharp%20style%20guides%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Fsharp style guides in F#: Setup, Tips, and Workflows" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/fsharp-style-guides-in-f-setup-tips-and-workflows.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fsharp style guides in F#: Setup, Tips, and Workflows</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 18, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=migrating%20utilities%20from%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Debugging Migrating utilities from csharp: A Practical Approach" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/debugging-migrating-utilities-from-csharp-a-practical-approach.html" class="post-card__content-link">
+      <h3 class="post-card__title">Debugging Migrating utilities from csharp: A Practical Approach</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 17, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=type%20inference%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Practical Type inference for Everyday F# Work" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/practical-type-inference-for-everyday-f-work.html" class="post-card__content-link">
+      <h3 class="post-card__title">Practical Type inference for Everyday F# Work</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 15, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=immutability%20by%20default%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Understanding Immutability by default: A Practical Deep Dive" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/understanding-immutability-by-default-a-practical-deep-dive.html" class="post-card__content-link">
+      <h3 class="post-card__title">Understanding Immutability by default: A Practical Deep Dive</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 14, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=discriminated%20unions%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Common Discriminated unions Mistakes and How to Fix Them" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/common-discriminated-unions-mistakes-and-how-to-fix-them.html" class="post-card__content-link">
+      <h3 class="post-card__title">Common Discriminated unions Mistakes and How to Fix Them</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 13, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=pattern%20matching%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Pattern matching Explained: What It Is and How It Works" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/pattern-matching-explained-what-it-is-and-how-it-works.html" class="post-card__content-link">
+      <h3 class="post-card__title">Pattern matching Explained: What It Is and How It Works</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 12, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=option%20over%20null%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Option over null: A Complete Guide for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/option-over-null-a-complete-guide-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Option over null: A Complete Guide for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 11, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=results%20over%20exceptions%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Advanced Results over exceptions Techniques for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/advanced-results-over-exceptions-techniques-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Advanced Results over exceptions Techniques for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 10, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=function%20composition%20and%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Function composition and pipes: Setup, Configuration, and Optimization (With Real Examples)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/function-composition-and-pipes-setup-configuration-and-optimization-with.html" class="post-card__content-link">
+      <h3 class="post-card__title">Function composition and pipes: Setup, Configuration, and Optimization (With Real Examples)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 9, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=modules%20and%20organization%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Modules and organization Workflow: Organize, Build, Ship" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/modules-and-organization-workflow-organize-build-ship.html" class="post-card__content-link">
+      <h3 class="post-card__title">Modules and organization Workflow: Organize, Build, Ship</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 8, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=records%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Fix It Fast: A Records Error Handbook" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/fix-it-fast-a-records-error-handbook.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fix It Fast: A Records Error Handbook</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 7, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=active%20patterns%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Active patterns Essentials: 8 Tips That Save Hours" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/active-patterns-essentials-8-tips-that-save-hours.html" class="post-card__content-link">
+      <h3 class="post-card__title">Active patterns Essentials: 8 Tips That Save Hours</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 6, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=computation%20expressions%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Computation expressions Quick Reference for Busy Developers" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/computation-expressions-quick-reference-for-busy-developers.html" class="post-card__content-link">
+      <h3 class="post-card__title">Computation expressions Quick Reference for Busy Developers</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 5, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=async%20workflows%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Mastering Async workflows: From Basics to Advanced" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/mastering-async-workflows-from-basics-to-advanced.html" class="post-card__content-link">
+      <h3 class="post-card__title">Mastering Async workflows: From Basics to Advanced</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 4, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=type%20providers%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Debugging Type providers: A Practical Approach" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/debugging-type-providers-a-practical-approach.html" class="post-card__content-link">
+      <h3 class="post-card__title">Debugging Type providers: A Practical Approach</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 3, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=units%20of%20measure%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Units of measure Explained: What It Is and How It Works" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../../fsharp/units-of-measure-explained-what-it-is-and-how-it-works.html" class="post-card__content-link">
+      <h3 class="post-card__title">Units of measure Explained: What It Is and How It Works</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">August 2, 2026</span>
+    </div>
+  </div>
+</article>
+          </div>
+        </footer>
+      </article>
     </main>
 <footer id="site-footer" class="site-footer" data-theme="highlight">
   <div class="site-footer__content" data-canvas-grid="container">
