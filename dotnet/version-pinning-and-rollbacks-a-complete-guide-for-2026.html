@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>Version pinning and rollbacks: A Complete Guide for 2026</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Today's deep dive: Version pinning and rollbacks in .NET — keeping runtime and package versions deliberate. Reproducible builds make incident rollbacks">
+  <link rel="canonical" href="https://devtoolforge.github.io/dotnet/version-pinning-and-rollbacks-a-complete-guide-for-2026.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-07-11T21:00:00+06:00">
+  <meta property="article:modified_time" content="2026-07-11T21:00:00+06:00">
+  <meta property="article:section" content=".NET">
+  <meta property="og:updated_time" content="2026-07-11T21:00:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="5 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Version pinning and rollbacks: A Complete Guide for 2026">
+  <meta property="og:description" content="Today's deep dive: Version pinning and rollbacks in .NET — keeping runtime and package versions deliberate. Reproducible builds make incident rollbacks">
+  <meta property="og:url" content="https://devtoolforge.github.io/dotnet/version-pinning-and-rollbacks-a-complete-guide-for-2026.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=version%20pinning%20and%20dotnet%20programming&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Version pinning and rollbacks: A Complete Guide for 2026">
+  <meta name="twitter:description" content="Today's deep dive: Version pinning and rollbacks in .NET — keeping runtime and package versions deliberate. Reproducible builds make incident rollbacks">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=version%20pinning%20and%20dotnet%20programming&amp;w=474&amp;h=274&amp;c=7">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/dotnet/version-pinning-and-rollbacks-a-complete-guide-for-2026.html" }, "headline": "Version pinning and rollbacks: A Complete Guide for 2026", "description": "Today's deep dive: Version pinning and rollbacks in .NET — keeping runtime and package versions deliberate. Reproducible builds make incident rollbacks boring. Teams that take it s…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=version%20pinning%20and%20dotnet%20programming&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-07-11T21:00:00+06:00", "dateModified": "2026-07-11T21:00:00+06:00", "wordCount": 1117, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/dotnet/version-pinning-and-rollbacks-a-complete-guide-for-2026.html#webpage", "url": "https://devtoolforge.github.io/dotnet/version-pinning-and-rollbacks-a-complete-guide-for-2026.html", "name": "Version pinning and rollbacks: A Complete Guide for 2026", "datePublished": "2026-07-11T21:00:00+06:00", "dateModified": "2026-07-11T21:00:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/dotnet/", "url": "https://devtoolforge.github.io/category/dotnet/", "name": ".NET" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/dotnet/version-pinning-and-rollbacks-a-complete-guide-for-2026.html", "url": "https://devtoolforge.github.io/dotnet/version-pinning-and-rollbacks-a-complete-guide-for-2026.html", "name": "Version pinning and rollbacks: A Complete Guide for 2026" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure id="img-top" class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=version%20pinning%20and%20dotnet%20programming&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=version%20pinning%20and%20dotnet%20programming&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=version%20pinning%20and%20dotnet%20programming&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="Version pinning and rollbacks: A Complete Guide for 2026"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">Version pinning and rollbacks: A Complete Guide for 2026</h1>
+            <p class="article-header__excerpt">Today's deep dive: Version pinning and rollbacks in .NET — keeping runtime and package versions deliberate. Reproducible builds make incident rollbacks boring. Teams that take it s…</p>
+            <div class="article-header__footer">
+              <a href="../category/dotnet/" class="article-header__meta article-header__meta-tag-primary" rel="tag">.NET</a>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-07-11T21:00:00+06:00">July 11, 2026</time>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section" data-canvas-grid="content">
+        <div class="container">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Today's deep dive: Version pinning and rollbacks in .NET — keeping runtime and package versions deliberate. Reproducible builds make incident rollbacks boring. Teams that take it seriously spend less time on avoidable problems and more time shipping features users actually notice. It is one of the few practices that pays for itself within the first week of consistent use.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-is-version-pinning-and-rollbacks">What Is Version pinning and rollbacks?</a></li>
+<li><a href="#why-bother-with-version-pinning-and-rollbacks">Why Bother with Version pinning and rollbacks?</a></li>
+<li><a href="#performance-considerations">Performance Considerations</a></li>
+<li><a href="#version-pinning-and-rollbacks-vs-grpc-services">Version pinning and rollbacks vs Grpc services</a></li>
+<li><a href="#troubleshooting-version-pinning-and-rollbacks">Troubleshooting Version pinning and rollbacks</a></li>
+<li><a href="#quick-example">Quick Example</a></li>
+<li><a href="#a-practical-workflow">A Practical Workflow</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#how-long-does-it-take-to-get-comfortable-with-version-pinning-and-rollba">How long does it take to get comfortable with Version pinning and rollbacks?</a></li>
+<li><a href="#what-is-version-pinning-and-rollbacks-2">What is Version pinning and rollbacks?</a></li>
+<li><a href="#can-version-pinning-and-rollbacks-be-automated">Can Version pinning and rollbacks be automated?</a></li>
+<li><a href="#do-i-need-version-pinning-and-rollbacks-for-small-projects">Do I need Version pinning and rollbacks for small projects?</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ol></nav>
+<p>In this guide we cover version pinning and rollbacks end to end: the core concepts, the exact steps to set it up well, the mistakes that cost teams the most time, and the habits that keep the setup healthy. Everything here runs on the current 2026 toolchain, with commands you can copy as-is.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Topic</strong></td><td>Version pinning and rollbacks</td></tr>
+              <tr><td><strong>Area</strong></td><td>.NET</td></tr>
+              <tr><td><strong>Skill level</strong></td><td>Beginner-friendly</td></tr>
+              <tr><td><strong>Platform</strong></td><td>.NET 10 (LTS), released November 2025</td></tr>
+              <tr><td><strong>Support</strong></td><td>LTS: November 2025 to November 2028</td></tr>
+              <tr><td><strong>SDK</strong></td><td>.NET SDK 10.x (monthly feature updates)</td></tr>
+              <tr><td><strong>Languages</strong></td><td>C# 14, F#, Visual Basic</td></tr>
+              <tr><td><strong>Last verified</strong></td><td>October 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+<h2 id="what-is-version-pinning-and-rollbacks">What Is Version pinning and rollbacks?</h2>
+<p>Version pinning and rollbacks, in one sentence: keeping runtime and package versions deliberate. In practice that means the details are worth getting right once, because everything downstream inherits the decision. The good news is that the fundamentals have been stable for years, so the effort you invest compounds instead of expiring with the next release.</p>
+<p>The mental model is simple: one clear definition, one clear workflow, and configuration that matches reality. Most confusion around version pinning and rollbacks comes from mixing those layers — mixing definitions from different eras, or configs copied from projects with different needs. Keep them separate and the rest of this guide follows naturally.</p>
+<h2 id="why-bother-with-version-pinning-and-rollbacks">Why Bother with Version pinning and rollbacks?</h2>
+<p>"Why bother" is a fair question for any tooling topic. Version pinning and rollbacks earns its keep in three concrete ways:</p>
+<ul>
+              <li>It turns tribal knowledge into something a newcomer can read, run, and verify.</li>
+              <li>It lowers maintenance cost because every future change starts from a sane baseline.</li>
+              <li>It makes onboarding dramatically easier: new developers find rails instead of folklore.</li>
+            </ul>
+<p>Notice what is missing from that list: fashion. None of these benefits expire with a release cycle, which is why version pinning and rollbacks keeps showing up in every serious .NET conversation. Once the defaults are deliberate, the rest of the workflow tends to fall into place.</p>
+<h2 id="performance-considerations">Performance Considerations</h2>
+<p>Remove work before making work faster. The cheapest optimization for version pinning and rollbacks is usually doing less: fewer allocations, fewer passes, fewer round trips. Profile to find work that can be skipped entirely under normal conditions. Only then reach for caching, and only with an explicit invalidation plan.</p>
+<p>Watch the tails, not the averages. Median numbers hide the p95 and p99 latencies that users actually feel. For version pinning and rollbacks workloads, repeated runs under realistic data sizes reveal the variance that a single clean run misses. Set a budget for the worst case, not the best case, and design for it.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=version%20pinning%20and%20dotnet%20programming&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Version pinning and rollbacks: A Complete Guide for 2026" style="border-radius:9px"></figure>
+<h2 id="version-pinning-and-rollbacks-vs-grpc-services">Version pinning and rollbacks vs Grpc services</h2>
+<p>They overlap enough that the question is usually about trade-offs rather than right and wrong. Version pinning and rollbacks optimizes for reproducible builds make incident rollbacks boring; Grpc services pushes harder on the opposite axis. List your constraints honestly — team experience, platform targets, and maintenance budget — and the answer usually picks itself.</p>
+<p>Start from the problem, not the tool. If your pain is reproducible builds make incident rollbacks boring, Version pinning and rollbacks is the more direct route; if your team already lives in the other ecosystem, Grpc services minimizes ramp-up cost. Whatever you choose, write down why, because the next person will ask.</p>
+<h2 id="troubleshooting-version-pinning-and-rollbacks">Troubleshooting Version pinning and rollbacks</h2>
+<p>When things break, symptoms cluster into a handful of patterns. Match yours here and jump straight to the fix:</p>
+<ul>
+              <li><strong>It fails only in CI but passes locally</strong> — compare build modes and clean versus incremental state; CI reveals stale-output bugs instantly</li>
+              <li><strong>It worked yesterday and nothing was changed</strong> — check what the OS, SDK, or package manager updated overnight before blaming the code</li>
+              <li><strong>Errors mention a file or component you never touched</strong> — trace the first error in the log, not the last one — the real cause is almost always earlier</li>
+            </ul>
+<p>If none of these match, capture a full log before changing anything. For version pinning and rollbacks that log almost always names the failing layer, and the fix becomes obvious instead of guessed.</p>
+<h2 id="quick-example">Quick Example</h2>
+<p>Here is a compact, real-world command prompt example you can adapt directly. It shows the configuration style we recommend for version pinning and rollbacks: explicit, commented where it matters, and free of magic.</p>
+<pre><code>dotnet publish -c Release -r linux-x64 --self-contained \
+  -p:PublishSingleFile=true -p:PublishTrimmed=true</code></pre>
+<p>Copy it, run it once, then trim it to what your project actually needs. The worst version of any snippet is the one nobody on the team fully understands.</p>
+<h2 id="a-practical-workflow">A Practical Workflow</h2>
+<p>A repeatable workflow turns version pinning and rollbacks from a personality trait into a team capability:</p>
+<ol>
+              <li>Add a check to CI so regressions in version pinning and rollbacks fail loudly instead of silently.</li>
+              <li>Write the chosen setup down in the repository so the decision survives the next refactor.</li>
+              <li>Schedule a short review each quarter to prune what no longer earns its place.</li>
+              <li>Audit the current state: list what version pinning and rollbacks touches in your project today.</li>
+              <li>Pick the smallest meaningful change you can ship and measure — momentum matters more than scope.</li>
+            </ol>
+<p>This loop — audit, change, automate, verify — is deliberately generic. It fits .NET at any scale and survives every tooling generation we have seen.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="how-long-does-it-take-to-get-comfortable-with-version-pinning-and-rollba">How long does it take to get comfortable with Version pinning and rollbacks?</h3>
+<p>The basics take an afternoon; reliable habits take a few weeks of real use. The guide's checklist is designed to compress that ramp-up by focusing on what actually matters.</p>
+<h3 id="what-is-version-pinning-and-rollbacks-2">What is Version pinning and rollbacks?</h3>
+<p>{W2} It is a foundational part of the {C} workflow, and understanding it pays off across almost every project you will touch.</p>
+<h3 id="can-version-pinning-and-rollbacks-be-automated">Can Version pinning and rollbacks be automated?</h3>
+<p>Yes, and it should be. Start by scripting the steps in this guide, then wire them into CI so the automation runs without anyone remembering to.</p>
+<h3 id="do-i-need-version-pinning-and-rollbacks-for-small-projects">Do I need Version pinning and rollbacks for small projects?</h3>
+<p>More than you would expect. Small projects benefit disproportionately because there is no dedicated ops person to catch drift — the setup protects itself.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Version pinning and rollbacks rewards deliberate setup and punishes improvisation. Start with the checklist above, automate what you can, and revisit the configuration quarterly. The compounding effect is real: teams that invest here ship calmer, debug less, and onboard faster — and the gap widens every month.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=performance%20measurement%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+         alt="Performance measurement Cheat Sheet: 5 Shortcuts and Commands" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../dotnet/performance-measurement-cheat-sheet-5-shortcuts-and-commands.html" class="post-card__content-link">
+      <h3 class="post-card__title">Performance measurement Cheat Sheet: 5 Shortcuts and Commands</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</span>
+      <span class="post-card__meta post-card__meta--date">July 11, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=runtime%20vs%20sdk%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+         alt="Runtime vs sdk Essentials: 5 Tips That Save Hours" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../dotnet/runtime-vs-sdk-essentials-5-tips-that-save-hours.html" class="post-card__content-link">
+      <h3 class="post-card__title">Runtime vs sdk Essentials: 5 Tips That Save Hours</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</span>
+      <span class="post-card__meta post-card__meta--date">July 10, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=feature%20flags%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+         alt="7 Feature flags Shortcuts You Will Use Every Day" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../dotnet/7-feature-flags-shortcuts-you-will-use-every-day.html" class="post-card__content-link">
+      <h3 class="post-card__title">7 Feature flags Shortcuts You Will Use Every Day</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</span>
+      <span class="post-card__meta post-card__meta--date">July 11, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=lts%20and%20sts%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+         alt="Lts and sts releases vs Ef core fundamentals: Which Should You Use?" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../dotnet/lts-and-sts-releases-vs-ef-core-fundamentals-which-should-you-use.html" class="post-card__content-link">
+      <h3 class="post-card__title">Lts and sts releases vs Ef core fundamentals: Which Should You Use?</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</span>
+      <span class="post-card__meta post-card__meta--date">July 10, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=global.json%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+         alt="Global.json Migration Guide: Move Without Breaking Anything" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../dotnet/global-json-migration-guide-move-without-breaking-anything.html" class="post-card__content-link">
+      <h3 class="post-card__title">Global.json Migration Guide: Move Without Breaking Anything</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</span>
+      <span class="post-card__meta post-card__meta--date">July 10, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=health%20checks%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+         alt="Health checks Essentials: 7 Tips That Save Hours" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../dotnet/health-checks-essentials-7-tips-that-save-hours.html" class="post-card__content-link">
+      <h3 class="post-card__title">Health checks Essentials: 7 Tips That Save Hours</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</span>
+      <span class="post-card__meta post-card__meta--date">July 11, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

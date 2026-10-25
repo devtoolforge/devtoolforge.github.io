@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>Unit testing on mac for Beginners: A Practical Introduction</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Today's deep dive: Unit testing on mac in Visual Studio for Mac — running xUnit, NUnit, or MSTest suites in the IDE. The test loop in the IDE keeps fixes">
+  <link rel="canonical" href="https://devtoolforge.github.io/visual-studio-mac/unit-testing-on-mac-for-beginners-a-practical-introduction.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-09-06T18:00:00+06:00">
+  <meta property="article:modified_time" content="2026-09-06T18:00:00+06:00">
+  <meta property="article:section" content="Visual Studio for Mac">
+  <meta property="og:updated_time" content="2026-09-06T18:00:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="5 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Unit testing on mac for Beginners: A Practical Introduction">
+  <meta property="og:description" content="Today's deep dive: Unit testing on mac in Visual Studio for Mac — running xUnit, NUnit, or MSTest suites in the IDE. The test loop in the IDE keeps fixes">
+  <meta property="og:url" content="https://devtoolforge.github.io/visual-studio-mac/unit-testing-on-mac-for-beginners-a-practical-introduction.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=unit%20testing%20on%20mac%20developer%20setup&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Unit testing on mac for Beginners: A Practical Introduction">
+  <meta name="twitter:description" content="Today's deep dive: Unit testing on mac in Visual Studio for Mac — running xUnit, NUnit, or MSTest suites in the IDE. The test loop in the IDE keeps fixes">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=unit%20testing%20on%20mac%20developer%20setup&amp;w=474&amp;h=274&amp;c=7">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/visual-studio-mac/unit-testing-on-mac-for-beginners-a-practical-introduction.html" }, "headline": "Unit testing on mac for Beginners: A Practical Introduction", "description": "Today's deep dive: Unit testing on mac in Visual Studio for Mac — running xUnit, NUnit, or MSTest suites in the IDE. The test loop in the IDE keeps fixes verified as you write them…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=unit%20testing%20on%20mac%20developer%20setup&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-09-06T18:00:00+06:00", "dateModified": "2026-09-06T18:00:00+06:00", "wordCount": 1051, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/visual-studio-mac/unit-testing-on-mac-for-beginners-a-practical-introduction.html#webpage", "url": "https://devtoolforge.github.io/visual-studio-mac/unit-testing-on-mac-for-beginners-a-practical-introduction.html", "name": "Unit testing on mac for Beginners: A Practical Introduction", "datePublished": "2026-09-06T18:00:00+06:00", "dateModified": "2026-09-06T18:00:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/visual-studio-mac/", "url": "https://devtoolforge.github.io/category/visual-studio-mac/", "name": "Visual Studio for Mac" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/visual-studio-mac/unit-testing-on-mac-for-beginners-a-practical-introduction.html", "url": "https://devtoolforge.github.io/visual-studio-mac/unit-testing-on-mac-for-beginners-a-practical-introduction.html", "name": "Unit testing on mac for Beginners: A Practical Introduction" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure id="img-top" class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=unit%20testing%20on%20mac%20developer%20setup&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=unit%20testing%20on%20mac%20developer%20setup&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=unit%20testing%20on%20mac%20developer%20setup&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="Unit testing on mac for Beginners: A Practical Introduction"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">Unit testing on mac for Beginners: A Practical Introduction</h1>
+            <p class="article-header__excerpt">Today's deep dive: Unit testing on mac in Visual Studio for Mac — running xUnit, NUnit, or MSTest suites in the IDE. The test loop in the IDE keeps fixes verified as you write them…</p>
+            <div class="article-header__footer">
+              <a href="../category/visual-studio-mac/" class="article-header__meta article-header__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-09-06T18:00:00+06:00">September 6, 2026</time>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section" data-canvas-grid="content">
+        <div class="container">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Today's deep dive: Unit testing on mac in Visual Studio for Mac — running xUnit, NUnit, or MSTest suites in the IDE. The test loop in the IDE keeps fixes verified as you write them. Teams that take it seriously spend less time on avoidable problems and more time shipping features users actually notice. It is one of the few practices that pays for itself within the first week of consistent use.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-is-unit-testing-on-mac">What Is Unit testing on mac?</a></li>
+<li><a href="#common-unit-testing-on-mac-mistakes">Common Unit testing on mac Mistakes</a></li>
+<li><a href="#performance-considerations">Performance Considerations</a></li>
+<li><a href="#unit-testing-on-mac-vs-licensing-after-retirement">Unit testing on mac vs Licensing after retirement</a></li>
+<li><a href="#advanced-tips">Advanced Tips</a></li>
+<li><a href="#version-notes-for-2026">Version Notes for 2026</a></li>
+<li><a href="#quick-example">Quick Example</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#what-is-unit-testing-on-mac-2">What is Unit testing on mac?</a></li>
+<li><a href="#what-are-the-most-common-mistakes-with-unit-testing-on-mac">What are the most common mistakes with Unit testing on mac?</a></li>
+<li><a href="#can-unit-testing-on-mac-be-automated">Can Unit testing on mac be automated?</a></li>
+<li><a href="#do-i-need-unit-testing-on-mac-for-small-projects">Do I need Unit testing on mac for small projects?</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ol></nav>
+<p>In this guide we cover unit testing on mac end to end: the core concepts, the exact steps to set it up well, the mistakes that cost teams the most time, and the habits that keep the setup healthy. Everything here runs on the current 2026 toolchain, with commands you can copy as-is.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Topic</strong></td><td>Unit testing on mac</td></tr>
+              <tr><td><strong>Area</strong></td><td>Visual Studio for Mac</td></tr>
+              <tr><td><strong>Skill level</strong></td><td>Intermediate to advanced</td></tr>
+              <tr><td><strong>Product</strong></td><td>Visual Studio for Mac 17.x</td></tr>
+              <tr><td><strong>Status</strong></td><td>Retired — support ended (final release 17.6)</td></tr>
+              <tr><td><strong>Last release</strong></td><td>August 2024</td></tr>
+              <tr><td><strong>Migration paths</strong></td><td>VS Code + C# Dev Kit, JetBrains Rider, VM with VS for Windows</td></tr>
+              <tr><td><strong>Last verified</strong></td><td>October 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+<h2 id="what-is-unit-testing-on-mac">What Is Unit testing on mac?</h2>
+<p>Unit testing on mac, in one sentence: running xUnit, NUnit, or MSTest suites in the IDE. In practice that means the details are worth getting right once, because everything downstream inherits the decision. Once the defaults are deliberate, the rest of the workflow tends to fall into place.</p>
+<p>The mental model is simple: one clear definition, one clear workflow, and configuration that matches reality. Most confusion around unit testing on mac comes from mixing those layers — mixing definitions from different eras, or configs copied from projects with different needs. Keep them separate and the rest of this guide follows naturally.</p>
+<h2 id="common-unit-testing-on-mac-mistakes">Common Unit testing on mac Mistakes</h2>
+<p>The same failure patterns show up again and again. Here are the four we meet most often, including the classic: Letting test fixtures depend on local file paths that differ per machine.</p>
+<ul>
+              <li>Shipping changes without a rollback plan and improvising during the incident.</li>
+              <li>Optimizing before measuring, then optimizing again after the metrics disagree.</li>
+              <li>Ignoring warnings that point at real problems because they have always been there.</li>
+              <li>Skipping documentation for decisions, forcing archaeology six months later.</li>
+            </ul>
+<p>Every one of these fixes is cheap when caught early and expensive when caught late. A quarterly review of unit testing on mac — twenty minutes, honestly — catches most of them before they metastasize.</p>
+<h2 id="performance-considerations">Performance Considerations</h2>
+<p>Measure first. Capture baseline numbers for the scenario you care about before touching anything, because intuition about hot paths is famously wrong. For unit testing on mac, that usually means timing the end-to-end operation, not the method you suspect, and recording memory alongside time. A ten-minute baseline turns a week of speculation into an afternoon of targeted work.</p>
+<p>Remove work before making work faster. The cheapest optimization for unit testing on mac is usually doing less: fewer allocations, fewer passes, fewer round trips. Profile to find work that can be skipped entirely under normal conditions. Only then reach for caching, and only with an explicit invalidation plan.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=unit%20testing%20on%20mac%20developer%20setup&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Unit testing on mac for Beginners: A Practical Introduction" style="border-radius:9px"></figure>
+<h2 id="unit-testing-on-mac-vs-licensing-after-retirement">Unit testing on mac vs Licensing after retirement</h2>
+<p>They overlap enough that the question is usually about trade-offs rather than right and wrong. Unit testing on mac optimizes for the test loop in the ide keeps fixes verified as you write them; Licensing after retirement pushes harder on the opposite axis. List your constraints honestly — team experience, platform targets, and maintenance budget — and the answer usually picks itself.</p>
+<p>Start from the problem, not the tool. If your pain is the test loop in the ide keeps fixes verified as you write them, Unit testing on mac is the more direct route; if your team already lives in the other ecosystem, Licensing after retirement minimizes ramp-up cost. Whatever you choose, write down why, because the next person will ask.</p>
+<h2 id="advanced-tips">Advanced Tips</h2>
+<p>Once the fundamentals are second nature, these are the practices that separate good setups from great ones:</p>
+<ul>
+              <li>Record decisions next to the code they affect, in the same pull request that introduces them.</li>
+              <li>Build a tiny example project that demonstrates correct usage — it doubles as a smoke test when versions change.</li>
+              <li>Automate the audit: a scheduled check that compares expected state to real state catches drift within hours instead of months.</li>
+              <li>Tip: Run tests with the debugger attached when a failure only appears at runtime</li>
+            </ul>
+<h2 id="version-notes-for-2026">Version Notes for 2026</h2>
+<p>Version churn is the quiet tax on every Visual Studio for Mac project. Pin the versions unit testing on mac depends on, record why each was chosen, and upgrade on your schedule — deliberately, with a reviewed test pass — rather than reactively when something breaks. The 2026 toolchain is stable for current workloads, which makes disciplined pinning easier than it used to be.</p>
+<h2 id="quick-example">Quick Example</h2>
+<p>Here is a compact, real-world command prompt example you can adapt directly. It shows the configuration style we recommend for unit testing on mac: explicit, commented where it matters, and free of magic.</p>
+<pre><code>git checkout -b migrate/ide-vm &amp;&amp; dotnet build &amp;&amp; dotnet test</code></pre>
+<p>Copy it, run it once, then trim it to what your project actually needs. The worst version of any snippet is the one nobody on the team fully understands.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="what-is-unit-testing-on-mac-2">What is Unit testing on mac?</h3>
+<p>{W2} It is a foundational part of the {C} workflow, and understanding it pays off across almost every project you will touch.</p>
+<h3 id="what-are-the-most-common-mistakes-with-unit-testing-on-mac">What are the most common mistakes with Unit testing on mac?</h3>
+<p>The big three: treating it as a one-time setup, letting local configuration drift from CI, and skipping documentation for the decisions you make. All three are covered above with concrete fixes.</p>
+<h3 id="can-unit-testing-on-mac-be-automated">Can Unit testing on mac be automated?</h3>
+<p>Yes, and it should be. Start by scripting the steps in this guide, then wire them into CI so the automation runs without anyone remembering to.</p>
+<h3 id="do-i-need-unit-testing-on-mac-for-small-projects">Do I need Unit testing on mac for small projects?</h3>
+<p>More than you would expect. Small projects benefit disproportionately because there is no dedicated ops person to catch drift — the setup protects itself.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The takeaway is unglamorous but true: consistency beats cleverness. Keep the Unit testing on mac setup documented, automated, and reviewed, and it will quietly repay the effort for the life of the project.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=hot%20restart%20for%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+         alt="Fix It Fast: A Hot restart for ios Error Handbook (With Real Examples)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-mac/fix-it-fast-a-hot-restart-for-ios-error-handbook-with-real-examples.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fix It Fast: A Hot restart for ios Error Handbook (With Real Examples)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</span>
+      <span class="post-card__meta post-card__meta--date">September 7, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=git%20integration%20on%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+         alt="Git integration on mac Workflow: Organize, Build, Ship" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-mac/git-integration-on-mac-workflow-organize-build-ship.html" class="post-card__content-link">
+      <h3 class="post-card__title">Git integration on mac Workflow: Organize, Build, Ship</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</span>
+      <span class="post-card__meta post-card__meta--date">September 5, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=xaml%20previewer%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+         alt="Xaml previewer: A Complete Guide for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-mac/xaml-previewer-a-complete-guide-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Xaml previewer: A Complete Guide for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</span>
+      <span class="post-card__meta post-card__meta--date">September 8, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=maui%20development%20after%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+         alt="Maui development after retirement in Visual Studio for Mac: Setup, Tips, and Workflows" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-mac/maui-development-after-retirement-in-visual-studio-for-mac-setup-tips-an.html" class="post-card__content-link">
+      <h3 class="post-card__title">Maui development after retirement in Visual Studio for Mac: Setup, Tips, and Workflows</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</span>
+      <span class="post-card__meta post-card__meta--date">September 4, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=macos%20and%20mac%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+         alt="Macos and mac catalyst projects Essentials: 15 Tips That Save Hours" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-mac/macos-and-mac-catalyst-projects-essentials-15-tips-that-save-hours.html" class="post-card__content-link">
+      <h3 class="post-card__title">Macos and mac catalyst projects Essentials: 15 Tips That Save Hours</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</span>
+      <span class="post-card__meta post-card__meta--date">September 9, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=workload%20manager%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+         alt="Mastering Workload manager: From Basics to Advanced" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-mac/mastering-workload-manager-from-basics-to-advanced.html" class="post-card__content-link">
+      <h3 class="post-card__title">Mastering Workload manager: From Basics to Advanced</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</span>
+      <span class="post-card__meta post-card__meta--date">September 3, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

@@ -1,62 +1,87 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" data-header-style="modern">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
   <title>.NET — DevTools Journal</title>
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Microsoft developer tools, explained — DevTools Journal demo build. This demo is intentionally noindex/nofollow.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Articles, guides, and how-tos filed under .NET.">
+  <link rel="canonical" href="https://devtoolforge.github.io/category/dotnet/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content=".NET — DevTools Journal">
+  <meta property="og:description" content="Articles, guides, and how-tos filed under .NET.">
+  <meta property="og:url" content="https://devtoolforge.github.io/category/dotnet/">
+  <meta property="og:image" content="../../assets/kutukdev/images/icon128.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content=".NET — DevTools Journal">
+  <meta name="twitter:description" content="Articles, guides, and how-tos filed under .NET.">
+  <meta name="twitter:image" content="../../assets/kutukdev/images/icon128.png">
     <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
-  <link rel="icon" href="../../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="shortcut icon" href="../../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
   <link rel="icon" href="../../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../../assets/kutukdev/images/icon128.png">
   <link rel="preload" as="style" href="../../assets/kutukdev/css/style.css">
   <link rel="stylesheet" href="../../assets/kutukdev/css/style.css">
   <link rel="preconnect" href="https://tse1.mm.bing.net">
-  <meta property="og:site_name" content="DevTools Journal">
-  <meta property="og:title" content=".NET — DevTools Journal">
-  <meta property="og:type" content="article">
-  <meta name="generator" content="DevTools Journal demo generator">
-
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/dotnet/", "url": "https://devtoolforge.github.io/category/dotnet/", "name": ".NET" } }] }
+  </script>
 </head>
 <body class="home-template">
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
   <div class="site" id="site">
-    <header class="site-header">
-      <div class="site-header__container">
-        <button class="site-header__hamburger" aria-label="Open menu"
-                aria-expanded="false" data-site-action-trigger="navigation">
-          <span></span><span></span><span></span>
-        </button>
-        <a class="site-header__logo" href="../../">DevTools Journal</a>
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
       </div>
-    </header>
-    <div class="site-actions" aria-hidden="true">
-      <div class="site-actions__backdrop"></div>
-      <nav class="site-actions__panel" aria-label="Main navigation">
-        <div class="site-actions__top">
-          <p class="site-actions__title">Menu</p>
-          <button class="site-actions__close" data-close-site-actions aria-label="Close menu">&times;</button>
-        </div>
-        <ul class="site-actions__menu">
-          <li><a href="../../">Home</a></li>
-      <li><a href="../../category/visual-studio/">Visual Studio</a></li>
-      <li><a href="../../category/visual-studio-code/">Visual Studio Code</a></li>
-      <li><a href="../../category/visual-studio-mac/">Visual Studio for Mac</a></li>
-      <li><a href="../../category/dotnet/">.NET</a></li>
-      <li><a href="../../category/dotnet-framework/">.NET Framework</a></li>
-      <li><a href="../../category/aspnet-core/">ASP.NET Core</a></li>
-      <li><a href="../../category/csharp/">C#</a></li>
-      <li><a href="../../category/fsharp/">F#</a></li>
-      <li><a href="../../category/typescript/">TypeScript</a></li>
-      <li><a href="../../category/microsoft-build-tools/">Microsoft Build Tools</a></li>
-      <li><a href="../../category/msbuild/">MSBuild</a></li>
-        </ul>
-      </nav>
     </div>
+  </div>
+</header>
     <main id="main" class="site-main">
-</div>
       <header class="page-header section" data-section="first">
         <div class="container">
           <h1 class="page-header__title">.NET</h1>
@@ -67,27 +92,87 @@
         <div class="container">
           <div class="posts-feed" data-layout-grid="columns">
           <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" >
-            <a href="../../dotnet/dotnet-10-explained-lts-features-support-dates-upgrade-path.html" class="post-card__media" tabindex="-1">
+                   data-has-featured-image="true">
+            <a href="../../dotnet/runtime-vs-sdk-anatomy-how-the-pieces-fit-together.html" class="post-card__media" tabindex="-1">
               <picture class="post-card__figure">
                 <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=dotnet%20programming%20code%20screen&w=474&h=274&c=7" loading="lazy"
-                     alt=".NET 10 Explained: LTS Features, Support Dates, and Upgrade Path">
+                     src="https://tse1.mm.bing.net/th?q=runtime%20vs%20sdk%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Runtime vs sdk Anatomy: How the Pieces Fit Together">
               </picture>
             </a>
             <div class="post-card__content">
-              <a href="../../dotnet/dotnet-10-explained-lts-features-support-dates-upgrade-path.html" class="post-card__content-link">
-                <h2 class="post-card__title">.NET 10 Explained: LTS Features, Support Dates, and Upgrade Path</h2>
-                <p class="post-card__excerpt">.NET 10 is Microsoft's eleventh major unified .NET release and its current Long-Term Support (LTS) platform. Shipped on November 11, 2025 alongside C# 14, it carries three years of&hellip;</p>
+              <a href="../../dotnet/runtime-vs-sdk-anatomy-how-the-pieces-fit-together.html" class="post-card__content-link">
+                <h2 class="post-card__title">Runtime vs sdk Anatomy: How the Pieces Fit Together</h2>
+                <p class="post-card__excerpt">Today's deep dive: Runtime vs sdk in .NET — the difference between the runtime that executes apps and the SDK that builds them. Installing the right components keeps machines lean …</p>
               </a>
               <div class="post-card__footer">
                 <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
-                <span class="post-card__meta post-card__meta--date">September 3, 2026</span>
+                <span class="post-card__meta post-card__meta--date">October 24, 2026</span>
               </div>
             </div>
           </article>
           <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" data-publish-offset="2700000">
+                   data-has-featured-image="true">
+            <a href="../../dotnet/lts-and-sts-releases-a-complete-guide-for-2026.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=lts%20and%20sts%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Lts and sts releases: A Complete Guide for 2026">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/lts-and-sts-releases-a-complete-guide-for-2026.html" class="post-card__content-link">
+                <h2 class="post-card__title">Lts and sts releases: A Complete Guide for 2026</h2>
+                <p class="post-card__excerpt">Today's deep dive: Lts and sts releases in .NET — the two support tracks: Long Term Support and Standard Term Support. Choosing the right track decides when your platform forces an…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 23, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/a-field-guide-to-global-json.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=global.json%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="A Field Guide to Global.json">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/a-field-guide-to-global-json.html" class="post-card__content-link">
+                <h2 class="post-card__title">A Field Guide to Global.json</h2>
+                <p class="post-card__excerpt">Today's deep dive: Global.json in .NET — the file that pins the SDK version for a repository. CI and teammates build with exactly the SDK the project expects. Teams that take it se…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 22, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/sdk-style-project-files-essentials-8-tips-that-save-hours.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=sdk-style%20project%20files%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Sdk-style project files Essentials: 8 Tips That Save Hours">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/sdk-style-project-files-essentials-8-tips-that-save-hours.html" class="post-card__content-link">
+                <h2 class="post-card__title">Sdk-style project files Essentials: 8 Tips That Save Hours</h2>
+                <p class="post-card__excerpt">Today's deep dive: Sdk-style project files in .NET — the modern csproj with implicit includes and package references. Projects shrink from hundreds of lines to a handful of meaning…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 21, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
             <a href="../../dotnet/migrating-from-dotnet-framework-to-dotnet-10-step-by-step-plan.html" class="post-card__media" tabindex="-1">
               <picture class="post-card__figure">
                 <img class="post-card__image" width="16" height="9"
@@ -98,20 +183,414 @@
             <div class="post-card__content">
               <a href="../../dotnet/migrating-from-dotnet-framework-to-dotnet-10-step-by-step-plan.html" class="post-card__content-link">
                 <h2 class="post-card__title">Migrating from .NET Framework to .NET 10: A Practical Step-by-Step Plan</h2>
-                <p class="post-card__excerpt">Every .NET Framework codebase faces the same eventual question: when and how do we move to modern .NET? With .NET 10 as the current LTS supported through November 2028, the destina&hellip;</p>
+                <p class="post-card__excerpt">Every .NET Framework codebase faces the same eventual question: when and how do we move to modern .NET? With .NET 10 as the current LTS supported through November 2028, the destina…</p>
               </a>
               <div class="post-card__footer">
                 <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
-                <span class="post-card__meta post-card__meta--date" data-dynamic-date></span>
+                <span class="post-card__meta post-card__meta--date">October 21, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/getting-started-with-central-package-management.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=central%20package%20management%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Getting Started with Central package management">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/getting-started-with-central-package-management.html" class="post-card__content-link">
+                <h2 class="post-card__title">Getting Started with Central package management</h2>
+                <p class="post-card__excerpt">Today's deep dive: Central package management in .NET — one Directory.Packages.props defining versions for the whole repo. Version drift and transitive surprises drop dramatically …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 20, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/fix-it-fast-a-dependency-injection-basics-error-handbook.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=dependency%20injection%20basics%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Fix It Fast: A Dependency injection basics Error Handbook">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/fix-it-fast-a-dependency-injection-basics-error-handbook.html" class="post-card__content-link">
+                <h2 class="post-card__title">Fix It Fast: A Dependency injection basics Error Handbook</h2>
+                <p class="post-card__excerpt">Today's deep dive: Dependency injection basics in .NET — the built-in service container and lifetimes: singleton, scoped, transient. Correct lifetimes prevent leaks and threading b…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 19, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/hosted-services-and-background-workers-performance-tuning-practical-tips.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=hosted%20services%20and%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Hosted services and background workers Performance Tuning: Practical Tips That Work">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/hosted-services-and-background-workers-performance-tuning-practical-tips.html" class="post-card__content-link">
+                <h2 class="post-card__title">Hosted services and background workers Performance Tuning: Practical Tips That Work</h2>
+                <p class="post-card__excerpt">Today's deep dive: Hosted services and background workers in .NET — BackgroundService for long-running work inside the host. Queues, polling, and schedulers run managed with gracef…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 18, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/mastering-configuration-providers-from-basics-to-advanced.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=configuration%20providers%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Mastering Configuration providers: From Basics to Advanced">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/mastering-configuration-providers-from-basics-to-advanced.html" class="post-card__content-link">
+                <h2 class="post-card__title">Mastering Configuration providers: From Basics to Advanced</h2>
+                <p class="post-card__excerpt">Today's deep dive: Configuration providers in .NET — layered config from appsettings, environment, and command line. One config pipeline covers local, container, and cloud environm…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 16, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/what-s-new-in-the-options-pattern-for-2026.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=the%20options%20pattern%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="What's New in The options pattern for 2026?">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/what-s-new-in-the-options-pattern-for-2026.html" class="post-card__content-link">
+                <h2 class="post-card__title">What's New in The options pattern for 2026?</h2>
+                <p class="post-card__excerpt">Today's deep dive: The options pattern in .NET — typed configuration classes bound from configuration sections. Settings become validated, injected, and testable instead of stringl…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 15, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/logging-abstractions-health-check-audit-and-improve-your-setup.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=logging%20abstractions%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Logging abstractions Health Check: Audit and Improve Your Setup">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/logging-abstractions-health-check-audit-and-improve-your-setup.html" class="post-card__content-link">
+                <h2 class="post-card__title">Logging abstractions Health Check: Audit and Improve Your Setup</h2>
+                <p class="post-card__excerpt">Today's deep dive: Logging abstractions in .NET — ILogger with structured logging across providers. Logs become queryable events rather than unsearchable text. Teams that take it s…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 14, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/ef-core-fundamentals-health-check-audit-and-improve-your-setup.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=ef%20core%20fundamentals%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Ef core fundamentals Health Check: Audit and Improve Your Setup">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/ef-core-fundamentals-health-check-audit-and-improve-your-setup.html" class="post-card__content-link">
+                <h2 class="post-card__title">Ef core fundamentals Health Check: Audit and Improve Your Setup</h2>
+                <p class="post-card__excerpt">Today's deep dive: Ef core fundamentals in .NET — the ORM for mapping entities, DbContext, and LINQ to SQL. Typed queries with migrations cover most relational workloads. Teams tha…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 13, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/mastering-minimal-apis-from-basics-to-advanced.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=minimal%20apis%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Mastering Minimal apis: From Basics to Advanced">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/mastering-minimal-apis-from-basics-to-advanced.html" class="post-card__content-link">
+                <h2 class="post-card__title">Mastering Minimal apis: From Basics to Advanced</h2>
+                <p class="post-card__excerpt">Today's deep dive: Minimal apis in .NET — endpoint routing with a few lines instead of controllers. Small services and prototypes express surface area without ceremony. Teams that …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 12, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/grpc-services-anatomy-how-the-pieces-fit-together.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=grpc%20services%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Grpc services Anatomy: How the Pieces Fit Together">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/grpc-services-anatomy-how-the-pieces-fit-together.html" class="post-card__content-link">
+                <h2 class="post-card__title">Grpc services Anatomy: How the Pieces Fit Together</h2>
+                <p class="post-card__excerpt">Today's deep dive: Grpc services in .NET — contract-first RPC over HTTP/2 with protobuf. Typed, efficient service-to-service calls inside clusters. Teams that take it seriously spe…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 11, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/native-aot-publishing-performance-tuning-practical-tips-that-work.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=native%20aot%20publishing%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Native aot publishing Performance Tuning: Practical Tips That Work">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/native-aot-publishing-performance-tuning-practical-tips-that-work.html" class="post-card__content-link">
+                <h2 class="post-card__title">Native aot publishing Performance Tuning: Practical Tips That Work</h2>
+                <p class="post-card__excerpt">Today's deep dive: Native aot publishing in .NET — compiling to a native binary with ahead-of-time compilation. Startup is near-instant and images shrink dramatically. Teams that t…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 10, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/8-assembly-trimming-shortcuts-you-will-use-every-day.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=assembly%20trimming%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="8 Assembly trimming Shortcuts You Will Use Every Day">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/8-assembly-trimming-shortcuts-you-will-use-every-day.html" class="post-card__content-link">
+                <h2 class="post-card__title">8 Assembly trimming Shortcuts You Will Use Every Day</h2>
+                <p class="post-card__excerpt">Today's deep dive: Assembly trimming in .NET — removing unused IL from published output. Container images and single-file apps get much smaller. Teams that take it seriously spend …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 9, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/single-file-publish-workflow-organize-build-ship.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=single-file%20publish%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Single-file publish Workflow: Organize, Build, Ship">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/single-file-publish-workflow-organize-build-ship.html" class="post-card__content-link">
+                <h2 class="post-card__title">Single-file publish Workflow: Organize, Build, Ship</h2>
+                <p class="post-card__excerpt">Today's deep dive: Single-file publish in .NET — packing the app and runtime into one executable. Deployment becomes copying a file plus any native dependencies. Teams that take it…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 8, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/level-up-your-net-skills-with-self-contained-vs-framework-dependent-with.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=self-contained%20vs%20framework-dependent%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Level Up Your .NET Skills with Self-contained vs framework-dependent (With Real Examples)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/level-up-your-net-skills-with-self-contained-vs-framework-dependent-with.html" class="post-card__content-link">
+                <h2 class="post-card__title">Level Up Your .NET Skills with Self-contained vs framework-dependent (With Real Examples)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Self-contained vs framework-dependent in .NET — shipping the runtime with the app or relying on an installed runtime. The trade-off is deployment size versus sha…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 7, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/common-rids-and-cross-compilation-mistakes-and-how-to-fix-them-with-real.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=rids%20and%20cross-compilation%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Common Rids and cross-compilation Mistakes and How to Fix Them (With Real Examples)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/common-rids-and-cross-compilation-mistakes-and-how-to-fix-them-with-real.html" class="post-card__content-link">
+                <h2 class="post-card__title">Common Rids and cross-compilation Mistakes and How to Fix Them (With Real Examples)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Rids and cross-compilation in .NET — runtime identifiers for targeting OS and CPU combinations. One CI job can produce binaries for every target platform. Teams …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 5, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/getting-started-with-span-and-memory-types.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=span%20and%20memory%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Getting Started with Span and memory types">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/getting-started-with-span-and-memory-types.html" class="post-card__content-link">
+                <h2 class="post-card__title">Getting Started with Span and memory types</h2>
+                <p class="post-card__excerpt">Today's deep dive: Span and memory types in .NET — stack-allocated slices that avoid copies and allocations. Hot paths parse and slice with zero garbage collection pressure. Teams …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 4, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/async-and-await-patterns-the-missing-manual.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=async%20and%20await%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Async and await patterns: The Missing Manual">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/async-and-await-patterns-the-missing-manual.html" class="post-card__content-link">
+                <h2 class="post-card__title">Async and await patterns: The Missing Manual</h2>
+                <p class="post-card__excerpt">Today's deep dive: Async and await patterns in .NET — asynchronous programming with Task, ValueTask, and await. Async keeps servers responsive under IO-heavy load. Teams that take …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 3, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/10-iasyncenumerable-streams-shortcuts-you-will-use-every-day.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=iasyncenumerable%20streams%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="10 Iasyncenumerable streams Shortcuts You Will Use Every Day">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/10-iasyncenumerable-streams-shortcuts-you-will-use-every-day.html" class="post-card__content-link">
+                <h2 class="post-card__title">10 Iasyncenumerable streams Shortcuts You Will Use Every Day</h2>
+                <p class="post-card__excerpt">Today's deep dive: Iasyncenumerable streams in .NET — async sequences consumed with await foreach. Streaming data from APIs and databases flows without buffering everything. Teams …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 2, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/12-ways-to-master-cancellation-tokens-faster.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=cancellation%20tokens%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="12 Ways to master Cancellation tokens Faster">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/12-ways-to-master-cancellation-tokens-faster.html" class="post-card__content-link">
+                <h2 class="post-card__title">12 Ways to master Cancellation tokens Faster</h2>
+                <p class="post-card__excerpt">Today's deep dive: Cancellation tokens in .NET — cooperative cancellation across async operations. Shutdowns and timeouts stay clean instead of leaking work. Teams that take it ser…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">October 1, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../dotnet/garbage-collection-modes-troubleshooting-15-fixes-for-everyday-problems.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=garbage%20collection%20modes%20dotnet%20programming&w=474&h=274&c=7" loading="lazy"
+                     alt="Garbage collection modes Troubleshooting: 15 Fixes for Everyday Problems (With Real Examples)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../dotnet/garbage-collection-modes-troubleshooting-15-fixes-for-everyday-problems.html" class="post-card__content-link">
+                <h2 class="post-card__title">Garbage collection modes Troubleshooting: 15 Fixes for Everyday Problems (With Real Examples)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Garbage collection modes in .NET — workstation vs server GC and background collection. The right mode changes latency and throughput profiles substantially. Team…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/dotnet/" class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET</a>
+                <span class="post-card__meta post-card__meta--date">September 30, 2026</span>
               </div>
             </div>
           </article>
           </div>
+          <nav class="pagination" aria-label="Pages"><span class="current">1</span><a href="../../category/dotnet/page/2/">2</a><a href="../../category/dotnet/page/3/">3</a><span>&hellip;</span><a href="../../category/dotnet/page/6/">6</a></nav>
         </div>
       </section>
     </main>
-<footer class="site-footer"><nav class="site-footer__nav"><a href="../../">Home</a><a href="../../page/dmca.html">DMCA</a><a href="../../page/contact.html">Contact</a><a href="../../page/privacy-policy.html">Privacy Policy</a><a href="../../page/copyright.html">Copyright</a></nav><div class="site-footer__copyright">Copyright &copy; 2026 DevTools Journal</div></footer>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
   </div>
-  <script src="../../assets/kutukdev/js/main.js"></script>
+</footer>
+  </div>
+  <script defer src="../../assets/kutukdev/js/main.js"></script>
 </body>
 </html>

@@ -1,88 +1,164 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" data-header-style="modern">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
   <title>ASP.NET Core Minimal APIs: Build Production REST APIs with Less Code</title>
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Microsoft developer tools, explained — DevTools Journal demo build. This demo is intentionally noindex/nofollow.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Minimal APIs arrived in ASP.NET Core 6 as a way to define HTTP endpoints in a few lines of C#, and in the .NET 10 era they have matured into a complete,">
+  <link rel="canonical" href="https://devtoolforge.github.io/aspnet-core/aspnet-core-minimal-apis-production-rest-apis-less-code.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-09-28T12:45:00+06:00">
+  <meta property="article:modified_time" content="2026-09-28T12:45:00+06:00">
+  <meta property="article:section" content="ASP.NET Core">
+  <meta property="og:updated_time" content="2026-09-28T12:45:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="5 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="ASP.NET Core Minimal APIs: Build Production REST APIs with Less Code">
+  <meta property="og:description" content="Minimal APIs arrived in ASP.NET Core 6 as a way to define HTTP endpoints in a few lines of C#, and in the .NET 10 era they have matured into a complete,">
+  <meta property="og:url" content="https://devtoolforge.github.io/aspnet-core/aspnet-core-minimal-apis-production-rest-apis-less-code.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=web%20api%20development%20code%20monitor&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ASP.NET Core Minimal APIs: Build Production REST APIs with Less Code">
+  <meta name="twitter:description" content="Minimal APIs arrived in ASP.NET Core 6 as a way to define HTTP endpoints in a few lines of C#, and in the .NET 10 era they have matured into a complete,">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=web%20api%20development%20code%20monitor&amp;w=474&amp;h=274&amp;c=7">
     <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
-  <link rel="icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
   <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
   <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
   <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
   <link rel="preconnect" href="https://tse1.mm.bing.net">
-  <meta property="og:site_name" content="DevTools Journal">
-  <meta property="og:title" content="ASP.NET Core Minimal APIs: Build Production REST APIs with Less Code">
-  <meta property="og:type" content="article">
-  <meta name="generator" content="DevTools Journal demo generator">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/aspnet-core/aspnet-core-minimal-apis-production-rest-apis-less-code.html" }, "headline": "ASP.NET Core Minimal APIs: Build Production REST APIs with Less Code", "description": "Minimal APIs arrived in ASP.NET Core 6 as a way to define HTTP endpoints in a few lines of C#, and in the .NET 10 era they have matured into a complete, production-grade alternativ…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=web%20api%20development%20code%20monitor&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-09-28T12:45:00+06:00", "dateModified": "2026-09-28T12:45:00+06:00", "wordCount": 1039, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
 
   <script type="application/ld+json">
-{ "@context": "https://schema.org", "@type": "BlogPosting", "headline": "ASP.NET Core Minimal APIs: Build Production REST APIs with Less Code", "description": "Minimal APIs arrived in ASP.NET Core 6 as a way to define HTTP endpoints in a few lines of C#, and in the .NET 10 era they have matured into a complete, product", "image": "https://tse1.mm.bing.net/th?q=web%20api%20development%20code%20monitor&w=474&h=274&c=7", "datePublished": "2026-09-28", "dateModified": "2026-09-28", "wordCount": 657, "author": {"@type": "Organization", "name": "DevTools Journal"}, "publisher": {"@type": "Organization", "name": "DevTools Journal"} }
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/aspnet-core/aspnet-core-minimal-apis-production-rest-apis-less-code.html#webpage", "url": "https://devtoolforge.github.io/aspnet-core/aspnet-core-minimal-apis-production-rest-apis-less-code.html", "name": "ASP.NET Core Minimal APIs: Build Production REST APIs with Less Code", "datePublished": "2026-09-28T12:45:00+06:00", "dateModified": "2026-09-28T12:45:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/aspnet-core/", "url": "https://devtoolforge.github.io/category/aspnet-core/", "name": "ASP.NET Core" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/aspnet-core/aspnet-core-minimal-apis-production-rest-apis-less-code.html", "url": "https://devtoolforge.github.io/aspnet-core/aspnet-core-minimal-apis-production-rest-apis-less-code.html", "name": "ASP.NET Core Minimal APIs: Build Production REST APIs with Less Code" } }] }
   </script>
 </head>
 <body class="home-template">
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
   <div class="site" id="site">
-    <header class="site-header">
-      <div class="site-header__container">
-        <button class="site-header__hamburger" aria-label="Open menu"
-                aria-expanded="false" data-site-action-trigger="navigation">
-          <span></span><span></span><span></span>
-        </button>
-        <a class="site-header__logo" href="../">DevTools Journal</a>
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
       </div>
-    </header>
-    <div class="site-actions" aria-hidden="true">
-      <div class="site-actions__backdrop"></div>
-      <nav class="site-actions__panel" aria-label="Main navigation">
-        <div class="site-actions__top">
-          <p class="site-actions__title">Menu</p>
-          <button class="site-actions__close" data-close-site-actions aria-label="Close menu">&times;</button>
-        </div>
-        <ul class="site-actions__menu">
-          <li><a href="../">Home</a></li>
-      <li><a href="../category/visual-studio/">Visual Studio</a></li>
-      <li><a href="../category/visual-studio-code/">Visual Studio Code</a></li>
-      <li><a href="../category/visual-studio-mac/">Visual Studio for Mac</a></li>
-      <li><a href="../category/dotnet/">.NET</a></li>
-      <li><a href="../category/dotnet-framework/">.NET Framework</a></li>
-      <li><a href="../category/aspnet-core/">ASP.NET Core</a></li>
-      <li><a href="../category/csharp/">C#</a></li>
-      <li><a href="../category/fsharp/">F#</a></li>
-      <li><a href="../category/typescript/">TypeScript</a></li>
-      <li><a href="../category/microsoft-build-tools/">Microsoft Build Tools</a></li>
-      <li><a href="../category/msbuild/">MSBuild</a></li>
-        </ul>
-      </nav>
     </div>
+  </div>
+</header>
     <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
       <header class="article-header section" data-layout-grid="custom"
               data-theme="highlight" data-section="first" data-has-featured-image="true">
         <div class="article-header__inner">
-          <figure class="article-header__figure">
+          <figure id="img-top" class="article-header__figure">
             <img class="article-header__image" width="1200" height="630"
-                 src="https://tse1.mm.bing.net/th?q=web%20api%20development%20code%20monitor&w=474&h=274&c=7" alt="ASP.NET Core Minimal APIs: Build Production REST APIs with Less Code">
+                 src="https://tse1.mm.bing.net/th?q=web%20api%20development%20code%20monitor&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=web%20api%20development%20code%20monitor&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=web%20api%20development%20code%20monitor&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="ASP.NET Core Minimal APIs: Build Production REST APIs with Less Code"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
           </figure>
           <div class="article-header__content">
             <h1 class="article-header__title">ASP.NET Core Minimal APIs: Build Production REST APIs with Less Code</h1>
-            <p class="article-header__excerpt">Minimal APIs arrived in ASP.NET Core 6 as a way to define HTTP endpoints in a few lines of C#, and in the .NET 10 era they have matured into a complete, production-grade alternative to controllers. For many services, the ceremony of controller classes buys nothing: what you want is a route, a handler, validation, and JSON, wired up in the smallest possible surface.</p>
+            <p class="article-header__excerpt">Minimal APIs arrived in ASP.NET Core 6 as a way to define HTTP endpoints in a few lines of C#, and in the .NET 10 era they have matured into a complete, production-grade alternativ…</p>
             <div class="article-header__footer">
               <a href="../category/aspnet-core/" class="article-header__meta article-header__meta-tag-primary" rel="tag">ASP.NET Core</a>
-              <span class="article-header__meta article-header__meta--date">September 28, 2026</span>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-09-28T12:45:00+06:00">September 28, 2026</time>
             </div>
           </div>
         </div>
       </header>
-      <div class="article-main section">
+      <div class="article-main section" data-canvas-grid="content">
         <div class="container">
-          <div class="article-content">
-          <p>Minimal APIs arrived in ASP.NET Core 6 as a way to define HTTP endpoints in a few lines of C#, and in the .NET 10 era they have matured into a complete, production-grade alternative to controllers. For many services, the ceremony of controller classes buys nothing: what you want is a route, a handler, validation, and JSON, wired up in the smallest possible surface.</p>
-          <p>This article shows how to build genuinely production-ready APIs with Minimal APIs: routing and filters, built-in validation in .NET 10, OpenAPI 3.1 documentation, authentication, error handling, and testing. By the end you will know when Minimal APIs are the right choice and how to keep a large API codebase tidy without controllers.</p>
-          
-          <h2>Quick Info Table</h2>
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Minimal APIs arrived in ASP.NET Core 6 as a way to define HTTP endpoints in a few lines of C#, and in the .NET 10 era they have matured into a complete, production-grade alternative to controllers. For many services, the ceremony of controller classes buys nothing: what you want is a route, a handler, validation, and JSON, wired up in the smallest possible surface.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-are-minimal-apis">What Are Minimal APIs?</a></li>
+<li><a href="#validation-without-ceremony">Validation Without Ceremony</a></li>
+<li><a href="#openapi-documentation-out-of-the-box">OpenAPI Documentation Out of the Box</a></li>
+<li><a href="#organizing-larger-apis-with-route-groups">Organizing Larger APIs with Route Groups</a></li>
+<li><a href="#auth-errors-and-testing">Auth, Errors, and Testing</a></li>
+<li><a href="#when-to-choose-minimal-apis-vs-controllers">When to Choose Minimal APIs vs Controllers</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#are-minimal-apis-production-ready">Are Minimal APIs production ready?</a></li>
+<li><a href="#do-minimal-apis-perform-better-than-controllers">Do Minimal APIs perform better than controllers?</a></li>
+<li><a href="#can-i-use-dependency-injection-with-minimal-apis">Can I use dependency injection with Minimal APIs?</a></li>
+<li><a href="#how-do-i-document-minimal-apis">How do I document Minimal APIs?</a></li>
+<li><a href="#can-minimal-apis-and-controllers-coexist">Can Minimal APIs and controllers coexist?</a></li>
+</ul></li>
+</ol></nav>
+<p>This article shows how to build genuinely production-ready APIs with Minimal APIs: routing and filters, built-in validation in .NET 10, OpenAPI 3.1 documentation, authentication, error handling, and testing. By the end you will know when Minimal APIs are the right choice and how to keep a large API codebase tidy without controllers.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
           <div class="table-scroll">
             <table>
               <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
@@ -98,138 +174,189 @@
               </tbody>
             </table>
           </div>
-          <h2>What Are Minimal APIs?</h2>
-          <p>Minimal APIs let you map HTTP endpoints directly on the application builder: a verb method, a route pattern, and a handler. The framework handles parameter binding from route, query, body, and services, and serializes the return value to JSON. No controller class, no base type, no attribute routing tables.</p>
-          <pre><code>var builder = WebApplication.CreateBuilder(args);
+<h2 id="what-are-minimal-apis">What Are Minimal APIs?</h2>
+<p>Minimal APIs let you map HTTP endpoints directly on the application builder: a verb method, a route pattern, and a handler. The framework handles parameter binding from route, query, body, and services, and serializes the return value to JSON. No controller class, no base type, no attribute routing tables.</p>
+<pre><code>var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.MapGet(&quot;/products/{id:int}&quot;, (int id, ProductDb db) =&gt;
+app.MapGet("/products/{id:int}", (int id, ProductDb db) =&gt;
     db.Find(id) is Product p ? Results.Ok(p) : Results.NotFound());
 
-app.MapPost(&quot;/products&quot;, (ProductDto dto, ProductDb db) =&gt; { ... });
+app.MapPost("/products", (ProductDto dto, ProductDb db) =&gt; { ... });
 
 app.Run();</code></pre>
-          <p>The handler signature is the contract. Simple types bind from route and query, complex types from JSON body, and registered services inject automatically, exactly like constructor injection in controllers.</p>
-          <h2>Validation Without Ceremony</h2>
-          <figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=web%20api%20development%20code%20monitor&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="ASP.NET Core Minimal APIs: Build Production REST APIs with Less Code" style="border-radius:9px"></figure>
-          <!-- ADSLOT:article_mid_300x250 -->
-          <p>.NET 10 made validation a built-in Minimal API feature: register the validation service, apply data annotations or a validation library to your DTOs, and invalid requests return a structured 400 ProblemDetails response before your handler runs. This closes the most-cited gap that pushed teams back to controllers.</p>
-          <pre><code>builder.Services.AddValidation();
+<p>The handler signature is the contract. Simple types bind from route and query, complex types from JSON body, and registered services inject automatically, exactly like constructor injection in controllers.</p>
+<h2 id="validation-without-ceremony">Validation Without Ceremony</h2>
+<p>.NET 10 made validation a built-in Minimal API feature: register the validation service, apply data annotations or a validation library to your DTOs, and invalid requests return a structured 400 ProblemDetails response before your handler runs. This closes the most-cited gap that pushed teams back to controllers.</p>
+<pre><code>builder.Services.AddValidation();
 
 public record ProductDto(
     [Required, MinLength(2)] string Name,
     [Range(0.01, 100_000)] decimal Price);</code></pre>
-          <p>For richer rules, combine annotations with IValidatableObject implementations or third-party validators like FluentValidation invoked via an endpoint filter. Either way, validation errors leave your endpoint code looking like the happy path only.</p>
-          <h2>OpenAPI Documentation Out of the Box</h2>
-          <p>ASP.NET Core 10 generates OpenAPI 3.1 documents from your Minimal API endpoints with a single line: builder.Services.AddOpenApi() plus app.MapOpenApi(). Route groups, typed results, and XML comments flow into the document, and the built-in UI lets you explore and test endpoints during development.</p>
-          <p>Because the document is generated from code, it stays truthful: add a parameter and the schema updates on rebuild. Teams no longer maintain a separate spec and hope it matches the implementation, which removes a whole class of integration bugs.</p>
-          <h2>Organizing Larger APIs with Route Groups</h2>
-          <p>Critics feared Minimal APIs would devolve into a thousand-line Program.cs. Route groups solve this: group endpoints by resource, apply shared filters, tags, and prefixes, and split groups across files or extension methods. The result reads like a table of contents for the API.</p>
-          <pre><code>var products = app.MapGroup(&quot;/products&quot;)
-    .WithTags(&quot;Products&quot;)
+<p>For richer rules, combine annotations with IValidatableObject implementations or third-party validators like FluentValidation invoked via an endpoint filter. Either way, validation errors leave your endpoint code looking like the happy path only.</p>
+<h2 id="openapi-documentation-out-of-the-box">OpenAPI Documentation Out of the Box</h2>
+<p>ASP.NET Core 10 generates OpenAPI 3.1 documents from your Minimal API endpoints with a single line: builder.Services.AddOpenApi() plus app.MapOpenApi(). Route groups, typed results, and XML comments flow into the document, and the built-in UI lets you explore and test endpoints during development.</p>
+<p>Because the document is generated from code, it stays truthful: add a parameter and the schema updates on rebuild. Teams no longer maintain a separate spec and hope it matches the implementation, which removes a whole class of integration bugs.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=web%20api%20development%20code%20monitor&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="ASP.NET Core Minimal APIs: Build Production REST APIs with Less Code" style="border-radius:9px"></figure>
+<h2 id="organizing-larger-apis-with-route-groups">Organizing Larger APIs with Route Groups</h2>
+<p>Critics feared Minimal APIs would devolve into a thousand-line Program.cs. Route groups solve this: group endpoints by resource, apply shared filters, tags, and prefixes, and split groups across files or extension methods. The result reads like a table of contents for the API.</p>
+<pre><code>var products = app.MapGroup("/products")
+    .WithTags("Products")
     .AddEndpointFilter&lt;ETagFilter&gt;();
 
-products.MapGet(&quot;/&quot;, GetAll);
-products.MapGet(&quot;/{id:int}&quot;, GetById);
-products.MapPost(&quot;/&quot;, Create).RequireAuthorization(&quot;admin&quot;);</code></pre>
-          <p>Endpoint filters replace action filters: implement IEndpointFilter, apply per endpoint or per group, and use them for cross-cutting concerns like caching headers, feature flags, or audit logging.</p>
-          <h2>Auth, Errors, and Testing</h2>
-          <p>Authentication plugs in through the same builder services as controllers: RequireAuthorization() on any endpoint or group, JWT bearer or cookie schemes, and policies for fine-grained rules. Error responses should follow RFC 7807 ProblemDetails, which the framework emits for validation and can be standardized with an exception-handling middleware.</p>
-          <p>Testing Minimal APIs is refreshingly direct: WebApplicationFactory boots your app in memory, and tests hit real endpoints over HttpClient. Assert status codes, JSON bodies, and headers with your favorite test framework; no mocking of controller base classes required.</p>
-          <h2>When to Choose Minimal APIs vs Controllers</h2>
-          <ul>
+products.MapGet("/", GetAll);
+products.MapGet("/{id:int}", GetById);
+products.MapPost("/", Create).RequireAuthorization("admin");</code></pre>
+<p>Endpoint filters replace action filters: implement IEndpointFilter, apply per endpoint or per group, and use them for cross-cutting concerns like caching headers, feature flags, or audit logging.</p>
+<h2 id="auth-errors-and-testing">Auth, Errors, and Testing</h2>
+<p>Authentication plugs in through the same builder services as controllers: RequireAuthorization() on any endpoint or group, JWT bearer or cookie schemes, and policies for fine-grained rules. Error responses should follow RFC 7807 ProblemDetails, which the framework emits for validation and can be standardized with an exception-handling middleware.</p>
+<p>Testing Minimal APIs is refreshingly direct: WebApplicationFactory boots your app in memory, and tests hit real endpoints over HttpClient. Assert status codes, JSON bodies, and headers with your favorite test framework; no mocking of controller base classes required.</p>
+<h2 id="when-to-choose-minimal-apis-vs-controllers">When to Choose Minimal APIs vs Controllers</h2>
+<ul>
               <li>Choose Minimal APIs for microservices, BFFs, serverless functions, gRPC-adjacent JSON services, and new APIs where you control the design</li>
               <li>Controllers remain fine for very large team-standardized codebases, heavy use of MVC filters already in place, or frameworks that assume MVC (some legacy libraries)</li>
               <li>Performance-sensitive hot paths benefit from Minimal APIs' lower routing overhead</li>
               <li>Mixed is allowed: controllers and Minimal APIs coexist in one app without conflict</li>
             </ul>
-          <p>The honest summary in 2026: there is no longer a technical reason to default to controllers for new services. Minimal APIs cover the feature surface with less code and better discoverability.</p>
-          <h2>Conclusion</h2>
-          <p>Minimal APIs have crossed from novelty to default. With built-in validation, OpenAPI 3.1, route groups, and filters in .NET 10, they deliver everything controllers did with a fraction of the ceremony. Start your next ASP.NET Core service with MapGet and friends; your future self maintaining that service will thank you.</p>
-          <h2>Frequently Asked Questions</h2>
-          <h3>Are Minimal APIs production ready?</h3>
-          <p>Yes. Since .NET 7 added filters and .NET 10 added built-in validation and OpenAPI 3.1, Minimal APIs cover the full production feature set: auth, validation, versioning, documentation, and diagnostics.</p>
-          <h3>Do Minimal APIs perform better than controllers?</h3>
-          <p>They have lower routing and invocation overhead, which matters for high-throughput services. The difference is modest in typical CRUD apps but real in hot paths and microservices benchmarks.</p>
-          <h3>Can I use dependency injection with Minimal APIs?</h3>
-          <p>Yes, automatically. Services registered in the DI container are injected into handler parameters by type, just like controller constructor injection, including scoped and transient lifetimes.</p>
-          <h3>How do I document Minimal APIs?</h3>
-          <p>Add builder.Services.AddOpenApi() and app.MapOpenApi(). The framework generates an OpenAPI 3.1 document from your endpoints; enrich it with WithDescription, WithSummary, results types, and XML comments.</p>
-          <h3>Can Minimal APIs and controllers coexist?</h3>
-          <p>Yes. A single ASP.NET Core app can map controller routes and Minimal API endpoints together, which makes incremental migration straightforward.</p>
+<p>The honest summary in 2026: there is no longer a technical reason to default to controllers for new services. Minimal APIs cover the feature surface with less code and better discoverability.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Minimal APIs have crossed from novelty to default. With built-in validation, OpenAPI 3.1, route groups, and filters in .NET 10, they deliver everything controllers did with a fraction of the ceremony. Start your next ASP.NET Core service with MapGet and friends; your future self maintaining that service will thank you.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="are-minimal-apis-production-ready">Are Minimal APIs production ready?</h3>
+<p>Yes. Since .NET 7 added filters and .NET 10 added built-in validation and OpenAPI 3.1, Minimal APIs cover the full production feature set: auth, validation, versioning, documentation, and diagnostics.</p>
+<h3 id="do-minimal-apis-perform-better-than-controllers">Do Minimal APIs perform better than controllers?</h3>
+<p>They have lower routing and invocation overhead, which matters for high-throughput services. The difference is modest in typical CRUD apps but real in hot paths and microservices benchmarks.</p>
+<h3 id="can-i-use-dependency-injection-with-minimal-apis">Can I use dependency injection with Minimal APIs?</h3>
+<p>Yes, automatically. Services registered in the DI container are injected into handler parameters by type, just like controller constructor injection, including scoped and transient lifetimes.</p>
+<h3 id="how-do-i-document-minimal-apis">How do I document Minimal APIs?</h3>
+<p>Add builder.Services.AddOpenApi() and app.MapOpenApi(). The framework generates an OpenAPI 3.1 document from your endpoints; enrich it with WithDescription, WithSummary, results types, and XML comments.</p>
+<h3 id="can-minimal-apis-and-controllers-coexist">Can Minimal APIs and controllers coexist?</h3>
+<p>Yes. A single ASP.NET Core app can map controller routes and Minimal API endpoints together, which makes incremental migration straightforward.</p>
           </div>
         </div>
       </div>
-      <section class="related-posts section">
-        <div class="container">
-          <h2 class="section-title">You might also like</h2>
-          <div class="related-posts__grid" data-layout-grid="columns">
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" data-publish-offset="3600000">
-            <a href="../aspnet-core/aspnet-core-middleware-pipeline-how-requests-flow.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=network%20pipeline%20flow%20diagram&w=474&h=274&c=7" loading="lazy"
-                     alt="ASP.NET Core Middleware Pipeline: How Requests Flow Through Your App">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../aspnet-core/aspnet-core-middleware-pipeline-how-requests-flow.html" class="post-card__content-link">
-                <h2 class="post-card__title">ASP.NET Core Middleware Pipeline: How Requests Flow Through Your App</h2>
-                <p class="post-card__excerpt">Every request to an ASP.NET Core application travels through a single, ordered pipeline of middleware components: the code that handles logging, exceptions, HTTPS redirection, auth&hellip;</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
-                <span class="post-card__meta post-card__meta--date" data-dynamic-date></span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" >
-            <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=visual%20studio%202026%20IDE&w=474&h=274&c=7" loading="lazy"
-                     alt="Visual Studio 2026 Review: Features, Performance, and Upgrade Guide">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__content-link">
-                <h2 class="post-card__title">Visual Studio 2026 Review: Features, Performance, and Upgrade Guide</h2>
-                <p class="post-card__excerpt">Visual Studio 2026 is the newest major release of Microsoft's flagship integrated development environment, and it represents the most significant redesign of the product in years. &hellip;</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../category/visual-studio/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio</a>
-                <span class="post-card__meta post-card__meta--date">July 14, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" >
-            <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=visual%20studio%20code%20editor%20laptop&w=474&h=274&c=7" loading="lazy"
-                     alt="Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__content-link">
-                <h2 class="post-card__title">Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts</h2>
-                <p class="post-card__excerpt">Visual Studio Code has become the default editor for millions of developers because it is free, fast, and endlessly customizable. But a fresh VS Code install is intentionally bare:&hellip;</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
-                <span class="post-card__meta post-card__meta--date">August 2, 2026</span>
-              </div>
-            </div>
-          </article>
-          </div>
-        </div>
-      </section>
-    </main>
-<footer class="site-footer"><nav class="site-footer__nav"><a href="../">Home</a><a href="../page/dmca.html">DMCA</a><a href="../page/contact.html">Contact</a><a href="../page/privacy-policy.html">Privacy Policy</a><a href="../page/copyright.html">Copyright</a></nav><div class="site-footer__copyright">Copyright &copy; 2026 DevTools Journal</div></footer>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=network%20pipeline%20flow%20diagram&w=474&h=274&c=7" loading="lazy"
+         alt="ASP.NET Core Middleware Pipeline: How Requests Flow Through Your App" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/aspnet-core-middleware-pipeline-how-requests-flow.html" class="post-card__content-link">
+      <h3 class="post-card__title">ASP.NET Core Middleware Pipeline: How Requests Flow Through Your App</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">October 20, 2026</span>
+    </div>
   </div>
-  <script src="../assets/kutukdev/js/main.js"></script>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=middleware%20pipeline%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Middleware pipeline Workflow: Organize, Build, Ship" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/middleware-pipeline-workflow-organize-build-ship.html" class="post-card__content-link">
+      <h3 class="post-card__title">Middleware pipeline Workflow: Organize, Build, Ship</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">October 24, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=minimal%20apis%20vs%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Minimal apis vs controllers: The Missing Manual" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/minimal-apis-vs-controllers-the-missing-manual.html" class="post-card__content-link">
+      <h3 class="post-card__title">Minimal apis vs controllers: The Missing Manual</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">October 23, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=endpoint%20routing%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Endpoint routing Anatomy: How the Pieces Fit Together" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/endpoint-routing-anatomy-how-the-pieces-fit-together.html" class="post-card__content-link">
+      <h3 class="post-card__title">Endpoint routing Anatomy: How the Pieces Fit Together</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">October 22, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=model%20binding%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="What's New in Model binding for 2026?" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/what-s-new-in-model-binding-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">What's New in Model binding for 2026?</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">October 21, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=validation%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Fix It Fast: A Validation Error Handbook" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/fix-it-fast-a-validation-error-handbook.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fix It Fast: A Validation Error Handbook</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">October 20, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
 </body>
 </html>

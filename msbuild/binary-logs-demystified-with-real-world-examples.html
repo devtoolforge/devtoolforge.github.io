@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>Binary logs Demystified with Real-World Examples</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Today's deep dive: Binary logs in MSBuild — -bl output capturing the entire build for replay. Every evaluation, property, and task input becomes inspectable.">
+  <link rel="canonical" href="https://devtoolforge.github.io/msbuild/binary-logs-demystified-with-real-world-examples.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-09-03T18:00:00+06:00">
+  <meta property="article:modified_time" content="2026-09-03T18:00:00+06:00">
+  <meta property="article:section" content="MSBuild">
+  <meta property="og:updated_time" content="2026-09-03T18:00:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="5 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Binary logs Demystified with Real-World Examples">
+  <meta property="og:description" content="Today's deep dive: Binary logs in MSBuild — -bl output capturing the entire build for replay. Every evaluation, property, and task input becomes inspectable.">
+  <meta property="og:url" content="https://devtoolforge.github.io/msbuild/binary-logs-demystified-with-real-world-examples.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=binary%20logs%20build%20automation%20engineering%20blueprint&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Binary logs Demystified with Real-World Examples">
+  <meta name="twitter:description" content="Today's deep dive: Binary logs in MSBuild — -bl output capturing the entire build for replay. Every evaluation, property, and task input becomes inspectable.">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=binary%20logs%20build%20automation%20engineering%20blueprint&amp;w=474&amp;h=274&amp;c=7">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/msbuild/binary-logs-demystified-with-real-world-examples.html" }, "headline": "Binary logs Demystified with Real-World Examples", "description": "Today's deep dive: Binary logs in MSBuild — -bl output capturing the entire build for replay. Every evaluation, property, and task input becomes inspectable. Teams that take it ser…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=binary%20logs%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-09-03T18:00:00+06:00", "dateModified": "2026-09-03T18:00:00+06:00", "wordCount": 1044, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/msbuild/binary-logs-demystified-with-real-world-examples.html#webpage", "url": "https://devtoolforge.github.io/msbuild/binary-logs-demystified-with-real-world-examples.html", "name": "Binary logs Demystified with Real-World Examples", "datePublished": "2026-09-03T18:00:00+06:00", "dateModified": "2026-09-03T18:00:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/msbuild/", "url": "https://devtoolforge.github.io/category/msbuild/", "name": "MSBuild" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/msbuild/binary-logs-demystified-with-real-world-examples.html", "url": "https://devtoolforge.github.io/msbuild/binary-logs-demystified-with-real-world-examples.html", "name": "Binary logs Demystified with Real-World Examples" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure id="img-top" class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=binary%20logs%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=binary%20logs%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=binary%20logs%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="Binary logs Demystified with Real-World Examples"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">Binary logs Demystified with Real-World Examples</h1>
+            <p class="article-header__excerpt">Today's deep dive: Binary logs in MSBuild — -bl output capturing the entire build for replay. Every evaluation, property, and task input becomes inspectable. Teams that take it ser…</p>
+            <div class="article-header__footer">
+              <a href="../category/msbuild/" class="article-header__meta article-header__meta-tag-primary" rel="tag">MSBuild</a>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-09-03T18:00:00+06:00">September 3, 2026</time>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section" data-canvas-grid="content">
+        <div class="container">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Today's deep dive: Binary logs in MSBuild — -bl output capturing the entire build for replay. Every evaluation, property, and task input becomes inspectable. Teams that take it seriously spend less time on avoidable problems and more time shipping features users actually notice. The details vary by project size, but the principles below apply equally to a weekend tool and an enterprise solution.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-is-binary-logs">What Is Binary logs?</a></li>
+<li><a href="#the-mechanics-of-binary-logs">The Mechanics of Binary logs</a></li>
+<li><a href="#best-practices-for-binary-logs">Best Practices for Binary logs</a></li>
+<li><a href="#performance-considerations">Performance Considerations</a></li>
+<li><a href="#binary-logs-vs-building-legacy-projects">Binary logs vs Building legacy projects</a></li>
+<li><a href="#advanced-tips">Advanced Tips</a></li>
+<li><a href="#version-notes-for-2026">Version Notes for 2026</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#what-are-the-most-common-mistakes-with-binary-logs">What are the most common mistakes with Binary logs?</a></li>
+<li><a href="#is-binary-logs-still-relevant-in-2026">Is Binary logs still relevant in 2026?</a></li>
+<li><a href="#what-is-binary-logs-2">What is Binary logs?</a></li>
+<li><a href="#can-binary-logs-be-automated">Can Binary logs be automated?</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ol></nav>
+<p>In this guide we cover binary logs end to end: the core concepts, the exact steps to set it up well, the mistakes that cost teams the most time, and the habits that keep the setup healthy. Everything here runs on the current 2026 toolchain, with commands you can copy as-is.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Topic</strong></td><td>Binary logs</td></tr>
+              <tr><td><strong>Area</strong></td><td>MSBuild</td></tr>
+              <tr><td><strong>Skill level</strong></td><td>Intermediate</td></tr>
+              <tr><td><strong>Engine</strong></td><td>MSBuild 18 (ships with VS 2026 / Build Tools)</td></tr>
+              <tr><td><strong>Project files</strong></td><td>.csproj, .vbproj, .fsproj, .props, .targets</td></tr>
+              <tr><td><strong>Phases</strong></td><td>Evaluation, then Execution</td></tr>
+              <tr><td><strong>Invoked by</strong></td><td>dotnet build, Visual Studio, Build Tools</td></tr>
+              <tr><td><strong>Last verified</strong></td><td>October 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+<h2 id="what-is-binary-logs">What Is Binary logs?</h2>
+<p>Binary logs, in one sentence: -bl output capturing the entire build for replay. In practice that means the details are worth getting right once, because everything downstream inherits the decision. The key is treating it as a living part of the workflow rather than a one-time setup task.</p>
+<p>The mental model is simple: one clear definition, one clear workflow, and configuration that matches reality. Most confusion around binary logs comes from mixing those layers — mixing definitions from different eras, or configs copied from projects with different needs. Keep them separate and the rest of this guide follows naturally.</p>
+<h2 id="the-mechanics-of-binary-logs">The Mechanics of Binary logs</h2>
+<p>Msbuild solution.sln /bl:build.binlog and open in Structured Log Viewer. That is the core of it, and the steps below turn the idea into muscle memory:</p>
+<ol>
+              <li>Schedule a short review each quarter to prune what no longer earns its place.</li>
+              <li>Pick the smallest meaningful change you can ship and measure — momentum matters more than scope.</li>
+              <li>Document the rollback path before you need it, not during an incident.</li>
+              <li>Review the setup with the team and record one owner responsible for it.</li>
+              <li>Document the rollback path before you need it, not during an incident.</li>
+            </ol>
+<p>Notice how much of the value comes from the boring parts: writing things down, pinning versions, automating checks. That is not an accident — binary logs rewards exactly the habits that compound everywhere else in MSBuild.</p>
+<h2 id="best-practices-for-binary-logs">Best Practices for Binary logs</h2>
+<p>These are the practices we see on teams where this area simply never causes drama:</p>
+<ul>
+              <li>Pin versions and record why each choice was made, so upgrades are decisions instead of accidents.</li>
+              <li>Start every project with a documented binary logs setup so the whole team follows the same conventions from day one.</li>
+              <li>Prefer small, reversible changes over big-bang migrations nobody can review.</li>
+              <li>Test the failure path, not just the happy path — most real incidents live there.</li>
+              <li>Measure before and after changes to binary logs so decisions are driven by data rather than vibes.</li>
+            </ul>
+<p>None of these are hard individually. The discipline is doing them every time, which is why automation and CI checks carry so much of the load.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=binary%20logs%20build%20automation%20engineering%20blueprint&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Binary logs Demystified with Real-World Examples" style="border-radius:9px"></figure>
+<h2 id="performance-considerations">Performance Considerations</h2>
+<p>Measure first. Capture baseline numbers for the scenario you care about before touching anything, because intuition about hot paths is famously wrong. For binary logs, that usually means timing the end-to-end operation, not the method you suspect, and recording memory alongside time. A ten-minute baseline turns a week of speculation into an afternoon of targeted work.</p>
+<p>Remove work before making work faster. The cheapest optimization for binary logs is usually doing less: fewer allocations, fewer passes, fewer round trips. Profile to find work that can be skipped entirely under normal conditions. Only then reach for caching, and only with an explicit invalidation plan.</p>
+<h2 id="binary-logs-vs-building-legacy-projects">Binary logs vs Building legacy projects</h2>
+<p>They overlap enough that the question is usually about trade-offs rather than right and wrong. Binary logs optimizes for every evaluation; Building legacy projects pushes harder on the opposite axis. List your constraints honestly — team experience, platform targets, and maintenance budget — and the answer usually picks itself.</p>
+<p>Start from the problem, not the tool. If your pain is every evaluation, Binary logs is the more direct route; if your team already lives in the other ecosystem, Building legacy projects minimizes ramp-up cost. Whatever you choose, write down why, because the next person will ask.</p>
+<h2 id="advanced-tips">Advanced Tips</h2>
+<p>Once the fundamentals are second nature, these are the practices that separate good setups from great ones:</p>
+<ul>
+              <li>Build a tiny example project that demonstrates correct usage — it doubles as a smoke test when versions change.</li>
+              <li>Automate the audit: a scheduled check that compares expected state to real state catches drift within hours instead of months.</li>
+              <li>Record decisions next to the code they affect, in the same pull request that introduces them.</li>
+              <li>Tip: Search the timeline for 'unexpected' property values instantly</li>
+            </ul>
+<h2 id="version-notes-for-2026">Version Notes for 2026</h2>
+<p>Compatibility rarely breaks loudly. Small behavior changes in binary logs accumulate until something subtle fails in production weeks later. Keep a changelog of your own: which versions you adopted, when, and what you had to adjust. That log becomes the fastest diagnostic when old behavior needs explaining.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="what-are-the-most-common-mistakes-with-binary-logs">What are the most common mistakes with Binary logs?</h3>
+<p>The big three: treating it as a one-time setup, letting local configuration drift from CI, and skipping documentation for the decisions you make. All three are covered above with concrete fixes.</p>
+<h3 id="is-binary-logs-still-relevant-in-2026">Is Binary logs still relevant in 2026?</h3>
+<p>Yes — more than ever. The 2026 toolchain builds directly on these fundamentals, and the practices in this article are the ones current documentation assumes you already follow.</p>
+<h3 id="what-is-binary-logs-2">What is Binary logs?</h3>
+<p>{W2} It is a foundational part of the {C} workflow, and understanding it pays off across almost every project you will touch.</p>
+<h3 id="can-binary-logs-be-automated">Can Binary logs be automated?</h3>
+<p>Yes, and it should be. Start by scripting the steps in this guide, then wire them into CI so the automation runs without anyone remembering to.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Binary logs rewards deliberate setup and punishes improvisation. Start with the checklist above, automate what you can, and revisit the configuration quarterly. The compounding effect is real: teams that invest here ship calmer, debug less, and onboard faster — and the gap widens every month.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=property%20functions%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="Practical Property functions for Everyday MSBuild Work" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/practical-property-functions-for-everyday-msbuild-work.html" class="post-card__content-link">
+      <h3 class="post-card__title">Practical Property functions for Everyday MSBuild Work</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">September 4, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=preprocessed%20projects%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="Preprocessed projects Demystified with Real-World Examples" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/preprocessed-projects-demystified-with-real-world-examples.html" class="post-card__content-link">
+      <h3 class="post-card__title">Preprocessed projects Demystified with Real-World Examples</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">September 2, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=inline%20tasks%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="Automating Inline tasks: Tools, Scripts, and Workflows" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/automating-inline-tasks-tools-scripts-and-workflows.html" class="post-card__content-link">
+      <h3 class="post-card__title">Automating Inline tasks: Tools, Scripts, and Workflows</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">September 5, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=verbosity%20and%20logs%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="Verbosity and logs Health Check: Audit and Improve Your Setup" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/verbosity-and-logs-health-check-audit-and-improve-your-setup.html" class="post-card__content-link">
+      <h3 class="post-card__title">Verbosity and logs Health Check: Audit and Improve Your Setup</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">September 1, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=custom%20tasks%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="What's New in Custom tasks for 2026?" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/what-s-new-in-custom-tasks-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">What's New in Custom tasks for 2026?</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">September 6, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=node%20reuse%20and%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="The Ultimate Node reuse and parallelism Checklist for 2026 (With Real Examples)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/the-ultimate-node-reuse-and-parallelism-checklist-for-2026-with-real-exa.html" class="post-card__content-link">
+      <h3 class="post-card__title">The Ultimate Node reuse and parallelism Checklist for 2026 (With Real Examples)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">August 31, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

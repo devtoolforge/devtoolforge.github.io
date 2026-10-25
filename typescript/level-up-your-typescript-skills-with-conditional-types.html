@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>Level Up Your TypeScript Skills with Conditional types</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Today's deep dive: Conditional types in TypeScript — types that branch on other types. Complex transformations stay DRY and compile-time checked. Teams that">
+  <link rel="canonical" href="https://devtoolforge.github.io/typescript/level-up-your-typescript-skills-with-conditional-types.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-10-17T15:00:00+06:00">
+  <meta property="article:modified_time" content="2026-10-17T15:00:00+06:00">
+  <meta property="article:section" content="TypeScript">
+  <meta property="og:updated_time" content="2026-10-17T15:00:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="5 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Level Up Your TypeScript Skills with Conditional types">
+  <meta property="og:description" content="Today's deep dive: Conditional types in TypeScript — types that branch on other types. Complex transformations stay DRY and compile-time checked. Teams that">
+  <meta property="og:url" content="https://devtoolforge.github.io/typescript/level-up-your-typescript-skills-with-conditional-types.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=conditional%20types%20typescript%20javascript%20code&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Level Up Your TypeScript Skills with Conditional types">
+  <meta name="twitter:description" content="Today's deep dive: Conditional types in TypeScript — types that branch on other types. Complex transformations stay DRY and compile-time checked. Teams that">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=conditional%20types%20typescript%20javascript%20code&amp;w=474&amp;h=274&amp;c=7">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/typescript/level-up-your-typescript-skills-with-conditional-types.html" }, "headline": "Level Up Your TypeScript Skills with Conditional types", "description": "Today's deep dive: Conditional types in TypeScript — types that branch on other types. Complex transformations stay DRY and compile-time checked. Teams that take it seriously spend…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=conditional%20types%20typescript%20javascript%20code&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-10-17T15:00:00+06:00", "dateModified": "2026-10-17T15:00:00+06:00", "wordCount": 1085, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/typescript/level-up-your-typescript-skills-with-conditional-types.html#webpage", "url": "https://devtoolforge.github.io/typescript/level-up-your-typescript-skills-with-conditional-types.html", "name": "Level Up Your TypeScript Skills with Conditional types", "datePublished": "2026-10-17T15:00:00+06:00", "dateModified": "2026-10-17T15:00:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/typescript/", "url": "https://devtoolforge.github.io/category/typescript/", "name": "TypeScript" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/typescript/level-up-your-typescript-skills-with-conditional-types.html", "url": "https://devtoolforge.github.io/typescript/level-up-your-typescript-skills-with-conditional-types.html", "name": "Level Up Your TypeScript Skills with Conditional types" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure id="img-top" class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=conditional%20types%20typescript%20javascript%20code&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=conditional%20types%20typescript%20javascript%20code&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=conditional%20types%20typescript%20javascript%20code&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="Level Up Your TypeScript Skills with Conditional types"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">Level Up Your TypeScript Skills with Conditional types</h1>
+            <p class="article-header__excerpt">Today's deep dive: Conditional types in TypeScript — types that branch on other types. Complex transformations stay DRY and compile-time checked. Teams that take it seriously spend…</p>
+            <div class="article-header__footer">
+              <a href="../category/typescript/" class="article-header__meta article-header__meta-tag-primary" rel="tag">TypeScript</a>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-10-17T15:00:00+06:00">October 17, 2026</time>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section" data-canvas-grid="content">
+        <div class="container">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Today's deep dive: Conditional types in TypeScript — types that branch on other types. Complex transformations stay DRY and compile-time checked. Teams that take it seriously spend less time on avoidable problems and more time shipping features users actually notice. The good news is that the fundamentals have been stable for years, so the effort you invest compounds instead of expiring with the next release.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-is-conditional-types">What Is Conditional types?</a></li>
+<li><a href="#best-practices-for-conditional-types">Best Practices for Conditional types</a></li>
+<li><a href="#common-conditional-types-mistakes">Common Conditional types Mistakes</a></li>
+<li><a href="#troubleshooting-conditional-types">Troubleshooting Conditional types</a></li>
+<li><a href="#advanced-tips">Advanced Tips</a></li>
+<li><a href="#quick-example">Quick Example</a></li>
+<li><a href="#step-by-step-quickstart">Step-by-Step Quickstart</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#can-conditional-types-be-automated">Can Conditional types be automated?</a></li>
+<li><a href="#how-long-does-it-take-to-get-comfortable-with-conditional-types">How long does it take to get comfortable with Conditional types?</a></li>
+<li><a href="#is-conditional-types-still-relevant-in-2026">Is Conditional types still relevant in 2026?</a></li>
+<li><a href="#do-i-need-conditional-types-for-small-projects">Do I need Conditional types for small projects?</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ol></nav>
+<p>In this guide we cover conditional types end to end: the core concepts, the exact steps to set it up well, the mistakes that cost teams the most time, and the habits that keep the setup healthy. Everything here runs on the current 2026 toolchain, with commands you can copy as-is.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Topic</strong></td><td>Conditional types</td></tr>
+              <tr><td><strong>Area</strong></td><td>TypeScript</td></tr>
+              <tr><td><strong>Skill level</strong></td><td>Beginner-friendly</td></tr>
+              <tr><td><strong>Language</strong></td><td>TypeScript 6.x (native tsgo compiler in preview)</td></tr>
+              <tr><td><strong>Compiles to</strong></td><td>JavaScript (ES2015+ targets)</td></tr>
+              <tr><td><strong>Runs on</strong></td><td>Node.js, Deno, Bun, all browsers</td></tr>
+              <tr><td><strong>Typing</strong></td><td>Structural, gradual, erased at runtime</td></tr>
+              <tr><td><strong>Last verified</strong></td><td>October 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+<h2 id="what-is-conditional-types">What Is Conditional types?</h2>
+<p>Conditional types, in one sentence: types that branch on other types. In practice that means the details are worth getting right once, because everything downstream inherits the decision. Small teams benefit as much as large ones, often faster because they can change habits quickly.</p>
+<p>The mental model is simple: one clear definition, one clear workflow, and configuration that matches reality. Most confusion around conditional types comes from mixing those layers — mixing definitions from different eras, or configs copied from projects with different needs. Keep them separate and the rest of this guide follows naturally.</p>
+<h2 id="best-practices-for-conditional-types">Best Practices for Conditional types</h2>
+<p>These are the practices we see on teams where this area simply never causes drama:</p>
+<ul>
+              <li>Automate the boring parts of conditional types with scripts or tasks; humans are bad at remembering commands.</li>
+              <li>Test the failure path, not just the happy path — most real incidents live there.</li>
+              <li>Review conditional types changes in code review with the same seriousness as application logic.</li>
+              <li>Prefer small, reversible changes over big-bang migrations nobody can review.</li>
+              <li>Pin versions and record why each choice was made, so upgrades are decisions instead of accidents.</li>
+            </ul>
+<p>None of these are hard individually. The discipline is doing them every time, which is why automation and CI checks carry so much of the load.</p>
+<h2 id="common-conditional-types-mistakes">Common Conditional types Mistakes</h2>
+<p>The same failure patterns show up again and again. Here are the four we meet most often, including the classic: Recursive conditional types that neither humans nor LSP can follow.</p>
+<ul>
+              <li>Letting local settings drift from CI until nobody knows which one is right.</li>
+              <li>Optimizing before measuring, then optimizing again after the metrics disagree.</li>
+              <li>Copying configuration from an old project without understanding what it does today.</li>
+              <li>Shipping changes without a rollback plan and improvising during the incident.</li>
+            </ul>
+<p>Every one of these fixes is cheap when caught early and expensive when caught late. A quarterly review of conditional types — twenty minutes, honestly — catches most of them before they metastasize.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=conditional%20types%20typescript%20javascript%20code&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Level Up Your TypeScript Skills with Conditional types" style="border-radius:9px"></figure>
+<h2 id="troubleshooting-conditional-types">Troubleshooting Conditional types</h2>
+<p>When things break, symptoms cluster into a handful of patterns. Match yours here and jump straight to the fix:</p>
+<ul>
+              <li><strong>It fails intermittently under load</strong> — look for shared state and timing assumptions that only break when things overlap</li>
+              <li><strong>It works on one machine and fails on another</strong> — diff the versions and configuration first — environment drift explains most of these bugs</li>
+              <li><strong>Performance collapsed after an upgrade</strong> — bisect the upgrade by rolling back one component at a time and re-measuring</li>
+            </ul>
+<p>If none of these match, capture a full log before changing anything. For conditional types that log almost always names the failing layer, and the fix becomes obvious instead of guessed.</p>
+<h2 id="advanced-tips">Advanced Tips</h2>
+<p>Once the fundamentals are second nature, these are the practices that separate good setups from great ones:</p>
+<ul>
+              <li>Version your conventions: what worked for a two-person team needs revision at ten, and that is normal.</li>
+              <li>Automate the audit: a scheduled check that compares expected state to real state catches drift within hours instead of months.</li>
+              <li>Wrap external flakiness with retries and clear timeouts so failures are visible instead of mysterious.</li>
+              <li>Tip: Extract infer U to name and reuse matched inner types</li>
+            </ul>
+<h2 id="quick-example">Quick Example</h2>
+<p>Here is a compact, real-world typescript example you can adapt directly. It shows the configuration style we recommend for conditional types: explicit, commented where it matters, and free of magic.</p>
+<pre><code>type Result&lt;T&gt; = { ok: true; value: T } | { ok: false; error: string };
+
+function unwrap&lt;T&gt;(r: Result&lt;T&gt;): T {
+  if (!r.ok) throw new Error(r.error);
+  return r.value;
+}</code></pre>
+<p>Copy it, run it once, then trim it to what your project actually needs. The worst version of any snippet is the one nobody on the team fully understands.</p>
+<h2 id="step-by-step-quickstart">Step-by-Step Quickstart</h2>
+<p>For readers who want the shortest possible path, here is the compressed version:</p>
+<ol>
+              <li>Document the rollback path before you need it, not during an incident.</li>
+              <li>Pick the smallest meaningful change you can ship and measure — momentum matters more than scope.</li>
+              <li>Add a check to CI so regressions in conditional types fail loudly instead of silently.</li>
+              <li>Write the chosen setup down in the repository so the decision survives the next refactor.</li>
+              <li>Document the rollback path before you need it, not during an incident.</li>
+              <li>Document the rollback path before you need it, not during an incident.</li>
+            </ol>
+<p>Each step stands alone, so partial adoption already helps. Do them in order and the later ones get easier.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="can-conditional-types-be-automated">Can Conditional types be automated?</h3>
+<p>Yes, and it should be. Start by scripting the steps in this guide, then wire them into CI so the automation runs without anyone remembering to.</p>
+<h3 id="how-long-does-it-take-to-get-comfortable-with-conditional-types">How long does it take to get comfortable with Conditional types?</h3>
+<p>The basics take an afternoon; reliable habits take a few weeks of real use. The guide's checklist is designed to compress that ramp-up by focusing on what actually matters.</p>
+<h3 id="is-conditional-types-still-relevant-in-2026">Is Conditional types still relevant in 2026?</h3>
+<p>Yes — more than ever. The 2026 toolchain builds directly on these fundamentals, and the practices in this article are the ones current documentation assumes you already follow.</p>
+<h3 id="do-i-need-conditional-types-for-small-projects">Do I need Conditional types for small projects?</h3>
+<p>More than you would expect. Small projects benefit disproportionately because there is no dedicated ops person to catch drift — the setup protects itself.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Conditional types rewards deliberate setup and punishes improvisation. Start with the checklist above, automate what you can, and revisit the configuration quarterly. The compounding effect is real: teams that invest here ship calmer, debug less, and onboard faster — and the gap widens every month.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=generics%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Generics Cheat Sheet: 7 Shortcuts and Commands" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../typescript/generics-cheat-sheet-7-shortcuts-and-commands.html" class="post-card__content-link">
+      <h3 class="post-card__title">Generics Cheat Sheet: 7 Shortcuts and Commands</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</span>
+      <span class="post-card__meta post-card__meta--date">October 18, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=mapped%20types%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Common Mapped types Mistakes and How to Fix Them" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../typescript/common-mapped-types-mistakes-and-how-to-fix-them.html" class="post-card__content-link">
+      <h3 class="post-card__title">Common Mapped types Mistakes and How to Fix Them</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</span>
+      <span class="post-card__meta post-card__meta--date">October 16, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=definitelytyped%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Definitelytyped: From First Steps to Production" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../typescript/definitelytyped-from-first-steps-to-production.html" class="post-card__content-link">
+      <h3 class="post-card__title">Definitelytyped: From First Steps to Production</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</span>
+      <span class="post-card__meta post-card__meta--date">October 19, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=template%20literal%20types%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+         alt="7 Template literal types Best Practices Every Developer Should Know" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../typescript/7-template-literal-types-best-practices-every-developer-should-know.html" class="post-card__content-link">
+      <h3 class="post-card__title">7 Template literal types Best Practices Every Developer Should Know</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</span>
+      <span class="post-card__meta post-card__meta--date">October 15, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=declaration%20files%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Declaration files Security and Reliability Best Practices" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../typescript/declaration-files-security-and-reliability-best-practices.html" class="post-card__content-link">
+      <h3 class="post-card__title">Declaration files Security and Reliability Best Practices</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</span>
+      <span class="post-card__meta post-card__meta--date">October 20, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=utility%20types%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Advanced Utility types Techniques for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../typescript/advanced-utility-types-techniques-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Advanced Utility types Techniques for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</span>
+      <span class="post-card__meta post-card__meta--date">October 14, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

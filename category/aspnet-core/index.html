@@ -1,62 +1,87 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" data-header-style="modern">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
   <title>ASP.NET Core — DevTools Journal</title>
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Microsoft developer tools, explained — DevTools Journal demo build. This demo is intentionally noindex/nofollow.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Articles, guides, and how-tos filed under ASP.NET Core.">
+  <link rel="canonical" href="https://devtoolforge.github.io/category/aspnet-core/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="ASP.NET Core — DevTools Journal">
+  <meta property="og:description" content="Articles, guides, and how-tos filed under ASP.NET Core.">
+  <meta property="og:url" content="https://devtoolforge.github.io/category/aspnet-core/">
+  <meta property="og:image" content="../../assets/kutukdev/images/icon128.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ASP.NET Core — DevTools Journal">
+  <meta name="twitter:description" content="Articles, guides, and how-tos filed under ASP.NET Core.">
+  <meta name="twitter:image" content="../../assets/kutukdev/images/icon128.png">
     <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
-  <link rel="icon" href="../../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="shortcut icon" href="../../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
   <link rel="icon" href="../../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../../assets/kutukdev/images/icon128.png">
   <link rel="preload" as="style" href="../../assets/kutukdev/css/style.css">
   <link rel="stylesheet" href="../../assets/kutukdev/css/style.css">
   <link rel="preconnect" href="https://tse1.mm.bing.net">
-  <meta property="og:site_name" content="DevTools Journal">
-  <meta property="og:title" content="ASP.NET Core — DevTools Journal">
-  <meta property="og:type" content="article">
-  <meta name="generator" content="DevTools Journal demo generator">
-
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/aspnet-core/", "url": "https://devtoolforge.github.io/category/aspnet-core/", "name": "ASP.NET Core" } }] }
+  </script>
 </head>
 <body class="home-template">
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
   <div class="site" id="site">
-    <header class="site-header">
-      <div class="site-header__container">
-        <button class="site-header__hamburger" aria-label="Open menu"
-                aria-expanded="false" data-site-action-trigger="navigation">
-          <span></span><span></span><span></span>
-        </button>
-        <a class="site-header__logo" href="../../">DevTools Journal</a>
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
       </div>
-    </header>
-    <div class="site-actions" aria-hidden="true">
-      <div class="site-actions__backdrop"></div>
-      <nav class="site-actions__panel" aria-label="Main navigation">
-        <div class="site-actions__top">
-          <p class="site-actions__title">Menu</p>
-          <button class="site-actions__close" data-close-site-actions aria-label="Close menu">&times;</button>
-        </div>
-        <ul class="site-actions__menu">
-          <li><a href="../../">Home</a></li>
-      <li><a href="../../category/visual-studio/">Visual Studio</a></li>
-      <li><a href="../../category/visual-studio-code/">Visual Studio Code</a></li>
-      <li><a href="../../category/visual-studio-mac/">Visual Studio for Mac</a></li>
-      <li><a href="../../category/dotnet/">.NET</a></li>
-      <li><a href="../../category/dotnet-framework/">.NET Framework</a></li>
-      <li><a href="../../category/aspnet-core/">ASP.NET Core</a></li>
-      <li><a href="../../category/csharp/">C#</a></li>
-      <li><a href="../../category/fsharp/">F#</a></li>
-      <li><a href="../../category/typescript/">TypeScript</a></li>
-      <li><a href="../../category/microsoft-build-tools/">Microsoft Build Tools</a></li>
-      <li><a href="../../category/msbuild/">MSBuild</a></li>
-        </ul>
-      </nav>
     </div>
+  </div>
+</header>
     <main id="main" class="site-main">
-</div>
       <header class="page-header section" data-section="first">
         <div class="container">
           <h1 class="page-header__title">ASP.NET Core</h1>
@@ -67,27 +92,107 @@
         <div class="container">
           <div class="posts-feed" data-layout-grid="columns">
           <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" >
-            <a href="../../aspnet-core/aspnet-core-minimal-apis-production-rest-apis-less-code.html" class="post-card__media" tabindex="-1">
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/middleware-pipeline-workflow-organize-build-ship.html" class="post-card__media" tabindex="-1">
               <picture class="post-card__figure">
                 <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=web%20api%20development%20code%20monitor&w=474&h=274&c=7" loading="lazy"
-                     alt="ASP.NET Core Minimal APIs: Build Production REST APIs with Less Code">
+                     src="https://tse1.mm.bing.net/th?q=middleware%20pipeline%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Middleware pipeline Workflow: Organize, Build, Ship">
               </picture>
             </a>
             <div class="post-card__content">
-              <a href="../../aspnet-core/aspnet-core-minimal-apis-production-rest-apis-less-code.html" class="post-card__content-link">
-                <h2 class="post-card__title">ASP.NET Core Minimal APIs: Build Production REST APIs with Less Code</h2>
-                <p class="post-card__excerpt">Minimal APIs arrived in ASP.NET Core 6 as a way to define HTTP endpoints in a few lines of C#, and in the .NET 10 era they have matured into a complete, production-grade alternativ&hellip;</p>
+              <a href="../../aspnet-core/middleware-pipeline-workflow-organize-build-ship.html" class="post-card__content-link">
+                <h2 class="post-card__title">Middleware pipeline Workflow: Organize, Build, Ship</h2>
+                <p class="post-card__excerpt">Today's deep dive: Middleware pipeline in ASP.NET Core — the ordered chain of delegates that processes every request. Understanding the order explains 90 percent of request behavio…</p>
               </a>
               <div class="post-card__footer">
                 <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
-                <span class="post-card__meta post-card__meta--date">September 28, 2026</span>
+                <span class="post-card__meta post-card__meta--date">October 24, 2026</span>
               </div>
             </div>
           </article>
           <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" data-publish-offset="3600000">
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/minimal-apis-vs-controllers-the-missing-manual.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=minimal%20apis%20vs%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Minimal apis vs controllers: The Missing Manual">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/minimal-apis-vs-controllers-the-missing-manual.html" class="post-card__content-link">
+                <h2 class="post-card__title">Minimal apis vs controllers: The Missing Manual</h2>
+                <p class="post-card__excerpt">Today's deep dive: Minimal apis vs controllers in ASP.NET Core — choosing lightweight endpoint mapping or controller classes. The right default keeps small services small and big a…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 23, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/endpoint-routing-anatomy-how-the-pieces-fit-together.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=endpoint%20routing%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Endpoint routing Anatomy: How the Pieces Fit Together">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/endpoint-routing-anatomy-how-the-pieces-fit-together.html" class="post-card__content-link">
+                <h2 class="post-card__title">Endpoint routing Anatomy: How the Pieces Fit Together</h2>
+                <p class="post-card__excerpt">Today's deep dive: Endpoint routing in ASP.NET Core — the modern routing system that matches URLs to endpoints. Link generation and policy evaluation flow from the same route table…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 22, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/what-s-new-in-model-binding-for-2026.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=model%20binding%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="What's New in Model binding for 2026?">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/what-s-new-in-model-binding-for-2026.html" class="post-card__content-link">
+                <h2 class="post-card__title">What's New in Model binding for 2026?</h2>
+                <p class="post-card__excerpt">Today's deep dive: Model binding in ASP.NET Core — automatic mapping of request data to action parameters. Binding rules explain where form, route, and query data actually land. Te…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 21, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/fix-it-fast-a-validation-error-handbook.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=validation%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Fix It Fast: A Validation Error Handbook">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/fix-it-fast-a-validation-error-handbook.html" class="post-card__content-link">
+                <h2 class="post-card__title">Fix It Fast: A Validation Error Handbook</h2>
+                <p class="post-card__excerpt">Today's deep dive: Validation in ASP.NET Core — declarative input checks with data annotations or FluentValidation. Invalid data never reaches business logic, and error messages st…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 20, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
             <a href="../../aspnet-core/aspnet-core-middleware-pipeline-how-requests-flow.html" class="post-card__media" tabindex="-1">
               <picture class="post-card__figure">
                 <img class="post-card__image" width="16" height="9"
@@ -98,20 +203,394 @@
             <div class="post-card__content">
               <a href="../../aspnet-core/aspnet-core-middleware-pipeline-how-requests-flow.html" class="post-card__content-link">
                 <h2 class="post-card__title">ASP.NET Core Middleware Pipeline: How Requests Flow Through Your App</h2>
-                <p class="post-card__excerpt">Every request to an ASP.NET Core application travels through a single, ordered pipeline of middleware components: the code that handles logging, exceptions, HTTPS redirection, auth&hellip;</p>
+                <p class="post-card__excerpt">Every request to an ASP.NET Core application travels through a single, ordered pipeline of middleware components: the code that handles logging, exceptions, HTTPS redirection, auth…</p>
               </a>
               <div class="post-card__footer">
                 <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
-                <span class="post-card__meta post-card__meta--date" data-dynamic-date></span>
+                <span class="post-card__meta post-card__meta--date">October 20, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/filters-pitfalls-what-the-docs-don-t-tell-you.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=filters%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Filters Pitfalls: What the Docs Don't Tell You">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/filters-pitfalls-what-the-docs-don-t-tell-you.html" class="post-card__content-link">
+                <h2 class="post-card__title">Filters Pitfalls: What the Docs Don't Tell You</h2>
+                <p class="post-card__excerpt">Today's deep dive: Filters in ASP.NET Core — cross-cutting action pipeline hooks: authorization, resource, action, result. Filters centralize logging, caching, and transaction beha…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 18, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/di-lifetimes-in-web-apps-the-missing-manual.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=di%20lifetimes%20in%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Di lifetimes in web apps: The Missing Manual">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/di-lifetimes-in-web-apps-the-missing-manual.html" class="post-card__content-link">
+                <h2 class="post-card__title">Di lifetimes in web apps: The Missing Manual</h2>
+                <p class="post-card__excerpt">Today's deep dive: Di lifetimes in web apps in ASP.NET Core — singleton, scoped, and transient services in request pipelines. Wrong lifetimes cause cross-request leaks and data ble…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 17, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/common-configuration-per-environment-mistakes-and-how-to-fix-them.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=configuration%20per%20environment%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Common Configuration per environment Mistakes and How to Fix Them">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/common-configuration-per-environment-mistakes-and-how-to-fix-them.html" class="post-card__content-link">
+                <h2 class="post-card__title">Common Configuration per environment Mistakes and How to Fix Them</h2>
+                <p class="post-card__excerpt">Today's deep dive: Configuration per environment in ASP.NET Core — Development, Staging, Production config layers. Secrets and endpoints differ per environment without code changes…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 16, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/debugging-logging-and-structured-events-a-practical-approach.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=logging%20and%20structured%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Debugging Logging and structured events: A Practical Approach">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/debugging-logging-and-structured-events-a-practical-approach.html" class="post-card__content-link">
+                <h2 class="post-card__title">Debugging Logging and structured events: A Practical Approach</h2>
+                <p class="post-card__excerpt">Today's deep dive: Logging and structured events in ASP.NET Core — ILogger with scopes and provider-based sinks. Correlating requests via ids in structured logs makes incidents tra…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 15, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/ef-core-migrations-troubleshooting-8-fixes-for-everyday-problems.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=ef%20core%20migrations%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Ef core migrations Troubleshooting: 8 Fixes for Everyday Problems">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/ef-core-migrations-troubleshooting-8-fixes-for-everyday-problems.html" class="post-card__content-link">
+                <h2 class="post-card__title">Ef core migrations Troubleshooting: 8 Fixes for Everyday Problems</h2>
+                <p class="post-card__excerpt">Today's deep dive: Ef core migrations in ASP.NET Core — versioned schema changes applied via CLI or at startup. Database evolution becomes reviewable code rather than ad-hoc SQL. T…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 14, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/identity-and-user-management-from-first-steps-to-production.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=identity%20and%20user%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Identity and user management: From First Steps to Production">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/identity-and-user-management-from-first-steps-to-production.html" class="post-card__content-link">
+                <h2 class="post-card__title">Identity and user management: From First Steps to Production</h2>
+                <p class="post-card__excerpt">Today's deep dive: Identity and user management in ASP.NET Core — the membership stack for accounts, roles, and claims. Secure account flows (confirm, reset, MFA) come built-in. Te…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 13, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/15-jwt-authentication-shortcuts-you-will-use-every-day.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=jwt%20authentication%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="15 Jwt authentication Shortcuts You Will Use Every Day">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/15-jwt-authentication-shortcuts-you-will-use-every-day.html" class="post-card__content-link">
+                <h2 class="post-card__title">15 Jwt authentication Shortcuts You Will Use Every Day</h2>
+                <p class="post-card__excerpt">Today's deep dive: Jwt authentication in ASP.NET Core — token-based auth for APIs and single-page apps. Stateless auth scales across instances and mobile clients. Teams that take i…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 12, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/fix-it-fast-a-authorization-policies-error-handbook.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=authorization%20policies%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Fix It Fast: A Authorization policies Error Handbook">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/fix-it-fast-a-authorization-policies-error-handbook.html" class="post-card__content-link">
+                <h2 class="post-card__title">Fix It Fast: A Authorization policies Error Handbook</h2>
+                <p class="post-card__excerpt">Today's deep dive: Authorization policies in ASP.NET Core — claim- and requirement-based access rules. Business rules like ownership or tier become testable policies. Teams that ta…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 11, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/cors-cheat-sheet-12-shortcuts-and-commands.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=cors%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Cors Cheat Sheet: 12 Shortcuts and Commands">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/cors-cheat-sheet-12-shortcuts-and-commands.html" class="post-card__content-link">
+                <h2 class="post-card__title">Cors Cheat Sheet: 12 Shortcuts and Commands</h2>
+                <p class="post-card__excerpt">Today's deep dive: Cors in ASP.NET Core — browser cross-origin rules for APIs consumed by other domains. Misconfigured CORS blocks every frontend integration mysteriously. Teams th…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 10, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/getting-started-with-rate-limiting.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=rate%20limiting%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Getting Started with Rate limiting">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/getting-started-with-rate-limiting.html" class="post-card__content-link">
+                <h2 class="post-card__title">Getting Started with Rate limiting</h2>
+                <p class="post-card__excerpt">Today's deep dive: Rate limiting in ASP.NET Core — built-in middleware limiting request rates per client. Abuse and accidental loops stop taking your API down. Teams that take it s…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 9, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/output-caching-and-response-caching-health-check-audit-and-improve-your.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=output%20caching%20and%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Output caching and response caching Health Check: Audit and Improve Your Setup">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/output-caching-and-response-caching-health-check-audit-and-improve-your.html" class="post-card__content-link">
+                <h2 class="post-card__title">Output caching and response caching Health Check: Audit and Improve Your Setup</h2>
+                <p class="post-card__excerpt">Today's deep dive: Output caching and response caching in ASP.NET Core — storing generated responses or letting clients cache. Hot public endpoints stop recomputing identical resul…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 7, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/response-compression-performance-tuning-practical-tips-that-work.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=response%20compression%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Response compression Performance Tuning: Practical Tips That Work">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/response-compression-performance-tuning-practical-tips-that-work.html" class="post-card__content-link">
+                <h2 class="post-card__title">Response compression Performance Tuning: Practical Tips That Work</h2>
+                <p class="post-card__excerpt">Today's deep dive: Response compression in ASP.NET Core — gzip/brotli middleware for text responses. Payload sizes and mobile load times drop significantly. Teams that take it seri…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 6, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/static-files-and-wwwroot-essentials-20-tips-that-save-hours.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=static%20files%20and%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Static files and wwwroot Essentials: 20 Tips That Save Hours">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/static-files-and-wwwroot-essentials-20-tips-that-save-hours.html" class="post-card__content-link">
+                <h2 class="post-card__title">Static files and wwwroot Essentials: 20 Tips That Save Hours</h2>
+                <p class="post-card__excerpt">Today's deep dive: Static files and wwwroot in ASP.NET Core — serving assets with caching and security headers. Fast asset delivery with correct caching halves page load time. Team…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 5, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/practical-error-handling-and-problem-details-for-everyday-asp-net-core-w.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=error%20handling%20and%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Practical Error handling and problem details for Everyday ASP.NET Core Work">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/practical-error-handling-and-problem-details-for-everyday-asp-net-core-w.html" class="post-card__content-link">
+                <h2 class="post-card__title">Practical Error handling and problem details for Everyday ASP.NET Core Work</h2>
+                <p class="post-card__excerpt">Today's deep dive: Error handling and problem details in ASP.NET Core — consistent error responses with the RFC 7807 format. Clients handle errors predictably, and debugging gets e…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 4, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/a-field-guide-to-health-checks.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=health%20checks%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="A Field Guide to Health checks">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/a-field-guide-to-health-checks.html" class="post-card__content-link">
+                <h2 class="post-card__title">A Field Guide to Health checks</h2>
+                <p class="post-card__excerpt">Today's deep dive: Health checks in ASP.NET Core — liveness and readiness endpoints for orchestrators. Deploys and restarts happen only when dependencies are truly ready. Teams tha…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 3, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/the-smart-way-to-set-up-openapi-and-swagger-ui.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=openapi%20and%20swagger%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="The Smart Way to set up Openapi and swagger ui">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/the-smart-way-to-set-up-openapi-and-swagger-ui.html" class="post-card__content-link">
+                <h2 class="post-card__title">The Smart Way to set up Openapi and swagger ui</h2>
+                <p class="post-card__excerpt">Today's deep dive: Openapi and swagger ui in ASP.NET Core — machine-readable API docs and an interactive explorer. Frontend and partner teams integrate without reading source. Team…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 2, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/common-api-versioning-mistakes-and-how-to-fix-them.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=api%20versioning%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Common Api versioning Mistakes and How to Fix Them">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/common-api-versioning-mistakes-and-how-to-fix-them.html" class="post-card__content-link">
+                <h2 class="post-card__title">Common Api versioning Mistakes and How to Fix Them</h2>
+                <p class="post-card__excerpt">Today's deep dive: Api versioning in ASP.NET Core — running multiple API versions side by side. Clients migrate on their schedule instead of yours. Teams that take it seriously spe…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">October 1, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../aspnet-core/level-up-your-asp-net-core-skills-with-signalr.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=signalr%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Level Up Your ASP.NET Core Skills with Signalr">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../aspnet-core/level-up-your-asp-net-core-skills-with-signalr.html" class="post-card__content-link">
+                <h2 class="post-card__title">Level Up Your ASP.NET Core Skills with Signalr</h2>
+                <p class="post-card__excerpt">Today's deep dive: Signalr in ASP.NET Core — real-time push over websockets with fallbacks. Dashboards and chat update without polling. Teams that take it seriously spend less time…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/aspnet-core/" class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</a>
+                <span class="post-card__meta post-card__meta--date">September 30, 2026</span>
               </div>
             </div>
           </article>
           </div>
+          <nav class="pagination" aria-label="Pages"><span class="current">1</span><a href="../../category/aspnet-core/page/2/">2</a><a href="../../category/aspnet-core/page/3/">3</a><span>&hellip;</span><a href="../../category/aspnet-core/page/5/">5</a></nav>
         </div>
       </section>
     </main>
-<footer class="site-footer"><nav class="site-footer__nav"><a href="../../">Home</a><a href="../../page/dmca.html">DMCA</a><a href="../../page/contact.html">Contact</a><a href="../../page/privacy-policy.html">Privacy Policy</a><a href="../../page/copyright.html">Copyright</a></nav><div class="site-footer__copyright">Copyright &copy; 2026 DevTools Journal</div></footer>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
   </div>
-  <script src="../../assets/kutukdev/js/main.js"></script>
+</footer>
+  </div>
+  <script defer src="../../assets/kutukdev/js/main.js"></script>
 </body>
 </html>

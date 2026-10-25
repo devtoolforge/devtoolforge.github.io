@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>How to learn Wcf and corewcf (Step-by-Step)</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Today's deep dive: Wcf and corewcf in .NET Framework — moving WCF services; CoreWCF provides a supported subset. Long-lived SOAP contracts can survive with a">
+  <link rel="canonical" href="https://devtoolforge.github.io/dotnet-framework/how-to-learn-wcf-and-corewcf-step-by-step.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-09-07T19:30:00+06:00">
+  <meta property="article:modified_time" content="2026-09-07T19:30:00+06:00">
+  <meta property="article:section" content=".NET Framework">
+  <meta property="og:updated_time" content="2026-09-07T19:30:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="5 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="How to learn Wcf and corewcf (Step-by-Step)">
+  <meta property="og:description" content="Today's deep dive: Wcf and corewcf in .NET Framework — moving WCF services; CoreWCF provides a supported subset. Long-lived SOAP contracts can survive with a">
+  <meta property="og:url" content="https://devtoolforge.github.io/dotnet-framework/how-to-learn-wcf-and-corewcf-step-by-step.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=wcf%20and%20corewcf%20legacy%20software%20maintenance&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to learn Wcf and corewcf (Step-by-Step)">
+  <meta name="twitter:description" content="Today's deep dive: Wcf and corewcf in .NET Framework — moving WCF services; CoreWCF provides a supported subset. Long-lived SOAP contracts can survive with a">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=wcf%20and%20corewcf%20legacy%20software%20maintenance&amp;w=474&amp;h=274&amp;c=7">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/dotnet-framework/how-to-learn-wcf-and-corewcf-step-by-step.html" }, "headline": "How to learn Wcf and corewcf (Step-by-Step)", "description": "Today's deep dive: Wcf and corewcf in .NET Framework — moving WCF services; CoreWCF provides a supported subset. Long-lived SOAP contracts can survive with a modern host. Teams tha…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=wcf%20and%20corewcf%20legacy%20software%20maintenance&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-09-07T19:30:00+06:00", "dateModified": "2026-09-07T19:30:00+06:00", "wordCount": 1027, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/dotnet-framework/how-to-learn-wcf-and-corewcf-step-by-step.html#webpage", "url": "https://devtoolforge.github.io/dotnet-framework/how-to-learn-wcf-and-corewcf-step-by-step.html", "name": "How to learn Wcf and corewcf (Step-by-Step)", "datePublished": "2026-09-07T19:30:00+06:00", "dateModified": "2026-09-07T19:30:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/dotnet-framework/", "url": "https://devtoolforge.github.io/category/dotnet-framework/", "name": ".NET Framework" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/dotnet-framework/how-to-learn-wcf-and-corewcf-step-by-step.html", "url": "https://devtoolforge.github.io/dotnet-framework/how-to-learn-wcf-and-corewcf-step-by-step.html", "name": "How to learn Wcf and corewcf (Step-by-Step)" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure id="img-top" class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=wcf%20and%20corewcf%20legacy%20software%20maintenance&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=wcf%20and%20corewcf%20legacy%20software%20maintenance&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=wcf%20and%20corewcf%20legacy%20software%20maintenance&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="How to learn Wcf and corewcf (Step-by-Step)"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">How to learn Wcf and corewcf (Step-by-Step)</h1>
+            <p class="article-header__excerpt">Today's deep dive: Wcf and corewcf in .NET Framework — moving WCF services; CoreWCF provides a supported subset. Long-lived SOAP contracts can survive with a modern host. Teams tha…</p>
+            <div class="article-header__footer">
+              <a href="../category/dotnet-framework/" class="article-header__meta article-header__meta-tag-primary" rel="tag">.NET Framework</a>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-09-07T19:30:00+06:00">September 7, 2026</time>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section" data-canvas-grid="content">
+        <div class="container">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Today's deep dive: Wcf and corewcf in .NET Framework — moving WCF services; CoreWCF provides a supported subset. Long-lived SOAP contracts can survive with a modern host. Teams that take it seriously spend less time on avoidable problems and more time shipping features users actually notice. The key is treating it as a living part of the workflow rather than a one-time setup task.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-is-wcf-and-corewcf">What Is Wcf and corewcf?</a></li>
+<li><a href="#tooling-and-ecosystem">Tooling and Ecosystem</a></li>
+<li><a href="#wcf-and-corewcf-vs-com-interop">Wcf and corewcf vs Com interop</a></li>
+<li><a href="#advanced-tips">Advanced Tips</a></li>
+<li><a href="#quick-example">Quick Example</a></li>
+<li><a href="#a-practical-workflow">A Practical Workflow</a></li>
+<li><a href="#step-by-step-quickstart">Step-by-Step Quickstart</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#what-are-the-most-common-mistakes-with-wcf-and-corewcf">What are the most common mistakes with Wcf and corewcf?</a></li>
+<li><a href="#how-long-does-it-take-to-get-comfortable-with-wcf-and-corewcf">How long does it take to get comfortable with Wcf and corewcf?</a></li>
+<li><a href="#do-i-need-wcf-and-corewcf-for-small-projects">Do I need Wcf and corewcf for small projects?</a></li>
+<li><a href="#is-wcf-and-corewcf-still-relevant-in-2026">Is Wcf and corewcf still relevant in 2026?</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ol></nav>
+<p>In this guide we cover wcf and corewcf end to end: the core concepts, the exact steps to set it up well, the mistakes that cost teams the most time, and the habits that keep the setup healthy. Everything here runs on the current 2026 toolchain, with commands you can copy as-is.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Topic</strong></td><td>Wcf and corewcf</td></tr>
+              <tr><td><strong>Area</strong></td><td>.NET Framework</td></tr>
+              <tr><td><strong>Skill level</strong></td><td>Intermediate to advanced</td></tr>
+              <tr><td><strong>Platform</strong></td><td>.NET Framework 4.8.1 (final major version)</td></tr>
+              <tr><td><strong>Status</strong></td><td>Supported as a Windows component; no new features</td></tr>
+              <tr><td><strong>Ships with</strong></td><td>Windows 10/11 and Windows Server</td></tr>
+              <tr><td><strong>Typical workloads</strong></td><td>WinForms, WPF, ASP.NET (System.Web), WCF</td></tr>
+              <tr><td><strong>Last verified</strong></td><td>October 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+<h2 id="what-is-wcf-and-corewcf">What Is Wcf and corewcf?</h2>
+<p>Wcf and corewcf, in one sentence: moving WCF services; CoreWCF provides a supported subset. In practice that means the details are worth getting right once, because everything downstream inherits the decision. Once the defaults are deliberate, the rest of the workflow tends to fall into place.</p>
+<p>The mental model is simple: one clear definition, one clear workflow, and configuration that matches reality. Most confusion around wcf and corewcf comes from mixing those layers — mixing definitions from different eras, or configs copied from projects with different needs. Keep them separate and the rest of this guide follows naturally.</p>
+<h2 id="tooling-and-ecosystem">Tooling and Ecosystem</h2>
+<p>Tool choice is less important than tool consistency. Whether your team standardizes on try-convert, the .NET Portability Analyzer, Windows Compatibility Pack, MSBuild (VS) or alternatives, everyone should run the same versions from the same configuration. That single decision eliminates the works-on-my-machine class of wcf and corewcf problems.</p>
+<h2 id="wcf-and-corewcf-vs-com-interop">Wcf and corewcf vs Com interop</h2>
+<p>They overlap enough that the question is usually about trade-offs rather than right and wrong. Wcf and corewcf optimizes for long-lived soap contracts can survive with a modern host; Com interop pushes harder on the opposite axis. List your constraints honestly — team experience, platform targets, and maintenance budget — and the answer usually picks itself.</p>
+<p>Start from the problem, not the tool. If your pain is long-lived soap contracts can survive with a modern host, Wcf and corewcf is the more direct route; if your team already lives in the other ecosystem, Com interop minimizes ramp-up cost. Whatever you choose, write down why, because the next person will ask.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=wcf%20and%20corewcf%20legacy%20software%20maintenance&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="How to learn Wcf and corewcf (Step-by-Step)" style="border-radius:9px"></figure>
+<h2 id="advanced-tips">Advanced Tips</h2>
+<p>Once the fundamentals are second nature, these are the practices that separate good setups from great ones:</p>
+<ul>
+              <li>Build a tiny example project that demonstrates correct usage — it doubles as a smoke test when versions change.</li>
+              <li>Record decisions next to the code they affect, in the same pull request that introduces them.</li>
+              <li>Wrap external flakiness with retries and clear timeouts so failures are visible instead of mysterious.</li>
+              <li>Tip: Prefer basicHttpBinding/wsHttpBinding paths; replace exotic transports</li>
+            </ul>
+<h2 id="quick-example">Quick Example</h2>
+<p>Here is a compact, real-world command prompt example you can adapt directly. It shows the configuration style we recommend for wcf and corewcf: explicit, commented where it matters, and free of magic.</p>
+<pre><code>dotnet migrate-assessment --project MyApp.csproj --output report.json</code></pre>
+<p>Copy it, run it once, then trim it to what your project actually needs. The worst version of any snippet is the one nobody on the team fully understands.</p>
+<h2 id="a-practical-workflow">A Practical Workflow</h2>
+<p>A repeatable workflow turns wcf and corewcf from a personality trait into a team capability:</p>
+<ol>
+              <li>Add a check to CI so regressions in wcf and corewcf fail loudly instead of silently.</li>
+              <li>Document the rollback path before you need it, not during an incident.</li>
+              <li>Write the chosen setup down in the repository so the decision survives the next refactor.</li>
+              <li>Audit the current state: list what wcf and corewcf touches in your project today.</li>
+              <li>Pick the smallest meaningful change you can ship and measure — momentum matters more than scope.</li>
+            </ol>
+<p>This loop — audit, change, automate, verify — is deliberately generic. It fits .NET Framework at any scale and survives every tooling generation we have seen.</p>
+<h2 id="step-by-step-quickstart">Step-by-Step Quickstart</h2>
+<p>For readers who want the shortest possible path, here is the compressed version:</p>
+<ol>
+              <li>Pick the smallest meaningful change you can ship and measure — momentum matters more than scope.</li>
+              <li>Audit the current state: list what wcf and corewcf touches in your project today.</li>
+              <li>Add a check to CI so regressions in wcf and corewcf fail loudly instead of silently.</li>
+              <li>Add a check to CI so regressions in wcf and corewcf fail loudly instead of silently.</li>
+              <li>Write the chosen setup down in the repository so the decision survives the next refactor.</li>
+              <li>Audit the current state: list what wcf and corewcf touches in your project today.</li>
+            </ol>
+<p>Each step stands alone, so partial adoption already helps. Do them in order and the later ones get easier.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="what-are-the-most-common-mistakes-with-wcf-and-corewcf">What are the most common mistakes with Wcf and corewcf?</h3>
+<p>The big three: treating it as a one-time setup, letting local configuration drift from CI, and skipping documentation for the decisions you make. All three are covered above with concrete fixes.</p>
+<h3 id="how-long-does-it-take-to-get-comfortable-with-wcf-and-corewcf">How long does it take to get comfortable with Wcf and corewcf?</h3>
+<p>The basics take an afternoon; reliable habits take a few weeks of real use. The guide's checklist is designed to compress that ramp-up by focusing on what actually matters.</p>
+<h3 id="do-i-need-wcf-and-corewcf-for-small-projects">Do I need Wcf and corewcf for small projects?</h3>
+<p>More than you would expect. Small projects benefit disproportionately because there is no dedicated ops person to catch drift — the setup protects itself.</p>
+<h3 id="is-wcf-and-corewcf-still-relevant-in-2026">Is Wcf and corewcf still relevant in 2026?</h3>
+<p>Yes — more than ever. The 2026 toolchain builds directly on these fundamentals, and the practices in this article are the ones current documentation assumes you already follow.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Treat this guide as a starting inventory, not a finish line. Re-run the checklist whenever your team, toolchain, or scale changes, and Wcf and corewcf will stay an asset instead of becoming archaeology.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=web%20forms%20reality%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Practical Web forms reality for Everyday .NET Framework Work" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../dotnet-framework/practical-web-forms-reality-for-everyday-net-framework-work.html" class="post-card__content-link">
+      <h3 class="post-card__title">Practical Web forms reality for Everyday .NET Framework Work</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 8, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=app.config%20vs%20appsettings%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="App.config vs appsettings Pitfalls: What the Docs Don't Tell You" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../dotnet-framework/app-config-vs-appsettings-pitfalls-what-the-docs-don-t-tell-you.html" class="post-card__content-link">
+      <h3 class="post-card__title">App.config vs appsettings Pitfalls: What the Docs Don't Tell You</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 6, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=windows%20workflow%20foundation%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Windows workflow foundation reality Security and Reliability Best Practices" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../dotnet-framework/windows-workflow-foundation-reality-security-and-reliability-best-practi.html" class="post-card__content-link">
+      <h3 class="post-card__title">Windows workflow foundation reality Security and Reliability Best Practices</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 9, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=machine.config%20and%20server%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Practical Machine.config and server settings for Everyday .NET Framework Work" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../dotnet-framework/practical-machine-config-and-server-settings-for-everyday-net-framework.html" class="post-card__content-link">
+      <h3 class="post-card__title">Practical Machine.config and server settings for Everyday .NET Framework Work</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 5, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=wpf%20migration%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="Wpf migration in .NET Framework: Setup, Tips, and Workflows" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../dotnet-framework/wpf-migration-in-net-framework-setup-tips-and-workflows.html" class="post-card__content-link">
+      <h3 class="post-card__title">Wpf migration in .NET Framework: Setup, Tips, and Workflows</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 10, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=the%20gac%20legacy%20software%20maintenance&w=474&h=274&c=7" loading="lazy"
+         alt="How to optimize The gac (Step-by-Step)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../dotnet-framework/how-to-optimize-the-gac-step-by-step.html" class="post-card__content-link">
+      <h3 class="post-card__title">How to optimize The gac (Step-by-Step)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">.NET Framework</span>
+      <span class="post-card__meta post-card__meta--date">September 3, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>MSBuild — Page 2 — DevTools Journal</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Articles, guides, and how-tos filed under MSBuild.">
+  <link rel="canonical" href="https://devtoolforge.github.io/category/msbuild/page/2/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="MSBuild — Page 2 — DevTools Journal">
+  <meta property="og:description" content="Articles, guides, and how-tos filed under MSBuild.">
+  <meta property="og:url" content="https://devtoolforge.github.io/category/msbuild/page/2/">
+  <meta property="og:image" content="../../../../assets/kutukdev/images/icon128.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MSBuild — Page 2 — DevTools Journal">
+  <meta name="twitter:description" content="Articles, guides, and how-tos filed under MSBuild.">
+  <meta name="twitter:image" content="../../../../assets/kutukdev/images/icon128.png">
+    <link rel="preload" as="font" type="font/woff2" href="../../../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../../../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../../../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../../../../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../../../../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../../../../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../../../../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../../../../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../../../../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../../../../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/msbuild/", "url": "https://devtoolforge.github.io/category/msbuild/", "name": "MSBuild" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../../../../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../../../../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <header class="page-header section" data-section="first">
+        <div class="container">
+          <h1 class="page-header__title">MSBuild</h1>
+          <p class="page-header__desc">Articles, guides, and how-tos filed under MSBuild.</p>
+        </div>
+      </header>
+      <section class="section">
+        <div class="container">
+          <div class="posts-feed" data-layout-grid="columns">
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/multi-targeting-from-first-steps-to-production.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=multi-targeting%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Multi-targeting: From First Steps to Production">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/multi-targeting-from-first-steps-to-production.html" class="post-card__content-link">
+                <h2 class="post-card__title">Multi-targeting: From First Steps to Production</h2>
+                <p class="post-card__excerpt">Today's deep dive: Multi-targeting in MSBuild — TargetFrameworks loops building per framework. Libraries support net10.0 and net48 from one project. Teams that take it seriously sp…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 29, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/pack-and-publish-targets-vs-dependson-targets-which-should-you-use.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=pack%20and%20publish%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Pack and publish targets vs Dependson targets: Which Should You Use?">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/pack-and-publish-targets-vs-dependson-targets-which-should-you-use.html" class="post-card__content-link">
+                <h2 class="post-card__title">Pack and publish targets vs Dependson targets: Which Should You Use?</h2>
+                <p class="post-card__excerpt">Today's deep dive: Pack and publish targets in MSBuild — built-in packaging (dotnet pack/publish) flow. Nugets and deployables come out of standard targets, not scripts. Teams that…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 28, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/continuousintegrationbuild-property-essentials-10-tips-that-save-hours.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=continuousintegrationbuild%20property%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Continuousintegrationbuild property Essentials: 10 Tips That Save Hours">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/continuousintegrationbuild-property-essentials-10-tips-that-save-hours.html" class="post-card__content-link">
+                <h2 class="post-card__title">Continuousintegrationbuild property Essentials: 10 Tips That Save Hours</h2>
+                <p class="post-card__excerpt">Today's deep dive: Continuousintegrationbuild property in MSBuild — the official flag for deterministic CI builds. Artifacts become reproducible and source-link clean. Teams that t…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 27, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/sourcelink-and-embedded-pdbs-a-complete-guide-for-2026.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=sourcelink%20and%20embedded%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Sourcelink and embedded pdbs: A Complete Guide for 2026">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/sourcelink-and-embedded-pdbs-a-complete-guide-for-2026.html" class="post-card__content-link">
+                <h2 class="post-card__title">Sourcelink and embedded pdbs: A Complete Guide for 2026</h2>
+                <p class="post-card__excerpt">Today's deep dive: Sourcelink and embedded pdbs in MSBuild — portable PDBs mapping to source control. Stack traces and stepping work straight from your repo. Teams that take it ser…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 26, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/msbuild-in-ci-pipelines-explained-what-it-is-and-how-it-works.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=msbuild%20in%20ci%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Msbuild in ci pipelines Explained: What It Is and How It Works">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/msbuild-in-ci-pipelines-explained-what-it-is-and-how-it-works.html" class="post-card__content-link">
+                <h2 class="post-card__title">Msbuild in ci pipelines Explained: What It Is and How It Works</h2>
+                <p class="post-card__excerpt">Today's deep dive: Msbuild in ci pipelines in MSBuild — invoking engine correctly on agents. CI builds match local behavior bit for bit. Teams that take it seriously spend less tim…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 25, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/common-build-errors-performance-tuning-practical-tips-that-work.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=common%20build%20errors%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Common build errors Performance Tuning: Practical Tips That Work">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/common-build-errors-performance-tuning-practical-tips-that-work.html" class="post-card__content-link">
+                <h2 class="post-card__title">Common build errors Performance Tuning: Practical Tips That Work</h2>
+                <p class="post-card__excerpt">Today's deep dive: Common build errors in MSBuild — the classic MSBUILD : error MSB messages and fixes. Recognizing error codes halves debugging time. Teams that take it seriously …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 24, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/extending-the-build-safely-cheat-sheet-7-shortcuts-and-commands.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=extending%20the%20build%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Extending the build safely Cheat Sheet: 7 Shortcuts and Commands">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/extending-the-build-safely-cheat-sheet-7-shortcuts-and-commands.html" class="post-card__content-link">
+                <h2 class="post-card__title">Extending the build safely Cheat Sheet: 7 Shortcuts and Commands</h2>
+                <p class="post-card__excerpt">Today's deep dive: Extending the build safely in MSBuild — shipping shared targets as a NuGet package. The whole org inherits build improvements automatically. Teams that take it s…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 23, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/what-s-new-in-building-legacy-projects-for-2026.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=building%20legacy%20projects%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="What's New in Building legacy projects for 2026?">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/what-s-new-in-building-legacy-projects-for-2026.html" class="post-card__content-link">
+                <h2 class="post-card__title">What's New in Building legacy projects for 2026?</h2>
+                <p class="post-card__excerpt">Today's deep dive: Building legacy projects in MSBuild — old-style csproj on modern engines. Decades-old apps keep building on current toolchains. Teams that take it seriously spen…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 22, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/advanced-msbuild-apis-in-code-techniques-for-2026-with-real-examples.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=msbuild%20apis%20in%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Advanced Msbuild apis in code Techniques for 2026 (With Real Examples)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/advanced-msbuild-apis-in-code-techniques-for-2026-with-real-examples.html" class="post-card__content-link">
+                <h2 class="post-card__title">Advanced Msbuild apis in code Techniques for 2026 (With Real Examples)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Msbuild apis in code in MSBuild — Microsoft.Build.Framework/Legacy for hosting the engine. Custom tools and analyzers drive builds programmatically. Teams that t…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 20, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/practical-properties-for-everyday-msbuild-work-with-real-examples.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=properties%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Practical Properties for Everyday MSBuild Work (With Real Examples)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/practical-properties-for-everyday-msbuild-work-with-real-examples.html" class="post-card__content-link">
+                <h2 class="post-card__title">Practical Properties for Everyday MSBuild Work (With Real Examples)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Properties in MSBuild — name-value configuration entries evaluated in order. Every build knob from TargetFramework to OutputPath flows through them. Teams that t…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 19, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/5-items-shortcuts-you-will-use-every-day.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=items%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="5 Items Shortcuts You Will Use Every Day">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/5-items-shortcuts-you-will-use-every-day.html" class="post-card__content-link">
+                <h2 class="post-card__title">5 Items Shortcuts You Will Use Every Day</h2>
+                <p class="post-card__excerpt">Today's deep dive: Items in MSBuild — typed input lists (Compile, Reference, Content) with metadata. The build's worklist lives in items, and globs keep it automatic. Teams that ta…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 18, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/the-ultimate-targets-checklist-for-2026.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=targets%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="The Ultimate Targets Checklist for 2026">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/the-ultimate-targets-checklist-for-2026.html" class="post-card__content-link">
+                <h2 class="post-card__title">The Ultimate Targets Checklist for 2026</h2>
+                <p class="post-card__excerpt">Today's deep dive: Targets in MSBuild — named units of work that run tasks in order. Extension points like Build and Publish hook your custom logic in. Teams that take it seriously…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 17, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/tasks-workflow-organize-build-ship.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=tasks%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Tasks Workflow: Organize, Build, Ship">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/tasks-workflow-organize-build-ship.html" class="post-card__content-link">
+                <h2 class="post-card__title">Tasks Workflow: Organize, Build, Ship</h2>
+                <p class="post-card__excerpt">Today's deep dive: Tasks in MSBuild — atomic build actions invoked inside targets. Copy, WriteLinesToFile, and Exec cover most build needs. Teams that take it seriously spend less …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 16, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/evaluation-vs-execution-demystified-with-real-world-examples.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=evaluation%20vs%20execution%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Evaluation vs execution Demystified with Real-World Examples">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/evaluation-vs-execution-demystified-with-real-world-examples.html" class="post-card__content-link">
+                <h2 class="post-card__title">Evaluation vs execution Demystified with Real-World Examples</h2>
+                <p class="post-card__excerpt">Today's deep dive: Evaluation vs execution in MSBuild — the two-phase model: tables computed first, then targets run. Nearly every build mystery dissolves once phase thinking click…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 15, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/conditions-the-missing-manual.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=conditions%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Conditions: The Missing Manual">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/conditions-the-missing-manual.html" class="post-card__content-link">
+                <h2 class="post-card__title">Conditions: The Missing Manual</h2>
+                <p class="post-card__excerpt">Today's deep dive: Conditions in MSBuild — if-style attributes gating properties, items, and targets. Platform and configuration-specific behavior stays declarative. Teams that tak…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 14, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/getting-started-with-incremental-builds.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=incremental%20builds%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Getting Started with Incremental builds">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/getting-started-with-incremental-builds.html" class="post-card__content-link">
+                <h2 class="post-card__title">Getting Started with Incremental builds</h2>
+                <p class="post-card__excerpt">Today's deep dive: Incremental builds in MSBuild — Inputs/Outputs attributes skipping up-to-date targets. Builds get dramatically faster when only changed work runs. Teams that tak…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 13, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/fix-it-fast-a-beforetargets-and-aftertargets-error-handbook.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=beforetargets%20and%20aftertargets%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Fix It Fast: A Beforetargets and aftertargets Error Handbook">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/fix-it-fast-a-beforetargets-and-aftertargets-error-handbook.html" class="post-card__content-link">
+                <h2 class="post-card__title">Fix It Fast: A Beforetargets and aftertargets Error Handbook</h2>
+                <p class="post-card__excerpt">Today's deep dive: Beforetargets and aftertargets in MSBuild — hooking custom targets around built-in ones. Customization happens without editing imported files. Teams that take it…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 12, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/dependson-targets-anatomy-how-the-pieces-fit-together.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=dependson%20targets%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Dependson targets Anatomy: How the Pieces Fit Together">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/dependson-targets-anatomy-how-the-pieces-fit-together.html" class="post-card__content-link">
+                <h2 class="post-card__title">Dependson targets Anatomy: How the Pieces Fit Together</h2>
+                <p class="post-card__excerpt">Today's deep dive: Dependson targets in MSBuild — declarative ordering between targets. Shared pre-steps run exactly once in the right order. Teams that take it seriously spend les…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 11, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/what-s-new-in-directory-build-props-for-2026.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=directory.build.props%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="What's New in Directory.build.props for 2026?">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/what-s-new-in-directory-build-props-for-2026.html" class="post-card__content-link">
+                <h2 class="post-card__title">What's New in Directory.build.props for 2026?</h2>
+                <p class="post-card__excerpt">Today's deep dive: Directory.build.props in MSBuild — auto-imported properties for a whole folder tree. Company-wide defaults (nullable, versions, analyzers) live in one file. Team…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 9, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/8-ways-to-automate-directory-build-targets-faster.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=directory.build.targets%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="8 Ways to automate Directory.build.targets Faster">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/8-ways-to-automate-directory-build-targets-faster.html" class="post-card__content-link">
+                <h2 class="post-card__title">8 Ways to automate Directory.build.targets Faster</h2>
+                <p class="post-card__excerpt">Today's deep dive: Directory.build.targets in MSBuild — execution-time customization applied repo-wide. Post-build hooks and packaging steps stay DRY across projects. Teams that ta…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 8, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/automating-sdk-style-imports-tools-scripts-and-workflows-with-real-examp.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=sdk-style%20imports%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Automating Sdk-style imports: Tools, Scripts, and Workflows (With Real Examples)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/automating-sdk-style-imports-tools-scripts-and-workflows-with-real-examp.html" class="post-card__content-link">
+                <h2 class="post-card__title">Automating Sdk-style imports: Tools, Scripts, and Workflows (With Real Examples)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Sdk-style imports in MSBuild — what Sdk="Microsoft.NET.Sdk" pulls in automatically. Understanding implicit imports explains the short modern csproj. Teams that t…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 7, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/what-s-new-in-custom-tasks-for-2026.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=custom%20tasks%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="What's New in Custom tasks for 2026?">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/what-s-new-in-custom-tasks-for-2026.html" class="post-card__content-link">
+                <h2 class="post-card__title">What's New in Custom tasks for 2026?</h2>
+                <p class="post-card__excerpt">Today's deep dive: Custom tasks in MSBuild — ITask classes compiled into assemblies invoked via UsingTask. Real build logic (codegen, checks) runs inside the engine. Teams that tak…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 6, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/automating-inline-tasks-tools-scripts-and-workflows.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=inline%20tasks%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Automating Inline tasks: Tools, Scripts, and Workflows">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/automating-inline-tasks-tools-scripts-and-workflows.html" class="post-card__content-link">
+                <h2 class="post-card__title">Automating Inline tasks: Tools, Scripts, and Workflows</h2>
+                <p class="post-card__excerpt">Today's deep dive: Inline tasks in MSBuild — small tasks written directly in the project file. One-off logic avoids a separate assembly and repo. Teams that take it seriously spend…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 5, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../msbuild/practical-property-functions-for-everyday-msbuild-work.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=property%20functions%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+                     alt="Practical Property functions for Everyday MSBuild Work">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../msbuild/practical-property-functions-for-everyday-msbuild-work.html" class="post-card__content-link">
+                <h2 class="post-card__title">Practical Property functions for Everyday MSBuild Work</h2>
+                <p class="post-card__excerpt">Today's deep dive: Property functions in MSBuild — $([System.DateTime]::...) and MSBuild function calls. Surprisingly deep inline logic without custom tasks. Teams that take it ser…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
+                <span class="post-card__meta post-card__meta--date">September 4, 2026</span>
+              </div>
+            </div>
+          </article>
+          </div>
+          <nav class="pagination" aria-label="Pages"><a href="../../../../category/msbuild/">1</a><span class="current">2</span><a href="../../../../category/msbuild/page/3/">3</a><a href="../../../../category/msbuild/page/4/">4</a></nav>
+        </div>
+      </section>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../../../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../../../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../../../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../../../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../../../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../../../../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>Multi-root workspaces Quick Reference for Busy Developers</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Today's deep dive: Multi-root workspaces in Visual Studio Code — one window containing several project folders. Monorepos and frontend-plus-backend pairs">
+  <link rel="canonical" href="https://devtoolforge.github.io/visual-studio-code/multi-root-workspaces-quick-reference-for-busy-developers.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-10-12T12:00:00+06:00">
+  <meta property="article:modified_time" content="2026-10-12T12:00:00+06:00">
+  <meta property="article:section" content="Visual Studio Code">
+  <meta property="og:updated_time" content="2026-10-12T12:00:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="5 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Multi-root workspaces Quick Reference for Busy Developers">
+  <meta property="og:description" content="Today's deep dive: Multi-root workspaces in Visual Studio Code — one window containing several project folders. Monorepos and frontend-plus-backend pairs">
+  <meta property="og:url" content="https://devtoolforge.github.io/visual-studio-code/multi-root-workspaces-quick-reference-for-busy-developers.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=multi-root%20workspaces%20visual%20studio%20code%20editor&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Multi-root workspaces Quick Reference for Busy Developers">
+  <meta name="twitter:description" content="Today's deep dive: Multi-root workspaces in Visual Studio Code — one window containing several project folders. Monorepos and frontend-plus-backend pairs">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=multi-root%20workspaces%20visual%20studio%20code%20editor&amp;w=474&amp;h=274&amp;c=7">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/visual-studio-code/multi-root-workspaces-quick-reference-for-busy-developers.html" }, "headline": "Multi-root workspaces Quick Reference for Busy Developers", "description": "Today's deep dive: Multi-root workspaces in Visual Studio Code — one window containing several project folders. Monorepos and frontend-plus-backend pairs stay in a single editor. T…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=multi-root%20workspaces%20visual%20studio%20code%20editor&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-10-12T12:00:00+06:00", "dateModified": "2026-10-12T12:00:00+06:00", "wordCount": 1050, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/visual-studio-code/multi-root-workspaces-quick-reference-for-busy-developers.html#webpage", "url": "https://devtoolforge.github.io/visual-studio-code/multi-root-workspaces-quick-reference-for-busy-developers.html", "name": "Multi-root workspaces Quick Reference for Busy Developers", "datePublished": "2026-10-12T12:00:00+06:00", "dateModified": "2026-10-12T12:00:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/visual-studio-code/", "url": "https://devtoolforge.github.io/category/visual-studio-code/", "name": "Visual Studio Code" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/visual-studio-code/multi-root-workspaces-quick-reference-for-busy-developers.html", "url": "https://devtoolforge.github.io/visual-studio-code/multi-root-workspaces-quick-reference-for-busy-developers.html", "name": "Multi-root workspaces Quick Reference for Busy Developers" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure id="img-top" class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=multi-root%20workspaces%20visual%20studio%20code%20editor&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=multi-root%20workspaces%20visual%20studio%20code%20editor&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=multi-root%20workspaces%20visual%20studio%20code%20editor&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="Multi-root workspaces Quick Reference for Busy Developers"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">Multi-root workspaces Quick Reference for Busy Developers</h1>
+            <p class="article-header__excerpt">Today's deep dive: Multi-root workspaces in Visual Studio Code — one window containing several project folders. Monorepos and frontend-plus-backend pairs stay in a single editor. T…</p>
+            <div class="article-header__footer">
+              <a href="../category/visual-studio-code/" class="article-header__meta article-header__meta-tag-primary" rel="tag">Visual Studio Code</a>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-10-12T12:00:00+06:00">October 12, 2026</time>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section" data-canvas-grid="content">
+        <div class="container">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Today's deep dive: Multi-root workspaces in Visual Studio Code — one window containing several project folders. Monorepos and frontend-plus-backend pairs stay in a single editor. Teams that take it seriously spend less time on avoidable problems and more time shipping features users actually notice. The key is treating it as a living part of the workflow rather than a one-time setup task.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-is-multi-root-workspaces">What Is Multi-root workspaces?</a></li>
+<li><a href="#best-practices-for-multi-root-workspaces">Best Practices for Multi-root workspaces</a></li>
+<li><a href="#common-multi-root-workspaces-mistakes">Common Multi-root workspaces Mistakes</a></li>
+<li><a href="#multi-root-workspaces-vs-column-and-multi-cursor-editing">Multi-root workspaces vs Column and multi-cursor editing</a></li>
+<li><a href="#troubleshooting-multi-root-workspaces">Troubleshooting Multi-root workspaces</a></li>
+<li><a href="#quick-example">Quick Example</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#can-multi-root-workspaces-be-automated">Can Multi-root workspaces be automated?</a></li>
+<li><a href="#what-are-the-most-common-mistakes-with-multi-root-workspaces">What are the most common mistakes with Multi-root workspaces?</a></li>
+<li><a href="#do-i-need-multi-root-workspaces-for-small-projects">Do I need Multi-root workspaces for small projects?</a></li>
+<li><a href="#what-is-multi-root-workspaces-2">What is Multi-root workspaces?</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ol></nav>
+<p>In this guide we cover multi-root workspaces end to end: the core concepts, the exact steps to set it up well, the mistakes that cost teams the most time, and the habits that keep the setup healthy. Everything here runs on the current 2026 toolchain, with commands you can copy as-is.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Topic</strong></td><td>Multi-root workspaces</td></tr>
+              <tr><td><strong>Area</strong></td><td>Visual Studio Code</td></tr>
+              <tr><td><strong>Skill level</strong></td><td>Intermediate to advanced</td></tr>
+              <tr><td><strong>Product</strong></td><td>Visual Studio Code (Microsoft build)</td></tr>
+              <tr><td><strong>Platforms</strong></td><td>Windows, macOS, Linux (deb, rpm, snap)</td></tr>
+              <tr><td><strong>License</strong></td><td>Free; Code - OSS core is MIT</td></tr>
+              <tr><td><strong>Extension market</strong></td><td>Visual Studio Marketplace</td></tr>
+              <tr><td><strong>Last verified</strong></td><td>October 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+<h2 id="what-is-multi-root-workspaces">What Is Multi-root workspaces?</h2>
+<p>Multi-root workspaces, in one sentence: one window containing several project folders. In practice that means the details are worth getting right once, because everything downstream inherits the decision. Once the defaults are deliberate, the rest of the workflow tends to fall into place.</p>
+<p>The mental model is simple: one clear definition, one clear workflow, and configuration that matches reality. Most confusion around multi-root workspaces comes from mixing those layers — mixing definitions from different eras, or configs copied from projects with different needs. Keep them separate and the rest of this guide follows naturally.</p>
+<h2 id="best-practices-for-multi-root-workspaces">Best Practices for Multi-root workspaces</h2>
+<p>These are the practices we see on teams where this area simply never causes drama:</p>
+<ul>
+              <li>Review multi-root workspaces changes in code review with the same seriousness as application logic.</li>
+              <li>Measure before and after changes to multi-root workspaces so decisions are driven by data rather than vibes.</li>
+              <li>Test the failure path, not just the happy path — most real incidents live there.</li>
+              <li>Start every project with a documented multi-root workspaces setup so the whole team follows the same conventions from day one.</li>
+              <li>Automate the boring parts of multi-root workspaces with scripts or tasks; humans are bad at remembering commands.</li>
+            </ul>
+<p>None of these are hard individually. The discipline is doing them every time, which is why automation and CI checks carry so much of the load.</p>
+<h2 id="common-multi-root-workspaces-mistakes">Common Multi-root workspaces Mistakes</h2>
+<p>The same failure patterns show up again and again. Here are the four we meet most often, including the classic: Letting one folder's extension recommendations pollute every project in the window.</p>
+<ul>
+              <li>Ignoring warnings that point at real problems because they have always been there.</li>
+              <li>Letting local settings drift from CI until nobody knows which one is right.</li>
+              <li>Assuming the default configuration matches your project's real requirements.</li>
+              <li>Skipping documentation for decisions, forcing archaeology six months later.</li>
+            </ul>
+<p>Every one of these fixes is cheap when caught early and expensive when caught late. A quarterly review of multi-root workspaces — twenty minutes, honestly — catches most of them before they metastasize.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=multi-root%20workspaces%20visual%20studio%20code%20editor&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Multi-root workspaces Quick Reference for Busy Developers" style="border-radius:9px"></figure>
+<h2 id="multi-root-workspaces-vs-column-and-multi-cursor-editing">Multi-root workspaces vs Column and multi-cursor editing</h2>
+<p>They overlap enough that the question is usually about trade-offs rather than right and wrong. Multi-root workspaces optimizes for monorepos and frontend-plus-backend pairs stay in a single editor; Column and multi-cursor editing pushes harder on the opposite axis. List your constraints honestly — team experience, platform targets, and maintenance budget — and the answer usually picks itself.</p>
+<p>Start from the problem, not the tool. If your pain is monorepos and frontend-plus-backend pairs stay in a single editor, Multi-root workspaces is the more direct route; if your team already lives in the other ecosystem, Column and multi-cursor editing minimizes ramp-up cost. Whatever you choose, write down why, because the next person will ask.</p>
+<h2 id="troubleshooting-multi-root-workspaces">Troubleshooting Multi-root workspaces</h2>
+<p>When things break, symptoms cluster into a handful of patterns. Match yours here and jump straight to the fix:</p>
+<ul>
+              <li><strong>It fails only in CI but passes locally</strong> — compare build modes and clean versus incremental state; CI reveals stale-output bugs instantly</li>
+              <li><strong>It works on one machine and fails on another</strong> — diff the versions and configuration first — environment drift explains most of these bugs</li>
+              <li><strong>Performance collapsed after an upgrade</strong> — bisect the upgrade by rolling back one component at a time and re-measuring</li>
+            </ul>
+<p>If none of these match, capture a full log before changing anything. For multi-root workspaces that log almost always names the failing layer, and the fix becomes obvious instead of guessed.</p>
+<h2 id="quick-example">Quick Example</h2>
+<p>Here is a compact, real-world json example you can adapt directly. It shows the configuration style we recommend for multi-root workspaces: explicit, commented where it matters, and free of magic.</p>
+<pre><code>{
+  &quot;version&quot;: &quot;2.0.0&quot;,
+  &quot;tasks&quot;: [
+    { &quot;label&quot;: &quot;build&quot;, &quot;type&quot;: &quot;npm&quot;, &quot;script&quot;: &quot;build&quot;,
+      &quot;group&quot;: { &quot;kind&quot;: &quot;build&quot;, &quot;isDefault&quot;: true }, &quot;problemMatcher&quot;: [] }
+  ]
+}</code></pre>
+<p>Copy it, run it once, then trim it to what your project actually needs. The worst version of any snippet is the one nobody on the team fully understands.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="can-multi-root-workspaces-be-automated">Can Multi-root workspaces be automated?</h3>
+<p>Yes, and it should be. Start by scripting the steps in this guide, then wire them into CI so the automation runs without anyone remembering to.</p>
+<h3 id="what-are-the-most-common-mistakes-with-multi-root-workspaces">What are the most common mistakes with Multi-root workspaces?</h3>
+<p>The big three: treating it as a one-time setup, letting local configuration drift from CI, and skipping documentation for the decisions you make. All three are covered above with concrete fixes.</p>
+<h3 id="do-i-need-multi-root-workspaces-for-small-projects">Do I need Multi-root workspaces for small projects?</h3>
+<p>More than you would expect. Small projects benefit disproportionately because there is no dedicated ops person to catch drift — the setup protects itself.</p>
+<h3 id="what-is-multi-root-workspaces-2">What is Multi-root workspaces?</h3>
+<p>{W2} It is a foundational part of the {C} workflow, and understanding it pays off across almost every project you will touch.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Nothing in this guide is exotic, and that is the point. Multi-root workspaces done consistently — measured, documented, and automated — removes an entire category of daily friction from Visual Studio Code work. Pick one section, apply it this week, and let the results argue for the rest.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=logpoints%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+         alt="Logpoints in Visual Studio Code: Setup, Tips, and Workflows" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-code/logpoints-in-visual-studio-code-setup-tips-and-workflows.html" class="post-card__content-link">
+      <h3 class="post-card__title">Logpoints in Visual Studio Code: Setup, Tips, and Workflows</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</span>
+      <span class="post-card__meta post-card__meta--date">October 13, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=remote%20ssh%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+         alt="Remote ssh Anatomy: How the Pieces Fit Together" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-code/remote-ssh-anatomy-how-the-pieces-fit-together.html" class="post-card__content-link">
+      <h3 class="post-card__title">Remote ssh Anatomy: How the Pieces Fit Together</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</span>
+      <span class="post-card__meta post-card__meta--date">October 11, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=launch.json%20debugging%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+         alt="Launch.json debugging Health Check: Audit and Improve Your Setup" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-code/launch-json-debugging-health-check-audit-and-improve-your-setup.html" class="post-card__content-link">
+      <h3 class="post-card__title">Launch.json debugging Health Check: Audit and Improve Your Setup</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</span>
+      <span class="post-card__meta post-card__meta--date">October 14, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=dev%20containers%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+         alt="Dev containers Explained: What It Is and How It Works" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-code/dev-containers-explained-what-it-is-and-how-it-works.html" class="post-card__content-link">
+      <h3 class="post-card__title">Dev containers Explained: What It Is and How It Works</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</span>
+      <span class="post-card__meta post-card__meta--date">October 10, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=tasks.json%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+         alt="Understanding Tasks.json: A Practical Deep Dive" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-code/understanding-tasks-json-a-practical-deep-dive.html" class="post-card__content-link">
+      <h3 class="post-card__title">Understanding Tasks.json: A Practical Deep Dive</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</span>
+      <span class="post-card__meta post-card__meta--date">October 16, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=wsl%20integration%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+         alt="Fix It Fast: A Wsl integration Error Handbook" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-code/fix-it-fast-a-wsl-integration-error-handbook.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fix It Fast: A Wsl integration Error Handbook</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</span>
+      <span class="post-card__meta post-card__meta--date">October 9, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

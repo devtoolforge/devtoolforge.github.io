@@ -1,88 +1,163 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" data-header-style="modern">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
   <title>Custom MSBuild Tasks and Targets: Automate Your Build Pipeline</title>
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Microsoft developer tools, explained — DevTools Journal demo build. This demo is intentionally noindex/nofollow.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Most teams treat their build as an untouchable sequence configured long ago, then compensate with fragile CI shell scripts. MSBuild offers a better path:">
+  <link rel="canonical" href="https://devtoolforge.github.io/msbuild/custom-msbuild-tasks-and-targets-automate-build-pipeline.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-10-21T10:30:00+06:00">
+  <meta property="article:modified_time" content="2026-10-21T10:30:00+06:00">
+  <meta property="article:section" content="MSBuild">
+  <meta property="og:updated_time" content="2026-10-21T10:30:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="4 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Custom MSBuild Tasks and Targets: Automate Your Build Pipeline">
+  <meta property="og:description" content="Most teams treat their build as an untouchable sequence configured long ago, then compensate with fragile CI shell scripts. MSBuild offers a better path:">
+  <meta property="og:url" content="https://devtoolforge.github.io/msbuild/custom-msbuild-tasks-and-targets-automate-build-pipeline.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=automation%20gears%20code%20build&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Custom MSBuild Tasks and Targets: Automate Your Build Pipeline">
+  <meta name="twitter:description" content="Most teams treat their build as an untouchable sequence configured long ago, then compensate with fragile CI shell scripts. MSBuild offers a better path:">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=automation%20gears%20code%20build&amp;w=474&amp;h=274&amp;c=7">
     <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
-  <link rel="icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
   <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
   <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
   <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
   <link rel="preconnect" href="https://tse1.mm.bing.net">
-  <meta property="og:site_name" content="DevTools Journal">
-  <meta property="og:title" content="Custom MSBuild Tasks and Targets: Automate Your Build Pipeline">
-  <meta property="og:type" content="article">
-  <meta name="generator" content="DevTools Journal demo generator">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/msbuild/custom-msbuild-tasks-and-targets-automate-build-pipeline.html" }, "headline": "Custom MSBuild Tasks and Targets: Automate Your Build Pipeline", "description": "Most teams treat their build as an untouchable sequence configured long ago, then compensate with fragile CI shell scripts. MSBuild offers a better path: custom targets and tasks t…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=automation%20gears%20code%20build&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-10-21T10:30:00+06:00", "dateModified": "2026-10-21T10:30:00+06:00", "wordCount": 965, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
 
   <script type="application/ld+json">
-{ "@context": "https://schema.org", "@type": "BlogPosting", "headline": "Custom MSBuild Tasks and Targets: Automate Your Build Pipeline", "description": "Most teams treat their build as an untouchable sequence configured long ago, then compensate with fragile CI shell scripts. MSBuild offers a better path: custom", "image": "https://tse1.mm.bing.net/th?q=automation%20gears%20code%20build&w=474&h=274&c=7", "datePublished": "2026-10-25", "dateModified": "2026-10-25", "wordCount": 577, "author": {"@type": "Organization", "name": "DevTools Journal"}, "publisher": {"@type": "Organization", "name": "DevTools Journal"} }
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/msbuild/custom-msbuild-tasks-and-targets-automate-build-pipeline.html#webpage", "url": "https://devtoolforge.github.io/msbuild/custom-msbuild-tasks-and-targets-automate-build-pipeline.html", "name": "Custom MSBuild Tasks and Targets: Automate Your Build Pipeline", "datePublished": "2026-10-21T10:30:00+06:00", "dateModified": "2026-10-21T10:30:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/msbuild/", "url": "https://devtoolforge.github.io/category/msbuild/", "name": "MSBuild" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/msbuild/custom-msbuild-tasks-and-targets-automate-build-pipeline.html", "url": "https://devtoolforge.github.io/msbuild/custom-msbuild-tasks-and-targets-automate-build-pipeline.html", "name": "Custom MSBuild Tasks and Targets: Automate Your Build Pipeline" } }] }
   </script>
 </head>
 <body class="home-template">
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
   <div class="site" id="site">
-    <header class="site-header">
-      <div class="site-header__container">
-        <button class="site-header__hamburger" aria-label="Open menu"
-                aria-expanded="false" data-site-action-trigger="navigation">
-          <span></span><span></span><span></span>
-        </button>
-        <a class="site-header__logo" href="../">DevTools Journal</a>
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
       </div>
-    </header>
-    <div class="site-actions" aria-hidden="true">
-      <div class="site-actions__backdrop"></div>
-      <nav class="site-actions__panel" aria-label="Main navigation">
-        <div class="site-actions__top">
-          <p class="site-actions__title">Menu</p>
-          <button class="site-actions__close" data-close-site-actions aria-label="Close menu">&times;</button>
-        </div>
-        <ul class="site-actions__menu">
-          <li><a href="../">Home</a></li>
-      <li><a href="../category/visual-studio/">Visual Studio</a></li>
-      <li><a href="../category/visual-studio-code/">Visual Studio Code</a></li>
-      <li><a href="../category/visual-studio-mac/">Visual Studio for Mac</a></li>
-      <li><a href="../category/dotnet/">.NET</a></li>
-      <li><a href="../category/dotnet-framework/">.NET Framework</a></li>
-      <li><a href="../category/aspnet-core/">ASP.NET Core</a></li>
-      <li><a href="../category/csharp/">C#</a></li>
-      <li><a href="../category/fsharp/">F#</a></li>
-      <li><a href="../category/typescript/">TypeScript</a></li>
-      <li><a href="../category/microsoft-build-tools/">Microsoft Build Tools</a></li>
-      <li><a href="../category/msbuild/">MSBuild</a></li>
-        </ul>
-      </nav>
     </div>
+  </div>
+</header>
     <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
       <header class="article-header section" data-layout-grid="custom"
               data-theme="highlight" data-section="first" data-has-featured-image="true">
         <div class="article-header__inner">
-          <figure class="article-header__figure">
+          <figure id="img-top" class="article-header__figure">
             <img class="article-header__image" width="1200" height="630"
-                 src="https://tse1.mm.bing.net/th?q=automation%20gears%20code%20build&w=474&h=274&c=7" alt="Custom MSBuild Tasks and Targets: Automate Your Build Pipeline">
+                 src="https://tse1.mm.bing.net/th?q=automation%20gears%20code%20build&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=automation%20gears%20code%20build&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=automation%20gears%20code%20build&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="Custom MSBuild Tasks and Targets: Automate Your Build Pipeline"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
           </figure>
           <div class="article-header__content">
             <h1 class="article-header__title">Custom MSBuild Tasks and Targets: Automate Your Build Pipeline</h1>
-            <p class="article-header__excerpt">Most teams treat their build as an untouchable sequence configured long ago, then compensate with fragile CI shell scripts. MSBuild offers a better path: custom targets and tasks that live in the repository, run identically on every machine, and hook directly into the build pipeline where they belong.</p>
+            <p class="article-header__excerpt">Most teams treat their build as an untouchable sequence configured long ago, then compensate with fragile CI shell scripts. MSBuild offers a better path: custom targets and tasks t…</p>
             <div class="article-header__footer">
               <a href="../category/msbuild/" class="article-header__meta article-header__meta-tag-primary" rel="tag">MSBuild</a>
-              <span class="article-header__meta article-header__meta--date" data-dynamic-date></span>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-10-21T10:30:00+06:00">October 21, 2026</time>
             </div>
           </div>
         </div>
       </header>
-      <div class="article-main section">
+      <div class="article-main section" data-canvas-grid="content">
         <div class="container">
-          <div class="article-content">
-          <p>Most teams treat their build as an untouchable sequence configured long ago, then compensate with fragile CI shell scripts. MSBuild offers a better path: custom targets and tasks that live in the repository, run identically on every machine, and hook directly into the build pipeline where they belong.</p>
-          <p>This hands-on guide shows how to add custom targets with BeforeTargets and AfterTargets, write typed custom tasks in C#, package reusable build logic into a NuGet-integrated .props/.targets bundle, and debug the whole thing with binary logs. Your CI YAML shrinks, your local builds get smarter, and build knowledge stops living in one DevOps engineer's head.</p>
-          
-          <h2>Quick Info Table</h2>
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Most teams treat their build as an untouchable sequence configured long ago, then compensate with fragile CI shell scripts. MSBuild offers a better path: custom targets and tasks that live in the repository, run identically on every machine, and hook directly into the build pipeline where they belong.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#targets-declarative-build-steps">Targets: Declarative Build Steps</a></li>
+<li><a href="#custom-tasks-typed-build-logic">Custom Tasks: Typed Build Logic</a></li>
+<li><a href="#packaging-build-logic-for-the-organization">Packaging Build Logic for the Organization</a></li>
+<li><a href="#debugging-custom-build-logic">Debugging Custom Build Logic</a></li>
+<li><a href="#what-belongs-in-the-build-not-in-ci-yaml">What Belongs in the Build, Not in CI YAML</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#where-should-custom-targets-live">Where should custom targets live?</a></li>
+<li><a href="#exec-vs-custom-task-which-should-i-use">Exec vs custom task: which should I use?</a></li>
+<li><a href="#how-do-i-pass-values-between-targets">How do I pass values between targets?</a></li>
+<li><a href="#can-i-make-a-target-run-only-in-release">Can I make a target run only in Release?</a></li>
+<li><a href="#how-do-i-find-out-which-target-did-something">How do I find out which target did something?</a></li>
+</ul></li>
+</ol></nav>
+<p>This hands-on guide shows how to add custom targets with BeforeTargets and AfterTargets, write typed custom tasks in C#, package reusable build logic into a NuGet-integrated .props/.targets bundle, and debug the whole thing with binary logs. Your CI YAML shrinks, your local builds get smarter, and build knowledge stops living in one DevOps engineer's head.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
           <div class="table-scroll">
             <table>
               <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
@@ -97,131 +172,182 @@
               </tbody>
             </table>
           </div>
-          <h2>Targets: Declarative Build Steps</h2>
-          <p>A target is a named unit of build logic. Hooking into the pipeline needs no pipeline edits: declare BeforeTargets or AfterTargets against a built-in target and your step runs at the right moment on every machine that builds the repo.</p>
-          <pre><code>&lt;Target Name=&quot;VerifyApiCompat&quot; AfterTargets=&quot;Build&quot;
-        Condition=&quot;&#x27;$(Configuration)&#x27; == &#x27;Release&#x27;&quot;&gt;
-  &lt;Message Importance=&quot;high&quot; Text=&quot;Running API compatibility check...&quot; /&gt;
-  &lt;Exec Command=&quot;dotnet apicompat -l &quot;$(TargetPath)&quot;&quot; /&gt;
+<h2 id="targets-declarative-build-steps">Targets: Declarative Build Steps</h2>
+<p>A target is a named unit of build logic. Hooking into the pipeline needs no pipeline edits: declare BeforeTargets or AfterTargets against a built-in target and your step runs at the right moment on every machine that builds the repo.</p>
+<pre><code>&lt;Target Name="VerifyApiCompat" AfterTargets="Build"
+        Condition="'$(Configuration)' == 'Release'"&gt;
+  &lt;Message Importance="high" Text="Running API compatibility check..." /&gt;
+  &lt;Exec Command="dotnet apicompat -l "$(TargetPath)"" /&gt;
 &lt;/Target&gt;</code></pre>
-          <p>The Exec task shells out to tools; Message writes to build output; Condition gates by configuration or property. Keep targets small, named after their intent, and stored in Directory.Build.targets at the repo root so every project inherits them.</p>
-          <h2>Custom Tasks: Typed Build Logic</h2>
-          <figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=automation%20gears%20code%20build&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Custom MSBuild Tasks and Targets: Automate Your Build Pipeline" style="border-radius:9px"></figure>
-          <!-- ADSLOT:article_mid_300x250 -->
-          <p>When Exec and inline property functions are not enough, write a task: a public class deriving from Microsoft.Build.Utilities.Task with typed properties as parameters and Execute() as the body. MSBuild instantiates it, injects values, logs through the provided Log helper, and treats a false return as build failure.</p>
-          <pre><code>public class StampVersion : Microsoft.Build.Utilities.Task
+<p>The Exec task shells out to tools; Message writes to build output; Condition gates by configuration or property. Keep targets small, named after their intent, and stored in Directory.Build.targets at the repo root so every project inherits them.</p>
+<h2 id="custom-tasks-typed-build-logic">Custom Tasks: Typed Build Logic</h2>
+<p>When Exec and inline property functions are not enough, write a task: a public class deriving from Microsoft.Build.Utilities.Task with typed properties as parameters and Execute() as the body. MSBuild instantiates it, injects values, logs through the provided Log helper, and treats a false return as build failure.</p>
+<pre><code>public class StampVersion : Microsoft.Build.Utilities.Task
 {
-    public string VersionFile { get; set; } = &quot;&quot;;
-    [Output] public string Stamp { get; private set; } = &quot;&quot;;
+    public string VersionFile { get; set; } = "";
+    [Output] public string Stamp { get; private set; } = "";
 
     public override bool Execute()
     {
-        Stamp = DateTime.UtcNow.ToString(&quot;yyyyMMdd.HHmm&quot;);
+        Stamp = DateTime.UtcNow.ToString("yyyyMMdd.HHmm");
         File.WriteAllText(VersionFile, Stamp);
-        Log.LogMessage(&quot;Stamped {0}&quot;, Stamp);
+        Log.LogMessage("Stamped {0}", Stamp);
         return true;
     }
 }</code></pre>
-          <p>Register with UsingTask and call it from a target; Output parameters feed back into properties for downstream targets. Because tasks are compiled code, you get tests, debugging, and type safety that shell scripts never had.</p>
-          <h2>Packaging Build Logic for the Organization</h2>
-          <p>Shared build logic belongs in a NuGet package: put YourCompany.Build.props and YourCompany.Build.targets inside a build/ folder, pack it, and consume it via PackageReference. MSBuild imports those files automatically for every consumer, so central rules (versioning, warnings-as-errors, signing, SBOM generation) update everywhere with one package version bump.</p>
-          <p>Order matters for composition: props files run early in evaluation, targets run at execution; consumers can override anything via standard property precedence. Document the extension points the package offers, and treat its releases like any library: semantic versioning and a changelog.</p>
-          <h2>Debugging Custom Build Logic</h2>
-          <p>The binary log is the superpower: msbuild -bl writes every evaluation and task invocation to a structured file, and the free MSBuild Structured Log Viewer makes it searchable, showing exactly which target ran, with which property values, in which order. For evaluation questions, msbuild /pp:flatten.xml outputs the fully imported project.</p>
-          <pre><code>dotnet msbuild -bl:build.binlog
+<p>Register with UsingTask and call it from a target; Output parameters feed back into properties for downstream targets. Because tasks are compiled code, you get tests, debugging, and type safety that shell scripts never had.</p>
+<h2 id="packaging-build-logic-for-the-organization">Packaging Build Logic for the Organization</h2>
+<p>Shared build logic belongs in a NuGet package: put YourCompany.Build.props and YourCompany.Build.targets inside a build/ folder, pack it, and consume it via PackageReference. MSBuild imports those files automatically for every consumer, so central rules (versioning, warnings-as-errors, signing, SBOM generation) update everywhere with one package version bump.</p>
+<p>Order matters for composition: props files run early in evaluation, targets run at execution; consumers can override anything via standard property precedence. Document the extension points the package offers, and treat its releases like any library: semantic versioning and a changelog.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=automation%20gears%20code%20build&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Custom MSBuild Tasks and Targets: Automate Your Build Pipeline" style="border-radius:9px"></figure>
+<h2 id="debugging-custom-build-logic">Debugging Custom Build Logic</h2>
+<p>The binary log is the superpower: msbuild -bl writes every evaluation and task invocation to a structured file, and the free MSBuild Structured Log Viewer makes it searchable, showing exactly which target ran, with which property values, in which order. For evaluation questions, msbuild /pp:flatten.xml outputs the fully imported project.</p>
+<pre><code>dotnet msbuild -bl:build.binlog
 # open build.binlog in MSBuild Structured Log Viewer
 # or flatten all imports:
 dotnet msbuild /pp:flatten.xml</code></pre>
-          <p>Set MSBUILDDEBUGPATH and environment toggles when hunting engine-level issues, and add Message Importance=high lines temporarily, but prefer the log viewer; it answers where-did-this-value-come-from questions in seconds.</p>
-          <h2>What Belongs in the Build, Not in CI YAML</h2>
-          <p>Move anything that must be true of every build into targets: version stamping, API compatibility checks, code style enforcement, packaging metadata, artifact copying. Keep CI YAML for orchestration only: checkout, restore, build, test, publish. The division of labor keeps local builds honest (developers see the same steps) and makes CI files short enough to read.</p>
-          <p>Start small this week: add one AfterTargets=Build target that stamps a build time into output, and one Directory.Build.props with shared analysis settings. From there, every script you were maintaining in CI becomes a candidate for a home in the repo.</p>
-          <h2>Conclusion</h2>
-          <p>Custom MSBuild targets and tasks turn your repository into the single source of build truth. Hook targets into the pipeline, write typed tasks where logic deserves tests, distribute shared rules as a build package, and debug with binary logs. Your CI gets shorter, your team's builds get identical, and build knowledge finally lives in version control.</p>
-          <h2>Frequently Asked Questions</h2>
-          <h3>Where should custom targets live?</h3>
-          <p>In Directory.Build.targets at the repo root for repository-wide logic, or inside a NuGet package's build/ folder for organization-wide reuse. Project-level csproj edits are fine for single-project concerns.</p>
-          <h3>Exec vs custom task: which should I use?</h3>
-          <p>Exec is right for simple one-line tool invocations. Write a custom task when logic needs parameters typed, test coverage, or richer logging, or when the same shell command appears in multiple places.</p>
-          <h3>How do I pass values between targets?</h3>
-          <p>Output parameters from tasks (marked [Output]) write to properties or items, which downstream targets read. Declare the property in the task call and reference it later like any property.</p>
-          <h3>Can I make a target run only in Release?</h3>
-          <p>Yes: Condition="'$(Configuration)' == 'Release'" on the Target element gates execution, evaluated at execution phase per build.</p>
-          <h3>How do I find out which target did something?</h3>
-          <p>Capture msbuild -bl and open the log in the Structured Log Viewer; it lists every target and task with timing and inputs, searchable by name and property.</p>
+<p>Set MSBUILDDEBUGPATH and environment toggles when hunting engine-level issues, and add Message Importance=high lines temporarily, but prefer the log viewer; it answers where-did-this-value-come-from questions in seconds.</p>
+<h2 id="what-belongs-in-the-build-not-in-ci-yaml">What Belongs in the Build, Not in CI YAML</h2>
+<p>Move anything that must be true of every build into targets: version stamping, API compatibility checks, code style enforcement, packaging metadata, artifact copying. Keep CI YAML for orchestration only: checkout, restore, build, test, publish. The division of labor keeps local builds honest (developers see the same steps) and makes CI files short enough to read.</p>
+<p>Start small this week: add one AfterTargets=Build target that stamps a build time into output, and one Directory.Build.props with shared analysis settings. From there, every script you were maintaining in CI becomes a candidate for a home in the repo.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Custom MSBuild targets and tasks turn your repository into the single source of build truth. Hook targets into the pipeline, write typed tasks where logic deserves tests, distribute shared rules as a build package, and debug with binary logs. Your CI gets shorter, your team's builds get identical, and build knowledge finally lives in version control.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="where-should-custom-targets-live">Where should custom targets live?</h3>
+<p>In Directory.Build.targets at the repo root for repository-wide logic, or inside a NuGet package's build/ folder for organization-wide reuse. Project-level csproj edits are fine for single-project concerns.</p>
+<h3 id="exec-vs-custom-task-which-should-i-use">Exec vs custom task: which should I use?</h3>
+<p>Exec is right for simple one-line tool invocations. Write a custom task when logic needs parameters typed, test coverage, or richer logging, or when the same shell command appears in multiple places.</p>
+<h3 id="how-do-i-pass-values-between-targets">How do I pass values between targets?</h3>
+<p>Output parameters from tasks (marked [Output]) write to properties or items, which downstream targets read. Declare the property in the task call and reference it later like any property.</p>
+<h3 id="can-i-make-a-target-run-only-in-release">Can I make a target run only in Release?</h3>
+<p>Yes: Condition="'$(Configuration)' == 'Release'" on the Target element gates execution, evaluated at execution phase per build.</p>
+<h3 id="how-do-i-find-out-which-target-did-something">How do I find out which target did something?</h3>
+<p>Capture msbuild -bl and open the log in the Structured Log Viewer; it lists every target and task with timing and inputs, searchable by name and property.</p>
           </div>
         </div>
       </div>
-      <section class="related-posts section">
-        <div class="container">
-          <h2 class="section-title">You might also like</h2>
-          <div class="related-posts__grid" data-layout-grid="columns">
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" >
-            <a href="../msbuild/msbuild-explained-properties-items-targets-tasks.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
-                     alt="MSBuild Explained: Properties, Items, Targets, and Tasks">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../msbuild/msbuild-explained-properties-items-targets-tasks.html" class="post-card__content-link">
-                <h2 class="post-card__title">MSBuild Explained: Properties, Items, Targets, and Tasks</h2>
-                <p class="post-card__excerpt">Every time dotnet build runs, MSBuild is the engine underneath: reading project files, resolving dependencies, and orchestrating thousands of tasks. Yet most .NET developers treat &hellip;</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../category/msbuild/" class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</a>
-                <span class="post-card__meta post-card__meta--date">October 24, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" >
-            <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=visual%20studio%202026%20IDE&w=474&h=274&c=7" loading="lazy"
-                     alt="Visual Studio 2026 Review: Features, Performance, and Upgrade Guide">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__content-link">
-                <h2 class="post-card__title">Visual Studio 2026 Review: Features, Performance, and Upgrade Guide</h2>
-                <p class="post-card__excerpt">Visual Studio 2026 is the newest major release of Microsoft's flagship integrated development environment, and it represents the most significant redesign of the product in years. &hellip;</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../category/visual-studio/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio</a>
-                <span class="post-card__meta post-card__meta--date">July 14, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" >
-            <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=visual%20studio%20code%20editor%20laptop&w=474&h=274&c=7" loading="lazy"
-                     alt="Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__content-link">
-                <h2 class="post-card__title">Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts</h2>
-                <p class="post-card__excerpt">Visual Studio Code has become the default editor for millions of developers because it is free, fast, and endlessly customizable. But a fresh VS Code install is intentionally bare:&hellip;</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
-                <span class="post-card__meta post-card__meta--date">August 2, 2026</span>
-              </div>
-            </div>
-          </article>
-          </div>
-        </div>
-      </section>
-    </main>
-<footer class="site-footer"><nav class="site-footer__nav"><a href="../">Home</a><a href="../page/dmca.html">DMCA</a><a href="../page/contact.html">Contact</a><a href="../page/privacy-policy.html">Privacy Policy</a><a href="../page/copyright.html">Copyright</a></nav><div class="site-footer__copyright">Copyright &copy; 2026 DevTools Journal</div></footer>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="MSBuild Explained: Properties, Items, Targets, and Tasks" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/msbuild-explained-properties-items-targets-tasks.html" class="post-card__content-link">
+      <h3 class="post-card__title">MSBuild Explained: Properties, Items, Targets, and Tasks</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">October 24, 2026</span>
+    </div>
   </div>
-  <script src="../assets/kutukdev/js/main.js"></script>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=properties%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="Automating Properties: Tools, Scripts, and Workflows (With Real Examples)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/automating-properties-tools-scripts-and-workflows-with-real-examples.html" class="post-card__content-link">
+      <h3 class="post-card__title">Automating Properties: Tools, Scripts, and Workflows (With Real Examples)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">October 23, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=items%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="How to automate Items (Step-by-Step)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/how-to-automate-items-step-by-step.html" class="post-card__content-link">
+      <h3 class="post-card__title">How to automate Items (Step-by-Step)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">October 22, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=targets%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="Targets for Beginners: 12 Things to Master First" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/targets-for-beginners-12-things-to-master-first.html" class="post-card__content-link">
+      <h3 class="post-card__title">Targets for Beginners: 12 Things to Master First</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">October 21, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=tasks%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="Tasks vs Continuousintegrationbuild property: Which Should You Use?" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/tasks-vs-continuousintegrationbuild-property-which-should-you-use.html" class="post-card__content-link">
+      <h3 class="post-card__title">Tasks vs Continuousintegrationbuild property: Which Should You Use?</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">October 20, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=evaluation%20vs%20execution%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="Evaluation vs execution Troubleshooting: 20 Fixes for Everyday Problems" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/evaluation-vs-execution-troubleshooting-20-fixes-for-everyday-problems.html" class="post-card__content-link">
+      <h3 class="post-card__title">Evaluation vs execution Troubleshooting: 20 Fixes for Everyday Problems</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">October 19, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>Debugging Linq best practices: A Practical Approach</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Today's deep dive: Linq best practices in C# — composable queries that stay readable and efficient. Data transformations read like intent and defer work">
+  <link rel="canonical" href="https://devtoolforge.github.io/csharp/debugging-linq-best-practices-a-practical-approach.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-07-09T21:00:00+06:00">
+  <meta property="article:modified_time" content="2026-07-09T21:00:00+06:00">
+  <meta property="article:section" content="C#">
+  <meta property="og:updated_time" content="2026-07-09T21:00:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="5 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Debugging Linq best practices: A Practical Approach">
+  <meta property="og:description" content="Today's deep dive: Linq best practices in C# — composable queries that stay readable and efficient. Data transformations read like intent and defer work">
+  <meta property="og:url" content="https://devtoolforge.github.io/csharp/debugging-linq-best-practices-a-practical-approach.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=linq%20best%20practices%20csharp%20code&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Debugging Linq best practices: A Practical Approach">
+  <meta name="twitter:description" content="Today's deep dive: Linq best practices in C# — composable queries that stay readable and efficient. Data transformations read like intent and defer work">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=linq%20best%20practices%20csharp%20code&amp;w=474&amp;h=274&amp;c=7">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/csharp/debugging-linq-best-practices-a-practical-approach.html" }, "headline": "Debugging Linq best practices: A Practical Approach", "description": "Today's deep dive: Linq best practices in C# — composable queries that stay readable and efficient. Data transformations read like intent and defer work correctly. Teams that take …", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=linq%20best%20practices%20csharp%20code&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-07-09T21:00:00+06:00", "dateModified": "2026-07-09T21:00:00+06:00", "wordCount": 1057, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/csharp/debugging-linq-best-practices-a-practical-approach.html#webpage", "url": "https://devtoolforge.github.io/csharp/debugging-linq-best-practices-a-practical-approach.html", "name": "Debugging Linq best practices: A Practical Approach", "datePublished": "2026-07-09T21:00:00+06:00", "dateModified": "2026-07-09T21:00:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/csharp/", "url": "https://devtoolforge.github.io/category/csharp/", "name": "C#" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/csharp/debugging-linq-best-practices-a-practical-approach.html", "url": "https://devtoolforge.github.io/csharp/debugging-linq-best-practices-a-practical-approach.html", "name": "Debugging Linq best practices: A Practical Approach" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure id="img-top" class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=linq%20best%20practices%20csharp%20code&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=linq%20best%20practices%20csharp%20code&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=linq%20best%20practices%20csharp%20code&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="Debugging Linq best practices: A Practical Approach"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">Debugging Linq best practices: A Practical Approach</h1>
+            <p class="article-header__excerpt">Today's deep dive: Linq best practices in C# — composable queries that stay readable and efficient. Data transformations read like intent and defer work correctly. Teams that take …</p>
+            <div class="article-header__footer">
+              <a href="../category/csharp/" class="article-header__meta article-header__meta-tag-primary" rel="tag">C#</a>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-07-09T21:00:00+06:00">July 9, 2026</time>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section" data-canvas-grid="content">
+        <div class="container">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Today's deep dive: Linq best practices in C# — composable queries that stay readable and efficient. Data transformations read like intent and defer work correctly. Teams that take it seriously spend less time on avoidable problems and more time shipping features users actually notice. It is one of the few practices that pays for itself within the first week of consistent use.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-is-linq-best-practices">What Is Linq best practices?</a></li>
+<li><a href="#why-bother-with-linq-best-practices">Why Bother with Linq best practices?</a></li>
+<li><a href="#best-practices-for-linq-best-practices">Best Practices for Linq best practices</a></li>
+<li><a href="#tooling-and-ecosystem">Tooling and Ecosystem</a></li>
+<li><a href="#linq-best-practices-vs-string-handling">Linq best practices vs String handling</a></li>
+<li><a href="#troubleshooting-linq-best-practices">Troubleshooting Linq best practices</a></li>
+<li><a href="#advanced-tips">Advanced Tips</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#what-is-linq-best-practices-2">What is Linq best practices?</a></li>
+<li><a href="#is-linq-best-practices-still-relevant-in-2026">Is Linq best practices still relevant in 2026?</a></li>
+<li><a href="#what-are-the-most-common-mistakes-with-linq-best-practices">What are the most common mistakes with Linq best practices?</a></li>
+<li><a href="#how-long-does-it-take-to-get-comfortable-with-linq-best-practices">How long does it take to get comfortable with Linq best practices?</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ol></nav>
+<p>In this guide we cover linq best practices end to end: the core concepts, the exact steps to set it up well, the mistakes that cost teams the most time, and the habits that keep the setup healthy. Everything here runs on the current 2026 toolchain, with commands you can copy as-is.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Topic</strong></td><td>Linq best practices</td></tr>
+              <tr><td><strong>Area</strong></td><td>C#</td></tr>
+              <tr><td><strong>Skill level</strong></td><td>Intermediate</td></tr>
+              <tr><td><strong>Language</strong></td><td>C# 14 (with .NET 10, 2026)</td></tr>
+              <tr><td><strong>Runtime</strong></td><td>.NET 10 / .NET Framework 4.x for legacy</td></tr>
+              <tr><td><strong>Paradigm</strong></td><td>Object-oriented, functional, generic</td></tr>
+              <tr><td><strong>Tooling</strong></td><td>VS 2026, VS Code + C# Dev Kit, Rider</td></tr>
+              <tr><td><strong>Last verified</strong></td><td>October 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+<h2 id="what-is-linq-best-practices">What Is Linq best practices?</h2>
+<p>Linq best practices, in one sentence: composable queries that stay readable and efficient. In practice that means the details are worth getting right once, because everything downstream inherits the decision. Everything below assumes the current 2026 toolchain, but the reasoning generalizes to older versions too.</p>
+<p>The mental model is simple: one clear definition, one clear workflow, and configuration that matches reality. Most confusion around linq best practices comes from mixing those layers — mixing definitions from different eras, or configs copied from projects with different needs. Keep them separate and the rest of this guide follows naturally.</p>
+<h2 id="why-bother-with-linq-best-practices">Why Bother with Linq best practices?</h2>
+<p>"Why bother" is a fair question for any tooling topic. Linq best practices earns its keep in three concrete ways:</p>
+<ul>
+              <li>It shortens feedback loops, so problems surface while the code is still in your head.</li>
+              <li>It turns tribal knowledge into something a newcomer can read, run, and verify.</li>
+              <li>It improves code consistency across the team, making reviews faster and friendlier.</li>
+            </ul>
+<p>Notice what is missing from that list: fashion. None of these benefits expire with a release cycle, which is why linq best practices keeps showing up in every serious C# conversation. It is one of the few practices that pays for itself within the first week of consistent use.</p>
+<h2 id="best-practices-for-linq-best-practices">Best Practices for Linq best practices</h2>
+<p>These are the practices we see on teams where this area simply never causes drama:</p>
+<ul>
+              <li>Review linq best practices changes in code review with the same seriousness as application logic.</li>
+              <li>Test the failure path, not just the happy path — most real incidents live there.</li>
+              <li>Measure before and after changes to linq best practices so decisions are driven by data rather than vibes.</li>
+              <li>Start every project with a documented linq best practices setup so the whole team follows the same conventions from day one.</li>
+              <li>Automate the boring parts of linq best practices with scripts or tasks; humans are bad at remembering commands.</li>
+            </ul>
+<p>None of these are hard individually. The discipline is doing them every time, which is why automation and CI checks carry so much of the load.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=linq%20best%20practices%20csharp%20code&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Debugging Linq best practices: A Practical Approach" style="border-radius:9px"></figure>
+<h2 id="tooling-and-ecosystem">Tooling and Ecosystem</h2>
+<p>Choose boring, well-documented tools over clever ones. For linq best practices in C#, LINQPad, BenchmarkDotNet, Roslyn analyzers, xUnit cover the common cases, and each has a stable release history you can depend on. Adopt them one at a time so you can tell which tool actually earned its place.</p>
+<h2 id="linq-best-practices-vs-string-handling">Linq best practices vs String handling</h2>
+<p>They overlap enough that the question is usually about trade-offs rather than right and wrong. Linq best practices optimizes for data transformations read like intent and defer work correctly; String handling pushes harder on the opposite axis. List your constraints honestly — team experience, platform targets, and maintenance budget — and the answer usually picks itself.</p>
+<p>Start from the problem, not the tool. If your pain is data transformations read like intent and defer work correctly, Linq best practices is the more direct route; if your team already lives in the other ecosystem, String handling minimizes ramp-up cost. Whatever you choose, write down why, because the next person will ask.</p>
+<h2 id="troubleshooting-linq-best-practices">Troubleshooting Linq best practices</h2>
+<p>When things break, symptoms cluster into a handful of patterns. Match yours here and jump straight to the fix:</p>
+<ul>
+              <li><strong>It fails only in CI but passes locally</strong> — compare build modes and clean versus incremental state; CI reveals stale-output bugs instantly</li>
+              <li><strong>It fails intermittently under load</strong> — look for shared state and timing assumptions that only break when things overlap</li>
+              <li><strong>Performance collapsed after an upgrade</strong> — bisect the upgrade by rolling back one component at a time and re-measuring</li>
+            </ul>
+<p>If none of these match, capture a full log before changing anything. For linq best practices that log almost always names the failing layer, and the fix becomes obvious instead of guessed.</p>
+<h2 id="advanced-tips">Advanced Tips</h2>
+<p>Once the fundamentals are second nature, these are the practices that separate good setups from great ones:</p>
+<ul>
+              <li>Wrap external flakiness with retries and clear timeouts so failures are visible instead of mysterious.</li>
+              <li>Record decisions next to the code they affect, in the same pull request that introduces them.</li>
+              <li>Build a tiny example project that demonstrates correct usage — it doubles as a smoke test when versions change.</li>
+              <li>Tip: ToList at the boundary, not inside — keep streams streaming</li>
+            </ul>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="what-is-linq-best-practices-2">What is Linq best practices?</h3>
+<p>{W2} It is a foundational part of the {C} workflow, and understanding it pays off across almost every project you will touch.</p>
+<h3 id="is-linq-best-practices-still-relevant-in-2026">Is Linq best practices still relevant in 2026?</h3>
+<p>Yes — more than ever. The 2026 toolchain builds directly on these fundamentals, and the practices in this article are the ones current documentation assumes you already follow.</p>
+<h3 id="what-are-the-most-common-mistakes-with-linq-best-practices">What are the most common mistakes with Linq best practices?</h3>
+<p>The big three: treating it as a one-time setup, letting local configuration drift from CI, and skipping documentation for the decisions you make. All three are covered above with concrete fixes.</p>
+<h3 id="how-long-does-it-take-to-get-comfortable-with-linq-best-practices">How long does it take to get comfortable with Linq best practices?</h3>
+<p>The basics take an afternoon; reliable habits take a few weeks of real use. The guide's checklist is designed to compress that ramp-up by focusing on what actually matters.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Treat this guide as a starting inventory, not a finish line. Re-run the checklist whenever your team, toolchain, or scale changes, and Linq best practices will stay an asset instead of becoming archaeology.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=iasyncenumerable%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Iasyncenumerable Health Check: Audit and Improve Your Setup" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/iasyncenumerable-health-check-audit-and-improve-your-setup.html" class="post-card__content-link">
+      <h3 class="post-card__title">Iasyncenumerable Health Check: Audit and Improve Your Setup</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 9, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=generics%20and%20constraints%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="15 Generics and constraints Best Practices Every Developer Should Know" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/15-generics-and-constraints-best-practices-every-developer-should-know.html" class="post-card__content-link">
+      <h3 class="post-card__title">15 Generics and constraints Best Practices Every Developer Should Know</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 9, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=async%20await%20done%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Async await done right Demystified with Real-World Examples" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/async-await-done-right-demystified-with-real-world-examples.html" class="post-card__content-link">
+      <h3 class="post-card__title">Async await done right Demystified with Real-World Examples</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 9, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=spans%20in%20practice%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="8 Spans in practice Shortcuts You Will Use Every Day" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/8-spans-in-practice-shortcuts-you-will-use-every-day.html" class="post-card__content-link">
+      <h3 class="post-card__title">8 Spans in practice Shortcuts You Will Use Every Day</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 9, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=params%20collections%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="The Ultimate Params collections Checklist for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/the-ultimate-params-collections-checklist-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">The Ultimate Params collections Checklist for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 9, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=collection%20expressions%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Scaling Collection expressions for Large Projects" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/scaling-collection-expressions-for-large-projects.html" class="post-card__content-link">
+      <h3 class="post-card__title">Scaling Collection expressions for Large Projects</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 9, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

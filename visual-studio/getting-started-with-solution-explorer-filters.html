@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>Getting Started with Solution explorer filters</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Today's deep dive: Solution explorer filters in Visual Studio — views that trim the project tree to pending, opened, or changed files. In huge solutions,">
+  <link rel="canonical" href="https://devtoolforge.github.io/visual-studio/getting-started-with-solution-explorer-filters.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-07-23T16:30:00+06:00">
+  <meta property="article:modified_time" content="2026-07-23T16:30:00+06:00">
+  <meta property="article:section" content="Visual Studio">
+  <meta property="og:updated_time" content="2026-07-23T16:30:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="5 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Getting Started with Solution explorer filters">
+  <meta property="og:description" content="Today's deep dive: Solution explorer filters in Visual Studio — views that trim the project tree to pending, opened, or changed files. In huge solutions,">
+  <meta property="og:url" content="https://devtoolforge.github.io/visual-studio/getting-started-with-solution-explorer-filters.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=solution%20explorer%20filters%20visual%20studio%20IDE&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Getting Started with Solution explorer filters">
+  <meta name="twitter:description" content="Today's deep dive: Solution explorer filters in Visual Studio — views that trim the project tree to pending, opened, or changed files. In huge solutions,">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=solution%20explorer%20filters%20visual%20studio%20IDE&amp;w=474&amp;h=274&amp;c=7">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/visual-studio/getting-started-with-solution-explorer-filters.html" }, "headline": "Getting Started with Solution explorer filters", "description": "Today's deep dive: Solution explorer filters in Visual Studio — views that trim the project tree to pending, opened, or changed files. In huge solutions, filters are the difference…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=solution%20explorer%20filters%20visual%20studio%20IDE&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-07-23T16:30:00+06:00", "dateModified": "2026-07-23T16:30:00+06:00", "wordCount": 1041, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/visual-studio/getting-started-with-solution-explorer-filters.html#webpage", "url": "https://devtoolforge.github.io/visual-studio/getting-started-with-solution-explorer-filters.html", "name": "Getting Started with Solution explorer filters", "datePublished": "2026-07-23T16:30:00+06:00", "dateModified": "2026-07-23T16:30:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/visual-studio/", "url": "https://devtoolforge.github.io/category/visual-studio/", "name": "Visual Studio" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/visual-studio/getting-started-with-solution-explorer-filters.html", "url": "https://devtoolforge.github.io/visual-studio/getting-started-with-solution-explorer-filters.html", "name": "Getting Started with Solution explorer filters" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure id="img-top" class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=solution%20explorer%20filters%20visual%20studio%20IDE&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=solution%20explorer%20filters%20visual%20studio%20IDE&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=solution%20explorer%20filters%20visual%20studio%20IDE&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="Getting Started with Solution explorer filters"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">Getting Started with Solution explorer filters</h1>
+            <p class="article-header__excerpt">Today's deep dive: Solution explorer filters in Visual Studio — views that trim the project tree to pending, opened, or changed files. In huge solutions, filters are the difference…</p>
+            <div class="article-header__footer">
+              <a href="../category/visual-studio/" class="article-header__meta article-header__meta-tag-primary" rel="tag">Visual Studio</a>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-07-23T16:30:00+06:00">July 23, 2026</time>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section" data-canvas-grid="content">
+        <div class="container">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Today's deep dive: Solution explorer filters in Visual Studio — views that trim the project tree to pending, opened, or changed files. In huge solutions, filters are the difference between finding and losing files. Teams that take it seriously spend less time on avoidable problems and more time shipping features users actually notice. Teams that invest here early spend measurably less time firefighting later in the project.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-is-solution-explorer-filters">What Is Solution explorer filters?</a></li>
+<li><a href="#the-mechanics-of-solution-explorer-filters">The Mechanics of Solution explorer filters</a></li>
+<li><a href="#solution-explorer-filters-vs-refactoring-tools">Solution explorer filters vs Refactoring tools</a></li>
+<li><a href="#troubleshooting-solution-explorer-filters">Troubleshooting Solution explorer filters</a></li>
+<li><a href="#advanced-tips">Advanced Tips</a></li>
+<li><a href="#step-by-step-quickstart">Step-by-Step Quickstart</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#what-are-the-most-common-mistakes-with-solution-explorer-filters">What are the most common mistakes with Solution explorer filters?</a></li>
+<li><a href="#is-solution-explorer-filters-still-relevant-in-2026">Is Solution explorer filters still relevant in 2026?</a></li>
+<li><a href="#do-i-need-solution-explorer-filters-for-small-projects">Do I need Solution explorer filters for small projects?</a></li>
+<li><a href="#what-is-solution-explorer-filters-2">What is Solution explorer filters?</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ol></nav>
+<p>In this guide we cover solution explorer filters end to end: the core concepts, the exact steps to set it up well, the mistakes that cost teams the most time, and the habits that keep the setup healthy. Everything here runs on the current 2026 toolchain, with commands you can copy as-is.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Topic</strong></td><td>Solution explorer filters</td></tr>
+              <tr><td><strong>Area</strong></td><td>Visual Studio</td></tr>
+              <tr><td><strong>Skill level</strong></td><td>All levels</td></tr>
+              <tr><td><strong>Product</strong></td><td>Visual Studio 2026 (version 18.x)</td></tr>
+              <tr><td><strong>Platforms</strong></td><td>Windows 10 21H2+, Windows 11</td></tr>
+              <tr><td><strong>Editions</strong></td><td>Community (free), Professional, Enterprise</td></tr>
+              <tr><td><strong>Latest update</strong></td><td>18.11 servicing release, October 2026</td></tr>
+              <tr><td><strong>Last verified</strong></td><td>October 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+<h2 id="what-is-solution-explorer-filters">What Is Solution explorer filters?</h2>
+<p>Solution explorer filters, in one sentence: views that trim the project tree to pending, opened, or changed files. In practice that means the details are worth getting right once, because everything downstream inherits the decision. It is one of the few practices that pays for itself within the first week of consistent use.</p>
+<p>The mental model is simple: one clear definition, one clear workflow, and configuration that matches reality. Most confusion around solution explorer filters comes from mixing those layers — mixing definitions from different eras, or configs copied from projects with different needs. Keep them separate and the rest of this guide follows naturally.</p>
+<h2 id="the-mechanics-of-solution-explorer-filters">The Mechanics of Solution explorer filters</h2>
+<p>Use the filter icons at the top of Solution Explorer to switch views. That is the core of it, and the steps below turn the idea into muscle memory:</p>
+<ol>
+              <li>Document the rollback path before you need it, not during an incident.</li>
+              <li>Schedule a short review each quarter to prune what no longer earns its place.</li>
+              <li>Document the rollback path before you need it, not during an incident.</li>
+              <li>Write the chosen setup down in the repository so the decision survives the next refactor.</li>
+              <li>Audit the current state: list what solution explorer filters touches in your project today.</li>
+            </ol>
+<p>Notice how much of the value comes from the boring parts: writing things down, pinning versions, automating checks. That is not an accident — solution explorer filters rewards exactly the habits that compound everywhere else in Visual Studio.</p>
+<h2 id="solution-explorer-filters-vs-refactoring-tools">Solution explorer filters vs Refactoring tools</h2>
+<p>They overlap enough that the question is usually about trade-offs rather than right and wrong. Solution explorer filters optimizes for in huge solutions; Refactoring tools pushes harder on the opposite axis. List your constraints honestly — team experience, platform targets, and maintenance budget — and the answer usually picks itself.</p>
+<p>Start from the problem, not the tool. If your pain is in huge solutions, Solution explorer filters is the more direct route; if your team already lives in the other ecosystem, Refactoring tools minimizes ramp-up cost. Whatever you choose, write down why, because the next person will ask.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=solution%20explorer%20filters%20visual%20studio%20IDE&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Getting Started with Solution explorer filters" style="border-radius:9px"></figure>
+<h2 id="troubleshooting-solution-explorer-filters">Troubleshooting Solution explorer filters</h2>
+<p>When things break, symptoms cluster into a handful of patterns. Match yours here and jump straight to the fix:</p>
+<ul>
+              <li><strong>It fails only in CI but passes locally</strong> — compare build modes and clean versus incremental state; CI reveals stale-output bugs instantly</li>
+              <li><strong>Errors mention a file or component you never touched</strong> — trace the first error in the log, not the last one — the real cause is almost always earlier</li>
+              <li><strong>It works on one machine and fails on another</strong> — diff the versions and configuration first — environment drift explains most of these bugs</li>
+            </ul>
+<p>If none of these match, capture a full log before changing anything. For solution explorer filters that log almost always names the failing layer, and the fix becomes obvious instead of guessed.</p>
+<h2 id="advanced-tips">Advanced Tips</h2>
+<p>Once the fundamentals are second nature, these are the practices that separate good setups from great ones:</p>
+<ul>
+              <li>Wrap external flakiness with retries and clear timeouts so failures are visible instead of mysterious.</li>
+              <li>Automate the audit: a scheduled check that compares expected state to real state catches drift within hours instead of months.</li>
+              <li>Record decisions next to the code they affect, in the same pull request that introduces them.</li>
+              <li>Tip: Use Folder view to see the disk layout when project files and files on disk diverge</li>
+            </ul>
+<h2 id="step-by-step-quickstart">Step-by-Step Quickstart</h2>
+<p>For readers who want the shortest possible path, here is the compressed version:</p>
+<ol>
+              <li>Write the chosen setup down in the repository so the decision survives the next refactor.</li>
+              <li>Document the rollback path before you need it, not during an incident.</li>
+              <li>Add a check to CI so regressions in solution explorer filters fail loudly instead of silently.</li>
+              <li>Audit the current state: list what solution explorer filters touches in your project today.</li>
+              <li>Add a check to CI so regressions in solution explorer filters fail loudly instead of silently.</li>
+              <li>Write the chosen setup down in the repository so the decision survives the next refactor.</li>
+            </ol>
+<p>Each step stands alone, so partial adoption already helps. Do them in order and the later ones get easier.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="what-are-the-most-common-mistakes-with-solution-explorer-filters">What are the most common mistakes with Solution explorer filters?</h3>
+<p>The big three: treating it as a one-time setup, letting local configuration drift from CI, and skipping documentation for the decisions you make. All three are covered above with concrete fixes.</p>
+<h3 id="is-solution-explorer-filters-still-relevant-in-2026">Is Solution explorer filters still relevant in 2026?</h3>
+<p>Yes — more than ever. The 2026 toolchain builds directly on these fundamentals, and the practices in this article are the ones current documentation assumes you already follow.</p>
+<h3 id="do-i-need-solution-explorer-filters-for-small-projects">Do I need Solution explorer filters for small projects?</h3>
+<p>More than you would expect. Small projects benefit disproportionately because there is no dedicated ops person to catch drift — the setup protects itself.</p>
+<h3 id="what-is-solution-explorer-filters-2">What is Solution explorer filters?</h3>
+<p>{W2} It is a foundational part of the {C} workflow, and understanding it pays off across almost every project you will touch.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Nothing in this guide is exotic, and that is the point. Solution explorer filters done consistently — measured, documented, and automated — removes an entire category of daily friction from Visual Studio work. Pick one section, apply it this week, and let the results argue for the rest.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=pull%20requests%20in%20visual%20studio%20IDE&w=474&h=274&c=7" loading="lazy"
+         alt="A Field Guide to Pull requests in the IDE" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio/a-field-guide-to-pull-requests-in-the-ide.html" class="post-card__content-link">
+      <h3 class="post-card__title">A Field Guide to Pull requests in the IDE</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio</span>
+      <span class="post-card__meta post-card__meta--date">July 24, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=keyboard%20shortcuts%20visual%20studio%20IDE&w=474&h=274&c=7" loading="lazy"
+         alt="7 Keyboard shortcuts Shortcuts You Will Use Every Day" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio/7-keyboard-shortcuts-shortcuts-you-will-use-every-day.html" class="post-card__content-link">
+      <h3 class="post-card__title">7 Keyboard shortcuts Shortcuts You Will Use Every Day</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio</span>
+      <span class="post-card__meta post-card__meta--date">July 22, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=find%20in%20files%20visual%20studio%20IDE&w=474&h=274&c=7" loading="lazy"
+         alt="Find in files and go to Anatomy: How the Pieces Fit Together" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio/find-in-files-and-go-to-anatomy-how-the-pieces-fit-together.html" class="post-card__content-link">
+      <h3 class="post-card__title">Find in files and go to Anatomy: How the Pieces Fit Together</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio</span>
+      <span class="post-card__meta post-card__meta--date">July 22, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=git%20tooling%20visual%20studio%20IDE&w=474&h=274&c=7" loading="lazy"
+         alt="Git tooling Security and Reliability Best Practices" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio/git-tooling-security-and-reliability-best-practices.html" class="post-card__content-link">
+      <h3 class="post-card__title">Git tooling Security and Reliability Best Practices</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio</span>
+      <span class="post-card__meta post-card__meta--date">July 24, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=peek%20definition%20visual%20studio%20IDE&w=474&h=274&c=7" loading="lazy"
+         alt="Peek definition Quick Reference for Busy Developers" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio/peek-definition-quick-reference-for-busy-developers.html" class="post-card__content-link">
+      <h3 class="post-card__title">Peek definition Quick Reference for Busy Developers</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio</span>
+      <span class="post-card__meta post-card__meta--date">July 21, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=code%20cleanup%20visual%20studio%20IDE&w=474&h=274&c=7" loading="lazy"
+         alt="A Field Guide to Code cleanup" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio/a-field-guide-to-code-cleanup.html" class="post-card__content-link">
+      <h3 class="post-card__title">A Field Guide to Code cleanup</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio</span>
+      <span class="post-card__meta post-card__meta--date">July 25, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

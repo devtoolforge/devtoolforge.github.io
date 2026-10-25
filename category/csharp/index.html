@@ -1,62 +1,87 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" data-header-style="modern">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
   <title>C# — DevTools Journal</title>
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Microsoft developer tools, explained — DevTools Journal demo build. This demo is intentionally noindex/nofollow.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Articles, guides, and how-tos filed under C#.">
+  <link rel="canonical" href="https://devtoolforge.github.io/category/csharp/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="C# — DevTools Journal">
+  <meta property="og:description" content="Articles, guides, and how-tos filed under C#.">
+  <meta property="og:url" content="https://devtoolforge.github.io/category/csharp/">
+  <meta property="og:image" content="../../assets/kutukdev/images/icon128.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="C# — DevTools Journal">
+  <meta name="twitter:description" content="Articles, guides, and how-tos filed under C#.">
+  <meta name="twitter:image" content="../../assets/kutukdev/images/icon128.png">
     <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
-  <link rel="icon" href="../../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="shortcut icon" href="../../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
   <link rel="icon" href="../../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../../assets/kutukdev/images/icon128.png">
   <link rel="preload" as="style" href="../../assets/kutukdev/css/style.css">
   <link rel="stylesheet" href="../../assets/kutukdev/css/style.css">
   <link rel="preconnect" href="https://tse1.mm.bing.net">
-  <meta property="og:site_name" content="DevTools Journal">
-  <meta property="og:title" content="C# — DevTools Journal">
-  <meta property="og:type" content="article">
-  <meta name="generator" content="DevTools Journal demo generator">
-
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/csharp/", "url": "https://devtoolforge.github.io/category/csharp/", "name": "C#" } }] }
+  </script>
 </head>
 <body class="home-template">
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
   <div class="site" id="site">
-    <header class="site-header">
-      <div class="site-header__container">
-        <button class="site-header__hamburger" aria-label="Open menu"
-                aria-expanded="false" data-site-action-trigger="navigation">
-          <span></span><span></span><span></span>
-        </button>
-        <a class="site-header__logo" href="../../">DevTools Journal</a>
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
       </div>
-    </header>
-    <div class="site-actions" aria-hidden="true">
-      <div class="site-actions__backdrop"></div>
-      <nav class="site-actions__panel" aria-label="Main navigation">
-        <div class="site-actions__top">
-          <p class="site-actions__title">Menu</p>
-          <button class="site-actions__close" data-close-site-actions aria-label="Close menu">&times;</button>
-        </div>
-        <ul class="site-actions__menu">
-          <li><a href="../../">Home</a></li>
-      <li><a href="../../category/visual-studio/">Visual Studio</a></li>
-      <li><a href="../../category/visual-studio-code/">Visual Studio Code</a></li>
-      <li><a href="../../category/visual-studio-mac/">Visual Studio for Mac</a></li>
-      <li><a href="../../category/dotnet/">.NET</a></li>
-      <li><a href="../../category/dotnet-framework/">.NET Framework</a></li>
-      <li><a href="../../category/aspnet-core/">ASP.NET Core</a></li>
-      <li><a href="../../category/csharp/">C#</a></li>
-      <li><a href="../../category/fsharp/">F#</a></li>
-      <li><a href="../../category/typescript/">TypeScript</a></li>
-      <li><a href="../../category/microsoft-build-tools/">Microsoft Build Tools</a></li>
-      <li><a href="../../category/msbuild/">MSBuild</a></li>
-        </ul>
-      </nav>
     </div>
+  </div>
+</header>
     <main id="main" class="site-main">
-</div>
       <header class="page-header section" data-section="first">
         <div class="container">
           <h1 class="page-header__title">C#</h1>
@@ -67,27 +92,27 @@
         <div class="container">
           <div class="posts-feed" data-layout-grid="columns">
           <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" >
-            <a href="../../csharp/csharp-14-new-features-extension-members-field-keyword.html" class="post-card__media" tabindex="-1">
+                   data-has-featured-image="true">
+            <a href="../../csharp/records-anatomy-how-the-pieces-fit-together.html" class="post-card__media" tabindex="-1">
               <picture class="post-card__figure">
                 <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=csharp%20programming%20language%20code&w=474&h=274&c=7" loading="lazy"
-                     alt="C# 14 New Features: Extension Members, Field Keyword, and More">
+                     src="https://tse1.mm.bing.net/th?q=records%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Records Anatomy: How the Pieces Fit Together">
               </picture>
             </a>
             <div class="post-card__content">
-              <a href="../../csharp/csharp-14-new-features-extension-members-field-keyword.html" class="post-card__content-link">
-                <h2 class="post-card__title">C# 14 New Features: Extension Members, Field Keyword, and More</h2>
-                <p class="post-card__excerpt">C# 14, the language version that ships with .NET 10 in November 2025, is a quality-of-life release aimed squarely at the boilerplate that C# developers write every day. Extension b&hellip;</p>
+              <a href="../../csharp/records-anatomy-how-the-pieces-fit-together.html" class="post-card__content-link">
+                <h2 class="post-card__title">Records Anatomy: How the Pieces Fit Together</h2>
+                <p class="post-card__excerpt">Today's deep dive: Records in C# — concise immutable data types with value-based equality. Data carriers stop needing 60 lines of boilerplate and behave predictably in sets. Teams …</p>
               </a>
               <div class="post-card__footer">
                 <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
-                <span class="post-card__meta post-card__meta--date">October 5, 2026</span>
+                <span class="post-card__meta post-card__meta--date">October 24, 2026</span>
               </div>
             </div>
           </article>
           <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" data-publish-offset="4500000">
+                   data-has-featured-image="true">
             <a href="../../csharp/csharp-linq-best-practices-cleaner-queries-fewer-bugs.html" class="post-card__media" tabindex="-1">
               <picture class="post-card__figure">
                 <img class="post-card__image" width="16" height="9"
@@ -98,20 +123,474 @@
             <div class="post-card__content">
               <a href="../../csharp/csharp-linq-best-practices-cleaner-queries-fewer-bugs.html" class="post-card__content-link">
                 <h2 class="post-card__title">C# LINQ Best Practices: Cleaner Queries, Fewer Bugs</h2>
-                <p class="post-card__excerpt">LINQ turned C# collection manipulation from loops-and-flags into declarative pipelines, but power invites misuse: accidental multiple enumeration, subtle deferred-execution surpris&hellip;</p>
+                <p class="post-card__excerpt">LINQ turned C# collection manipulation from loops-and-flags into declarative pipelines, but power invites misuse: accidental multiple enumeration, subtle deferred-execution surpris…</p>
               </a>
               <div class="post-card__footer">
                 <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
-                <span class="post-card__meta post-card__meta--date" data-dynamic-date></span>
+                <span class="post-card__meta post-card__meta--date">October 24, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/how-to-learn-primary-constructors-step-by-step.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=primary%20constructors%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="How to learn Primary constructors (Step-by-Step)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/how-to-learn-primary-constructors-step-by-step.html" class="post-card__content-link">
+                <h2 class="post-card__title">How to learn Primary constructors (Step-by-Step)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Primary constructors in C# — class and struct parameters declared right in the type declaration. Dependency injection fields stop repeating the parameter name th…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 23, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/what-s-new-in-pattern-matching-for-2026.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=pattern%20matching%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="What's New in Pattern matching for 2026?">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/what-s-new-in-pattern-matching-for-2026.html" class="post-card__content-link">
+                <h2 class="post-card__title">What's New in Pattern matching for 2026?</h2>
+                <p class="post-card__excerpt">Today's deep dive: Pattern matching in C# — is-switch patterns that test shape and bind values declaratively. Complex conditionals flatten into readable, compiler-checked case anal…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 22, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/mastering-switch-expressions-from-basics-to-advanced.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=switch%20expressions%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Mastering Switch expressions: From Basics to Advanced">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/mastering-switch-expressions-from-basics-to-advanced.html" class="post-card__content-link">
+                <h2 class="post-card__title">Mastering Switch expressions: From Basics to Advanced</h2>
+                <p class="post-card__excerpt">Today's deep dive: Switch expressions in C# — expression-form switch returning values with arrow cases. Mapping logic becomes short, exhaustive, and exception-safe. Teams that take…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 21, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/12-nullable-reference-types-best-practices-every-developer-should-know.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=nullable%20reference%20types%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="12 Nullable reference types Best Practices Every Developer Should Know">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/12-nullable-reference-types-best-practices-every-developer-should-know.html" class="post-card__content-link">
+                <h2 class="post-card__title">12 Nullable reference types Best Practices Every Developer Should Know</h2>
+                <p class="post-card__excerpt">Today's deep dive: Nullable reference types in C# — compile-time null tracking with annotations and warnings. Null reference exceptions turn into red squiggles before production. T…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 19, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/init-only-setters-pitfalls-what-the-docs-don-t-tell-you.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=init-only%20setters%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Init-only setters Pitfalls: What the Docs Don't Tell You">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/init-only-setters-pitfalls-what-the-docs-don-t-tell-you.html" class="post-card__content-link">
+                <h2 class="post-card__title">Init-only setters Pitfalls: What the Docs Don't Tell You</h2>
+                <p class="post-card__excerpt">Today's deep dive: Init-only setters in C# — properties that can be set only during object initialization. Objects stay immutable after construction without builder ceremony. Teams…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 18, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/required-members-anatomy-how-the-pieces-fit-together.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=required%20members%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Required members Anatomy: How the Pieces Fit Together">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/required-members-anatomy-how-the-pieces-fit-together.html" class="post-card__content-link">
+                <h2 class="post-card__title">Required members Anatomy: How the Pieces Fit Together</h2>
+                <p class="post-card__excerpt">Today's deep dive: Required members in C# — properties and fields that constructors must initialize. Forgetting a critical property becomes a compile error, not a runtime bug. Team…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 17, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/file-scoped-namespaces-for-students-a-practical-introduction.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=file-scoped%20namespaces%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="File-scoped namespaces for Students: A Practical Introduction">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/file-scoped-namespaces-for-students-a-practical-introduction.html" class="post-card__content-link">
+                <h2 class="post-card__title">File-scoped namespaces for Students: A Practical Introduction</h2>
+                <p class="post-card__excerpt">Today's deep dive: File-scoped namespaces in C# — one namespace per file without a closing brace block. Files lose a whole level of indentation and read cleaner. Teams that take it…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 16, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/global-usings-explained-what-it-is-and-how-it-works.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=global%20usings%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Global usings Explained: What It Is and How It Works">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/global-usings-explained-what-it-is-and-how-it-works.html" class="post-card__content-link">
+                <h2 class="post-card__title">Global usings Explained: What It Is and How It Works</h2>
+                <p class="post-card__excerpt">Today's deep dive: Global usings in C# — project-wide using directives declared once. The top of every file shrinks to what actually matters. Teams that take it seriously spend les…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 15, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/level-up-your-c-skills-with-top-level-statements.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=top-level%20statements%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Level Up Your C# Skills with Top-level statements">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/level-up-your-c-skills-with-top-level-statements.html" class="post-card__content-link">
+                <h2 class="post-card__title">Level Up Your C# Skills with Top-level statements</h2>
+                <p class="post-card__excerpt">Today's deep dive: Top-level statements in C# — entry-point code without the Main ceremony. Small programs and samples read like scripts but compile the same. Teams that take it se…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 14, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/extension-members-from-first-steps-to-production-with-real-examples.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=extension%20members%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Extension members: From First Steps to Production (With Real Examples)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/extension-members-from-first-steps-to-production-with-real-examples.html" class="post-card__content-link">
+                <h2 class="post-card__title">Extension members: From First Steps to Production (With Real Examples)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Extension members in C# — C# 14's extended members: extension blocks adding properties and statics. Helper APIs attach to types you do not own, discoverably. Tea…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 13, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/getting-started-with-the-field-keyword.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=the%20field%20keyword%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Getting Started with The field keyword">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/getting-started-with-the-field-keyword.html" class="post-card__content-link">
+                <h2 class="post-card__title">Getting Started with The field keyword</h2>
+                <p class="post-card__excerpt">Today's deep dive: The field keyword in C# — C# 14's field-backed properties without manual backing fields. Add logic to a getter or setter while keeping auto-property simplicity. …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 12, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/collection-expressions-quick-reference-for-busy-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=collection%20expressions%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Collection expressions Quick Reference for Busy Developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/collection-expressions-quick-reference-for-busy-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">Collection expressions Quick Reference for Busy Developers</h2>
+                <p class="post-card__excerpt">Today's deep dive: Collection expressions in C# — [1, 2, 3] literal syntax for arrays, lists, and spans. Collection creation becomes uniform and allocation-aware. Teams that take i…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 11, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/common-params-collections-mistakes-and-how-to-fix-them.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=params%20collections%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Common Params collections Mistakes and How to Fix Them">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/common-params-collections-mistakes-and-how-to-fix-them.html" class="post-card__content-link">
+                <h2 class="post-card__title">Common Params collections Mistakes and How to Fix Them</h2>
+                <p class="post-card__excerpt">Today's deep dive: Params collections in C# — params with Span and IEnumerable targets. Helper calls avoid array allocations on hot paths. Teams that take it seriously spend less t…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 10, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/spans-in-practice-in-c-setup-tips-and-workflows.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=spans%20in%20practice%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Spans in practice in C#: Setup, Tips, and Workflows">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/spans-in-practice-in-c-setup-tips-and-workflows.html" class="post-card__content-link">
+                <h2 class="post-card__title">Spans in practice in C#: Setup, Tips, and Workflows</h2>
+                <p class="post-card__excerpt">Today's deep dive: Spans in practice in C# — ReadOnlySpan and Memory for slicing without copies. Parsers and protocol code drop allocations measurably. Teams that take it seriously…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 8, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/async-await-done-right-security-and-reliability-best-practices.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=async%20await%20done%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Async await done right Security and Reliability Best Practices">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/async-await-done-right-security-and-reliability-best-practices.html" class="post-card__content-link">
+                <h2 class="post-card__title">Async await done right Security and Reliability Best Practices</h2>
+                <p class="post-card__excerpt">Today's deep dive: Async await done right in C# — correct async flows, ConfigureAwait, and return types. Responsive apps and servers without deadlocks or thread starvation. Teams t…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 7, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/iasyncenumerable-performance-tuning-practical-tips-that-work.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=iasyncenumerable%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Iasyncenumerable Performance Tuning: Practical Tips That Work">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/iasyncenumerable-performance-tuning-practical-tips-that-work.html" class="post-card__content-link">
+                <h2 class="post-card__title">Iasyncenumerable Performance Tuning: Practical Tips That Work</h2>
+                <p class="post-card__excerpt">Today's deep dive: Iasyncenumerable in C# — producer-consumer async streams with await foreach. Data flows chunk by chunk instead of buffering whole datasets. Teams that take it se…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 6, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/automating-linq-best-practices-tools-scripts-and-workflows.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=linq%20best%20practices%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Automating Linq best practices: Tools, Scripts, and Workflows">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/automating-linq-best-practices-tools-scripts-and-workflows.html" class="post-card__content-link">
+                <h2 class="post-card__title">Automating Linq best practices: Tools, Scripts, and Workflows</h2>
+                <p class="post-card__excerpt">Today's deep dive: Linq best practices in C# — composable queries that stay readable and efficient. Data transformations read like intent and defer work correctly. Teams that take …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 5, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/csharp-14-new-features-extension-members-field-keyword.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=csharp%20programming%20language%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="C# 14 New Features: Extension Members, Field Keyword, and More">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/csharp-14-new-features-extension-members-field-keyword.html" class="post-card__content-link">
+                <h2 class="post-card__title">C# 14 New Features: Extension Members, Field Keyword, and More</h2>
+                <p class="post-card__excerpt">C# 14, the language version that ships with .NET 10 in November 2025, is a quality-of-life release aimed squarely at the boilerplate that C# developers write every day. Extension b…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 5, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/advanced-generics-and-constraints-techniques-for-2026-with-real-examples.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=generics%20and%20constraints%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Advanced Generics and constraints Techniques for 2026 (With Real Examples)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/advanced-generics-and-constraints-techniques-for-2026-with-real-examples.html" class="post-card__content-link">
+                <h2 class="post-card__title">Advanced Generics and constraints Techniques for 2026 (With Real Examples)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Generics and constraints in C# — type-safe abstractions with where clauses. One implementation serves many types without casts or boxing. Teams that take it seri…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 4, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/a-field-guide-to-source-generators.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=source%20generators%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="A Field Guide to Source generators">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/a-field-guide-to-source-generators.html" class="post-card__content-link">
+                <h2 class="post-card__title">A Field Guide to Source generators</h2>
+                <p class="post-card__excerpt">Today's deep dive: Source generators in C# — compile-time code emission for boilerplate. Mapping, logging, and serialization move to build time with zero reflection. Teams that tak…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 3, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/attributes-and-reflection-the-missing-manual.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=attributes%20and%20reflection%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Attributes and reflection: The Missing Manual">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/attributes-and-reflection-the-missing-manual.html" class="post-card__content-link">
+                <h2 class="post-card__title">Attributes and reflection: The Missing Manual</h2>
+                <p class="post-card__excerpt">Today's deep dive: Attributes and reflection in C# — metadata-driven programming with runtime discovery. Frameworks and conventions ride on declarative attributes. Teams that take …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 2, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../csharp/delegates-events-and-lambdas-for-beginners-12-things-to-master-first.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=delegates%20events%20and%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Delegates events and lambdas for Beginners: 12 Things to Master First">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../csharp/delegates-events-and-lambdas-for-beginners-12-things-to-master-first.html" class="post-card__content-link">
+                <h2 class="post-card__title">Delegates events and lambdas for Beginners: 12 Things to Master First</h2>
+                <p class="post-card__excerpt">Today's deep dive: Delegates events and lambdas in C# — function types, event patterns, and closures. Callbacks and pub-sub decouple components cleanly. Teams that take it seriousl…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/csharp/" class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</a>
+                <span class="post-card__meta post-card__meta--date">October 1, 2026</span>
               </div>
             </div>
           </article>
           </div>
+          <nav class="pagination" aria-label="Pages"><span class="current">1</span><a href="../../category/csharp/page/2/">2</a><a href="../../category/csharp/page/3/">3</a><span>&hellip;</span><a href="../../category/csharp/page/6/">6</a></nav>
         </div>
       </section>
     </main>
-<footer class="site-footer"><nav class="site-footer__nav"><a href="../../">Home</a><a href="../../page/dmca.html">DMCA</a><a href="../../page/contact.html">Contact</a><a href="../../page/privacy-policy.html">Privacy Policy</a><a href="../../page/copyright.html">Copyright</a></nav><div class="site-footer__copyright">Copyright &copy; 2026 DevTools Journal</div></footer>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
   </div>
-  <script src="../../assets/kutukdev/js/main.js"></script>
+</footer>
+  </div>
+  <script defer src="../../assets/kutukdev/js/main.js"></script>
 </body>
 </html>

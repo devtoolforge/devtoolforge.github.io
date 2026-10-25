@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>Extension members Performance Tuning: Practical Tips That Work</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Today's deep dive: Extension members in C# — C# 14's extended members: extension blocks adding properties and statics. Helper APIs attach to types you do not">
+  <link rel="canonical" href="https://devtoolforge.github.io/csharp/extension-members-performance-tuning-practical-tips-that-work.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-07-27T22:30:00+06:00">
+  <meta property="article:modified_time" content="2026-07-27T22:30:00+06:00">
+  <meta property="article:section" content="C#">
+  <meta property="og:updated_time" content="2026-07-27T22:30:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="4 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Extension members Performance Tuning: Practical Tips That Work">
+  <meta property="og:description" content="Today's deep dive: Extension members in C# — C# 14's extended members: extension blocks adding properties and statics. Helper APIs attach to types you do not">
+  <meta property="og:url" content="https://devtoolforge.github.io/csharp/extension-members-performance-tuning-practical-tips-that-work.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=extension%20members%20csharp%20code&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Extension members Performance Tuning: Practical Tips That Work">
+  <meta name="twitter:description" content="Today's deep dive: Extension members in C# — C# 14's extended members: extension blocks adding properties and statics. Helper APIs attach to types you do not">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=extension%20members%20csharp%20code&amp;w=474&amp;h=274&amp;c=7">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/csharp/extension-members-performance-tuning-practical-tips-that-work.html" }, "headline": "Extension members Performance Tuning: Practical Tips That Work", "description": "Today's deep dive: Extension members in C# — C# 14's extended members: extension blocks adding properties and statics. Helper APIs attach to types you do not own, discoverably. Tea…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=extension%20members%20csharp%20code&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-07-27T22:30:00+06:00", "dateModified": "2026-07-27T22:30:00+06:00", "wordCount": 964, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/csharp/extension-members-performance-tuning-practical-tips-that-work.html#webpage", "url": "https://devtoolforge.github.io/csharp/extension-members-performance-tuning-practical-tips-that-work.html", "name": "Extension members Performance Tuning: Practical Tips That Work", "datePublished": "2026-07-27T22:30:00+06:00", "dateModified": "2026-07-27T22:30:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/csharp/", "url": "https://devtoolforge.github.io/category/csharp/", "name": "C#" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/csharp/extension-members-performance-tuning-practical-tips-that-work.html", "url": "https://devtoolforge.github.io/csharp/extension-members-performance-tuning-practical-tips-that-work.html", "name": "Extension members Performance Tuning: Practical Tips That Work" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure id="img-top" class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=extension%20members%20csharp%20code&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=extension%20members%20csharp%20code&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=extension%20members%20csharp%20code&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="Extension members Performance Tuning: Practical Tips That Work"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">Extension members Performance Tuning: Practical Tips That Work</h1>
+            <p class="article-header__excerpt">Today's deep dive: Extension members in C# — C# 14's extended members: extension blocks adding properties and statics. Helper APIs attach to types you do not own, discoverably. Tea…</p>
+            <div class="article-header__footer">
+              <a href="../category/csharp/" class="article-header__meta article-header__meta-tag-primary" rel="tag">C#</a>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-07-27T22:30:00+06:00">July 27, 2026</time>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section" data-canvas-grid="content">
+        <div class="container">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Today's deep dive: Extension members in C# — C# 14's extended members: extension blocks adding properties and statics. Helper APIs attach to types you do not own, discoverably. Teams that take it seriously spend less time on avoidable problems and more time shipping features users actually notice. Teams that invest here early spend measurably less time firefighting later in the project.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-is-extension-members">What Is Extension members?</a></li>
+<li><a href="#the-mechanics-of-extension-members">The Mechanics of Extension members</a></li>
+<li><a href="#best-practices-for-extension-members">Best Practices for Extension members</a></li>
+<li><a href="#tooling-and-ecosystem">Tooling and Ecosystem</a></li>
+<li><a href="#troubleshooting-extension-members">Troubleshooting Extension members</a></li>
+<li><a href="#advanced-tips">Advanced Tips</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#do-i-need-extension-members-for-small-projects">Do I need Extension members for small projects?</a></li>
+<li><a href="#how-long-does-it-take-to-get-comfortable-with-extension-members">How long does it take to get comfortable with Extension members?</a></li>
+<li><a href="#is-extension-members-still-relevant-in-2026">Is Extension members still relevant in 2026?</a></li>
+<li><a href="#what-is-extension-members-2">What is Extension members?</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ol></nav>
+<p>In this guide we cover extension members end to end: the core concepts, the exact steps to set it up well, the mistakes that cost teams the most time, and the habits that keep the setup healthy. Everything here runs on the current 2026 toolchain, with commands you can copy as-is.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Topic</strong></td><td>Extension members</td></tr>
+              <tr><td><strong>Area</strong></td><td>C#</td></tr>
+              <tr><td><strong>Skill level</strong></td><td>Intermediate to advanced</td></tr>
+              <tr><td><strong>Language</strong></td><td>C# 14 (with .NET 10, 2026)</td></tr>
+              <tr><td><strong>Runtime</strong></td><td>.NET 10 / .NET Framework 4.x for legacy</td></tr>
+              <tr><td><strong>Paradigm</strong></td><td>Object-oriented, functional, generic</td></tr>
+              <tr><td><strong>Tooling</strong></td><td>VS 2026, VS Code + C# Dev Kit, Rider</td></tr>
+              <tr><td><strong>Last verified</strong></td><td>October 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+<h2 id="what-is-extension-members">What Is Extension members?</h2>
+<p>Extension members, in one sentence: C# 14's extended members: extension blocks adding properties and statics. In practice that means the details are worth getting right once, because everything downstream inherits the decision. It is one of the few practices that pays for itself within the first week of consistent use.</p>
+<p>The mental model is simple: one clear definition, one clear workflow, and configuration that matches reality. Most confusion around extension members comes from mixing those layers — mixing definitions from different eras, or configs copied from projects with different needs. Keep them separate and the rest of this guide follows naturally.</p>
+<h2 id="the-mechanics-of-extension-members">The Mechanics of Extension members</h2>
+<p>Declare extension blocks and add instance or static extension members. That is the core of it, and the steps below turn the idea into muscle memory:</p>
+<ol>
+              <li>Write the chosen setup down in the repository so the decision survives the next refactor.</li>
+              <li>Add a check to CI so regressions in extension members fail loudly instead of silently.</li>
+              <li>Add a check to CI so regressions in extension members fail loudly instead of silently.</li>
+              <li>Schedule a short review each quarter to prune what no longer earns its place.</li>
+              <li>Add a check to CI so regressions in extension members fail loudly instead of silently.</li>
+            </ol>
+<p>Notice how much of the value comes from the boring parts: writing things down, pinning versions, automating checks. That is not an accident — extension members rewards exactly the habits that compound everywhere else in C#.</p>
+<h2 id="best-practices-for-extension-members">Best Practices for Extension members</h2>
+<p>These are the practices we see on teams where this area simply never causes drama:</p>
+<ul>
+              <li>Automate the boring parts of extension members with scripts or tasks; humans are bad at remembering commands.</li>
+              <li>Review extension members changes in code review with the same seriousness as application logic.</li>
+              <li>Measure before and after changes to extension members so decisions are driven by data rather than vibes.</li>
+              <li>Start every project with a documented extension members setup so the whole team follows the same conventions from day one.</li>
+              <li>Prefer small, reversible changes over big-bang migrations nobody can review.</li>
+            </ul>
+<p>None of these are hard individually. The discipline is doing them every time, which is why automation and CI checks carry so much of the load.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=extension%20members%20csharp%20code&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Extension members Performance Tuning: Practical Tips That Work" style="border-radius:9px"></figure>
+<h2 id="tooling-and-ecosystem">Tooling and Ecosystem</h2>
+<p>Choose boring, well-documented tools over clever ones. For extension members in C#, LINQPad, BenchmarkDotNet, Roslyn analyzers, xUnit cover the common cases, and each has a stable release history you can depend on. Adopt them one at a time so you can tell which tool actually earned its place.</p>
+<h2 id="troubleshooting-extension-members">Troubleshooting Extension members</h2>
+<p>When things break, symptoms cluster into a handful of patterns. Match yours here and jump straight to the fix:</p>
+<ul>
+              <li><strong>It worked yesterday and nothing was changed</strong> — check what the OS, SDK, or package manager updated overnight before blaming the code</li>
+              <li><strong>Errors mention a file or component you never touched</strong> — trace the first error in the log, not the last one — the real cause is almost always earlier</li>
+              <li><strong>Performance collapsed after an upgrade</strong> — bisect the upgrade by rolling back one component at a time and re-measuring</li>
+            </ul>
+<p>If none of these match, capture a full log before changing anything. For extension members that log almost always names the failing layer, and the fix becomes obvious instead of guessed.</p>
+<h2 id="advanced-tips">Advanced Tips</h2>
+<p>Once the fundamentals are second nature, these are the practices that separate good setups from great ones:</p>
+<ul>
+              <li>Wrap external flakiness with retries and clear timeouts so failures are visible instead of mysterious.</li>
+              <li>Record decisions next to the code they affect, in the same pull request that introduces them.</li>
+              <li>Build a tiny example project that demonstrates correct usage — it doubles as a smoke test when versions change.</li>
+              <li>Tip: Keep extensions in a well-named namespace so adoption is opt-in</li>
+            </ul>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="do-i-need-extension-members-for-small-projects">Do I need Extension members for small projects?</h3>
+<p>More than you would expect. Small projects benefit disproportionately because there is no dedicated ops person to catch drift — the setup protects itself.</p>
+<h3 id="how-long-does-it-take-to-get-comfortable-with-extension-members">How long does it take to get comfortable with Extension members?</h3>
+<p>The basics take an afternoon; reliable habits take a few weeks of real use. The guide's checklist is designed to compress that ramp-up by focusing on what actually matters.</p>
+<h3 id="is-extension-members-still-relevant-in-2026">Is Extension members still relevant in 2026?</h3>
+<p>Yes — more than ever. The 2026 toolchain builds directly on these fundamentals, and the practices in this article are the ones current documentation assumes you already follow.</p>
+<h3 id="what-is-extension-members-2">What is Extension members?</h3>
+<p>{W2} It is a foundational part of the {C} workflow, and understanding it pays off across almost every project you will touch.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Extension members rewards deliberate setup and punishes improvisation. Start with the checklist above, automate what you can, and revisit the configuration quarterly. The compounding effect is real: teams that invest here ship calmer, debug less, and onboard faster — and the gap widens every month.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=top-level%20statements%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="What's New in Top-level statements for 2026?" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/what-s-new-in-top-level-statements-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">What's New in Top-level statements for 2026?</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 27, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=the%20field%20keyword%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="The field keyword: Setup, Configuration, and Optimization" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/the-field-keyword-setup-configuration-and-optimization.html" class="post-card__content-link">
+      <h3 class="post-card__title">The field keyword: Setup, Configuration, and Optimization</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 26, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=collection%20expressions%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="8 Collection expressions Best Practices Every Developer Should Know" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/8-collection-expressions-best-practices-every-developer-should-know.html" class="post-card__content-link">
+      <h3 class="post-card__title">8 Collection expressions Best Practices Every Developer Should Know</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 25, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=global%20usings%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Global usings Cheat Sheet: 20 Shortcuts and Commands" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/global-usings-cheat-sheet-20-shortcuts-and-commands.html" class="post-card__content-link">
+      <h3 class="post-card__title">Global usings Cheat Sheet: 20 Shortcuts and Commands</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 28, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=params%20collections%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Params collections for Enterprise Teams: A Practical Introduction" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/params-collections-for-enterprise-teams-a-practical-introduction.html" class="post-card__content-link">
+      <h3 class="post-card__title">Params collections for Enterprise Teams: A Practical Introduction</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 24, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=file-scoped%20namespaces%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Debugging File-scoped namespaces: A Practical Approach" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/debugging-file-scoped-namespaces-a-practical-approach.html" class="post-card__content-link">
+      <h3 class="post-card__title">Debugging File-scoped namespaces: A Practical Approach</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 29, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

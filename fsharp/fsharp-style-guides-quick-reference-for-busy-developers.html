@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>Fsharp style guides Quick Reference for Busy Developers</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Today's deep dive: Fsharp style guides in F# — official style and naming conventions. Consistent style keeps mixed-experience teams reading smoothly. Teams">
+  <link rel="canonical" href="https://devtoolforge.github.io/fsharp/fsharp-style-guides-quick-reference-for-busy-developers.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-09-21T19:30:00+06:00">
+  <meta property="article:modified_time" content="2026-09-21T19:30:00+06:00">
+  <meta property="article:section" content="F#">
+  <meta property="og:updated_time" content="2026-09-21T19:30:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="4 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Fsharp style guides Quick Reference for Busy Developers">
+  <meta property="og:description" content="Today's deep dive: Fsharp style guides in F# — official style and naming conventions. Consistent style keeps mixed-experience teams reading smoothly. Teams">
+  <meta property="og:url" content="https://devtoolforge.github.io/fsharp/fsharp-style-guides-quick-reference-for-busy-developers.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=fsharp%20style%20guides%20functional%20programming%20code&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fsharp style guides Quick Reference for Busy Developers">
+  <meta name="twitter:description" content="Today's deep dive: Fsharp style guides in F# — official style and naming conventions. Consistent style keeps mixed-experience teams reading smoothly. Teams">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=fsharp%20style%20guides%20functional%20programming%20code&amp;w=474&amp;h=274&amp;c=7">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/fsharp/fsharp-style-guides-quick-reference-for-busy-developers.html" }, "headline": "Fsharp style guides Quick Reference for Busy Developers", "description": "Today's deep dive: Fsharp style guides in F# — official style and naming conventions. Consistent style keeps mixed-experience teams reading smoothly. Teams that take it seriously s…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=fsharp%20style%20guides%20functional%20programming%20code&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-09-21T19:30:00+06:00", "dateModified": "2026-09-21T19:30:00+06:00", "wordCount": 951, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/fsharp/fsharp-style-guides-quick-reference-for-busy-developers.html#webpage", "url": "https://devtoolforge.github.io/fsharp/fsharp-style-guides-quick-reference-for-busy-developers.html", "name": "Fsharp style guides Quick Reference for Busy Developers", "datePublished": "2026-09-21T19:30:00+06:00", "dateModified": "2026-09-21T19:30:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/fsharp/", "url": "https://devtoolforge.github.io/category/fsharp/", "name": "F#" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/fsharp/fsharp-style-guides-quick-reference-for-busy-developers.html", "url": "https://devtoolforge.github.io/fsharp/fsharp-style-guides-quick-reference-for-busy-developers.html", "name": "Fsharp style guides Quick Reference for Busy Developers" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure id="img-top" class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=fsharp%20style%20guides%20functional%20programming%20code&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=fsharp%20style%20guides%20functional%20programming%20code&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=fsharp%20style%20guides%20functional%20programming%20code&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="Fsharp style guides Quick Reference for Busy Developers"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">Fsharp style guides Quick Reference for Busy Developers</h1>
+            <p class="article-header__excerpt">Today's deep dive: Fsharp style guides in F# — official style and naming conventions. Consistent style keeps mixed-experience teams reading smoothly. Teams that take it seriously s…</p>
+            <div class="article-header__footer">
+              <a href="../category/fsharp/" class="article-header__meta article-header__meta-tag-primary" rel="tag">F#</a>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-09-21T19:30:00+06:00">September 21, 2026</time>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section" data-canvas-grid="content">
+        <div class="container">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Today's deep dive: Fsharp style guides in F# — official style and naming conventions. Consistent style keeps mixed-experience teams reading smoothly. Teams that take it seriously spend less time on avoidable problems and more time shipping features users actually notice. The key is treating it as a living part of the workflow rather than a one-time setup task.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-is-fsharp-style-guides">What Is Fsharp style guides?</a></li>
+<li><a href="#why-bother-with-fsharp-style-guides">Why Bother with Fsharp style guides?</a></li>
+<li><a href="#common-fsharp-style-guides-mistakes">Common Fsharp style guides Mistakes</a></li>
+<li><a href="#advanced-tips">Advanced Tips</a></li>
+<li><a href="#quick-example">Quick Example</a></li>
+<li><a href="#step-by-step-quickstart">Step-by-Step Quickstart</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#what-is-fsharp-style-guides-2">What is Fsharp style guides?</a></li>
+<li><a href="#do-i-need-fsharp-style-guides-for-small-projects">Do I need Fsharp style guides for small projects?</a></li>
+<li><a href="#can-fsharp-style-guides-be-automated">Can Fsharp style guides be automated?</a></li>
+<li><a href="#what-are-the-most-common-mistakes-with-fsharp-style-guides">What are the most common mistakes with Fsharp style guides?</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ol></nav>
+<p>In this guide we cover fsharp style guides end to end: the core concepts, the exact steps to set it up well, the mistakes that cost teams the most time, and the habits that keep the setup healthy. Everything here runs on the current 2026 toolchain, with commands you can copy as-is.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Topic</strong></td><td>Fsharp style guides</td></tr>
+              <tr><td><strong>Area</strong></td><td>F#</td></tr>
+              <tr><td><strong>Skill level</strong></td><td>Intermediate to advanced</td></tr>
+              <tr><td><strong>Language</strong></td><td>F# on .NET 10</td></tr>
+              <tr><td><strong>Paradigm</strong></td><td>Functional-first with OO interop</td></tr>
+              <tr><td><strong>Tooling</strong></td><td>VS 2026, VS Code + Ionide, Rider</td></tr>
+              <tr><td><strong>Strengths</strong></td><td>Domain modeling, correctness, conciseness</td></tr>
+              <tr><td><strong>Last verified</strong></td><td>October 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+<h2 id="what-is-fsharp-style-guides">What Is Fsharp style guides?</h2>
+<p>Fsharp style guides, in one sentence: official style and naming conventions. In practice that means the details are worth getting right once, because everything downstream inherits the decision. The good news is that the fundamentals have been stable for years, so the effort you invest compounds instead of expiring with the next release.</p>
+<p>The mental model is simple: one clear definition, one clear workflow, and configuration that matches reality. Most confusion around fsharp style guides comes from mixing those layers — mixing definitions from different eras, or configs copied from projects with different needs. Keep them separate and the rest of this guide follows naturally.</p>
+<h2 id="why-bother-with-fsharp-style-guides">Why Bother with Fsharp style guides?</h2>
+<p>"Why bother" is a fair question for any tooling topic. Fsharp style guides earns its keep in three concrete ways:</p>
+<ul>
+              <li>It improves code consistency across the team, making reviews faster and friendlier.</li>
+              <li>It cuts repetitive work out of the daily loop, which is where most of the hidden cost of tooling lives.</li>
+              <li>It reduces build and integration surprises, the kind that derail an otherwise calm sprint.</li>
+            </ul>
+<p>Notice what is missing from that list: fashion. None of these benefits expire with a release cycle, which is why fsharp style guides keeps showing up in every serious F# conversation. It is one of the few practices that pays for itself within the first week of consistent use.</p>
+<h2 id="common-fsharp-style-guides-mistakes">Common Fsharp style guides Mistakes</h2>
+<p>The same failure patterns show up again and again. Here are the four we meet most often, including the classic: C# naming habits clashing with F# conventions.</p>
+<ul>
+              <li>Letting local settings drift from CI until nobody knows which one is right.</li>
+              <li>Assuming the default configuration matches your project's real requirements.</li>
+              <li>Shipping changes without a rollback plan and improvising during the incident.</li>
+              <li>Copying configuration from an old project without understanding what it does today.</li>
+            </ul>
+<p>Every one of these fixes is cheap when caught early and expensive when caught late. A quarterly review of fsharp style guides — twenty minutes, honestly — catches most of them before they metastasize.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=fsharp%20style%20guides%20functional%20programming%20code&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Fsharp style guides Quick Reference for Busy Developers" style="border-radius:9px"></figure>
+<h2 id="advanced-tips">Advanced Tips</h2>
+<p>Once the fundamentals are second nature, these are the practices that separate good setups from great ones:</p>
+<ul>
+              <li>Version your conventions: what worked for a two-person team needs revision at ten, and that is normal.</li>
+              <li>Automate the audit: a scheduled check that compares expected state to real state catches drift within hours instead of months.</li>
+              <li>Wrap external flakiness with retries and clear timeouts so failures are visible instead of mysterious.</li>
+              <li>Tip: Four-space indent, camelCase values, PascalCase modules/types</li>
+            </ul>
+<h2 id="quick-example">Quick Example</h2>
+<p>Here is a compact, real-world fsharp example you can adapt directly. It shows the configuration style we recommend for fsharp style guides: explicit, commented where it matters, and free of magic.</p>
+<pre><code>let total =
+    orders
+    |&gt; List.filter (fun o -&gt; o.Paid)
+    |&gt; List.sumBy (fun o -&gt; o.Amount)</code></pre>
+<p>Copy it, run it once, then trim it to what your project actually needs. The worst version of any snippet is the one nobody on the team fully understands.</p>
+<h2 id="step-by-step-quickstart">Step-by-Step Quickstart</h2>
+<p>For readers who want the shortest possible path, here is the compressed version:</p>
+<ol>
+              <li>Audit the current state: list what fsharp style guides touches in your project today.</li>
+              <li>Pick the smallest meaningful change you can ship and measure — momentum matters more than scope.</li>
+              <li>Add a check to CI so regressions in fsharp style guides fail loudly instead of silently.</li>
+              <li>Write the chosen setup down in the repository so the decision survives the next refactor.</li>
+              <li>Document the rollback path before you need it, not during an incident.</li>
+              <li>Schedule a short review each quarter to prune what no longer earns its place.</li>
+            </ol>
+<p>Each step stands alone, so partial adoption already helps. Do them in order and the later ones get easier.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="what-is-fsharp-style-guides-2">What is Fsharp style guides?</h3>
+<p>{W2} It is a foundational part of the {C} workflow, and understanding it pays off across almost every project you will touch.</p>
+<h3 id="do-i-need-fsharp-style-guides-for-small-projects">Do I need Fsharp style guides for small projects?</h3>
+<p>More than you would expect. Small projects benefit disproportionately because there is no dedicated ops person to catch drift — the setup protects itself.</p>
+<h3 id="can-fsharp-style-guides-be-automated">Can Fsharp style guides be automated?</h3>
+<p>Yes, and it should be. Start by scripting the steps in this guide, then wire them into CI so the automation runs without anyone remembering to.</p>
+<h3 id="what-are-the-most-common-mistakes-with-fsharp-style-guides">What are the most common mistakes with Fsharp style guides?</h3>
+<p>The big three: treating it as a one-time setup, letting local configuration drift from CI, and skipping documentation for the decisions you make. All three are covered above with concrete fixes.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Treat this guide as a starting inventory, not a finish line. Re-run the checklist whenever your team, toolchain, or scale changes, and Fsharp style guides will stay an asset instead of becoming archaeology.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=fsdocs%20and%20documentation%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Fsdocs and documentation Workflow: Organize, Build, Ship" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../fsharp/fsdocs-and-documentation-workflow-organize-build-ship.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fsdocs and documentation Workflow: Organize, Build, Ship</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 22, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=migrating%20utilities%20from%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Migrating utilities from csharp for Beginners: 7 Things to Master First" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../fsharp/migrating-utilities-from-csharp-for-beginners-7-things-to-master-first.html" class="post-card__content-link">
+      <h3 class="post-card__title">Migrating utilities from csharp for Beginners: 7 Things to Master First</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 20, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=fake%20build%20scripts%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Fake build scripts Migration Guide: Move Without Breaking Anything" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../fsharp/fake-build-scripts-migration-guide-move-without-breaking-anything.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fake build scripts Migration Guide: Move Without Breaking Anything</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 23, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=type%20inference%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Type inference: From First Steps to Production" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../fsharp/type-inference-from-first-steps-to-production.html" class="post-card__content-link">
+      <h3 class="post-card__title">Type inference: From First Steps to Production</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 19, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=giraffe%20vs%20asp.net%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Getting Started with Giraffe vs asp.net mvc" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../fsharp/getting-started-with-giraffe-vs-asp-net-mvc.html" class="post-card__content-link">
+      <h3 class="post-card__title">Getting Started with Giraffe vs asp.net mvc</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 24, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=immutability%20by%20default%20functional%20programming%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Immutability by default Quick Reference for Busy Developers" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../fsharp/immutability-by-default-quick-reference-for-busy-developers.html" class="post-card__content-link">
+      <h3 class="post-card__title">Immutability by default Quick Reference for Busy Developers</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">F#</span>
+      <span class="post-card__meta post-card__meta--date">September 17, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

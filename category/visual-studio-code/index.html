@@ -1,62 +1,87 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" data-header-style="modern">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
   <title>Visual Studio Code — DevTools Journal</title>
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Microsoft developer tools, explained — DevTools Journal demo build. This demo is intentionally noindex/nofollow.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Articles, guides, and how-tos filed under Visual Studio Code.">
+  <link rel="canonical" href="https://devtoolforge.github.io/category/visual-studio-code/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Visual Studio Code — DevTools Journal">
+  <meta property="og:description" content="Articles, guides, and how-tos filed under Visual Studio Code.">
+  <meta property="og:url" content="https://devtoolforge.github.io/category/visual-studio-code/">
+  <meta property="og:image" content="../../assets/kutukdev/images/icon128.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Visual Studio Code — DevTools Journal">
+  <meta name="twitter:description" content="Articles, guides, and how-tos filed under Visual Studio Code.">
+  <meta name="twitter:image" content="../../assets/kutukdev/images/icon128.png">
     <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
-  <link rel="icon" href="../../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="shortcut icon" href="../../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
   <link rel="icon" href="../../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../../assets/kutukdev/images/icon128.png">
   <link rel="preload" as="style" href="../../assets/kutukdev/css/style.css">
   <link rel="stylesheet" href="../../assets/kutukdev/css/style.css">
   <link rel="preconnect" href="https://tse1.mm.bing.net">
-  <meta property="og:site_name" content="DevTools Journal">
-  <meta property="og:title" content="Visual Studio Code — DevTools Journal">
-  <meta property="og:type" content="article">
-  <meta name="generator" content="DevTools Journal demo generator">
-
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/visual-studio-code/", "url": "https://devtoolforge.github.io/category/visual-studio-code/", "name": "Visual Studio Code" } }] }
+  </script>
 </head>
 <body class="home-template">
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
   <div class="site" id="site">
-    <header class="site-header">
-      <div class="site-header__container">
-        <button class="site-header__hamburger" aria-label="Open menu"
-                aria-expanded="false" data-site-action-trigger="navigation">
-          <span></span><span></span><span></span>
-        </button>
-        <a class="site-header__logo" href="../../">DevTools Journal</a>
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
       </div>
-    </header>
-    <div class="site-actions" aria-hidden="true">
-      <div class="site-actions__backdrop"></div>
-      <nav class="site-actions__panel" aria-label="Main navigation">
-        <div class="site-actions__top">
-          <p class="site-actions__title">Menu</p>
-          <button class="site-actions__close" data-close-site-actions aria-label="Close menu">&times;</button>
-        </div>
-        <ul class="site-actions__menu">
-          <li><a href="../../">Home</a></li>
-      <li><a href="../../category/visual-studio/">Visual Studio</a></li>
-      <li><a href="../../category/visual-studio-code/">Visual Studio Code</a></li>
-      <li><a href="../../category/visual-studio-mac/">Visual Studio for Mac</a></li>
-      <li><a href="../../category/dotnet/">.NET</a></li>
-      <li><a href="../../category/dotnet-framework/">.NET Framework</a></li>
-      <li><a href="../../category/aspnet-core/">ASP.NET Core</a></li>
-      <li><a href="../../category/csharp/">C#</a></li>
-      <li><a href="../../category/fsharp/">F#</a></li>
-      <li><a href="../../category/typescript/">TypeScript</a></li>
-      <li><a href="../../category/microsoft-build-tools/">Microsoft Build Tools</a></li>
-      <li><a href="../../category/msbuild/">MSBuild</a></li>
-        </ul>
-      </nav>
     </div>
+  </div>
+</header>
     <main id="main" class="site-main">
-</div>
       <header class="page-header section" data-section="first">
         <div class="container">
           <h1 class="page-header__title">Visual Studio Code</h1>
@@ -67,47 +92,7 @@
         <div class="container">
           <div class="posts-feed" data-layout-grid="columns">
           <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" >
-            <a href="../../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=visual%20studio%20code%20editor%20laptop&w=474&h=274&c=7" loading="lazy"
-                     alt="Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__content-link">
-                <h2 class="post-card__title">Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts</h2>
-                <p class="post-card__excerpt">Visual Studio Code has become the default editor for millions of developers because it is free, fast, and endlessly customizable. But a fresh VS Code install is intentionally bare:&hellip;</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
-                <span class="post-card__meta post-card__meta--date">August 2, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" data-publish-offset="1800000">
-            <a href="../../visual-studio-code/vs-code-vs-visual-studio-which-microsoft-ide-fits-your-workflow.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=two%20monitors%20code%20comparison&w=474&h=274&c=7" loading="lazy"
-                     alt="VS Code vs Visual Studio: Which Microsoft IDE Fits Your Workflow?">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../../visual-studio-code/vs-code-vs-visual-studio-which-microsoft-ide-fits-your-workflow.html" class="post-card__content-link">
-                <h2 class="post-card__title">VS Code vs Visual Studio: Which Microsoft IDE Fits Your Workflow?</h2>
-                <p class="post-card__excerpt">Microsoft ships two tools with almost the same name and very different philosophies. Visual Studio is a full integrated development environment: heavyweight project systems, design&hellip;</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
-                <span class="post-card__meta post-card__meta--date" data-dynamic-date></span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" data-publish-offset="9000000">
+                   data-has-featured-image="true">
             <a href="../../visual-studio-code/debugging-in-vs-code-launch-json-breakpoints-advanced-tips.html" class="post-card__media" tabindex="-1">
               <picture class="post-card__figure">
                 <img class="post-card__image" width="16" height="9"
@@ -118,20 +103,494 @@
             <div class="post-card__content">
               <a href="../../visual-studio-code/debugging-in-vs-code-launch-json-breakpoints-advanced-tips.html" class="post-card__content-link">
                 <h2 class="post-card__title">Debugging in VS Code: launch.json, Breakpoints, and Advanced Tips</h2>
-                <p class="post-card__excerpt">VS Code's debugger is one of its best features and one of its least explored. Beyond F5 lies a configuration system (launch.json) that reproduces any runtime environment, breakpoin&hellip;</p>
+                <p class="post-card__excerpt">VS Code's debugger is one of its best features and one of its least explored. Beyond F5 lies a configuration system (launch.json) that reproduces any runtime environment, breakpoin…</p>
               </a>
               <div class="post-card__footer">
                 <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
-                <span class="post-card__meta post-card__meta--date" data-dynamic-date></span>
+                <span class="post-card__meta post-card__meta--date">October 24, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/fix-it-fast-a-settings-json-error-handbook.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=settings.json%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Fix It Fast: A Settings.json Error Handbook">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/fix-it-fast-a-settings-json-error-handbook.html" class="post-card__content-link">
+                <h2 class="post-card__title">Fix It Fast: A Settings.json Error Handbook</h2>
+                <p class="post-card__excerpt">Today's deep dive: Settings.json in Visual Studio Code — the JSON file that controls editor and extension behavior. Settings in version control reproduce a productive environment o…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 24, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/workspace-settings-a-complete-guide-for-2026.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=workspace%20settings%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Workspace settings: A Complete Guide for 2026">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/workspace-settings-a-complete-guide-for-2026.html" class="post-card__content-link">
+                <h2 class="post-card__title">Workspace settings: A Complete Guide for 2026</h2>
+                <p class="post-card__excerpt">Today's deep dive: Workspace settings in Visual Studio Code — per-folder settings that override user preferences. Each project can enforce its own format and lint rules without aff…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 23, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/profiles-from-first-steps-to-production.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=profiles%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Profiles: From First Steps to Production">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/profiles-from-first-steps-to-production.html" class="post-card__content-link">
+                <h2 class="post-card__title">Profiles: From First Steps to Production</h2>
+                <p class="post-card__excerpt">Today's deep dive: Profiles in Visual Studio Code — named bundles of settings, extensions, and UI layouts. One install can switch between writing, teaching, and ops modes instantly…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 22, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/vs-code-vs-visual-studio-which-microsoft-ide-fits-your-workflow.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=two%20monitors%20code%20comparison&w=474&h=274&c=7" loading="lazy"
+                     alt="VS Code vs Visual Studio: Which Microsoft IDE Fits Your Workflow?">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/vs-code-vs-visual-studio-which-microsoft-ide-fits-your-workflow.html" class="post-card__content-link">
+                <h2 class="post-card__title">VS Code vs Visual Studio: Which Microsoft IDE Fits Your Workflow?</h2>
+                <p class="post-card__excerpt">Microsoft ships two tools with almost the same name and very different philosophies. Visual Studio is a full integrated development environment: heavyweight project systems, design…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 22, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/settings-sync-essentials-8-tips-that-save-hours.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=settings%20sync%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Settings sync Essentials: 8 Tips That Save Hours">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/settings-sync-essentials-8-tips-that-save-hours.html" class="post-card__content-link">
+                <h2 class="post-card__title">Settings sync Essentials: 8 Tips That Save Hours</h2>
+                <p class="post-card__excerpt">Today's deep dive: Settings sync in Visual Studio Code — built-in roaming of settings, keybindings, and extensions via GitHub or Microsoft accounts. New machines and reinstalls bec…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 21, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/keybindings-for-beginners-10-things-to-master-first.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=keybindings%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Keybindings for Beginners: 10 Things to Master First">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/keybindings-for-beginners-10-things-to-master-first.html" class="post-card__content-link">
+                <h2 class="post-card__title">Keybindings for Beginners: 10 Things to Master First</h2>
+                <p class="post-card__excerpt">Today's deep dive: Keybindings in Visual Studio Code — custom command shortcuts defined in keybindings.json. Personal shortcuts remove the most repeated mouse trips of the day. Tea…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 20, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/user-snippets-setup-configuration-and-optimization.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=user%20snippets%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="User snippets: Setup, Configuration, and Optimization">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/user-snippets-setup-configuration-and-optimization.html" class="post-card__content-link">
+                <h2 class="post-card__title">User snippets: Setup, Configuration, and Optimization</h2>
+                <p class="post-card__excerpt">Today's deep dive: User snippets in Visual Studio Code — your own prefix-triggered templates per language. Repeated boilerplate becomes a few keystrokes with placeholders. Teams th…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 19, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/understanding-emmet-a-practical-deep-dive.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=emmet%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Understanding Emmet: A Practical Deep Dive">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/understanding-emmet-a-practical-deep-dive.html" class="post-card__content-link">
+                <h2 class="post-card__title">Understanding Emmet: A Practical Deep Dive</h2>
+                <p class="post-card__excerpt">Today's deep dive: Emmet in Visual Studio Code — built-in HTML and CSS abbreviations that expand into full markup. Writing structured HTML becomes typing short expressions instead …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 18, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/the-smart-way-to-debug-the-integrated-terminal.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=the%20integrated%20terminal%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="The Smart Way to debug The integrated terminal">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/the-smart-way-to-debug-the-integrated-terminal.html" class="post-card__content-link">
+                <h2 class="post-card__title">The Smart Way to debug The integrated terminal</h2>
+                <p class="post-card__excerpt">Today's deep dive: The integrated terminal in Visual Studio Code — shells running inside the editor with editor awareness. One window covers editing, running, and git without app s…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 17, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/understanding-tasks-json-a-practical-deep-dive.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=tasks.json%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Understanding Tasks.json: A Practical Deep Dive">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/understanding-tasks-json-a-practical-deep-dive.html" class="post-card__content-link">
+                <h2 class="post-card__title">Understanding Tasks.json: A Practical Deep Dive</h2>
+                <p class="post-card__excerpt">Today's deep dive: Tasks.json in Visual Studio Code — project tasks that run builds, tests, and scripts. Shareable tasks turn tribal command-line knowledge into one shortcut. Teams…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 16, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/launch-json-debugging-health-check-audit-and-improve-your-setup.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=launch.json%20debugging%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Launch.json debugging Health Check: Audit and Improve Your Setup">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/launch-json-debugging-health-check-audit-and-improve-your-setup.html" class="post-card__content-link">
+                <h2 class="post-card__title">Launch.json debugging Health Check: Audit and Improve Your Setup</h2>
+                <p class="post-card__excerpt">Today's deep dive: Launch.json debugging in Visual Studio Code — debug configurations for launching or attaching. Reproducible debug sessions replace clicking through menus every m…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 14, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/logpoints-in-visual-studio-code-setup-tips-and-workflows.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=logpoints%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Logpoints in Visual Studio Code: Setup, Tips, and Workflows">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/logpoints-in-visual-studio-code-setup-tips-and-workflows.html" class="post-card__content-link">
+                <h2 class="post-card__title">Logpoints in Visual Studio Code: Setup, Tips, and Workflows</h2>
+                <p class="post-card__excerpt">Today's deep dive: Logpoints in Visual Studio Code — breakpoints that log without pausing execution. You trace values in hot loops where stopping would ruin timing. Teams that take…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 13, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/multi-root-workspaces-quick-reference-for-busy-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=multi-root%20workspaces%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Multi-root workspaces Quick Reference for Busy Developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/multi-root-workspaces-quick-reference-for-busy-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">Multi-root workspaces Quick Reference for Busy Developers</h2>
+                <p class="post-card__excerpt">Today's deep dive: Multi-root workspaces in Visual Studio Code — one window containing several project folders. Monorepos and frontend-plus-backend pairs stay in a single editor. T…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 12, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/remote-ssh-anatomy-how-the-pieces-fit-together.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=remote%20ssh%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Remote ssh Anatomy: How the Pieces Fit Together">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/remote-ssh-anatomy-how-the-pieces-fit-together.html" class="post-card__content-link">
+                <h2 class="post-card__title">Remote ssh Anatomy: How the Pieces Fit Together</h2>
+                <p class="post-card__excerpt">Today's deep dive: Remote ssh in Visual Studio Code — editing and debugging on a remote machine as if local. Heavy builds and company-only environments run on the server, not your …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 11, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/dev-containers-explained-what-it-is-and-how-it-works.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=dev%20containers%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Dev containers Explained: What It Is and How It Works">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/dev-containers-explained-what-it-is-and-how-it-works.html" class="post-card__content-link">
+                <h2 class="post-card__title">Dev containers Explained: What It Is and How It Works</h2>
+                <p class="post-card__excerpt">Today's deep dive: Dev containers in Visual Studio Code — a container defined by devcontainer.json as the full dev environment. Every contributor and CI uses an identical toolchain…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 10, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/fix-it-fast-a-wsl-integration-error-handbook.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=wsl%20integration%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Fix It Fast: A Wsl integration Error Handbook">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/fix-it-fast-a-wsl-integration-error-handbook.html" class="post-card__content-link">
+                <h2 class="post-card__title">Fix It Fast: A Wsl integration Error Handbook</h2>
+                <p class="post-card__excerpt">Today's deep dive: Wsl integration in Visual Studio Code — first-class editing of files and tools inside WSL on Windows. Linux toolchains run natively while the UI stays on Windows…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 9, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/fix-it-fast-a-extensions-marketplace-error-handbook.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=extensions%20marketplace%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Fix It Fast: A Extensions marketplace Error Handbook">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/fix-it-fast-a-extensions-marketplace-error-handbook.html" class="post-card__content-link">
+                <h2 class="post-card__title">Fix It Fast: A Extensions marketplace Error Handbook</h2>
+                <p class="post-card__excerpt">Today's deep dive: Extensions marketplace in Visual Studio Code — installing and managing extensions from the marketplace. The right ten extensions do the work of a customized IDE.…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 8, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/format-on-save-troubleshooting-12-fixes-for-everyday-problems.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=format%20on%20save%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Format on save Troubleshooting: 12 Fixes for Everyday Problems">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/format-on-save-troubleshooting-12-fixes-for-everyday-problems.html" class="post-card__content-link">
+                <h2 class="post-card__title">Format on save Troubleshooting: 12 Fixes for Everyday Problems</h2>
+                <p class="post-card__excerpt">Today's deep dive: Format on save in Visual Studio Code — automatic formatting when a file is saved. Style drift disappears because nobody formats by hand. Teams that take it serio…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 7, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/the-ultimate-file-nesting-checklist-for-2026.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=file%20nesting%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="The Ultimate File nesting Checklist for 2026">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/the-ultimate-file-nesting-checklist-for-2026.html" class="post-card__content-link">
+                <h2 class="post-card__title">The Ultimate File nesting Checklist for 2026</h2>
+                <p class="post-card__excerpt">Today's deep dive: File nesting in Visual Studio Code — grouping generated or related files under a parent in Explorer. Folders stay readable when build outputs and component files…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 6, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/breadcrumbs-and-sticky-scroll-in-visual-studio-code-setup-tips-and-workf.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=breadcrumbs%20and%20sticky%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Breadcrumbs and sticky scroll in Visual Studio Code: Setup, Tips, and Workflows">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/breadcrumbs-and-sticky-scroll-in-visual-studio-code-setup-tips-and-workf.html" class="post-card__content-link">
+                <h2 class="post-card__title">Breadcrumbs and sticky scroll in Visual Studio Code: Setup, Tips, and Workflows</h2>
+                <p class="post-card__excerpt">Today's deep dive: Breadcrumbs and sticky scroll in Visual Studio Code — navigation aids showing the path and current scope. You always know where you are in deep file hierarchies.…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 5, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/the-smart-way-to-learn-command-palette.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=command%20palette%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="The Smart Way to learn Command palette">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/the-smart-way-to-learn-command-palette.html" class="post-card__content-link">
+                <h2 class="post-card__title">The Smart Way to learn Command palette</h2>
+                <p class="post-card__excerpt">Today's deep dive: Command palette in Visual Studio Code — the Ctrl+Shift+P interface that reaches every command. The fastest route to any feature without memorizing menus. Teams t…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 3, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/zen-mode-and-layouts-health-check-audit-and-improve-your-setup.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=zen%20mode%20and%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Zen mode and layouts Health Check: Audit and Improve Your Setup">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/zen-mode-and-layouts-health-check-audit-and-improve-your-setup.html" class="post-card__content-link">
+                <h2 class="post-card__title">Zen mode and layouts Health Check: Audit and Improve Your Setup</h2>
+                <p class="post-card__excerpt">Today's deep dive: Zen mode and layouts in Visual Studio Code — distraction-free mode plus editor layout management. Focused writing sessions and split layouts are one shortcut awa…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 2, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../visual-studio-code/git-integration-workflow-organize-build-ship.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=git%20integration%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+                     alt="Git integration Workflow: Organize, Build, Ship">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../visual-studio-code/git-integration-workflow-organize-build-ship.html" class="post-card__content-link">
+                <h2 class="post-card__title">Git integration Workflow: Organize, Build, Ship</h2>
+                <p class="post-card__excerpt">Today's deep dive: Git integration in Visual Studio Code — built-in source control for staging, committing, and branching. Daily git flows happen next to the code without a separat…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
+                <span class="post-card__meta post-card__meta--date">October 1, 2026</span>
               </div>
             </div>
           </article>
           </div>
+          <nav class="pagination" aria-label="Pages"><span class="current">1</span><a href="../../category/visual-studio-code/page/2/">2</a><a href="../../category/visual-studio-code/page/3/">3</a><span>&hellip;</span><a href="../../category/visual-studio-code/page/5/">5</a></nav>
         </div>
       </section>
     </main>
-<footer class="site-footer"><nav class="site-footer__nav"><a href="../../">Home</a><a href="../../page/dmca.html">DMCA</a><a href="../../page/contact.html">Contact</a><a href="../../page/privacy-policy.html">Privacy Policy</a><a href="../../page/copyright.html">Copyright</a></nav><div class="site-footer__copyright">Copyright &copy; 2026 DevTools Journal</div></footer>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
   </div>
-  <script src="../../assets/kutukdev/js/main.js"></script>
+</footer>
+  </div>
+  <script defer src="../../assets/kutukdev/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>What's New in Building legacy projects for 2026?</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Today's deep dive: Building legacy projects in MSBuild — old-style csproj on modern engines. Decades-old apps keep building on current toolchains. Teams that">
+  <link rel="canonical" href="https://devtoolforge.github.io/msbuild/what-s-new-in-building-legacy-projects-for-2026.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-09-22T22:30:00+06:00">
+  <meta property="article:modified_time" content="2026-09-22T22:30:00+06:00">
+  <meta property="article:section" content="MSBuild">
+  <meta property="og:updated_time" content="2026-09-22T22:30:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="5 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="What's New in Building legacy projects for 2026?">
+  <meta property="og:description" content="Today's deep dive: Building legacy projects in MSBuild — old-style csproj on modern engines. Decades-old apps keep building on current toolchains. Teams that">
+  <meta property="og:url" content="https://devtoolforge.github.io/msbuild/what-s-new-in-building-legacy-projects-for-2026.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=building%20legacy%20projects%20build%20automation%20engineering%20blueprint&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What's New in Building legacy projects for 2026?">
+  <meta name="twitter:description" content="Today's deep dive: Building legacy projects in MSBuild — old-style csproj on modern engines. Decades-old apps keep building on current toolchains. Teams that">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=building%20legacy%20projects%20build%20automation%20engineering%20blueprint&amp;w=474&amp;h=274&amp;c=7">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/msbuild/what-s-new-in-building-legacy-projects-for-2026.html" }, "headline": "What's New in Building legacy projects for 2026?", "description": "Today's deep dive: Building legacy projects in MSBuild — old-style csproj on modern engines. Decades-old apps keep building on current toolchains. Teams that take it seriously spen…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=building%20legacy%20projects%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-09-22T22:30:00+06:00", "dateModified": "2026-09-22T22:30:00+06:00", "wordCount": 1076, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/msbuild/what-s-new-in-building-legacy-projects-for-2026.html#webpage", "url": "https://devtoolforge.github.io/msbuild/what-s-new-in-building-legacy-projects-for-2026.html", "name": "What's New in Building legacy projects for 2026?", "datePublished": "2026-09-22T22:30:00+06:00", "dateModified": "2026-09-22T22:30:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/msbuild/", "url": "https://devtoolforge.github.io/category/msbuild/", "name": "MSBuild" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/msbuild/what-s-new-in-building-legacy-projects-for-2026.html", "url": "https://devtoolforge.github.io/msbuild/what-s-new-in-building-legacy-projects-for-2026.html", "name": "What's New in Building legacy projects for 2026?" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure id="img-top" class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=building%20legacy%20projects%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=building%20legacy%20projects%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=building%20legacy%20projects%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="What's New in Building legacy projects for 2026?"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">What's New in Building legacy projects for 2026?</h1>
+            <p class="article-header__excerpt">Today's deep dive: Building legacy projects in MSBuild — old-style csproj on modern engines. Decades-old apps keep building on current toolchains. Teams that take it seriously spen…</p>
+            <div class="article-header__footer">
+              <a href="../category/msbuild/" class="article-header__meta article-header__meta-tag-primary" rel="tag">MSBuild</a>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-09-22T22:30:00+06:00">September 22, 2026</time>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section" data-canvas-grid="content">
+        <div class="container">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Today's deep dive: Building legacy projects in MSBuild — old-style csproj on modern engines. Decades-old apps keep building on current toolchains. Teams that take it seriously spend less time on avoidable problems and more time shipping features users actually notice. The key is treating it as a living part of the workflow rather than a one-time setup task.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-is-building-legacy-projects">What Is Building legacy projects?</a></li>
+<li><a href="#the-mechanics-of-building-legacy-projects">The Mechanics of Building legacy projects</a></li>
+<li><a href="#best-practices-for-building-legacy-projects">Best Practices for Building legacy projects</a></li>
+<li><a href="#tooling-and-ecosystem">Tooling and Ecosystem</a></li>
+<li><a href="#troubleshooting-building-legacy-projects">Troubleshooting Building legacy projects</a></li>
+<li><a href="#quick-example">Quick Example</a></li>
+<li><a href="#a-practical-workflow">A Practical Workflow</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#how-long-does-it-take-to-get-comfortable-with-building-legacy-projects">How long does it take to get comfortable with Building legacy projects?</a></li>
+<li><a href="#do-i-need-building-legacy-projects-for-small-projects">Do I need Building legacy projects for small projects?</a></li>
+<li><a href="#what-is-building-legacy-projects-2">What is Building legacy projects?</a></li>
+<li><a href="#is-building-legacy-projects-still-relevant-in-2026">Is Building legacy projects still relevant in 2026?</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ol></nav>
+<p>In this guide we cover building legacy projects end to end: the core concepts, the exact steps to set it up well, the mistakes that cost teams the most time, and the habits that keep the setup healthy. Everything here runs on the current 2026 toolchain, with commands you can copy as-is.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Topic</strong></td><td>Building legacy projects</td></tr>
+              <tr><td><strong>Area</strong></td><td>MSBuild</td></tr>
+              <tr><td><strong>Skill level</strong></td><td>Intermediate</td></tr>
+              <tr><td><strong>Engine</strong></td><td>MSBuild 18 (ships with VS 2026 / Build Tools)</td></tr>
+              <tr><td><strong>Project files</strong></td><td>.csproj, .vbproj, .fsproj, .props, .targets</td></tr>
+              <tr><td><strong>Phases</strong></td><td>Evaluation, then Execution</td></tr>
+              <tr><td><strong>Invoked by</strong></td><td>dotnet build, Visual Studio, Build Tools</td></tr>
+              <tr><td><strong>Last verified</strong></td><td>October 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+<h2 id="what-is-building-legacy-projects">What Is Building legacy projects?</h2>
+<p>Building legacy projects, in one sentence: old-style csproj on modern engines. In practice that means the details are worth getting right once, because everything downstream inherits the decision. Teams that invest here early spend measurably less time firefighting later in the project.</p>
+<p>The mental model is simple: one clear definition, one clear workflow, and configuration that matches reality. Most confusion around building legacy projects comes from mixing those layers — mixing definitions from different eras, or configs copied from projects with different needs. Keep them separate and the rest of this guide follows naturally.</p>
+<h2 id="the-mechanics-of-building-legacy-projects">The Mechanics of Building legacy projects</h2>
+<p>Install the matching developer packs and build with VS MSBuild. That is the core of it, and the steps below turn the idea into muscle memory:</p>
+<ol>
+              <li>Add a check to CI so regressions in building legacy projects fail loudly instead of silently.</li>
+              <li>Audit the current state: list what building legacy projects touches in your project today.</li>
+              <li>Review the setup with the team and record one owner responsible for it.</li>
+              <li>Audit the current state: list what building legacy projects touches in your project today.</li>
+              <li>Automate the step so it runs without anyone remembering the manual command.</li>
+            </ol>
+<p>Notice how much of the value comes from the boring parts: writing things down, pinning versions, automating checks. That is not an accident — building legacy projects rewards exactly the habits that compound everywhere else in MSBuild.</p>
+<h2 id="best-practices-for-building-legacy-projects">Best Practices for Building legacy projects</h2>
+<p>These are the practices we see on teams where this area simply never causes drama:</p>
+<ul>
+              <li>Keep one source of truth: if the docs and the actual configuration disagree, fix the docs immediately.</li>
+              <li>Measure before and after changes to building legacy projects so decisions are driven by data rather than vibes.</li>
+              <li>Review building legacy projects changes in code review with the same seriousness as application logic.</li>
+              <li>Test the failure path, not just the happy path — most real incidents live there.</li>
+              <li>Automate the boring parts of building legacy projects with scripts or tasks; humans are bad at remembering commands.</li>
+            </ul>
+<p>None of these are hard individually. The discipline is doing them every time, which is why automation and CI checks carry so much of the load.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=building%20legacy%20projects%20build%20automation%20engineering%20blueprint&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="What's New in Building legacy projects for 2026?" style="border-radius:9px"></figure>
+<h2 id="tooling-and-ecosystem">Tooling and Ecosystem</h2>
+<p>Tool choice is less important than tool consistency. Whether your team standardizes on the Structured Log Viewer, dotnet msbuild, Directory.Build.props, MSBuild Structured Logs or alternatives, everyone should run the same versions from the same configuration. That single decision eliminates the works-on-my-machine class of building legacy projects problems.</p>
+<h2 id="troubleshooting-building-legacy-projects">Troubleshooting Building legacy projects</h2>
+<p>When things break, symptoms cluster into a handful of patterns. Match yours here and jump straight to the fix:</p>
+<ul>
+              <li><strong>It fails intermittently under load</strong> — look for shared state and timing assumptions that only break when things overlap</li>
+              <li><strong>It works on one machine and fails on another</strong> — diff the versions and configuration first — environment drift explains most of these bugs</li>
+              <li><strong>Errors mention a file or component you never touched</strong> — trace the first error in the log, not the last one — the real cause is almost always earlier</li>
+            </ul>
+<p>If none of these match, capture a full log before changing anything. For building legacy projects that log almost always names the failing layer, and the fix becomes obvious instead of guessed.</p>
+<h2 id="quick-example">Quick Example</h2>
+<p>Here is a compact, real-world xml example you can adapt directly. It shows the configuration style we recommend for building legacy projects: explicit, commented where it matters, and free of magic.</p>
+<pre><code>&lt;PropertyGroup&gt;
+  &lt;TargetFramework&gt;net10.0&lt;/TargetFramework&gt;
+  &lt;Nullable&gt;enable&lt;/Nullable&gt;
+  &lt;LangVersion&gt;latest&lt;/LangVersion&gt;
+&lt;/PropertyGroup&gt;</code></pre>
+<p>Copy it, run it once, then trim it to what your project actually needs. The worst version of any snippet is the one nobody on the team fully understands.</p>
+<h2 id="a-practical-workflow">A Practical Workflow</h2>
+<p>A repeatable workflow turns building legacy projects from a personality trait into a team capability:</p>
+<ol>
+              <li>Add a check to CI so regressions in building legacy projects fail loudly instead of silently.</li>
+              <li>Schedule a short review each quarter to prune what no longer earns its place.</li>
+              <li>Write the chosen setup down in the repository so the decision survives the next refactor.</li>
+              <li>Automate the step so it runs without anyone remembering the manual command.</li>
+              <li>Review the setup with the team and record one owner responsible for it.</li>
+            </ol>
+<p>This loop — audit, change, automate, verify — is deliberately generic. It fits MSBuild at any scale and survives every tooling generation we have seen.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="how-long-does-it-take-to-get-comfortable-with-building-legacy-projects">How long does it take to get comfortable with Building legacy projects?</h3>
+<p>The basics take an afternoon; reliable habits take a few weeks of real use. The guide's checklist is designed to compress that ramp-up by focusing on what actually matters.</p>
+<h3 id="do-i-need-building-legacy-projects-for-small-projects">Do I need Building legacy projects for small projects?</h3>
+<p>More than you would expect. Small projects benefit disproportionately because there is no dedicated ops person to catch drift — the setup protects itself.</p>
+<h3 id="what-is-building-legacy-projects-2">What is Building legacy projects?</h3>
+<p>{W2} It is a foundational part of the {C} workflow, and understanding it pays off across almost every project you will touch.</p>
+<h3 id="is-building-legacy-projects-still-relevant-in-2026">Is Building legacy projects still relevant in 2026?</h3>
+<p>Yes — more than ever. The 2026 toolchain builds directly on these fundamentals, and the practices in this article are the ones current documentation assumes you already follow.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The takeaway is unglamorous but true: consistency beats cleverness. Keep the Building legacy projects setup documented, automated, and reviewed, and it will quietly repay the effort for the life of the project.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=extending%20the%20build%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="Extending the build safely Cheat Sheet: 7 Shortcuts and Commands" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/extending-the-build-safely-cheat-sheet-7-shortcuts-and-commands.html" class="post-card__content-link">
+      <h3 class="post-card__title">Extending the build safely Cheat Sheet: 7 Shortcuts and Commands</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">September 23, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=msbuild%20apis%20in%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="Advanced Msbuild apis in code Techniques for 2026 (With Real Examples)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/advanced-msbuild-apis-in-code-techniques-for-2026-with-real-examples.html" class="post-card__content-link">
+      <h3 class="post-card__title">Advanced Msbuild apis in code Techniques for 2026 (With Real Examples)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">September 20, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=common%20build%20errors%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="Common build errors Performance Tuning: Practical Tips That Work" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/common-build-errors-performance-tuning-practical-tips-that-work.html" class="post-card__content-link">
+      <h3 class="post-card__title">Common build errors Performance Tuning: Practical Tips That Work</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">September 24, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=properties%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="Practical Properties for Everyday MSBuild Work (With Real Examples)" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/practical-properties-for-everyday-msbuild-work-with-real-examples.html" class="post-card__content-link">
+      <h3 class="post-card__title">Practical Properties for Everyday MSBuild Work (With Real Examples)</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">September 19, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=msbuild%20in%20ci%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="Msbuild in ci pipelines Explained: What It Is and How It Works" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/msbuild-in-ci-pipelines-explained-what-it-is-and-how-it-works.html" class="post-card__content-link">
+      <h3 class="post-card__title">Msbuild in ci pipelines Explained: What It Is and How It Works</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">September 25, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=items%20build%20automation%20engineering%20blueprint&w=474&h=274&c=7" loading="lazy"
+         alt="5 Items Shortcuts You Will Use Every Day" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../msbuild/5-items-shortcuts-you-will-use-every-day.html" class="post-card__content-link">
+      <h3 class="post-card__title">5 Items Shortcuts You Will Use Every Day</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">MSBuild</span>
+      <span class="post-card__meta post-card__meta--date">September 18, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

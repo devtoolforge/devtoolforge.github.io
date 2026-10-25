@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>Load testing basics Performance Tuning: Practical Tips That Work</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Today's deep dive: Load testing basics in ASP.NET Core — generating realistic traffic before launch. Capacity limits surface in a controlled setting, not a">
+  <link rel="canonical" href="https://devtoolforge.github.io/aspnet-core/load-testing-basics-performance-tuning-practical-tips-that-work.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-08-10T13:30:00+06:00">
+  <meta property="article:modified_time" content="2026-08-10T13:30:00+06:00">
+  <meta property="article:section" content="ASP.NET Core">
+  <meta property="og:updated_time" content="2026-08-10T13:30:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="5 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Load testing basics Performance Tuning: Practical Tips That Work">
+  <meta property="og:description" content="Today's deep dive: Load testing basics in ASP.NET Core — generating realistic traffic before launch. Capacity limits surface in a controlled setting, not a">
+  <meta property="og:url" content="https://devtoolforge.github.io/aspnet-core/load-testing-basics-performance-tuning-practical-tips-that-work.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=load%20testing%20basics%20web%20development%20server&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Load testing basics Performance Tuning: Practical Tips That Work">
+  <meta name="twitter:description" content="Today's deep dive: Load testing basics in ASP.NET Core — generating realistic traffic before launch. Capacity limits surface in a controlled setting, not a">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=load%20testing%20basics%20web%20development%20server&amp;w=474&amp;h=274&amp;c=7">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/aspnet-core/load-testing-basics-performance-tuning-practical-tips-that-work.html" }, "headline": "Load testing basics Performance Tuning: Practical Tips That Work", "description": "Today's deep dive: Load testing basics in ASP.NET Core — generating realistic traffic before launch. Capacity limits surface in a controlled setting, not a launch incident. Teams t…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=load%20testing%20basics%20web%20development%20server&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-08-10T13:30:00+06:00", "dateModified": "2026-08-10T13:30:00+06:00", "wordCount": 1132, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/aspnet-core/load-testing-basics-performance-tuning-practical-tips-that-work.html#webpage", "url": "https://devtoolforge.github.io/aspnet-core/load-testing-basics-performance-tuning-practical-tips-that-work.html", "name": "Load testing basics Performance Tuning: Practical Tips That Work", "datePublished": "2026-08-10T13:30:00+06:00", "dateModified": "2026-08-10T13:30:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/aspnet-core/", "url": "https://devtoolforge.github.io/category/aspnet-core/", "name": "ASP.NET Core" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/aspnet-core/load-testing-basics-performance-tuning-practical-tips-that-work.html", "url": "https://devtoolforge.github.io/aspnet-core/load-testing-basics-performance-tuning-practical-tips-that-work.html", "name": "Load testing basics Performance Tuning: Practical Tips That Work" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure id="img-top" class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=load%20testing%20basics%20web%20development%20server&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=load%20testing%20basics%20web%20development%20server&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=load%20testing%20basics%20web%20development%20server&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="Load testing basics Performance Tuning: Practical Tips That Work"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">Load testing basics Performance Tuning: Practical Tips That Work</h1>
+            <p class="article-header__excerpt">Today's deep dive: Load testing basics in ASP.NET Core — generating realistic traffic before launch. Capacity limits surface in a controlled setting, not a launch incident. Teams t…</p>
+            <div class="article-header__footer">
+              <a href="../category/aspnet-core/" class="article-header__meta article-header__meta-tag-primary" rel="tag">ASP.NET Core</a>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-08-10T13:30:00+06:00">August 10, 2026</time>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section" data-canvas-grid="content">
+        <div class="container">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Today's deep dive: Load testing basics in ASP.NET Core — generating realistic traffic before launch. Capacity limits surface in a controlled setting, not a launch incident. Teams that take it seriously spend less time on avoidable problems and more time shipping features users actually notice. The good news is that the fundamentals have been stable for years, so the effort you invest compounds instead of expiring with the next release.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-is-load-testing-basics">What Is Load testing basics?</a></li>
+<li><a href="#why-bother-with-load-testing-basics">Why Bother with Load testing basics?</a></li>
+<li><a href="#best-practices-for-load-testing-basics">Best Practices for Load testing basics</a></li>
+<li><a href="#load-testing-basics-vs-identity-and-user-management">Load testing basics vs Identity and user management</a></li>
+<li><a href="#advanced-tips">Advanced Tips</a></li>
+<li><a href="#quick-example">Quick Example</a></li>
+<li><a href="#step-by-step-quickstart">Step-by-Step Quickstart</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#what-is-load-testing-basics-2">What is Load testing basics?</a></li>
+<li><a href="#can-load-testing-basics-be-automated">Can Load testing basics be automated?</a></li>
+<li><a href="#how-long-does-it-take-to-get-comfortable-with-load-testing-basics">How long does it take to get comfortable with Load testing basics?</a></li>
+<li><a href="#what-are-the-most-common-mistakes-with-load-testing-basics">What are the most common mistakes with Load testing basics?</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ol></nav>
+<p>In this guide we cover load testing basics end to end: the core concepts, the exact steps to set it up well, the mistakes that cost teams the most time, and the habits that keep the setup healthy. Everything here runs on the current 2026 toolchain, with commands you can copy as-is.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Topic</strong></td><td>Load testing basics</td></tr>
+              <tr><td><strong>Area</strong></td><td>ASP.NET Core</td></tr>
+              <tr><td><strong>Skill level</strong></td><td>All levels</td></tr>
+              <tr><td><strong>Framework</strong></td><td>ASP.NET Core 10 (on .NET 10 LTS)</td></tr>
+              <tr><td><strong>Hosting</strong></td><td>Kestrel, IIS, HTTP.sys, or containers</td></tr>
+              <tr><td><strong>Patterns</strong></td><td>MVC, Razor Pages, Minimal APIs, Blazor, gRPC, SignalR</td></tr>
+              <tr><td><strong>License</strong></td><td>MIT — open source</td></tr>
+              <tr><td><strong>Last verified</strong></td><td>October 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+<h2 id="what-is-load-testing-basics">What Is Load testing basics?</h2>
+<p>Load testing basics, in one sentence: generating realistic traffic before launch. In practice that means the details are worth getting right once, because everything downstream inherits the decision. The key is treating it as a living part of the workflow rather than a one-time setup task.</p>
+<p>The mental model is simple: one clear definition, one clear workflow, and configuration that matches reality. Most confusion around load testing basics comes from mixing those layers — mixing definitions from different eras, or configs copied from projects with different needs. Keep them separate and the rest of this guide follows naturally.</p>
+<h2 id="why-bother-with-load-testing-basics">Why Bother with Load testing basics?</h2>
+<p>"Why bother" is a fair question for any tooling topic. Load testing basics earns its keep in three concrete ways:</p>
+<ul>
+              <li>It makes onboarding dramatically easier: new developers find rails instead of folklore.</li>
+              <li>It improves code consistency across the team, making reviews faster and friendlier.</li>
+              <li>It lowers maintenance cost because every future change starts from a sane baseline.</li>
+            </ul>
+<p>Notice what is missing from that list: fashion. None of these benefits expire with a release cycle, which is why load testing basics keeps showing up in every serious ASP.NET Core conversation. The good news is that the fundamentals have been stable for years, so the effort you invest compounds instead of expiring with the next release.</p>
+<h2 id="best-practices-for-load-testing-basics">Best Practices for Load testing basics</h2>
+<p>These are the practices we see on teams where this area simply never causes drama:</p>
+<ul>
+              <li>Prefer small, reversible changes over big-bang migrations nobody can review.</li>
+              <li>Pin versions and record why each choice was made, so upgrades are decisions instead of accidents.</li>
+              <li>Keep one source of truth: if the docs and the actual configuration disagree, fix the docs immediately.</li>
+              <li>Review load testing basics changes in code review with the same seriousness as application logic.</li>
+              <li>Automate the boring parts of load testing basics with scripts or tasks; humans are bad at remembering commands.</li>
+            </ul>
+<p>None of these are hard individually. The discipline is doing them every time, which is why automation and CI checks carry so much of the load.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=load%20testing%20basics%20web%20development%20server&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Load testing basics Performance Tuning: Practical Tips That Work" style="border-radius:9px"></figure>
+<h2 id="load-testing-basics-vs-identity-and-user-management">Load testing basics vs Identity and user management</h2>
+<p>They overlap enough that the question is usually about trade-offs rather than right and wrong. Load testing basics optimizes for capacity limits surface in a controlled setting; Identity and user management pushes harder on the opposite axis. List your constraints honestly — team experience, platform targets, and maintenance budget — and the answer usually picks itself.</p>
+<p>Start from the problem, not the tool. If your pain is capacity limits surface in a controlled setting, Load testing basics is the more direct route; if your team already lives in the other ecosystem, Identity and user management minimizes ramp-up cost. Whatever you choose, write down why, because the next person will ask.</p>
+<h2 id="advanced-tips">Advanced Tips</h2>
+<p>Once the fundamentals are second nature, these are the practices that separate good setups from great ones:</p>
+<ul>
+              <li>Version your conventions: what worked for a two-person team needs revision at ten, and that is normal.</li>
+              <li>Automate the audit: a scheduled check that compares expected state to real state catches drift within hours instead of months.</li>
+              <li>Build a tiny example project that demonstrates correct usage — it doubles as a smoke test when versions change.</li>
+              <li>Tip: Test steady state plus burst patterns and record p95/p99 latencies</li>
+            </ul>
+<h2 id="quick-example">Quick Example</h2>
+<p>Here is a compact, real-world csharp example you can adapt directly. It shows the configuration style we recommend for load testing basics: explicit, commented where it matters, and free of magic.</p>
+<pre><code>var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddHealthChecks();
+var app = builder.Build();
+
+app.MapGet(&quot;/hello/{name}&quot;, (string name) =&gt; $&quot;Hi {name}&quot;);
+app.MapHealthChecks(&quot;/health&quot;);
+app.Run();</code></pre>
+<p>Copy it, run it once, then trim it to what your project actually needs. The worst version of any snippet is the one nobody on the team fully understands.</p>
+<h2 id="step-by-step-quickstart">Step-by-Step Quickstart</h2>
+<p>For readers who want the shortest possible path, here is the compressed version:</p>
+<ol>
+              <li>Document the rollback path before you need it, not during an incident.</li>
+              <li>Document the rollback path before you need it, not during an incident.</li>
+              <li>Automate the step so it runs without anyone remembering the manual command.</li>
+              <li>Review the setup with the team and record one owner responsible for it.</li>
+              <li>Add a check to CI so regressions in load testing basics fail loudly instead of silently.</li>
+              <li>Pick the smallest meaningful change you can ship and measure — momentum matters more than scope.</li>
+            </ol>
+<p>Each step stands alone, so partial adoption already helps. Do them in order and the later ones get easier.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="what-is-load-testing-basics-2">What is Load testing basics?</h3>
+<p>{W2} It is a foundational part of the {C} workflow, and understanding it pays off across almost every project you will touch.</p>
+<h3 id="can-load-testing-basics-be-automated">Can Load testing basics be automated?</h3>
+<p>Yes, and it should be. Start by scripting the steps in this guide, then wire them into CI so the automation runs without anyone remembering to.</p>
+<h3 id="how-long-does-it-take-to-get-comfortable-with-load-testing-basics">How long does it take to get comfortable with Load testing basics?</h3>
+<p>The basics take an afternoon; reliable habits take a few weeks of real use. The guide's checklist is designed to compress that ramp-up by focusing on what actually matters.</p>
+<h3 id="what-are-the-most-common-mistakes-with-load-testing-basics">What are the most common mistakes with Load testing basics?</h3>
+<p>The big three: treating it as a one-time setup, letting local configuration drift from CI, and skipping documentation for the decisions you make. All three are covered above with concrete fixes.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Nothing in this guide is exotic, and that is the point. Load testing basics done consistently — measured, documented, and automated — removes an entire category of daily friction from ASP.NET Core work. Pick one section, apply it this week, and let the results argue for the rest.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=integration%20testing%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Integration testing Pitfalls: What the Docs Don't Tell You" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/integration-testing-pitfalls-what-the-docs-don-t-tell-you.html" class="post-card__content-link">
+      <h3 class="post-card__title">Integration testing Pitfalls: What the Docs Don't Tell You</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">August 11, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=background%20jobs%20in%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Practical Background jobs in web apps for Everyday ASP.NET Core Work" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/practical-background-jobs-in-web-apps-for-everyday-asp-net-core-work.html" class="post-card__content-link">
+      <h3 class="post-card__title">Practical Background jobs in web apps for Everyday ASP.NET Core Work</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">August 9, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=dockerizing%20web%20apps%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Dockerizing web apps for Beginners: A Practical Introduction" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/dockerizing-web-apps-for-beginners-a-practical-introduction.html" class="post-card__content-link">
+      <h3 class="post-card__title">Dockerizing web apps for Beginners: A Practical Introduction</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">August 12, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=forwarding%20and%20url%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Forwarding and url generation: A Complete Guide for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/forwarding-and-url-generation-a-complete-guide-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Forwarding and url generation: A Complete Guide for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">August 8, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=hosting%20behind%20iis%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Hosting behind iis or nginx Security and Reliability Best Practices" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/hosting-behind-iis-or-nginx-security-and-reliability-best-practices.html" class="post-card__content-link">
+      <h3 class="post-card__title">Hosting behind iis or nginx Security and Reliability Best Practices</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">August 13, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=middleware%20pipeline%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Middleware pipeline Anatomy: How the Pieces Fit Together" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/middleware-pipeline-anatomy-how-the-pieces-fit-together.html" class="post-card__content-link">
+      <h3 class="post-card__title">Middleware pipeline Anatomy: How the Pieces Fit Together</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">August 7, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

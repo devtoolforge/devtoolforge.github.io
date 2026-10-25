@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>Visual Studio for Mac — Page 3 — DevTools Journal</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Articles, guides, and how-tos filed under Visual Studio for Mac.">
+  <link rel="canonical" href="https://devtoolforge.github.io/category/visual-studio-mac/page/3/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Visual Studio for Mac — Page 3 — DevTools Journal">
+  <meta property="og:description" content="Articles, guides, and how-tos filed under Visual Studio for Mac.">
+  <meta property="og:url" content="https://devtoolforge.github.io/category/visual-studio-mac/page/3/">
+  <meta property="og:image" content="../../../../assets/kutukdev/images/icon128.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Visual Studio for Mac — Page 3 — DevTools Journal">
+  <meta name="twitter:description" content="Articles, guides, and how-tos filed under Visual Studio for Mac.">
+  <meta name="twitter:image" content="../../../../assets/kutukdev/images/icon128.png">
+    <link rel="preload" as="font" type="font/woff2" href="../../../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../../../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../../../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../../../../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../../../../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../../../../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../../../../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../../../../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../../../../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../../../../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/visual-studio-mac/", "url": "https://devtoolforge.github.io/category/visual-studio-mac/", "name": "Visual Studio for Mac" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../../../../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../../../../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../../../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <header class="page-header section" data-section="first">
+        <div class="container">
+          <h1 class="page-header__title">Visual Studio for Mac</h1>
+          <p class="page-header__desc">Articles, guides, and how-tos filed under Visual Studio for Mac.</p>
+        </div>
+      </header>
+      <section class="section">
+        <div class="container">
+          <div class="posts-feed" data-layout-grid="columns">
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/updater-channels-troubleshooting-20-fixes-for-everyday-problems.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=updater%20channels%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Updater channels Troubleshooting: 20 Fixes for Everyday Problems">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/updater-channels-troubleshooting-20-fixes-for-everyday-problems.html" class="post-card__content-link">
+                <h2 class="post-card__title">Updater channels Troubleshooting: 20 Fixes for Everyday Problems</h2>
+                <p class="post-card__excerpt">Today's deep dive: Updater channels in Visual Studio for Mac — Beta, Alpha, and Stable update tracks in preferences. Stable is the safe channel for a retired product that no longer…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">September 1, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/keybinding-schemes-troubleshooting-8-fixes-for-everyday-problems.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=keybinding%20schemes%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Keybinding schemes Troubleshooting: 8 Fixes for Everyday Problems">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/keybinding-schemes-troubleshooting-8-fixes-for-everyday-problems.html" class="post-card__content-link">
+                <h2 class="post-card__title">Keybinding schemes Troubleshooting: 8 Fixes for Everyday Problems</h2>
+                <p class="post-card__excerpt">Today's deep dive: Keybinding schemes in Visual Studio for Mac — choosing Visual Studio, VS Code, or macOS-native keymaps. A familiar keymap shortens the switch to any replacement …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 31, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/entity-framework-tooling-the-missing-manual.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=entity%20framework%20tooling%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Entity framework tooling: The Missing Manual">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/entity-framework-tooling-the-missing-manual.html" class="post-card__content-link">
+                <h2 class="post-card__title">Entity framework tooling: The Missing Manual</h2>
+                <p class="post-card__excerpt">Today's deep dive: Entity framework tooling in Visual Studio for Mac — designers and migrations support for EF in the IDE. Migrations run from the IDE keep database changes in the …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 30, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/android-emulator-management-health-check-audit-and-improve-your-setup.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=android%20emulator%20management%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Android emulator management Health Check: Audit and Improve Your Setup">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/android-emulator-management-health-check-audit-and-improve-your-setup.html" class="post-card__content-link">
+                <h2 class="post-card__title">Android emulator management Health Check: Audit and Improve Your Setup</h2>
+                <p class="post-card__excerpt">Today's deep dive: Android emulator management in Visual Studio for Mac — creating and running Android virtual devices on the Mac. Reliable emulators prevent device-farm flakiness …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 29, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/getting-started-with-provisioning-and-certificates.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=provisioning%20and%20certificates%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Getting Started with Provisioning and certificates">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/getting-started-with-provisioning-and-certificates.html" class="post-card__content-link">
+                <h2 class="post-card__title">Getting Started with Provisioning and certificates</h2>
+                <p class="post-card__excerpt">Today's deep dive: Provisioning and certificates in Visual Studio for Mac — managing signing identities and provisioning for Apple platforms. Broken provisioning is the number-one …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 28, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/mastering-solution-migration-checklist-from-basics-to-advanced.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=solution%20migration%20checklist%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Mastering Solution migration checklist: From Basics to Advanced">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/mastering-solution-migration-checklist-from-basics-to-advanced.html" class="post-card__content-link">
+                <h2 class="post-card__title">Mastering Solution migration checklist: From Basics to Advanced</h2>
+                <p class="post-card__excerpt">Today's deep dive: Solution migration checklist in Visual Studio for Mac — a repeatable inventory of what moves where after retirement. A checklist turns a scary migration into a b…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 27, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/cloning-to-a-windows-machine-demystified-with-real-world-examples.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=cloning%20to%20a%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Cloning to a windows machine Demystified with Real-World Examples">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/cloning-to-a-windows-machine-demystified-with-real-world-examples.html" class="post-card__content-link">
+                <h2 class="post-card__title">Cloning to a windows machine Demystified with Real-World Examples</h2>
+                <p class="post-card__excerpt">Today's deep dive: Cloning to a windows machine in Visual Studio for Mac — using Visual Studio for Windows for projects that need it. Some project types were always Windows-first a…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 26, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/reporting-and-backing-up-settings-in-visual-studio-for-mac-setup-tips-an.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=reporting%20and%20backing%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Reporting and backing up settings in Visual Studio for Mac: Setup, Tips, and Workflows">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/reporting-and-backing-up-settings-in-visual-studio-for-mac-setup-tips-an.html" class="post-card__content-link">
+                <h2 class="post-card__title">Reporting and backing up settings in Visual Studio for Mac: Setup, Tips, and Workflows</h2>
+                <p class="post-card__excerpt">Today's deep dive: Reporting and backing up settings in Visual Studio for Mac — exporting preferences, snippets, and templates before uninstalling. Your tuned environment follows y…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 25, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/a-field-guide-to-licensing-after-retirement.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=licensing%20after%20retirement%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="A Field Guide to Licensing after retirement">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/a-field-guide-to-licensing-after-retirement.html" class="post-card__content-link">
+                <h2 class="post-card__title">A Field Guide to Licensing after retirement</h2>
+                <p class="post-card__excerpt">Today's deep dive: Licensing after retirement in Visual Studio for Mac — understanding what happens to licenses and activations. Expired activations can block an IDE you still keep…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 24, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/community-alternatives-for-beginners-12-things-to-master-first.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=community%20alternatives%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Community alternatives for Beginners: 12 Things to Master First">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/community-alternatives-for-beginners-12-things-to-master-first.html" class="post-card__content-link">
+                <h2 class="post-card__title">Community alternatives for Beginners: 12 Things to Master First</h2>
+                <p class="post-card__excerpt">Today's deep dive: Community alternatives in Visual Studio for Mac — open and free options beyond the official recommendations. Small teams can stay productive without new license …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 23, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/debugger-tips-on-mac-performance-tuning-practical-tips-that-work.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=debugger%20tips%20on%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Debugger tips on mac Performance Tuning: Practical Tips That Work">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/debugger-tips-on-mac-performance-tuning-practical-tips-that-work.html" class="post-card__content-link">
+                <h2 class="post-card__title">Debugger tips on mac Performance Tuning: Practical Tips That Work</h2>
+                <p class="post-card__excerpt">Today's deep dive: Debugger tips on mac in Visual Studio for Mac — using breakpoints, watches, and exception settings effectively. The debugging model matches other Visual Studio p…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 21, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/source-control-workflows-cheat-sheet-7-shortcuts-and-commands.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=source%20control%20workflows%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Source control workflows Cheat Sheet: 7 Shortcuts and Commands">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/source-control-workflows-cheat-sheet-7-shortcuts-and-commands.html" class="post-card__content-link">
+                <h2 class="post-card__title">Source control workflows Cheat Sheet: 7 Shortcuts and Commands</h2>
+                <p class="post-card__excerpt">Today's deep dive: Source control workflows in Visual Studio for Mac — feature branches, pull requests, and review flows from the IDE. Consistent workflows keep the migration invis…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 20, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/performance-on-apple-silicon-performance-tuning-practical-tips-that-work.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=performance%20on%20apple%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Performance on apple silicon Performance Tuning: Practical Tips That Work">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/performance-on-apple-silicon-performance-tuning-practical-tips-that-work.html" class="post-card__content-link">
+                <h2 class="post-card__title">Performance on apple silicon Performance Tuning: Practical Tips That Work</h2>
+                <p class="post-card__excerpt">Today's deep dive: Performance on apple silicon in Visual Studio for Mac — native ARM behavior, Rosetta issues, and expectations. Knowing what runs natively avoids misdiagnosing sl…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 19, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/visual-studio-for-mac-discontinued-what-happened-alternatives.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=macbook%20developer%20coding%20desk&w=474&h=274&c=7" loading="lazy"
+                     alt="Visual Studio for Mac Is Discontinued: What Happened and What to Use Now">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/visual-studio-for-mac-discontinued-what-happened-alternatives.html" class="post-card__content-link">
+                <h2 class="post-card__title">Visual Studio for Mac Is Discontinued: What Happened and What to Use Now</h2>
+                <p class="post-card__excerpt">Microsoft officially retired Visual Studio for Mac, leaving macOS developers who built with .NET and Xamarin searching for a new home. The retirement did not arrive without warning…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 19, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/10-clean-uninstall-best-practices-every-developer-should-know-with-real.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=clean%20uninstall%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="10 Clean uninstall Best Practices Every Developer Should Know (With Real Examples)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/10-clean-uninstall-best-practices-every-developer-should-know-with-real.html" class="post-card__content-link">
+                <h2 class="post-card__title">10 Clean uninstall Best Practices Every Developer Should Know (With Real Examples)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Clean uninstall in Visual Studio for Mac — removing the IDE and caches without breaking other tools. A clean uninstall frees gigabytes and prevents stale-config …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 18, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/documentation-and-archived-docs-cheat-sheet-8-shortcuts-and-commands-wit.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=documentation%20and%20archived%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Documentation and archived docs Cheat Sheet: 8 Shortcuts and Commands (With Real Examples)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/documentation-and-archived-docs-cheat-sheet-8-shortcuts-and-commands-wit.html" class="post-card__content-link">
+                <h2 class="post-card__title">Documentation and archived docs Cheat Sheet: 8 Shortcuts and Commands (With Real Examples)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Documentation and archived docs in Visual Studio for Mac — finding docs for a retired product. Old guides still matter when maintaining long-lived legacy project…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 17, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/common-team-migration-planning-mistakes-and-how-to-fix-them.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=team%20migration%20planning%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Common Team migration planning Mistakes and How to Fix Them">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/common-team-migration-planning-mistakes-and-how-to-fix-them.html" class="post-card__content-link">
+                <h2 class="post-card__title">Common Team migration planning Mistakes and How to Fix Them</h2>
+                <p class="post-card__excerpt">Today's deep dive: Team migration planning in Visual Studio for Mac — rolling the whole team to replacement tools safely. A staged plan avoids a productivity dip and conflicting se…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 16, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/how-to-set-up-keeping-legacy-solutions-compiling-step-by-step.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=keeping%20legacy%20solutions%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="How to set up Keeping legacy solutions compiling (Step-by-Step)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/how-to-set-up-keeping-legacy-solutions-compiling-step-by-step.html" class="post-card__content-link">
+                <h2 class="post-card__title">How to set up Keeping legacy solutions compiling (Step-by-Step)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Keeping legacy solutions compiling in Visual Studio for Mac — maintaining old Xamarin or .NET solutions without the IDE. Legacy apps still need security fixes fo…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 15, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/level-up-your-visual-studio-for-mac-skills-with-retirement-and-support-s.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=retirement%20and%20support%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Level Up Your Visual Studio for Mac Skills with Retirement and support status">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/level-up-your-visual-studio-for-mac-skills-with-retirement-and-support-s.html" class="post-card__content-link">
+                <h2 class="post-card__title">Level Up Your Visual Studio for Mac Skills with Retirement and support status</h2>
+                <p class="post-card__excerpt">Today's deep dive: Retirement and support status in Visual Studio for Mac — Microsoft's announcement that Visual Studio for Mac stopped receiving new features and support. Planning…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 14, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/advanced-migrating-to-visual-studio-code-techniques-for-2026-with-real-e.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=migrating%20to%20visual%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Advanced Migrating to visual studio code Techniques for 2026 (With Real Examples)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/advanced-migrating-to-visual-studio-code-techniques-for-2026-with-real-e.html" class="post-card__content-link">
+                <h2 class="post-card__title">Advanced Migrating to visual studio code Techniques for 2026 (With Real Examples)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Migrating to visual studio code in Visual Studio for Mac — moving daily .NET work to VS Code with the C# Dev Kit extension. It is the free, Microsoft-supported p…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 13, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/understanding-evaluating-jetbrains-rider-a-practical-deep-dive.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=evaluating%20jetbrains%20rider%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Understanding Evaluating jetbrains rider: A Practical Deep Dive">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/understanding-evaluating-jetbrains-rider-a-practical-deep-dive.html" class="post-card__content-link">
+                <h2 class="post-card__title">Understanding Evaluating jetbrains rider: A Practical Deep Dive</h2>
+                <p class="post-card__excerpt">Today's deep dive: Evaluating jetbrains rider in Visual Studio for Mac — the paid cross-platform IDE many macOS .NET teams adopt. It offers mature refactoring and debugger coverage…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 12, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/understanding-windows-vm-option-a-practical-deep-dive-with-real-examples.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=windows%20vm%20option%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Understanding Windows vm option: A Practical Deep Dive (With Real Examples)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/understanding-windows-vm-option-a-practical-deep-dive-with-real-examples.html" class="post-card__content-link">
+                <h2 class="post-card__title">Understanding Windows vm option: A Practical Deep Dive (With Real Examples)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Windows vm option in Visual Studio for Mac — running Visual Studio for Windows in a virtual machine on Apple silicon. Full Windows tooling stays available for th…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 10, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/the-solution-pad-setup-configuration-and-optimization.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=the%20solution%20pad%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="The solution pad: Setup, Configuration, and Optimization">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/the-solution-pad-setup-configuration-and-optimization.html" class="post-card__content-link">
+                <h2 class="post-card__title">The solution pad: Setup, Configuration, and Optimization</h2>
+                <p class="post-card__excerpt">Today's deep dive: The solution pad in Visual Studio for Mac — the project tree and item management pad in Visual Studio for Mac. It is the navigation center for solutions, files, …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 9, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../../../visual-studio-mac/level-up-your-visual-studio-for-mac-skills-with-nuget-package-management.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=nuget%20package%20management%20mac%20developer%20setup&w=474&h=274&c=7" loading="lazy"
+                     alt="Level Up Your Visual Studio for Mac Skills with Nuget package management on mac">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../../../visual-studio-mac/level-up-your-visual-studio-for-mac-skills-with-nuget-package-management.html" class="post-card__content-link">
+                <h2 class="post-card__title">Level Up Your Visual Studio for Mac Skills with Nuget package management on mac</h2>
+                <p class="post-card__excerpt">Today's deep dive: Nuget package management on mac in Visual Studio for Mac — adding and updating packages through the project options. Package drift across projects is caught by t…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../../../category/visual-studio-mac/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio for Mac</a>
+                <span class="post-card__meta post-card__meta--date">August 8, 2026</span>
+              </div>
+            </div>
+          </article>
+          </div>
+          <nav class="pagination" aria-label="Pages"><a href="../../../../category/visual-studio-mac/">1</a><a href="../../../../category/visual-studio-mac/page/2/">2</a><span class="current">3</span><a href="../../../../category/visual-studio-mac/page/4/">4</a></nav>
+        </div>
+      </section>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../../../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../../../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../../../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../../../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../../../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../../../../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

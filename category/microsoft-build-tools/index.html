@@ -1,62 +1,87 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" data-header-style="modern">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
   <title>Microsoft Build Tools — DevTools Journal</title>
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Microsoft developer tools, explained — DevTools Journal demo build. This demo is intentionally noindex/nofollow.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Articles, guides, and how-tos filed under Microsoft Build Tools.">
+  <link rel="canonical" href="https://devtoolforge.github.io/category/microsoft-build-tools/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Microsoft Build Tools — DevTools Journal">
+  <meta property="og:description" content="Articles, guides, and how-tos filed under Microsoft Build Tools.">
+  <meta property="og:url" content="https://devtoolforge.github.io/category/microsoft-build-tools/">
+  <meta property="og:image" content="../../assets/kutukdev/images/icon128.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Microsoft Build Tools — DevTools Journal">
+  <meta name="twitter:description" content="Articles, guides, and how-tos filed under Microsoft Build Tools.">
+  <meta name="twitter:image" content="../../assets/kutukdev/images/icon128.png">
     <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
-  <link rel="icon" href="../../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="shortcut icon" href="../../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
   <link rel="icon" href="../../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../../assets/kutukdev/images/icon128.png">
   <link rel="preload" as="style" href="../../assets/kutukdev/css/style.css">
   <link rel="stylesheet" href="../../assets/kutukdev/css/style.css">
   <link rel="preconnect" href="https://tse1.mm.bing.net">
-  <meta property="og:site_name" content="DevTools Journal">
-  <meta property="og:title" content="Microsoft Build Tools — DevTools Journal">
-  <meta property="og:type" content="article">
-  <meta name="generator" content="DevTools Journal demo generator">
-
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/microsoft-build-tools/", "url": "https://devtoolforge.github.io/category/microsoft-build-tools/", "name": "Microsoft Build Tools" } }] }
+  </script>
 </head>
 <body class="home-template">
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
   <div class="site" id="site">
-    <header class="site-header">
-      <div class="site-header__container">
-        <button class="site-header__hamburger" aria-label="Open menu"
-                aria-expanded="false" data-site-action-trigger="navigation">
-          <span></span><span></span><span></span>
-        </button>
-        <a class="site-header__logo" href="../../">DevTools Journal</a>
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
       </div>
-    </header>
-    <div class="site-actions" aria-hidden="true">
-      <div class="site-actions__backdrop"></div>
-      <nav class="site-actions__panel" aria-label="Main navigation">
-        <div class="site-actions__top">
-          <p class="site-actions__title">Menu</p>
-          <button class="site-actions__close" data-close-site-actions aria-label="Close menu">&times;</button>
-        </div>
-        <ul class="site-actions__menu">
-          <li><a href="../../">Home</a></li>
-      <li><a href="../../category/visual-studio/">Visual Studio</a></li>
-      <li><a href="../../category/visual-studio-code/">Visual Studio Code</a></li>
-      <li><a href="../../category/visual-studio-mac/">Visual Studio for Mac</a></li>
-      <li><a href="../../category/dotnet/">.NET</a></li>
-      <li><a href="../../category/dotnet-framework/">.NET Framework</a></li>
-      <li><a href="../../category/aspnet-core/">ASP.NET Core</a></li>
-      <li><a href="../../category/csharp/">C#</a></li>
-      <li><a href="../../category/fsharp/">F#</a></li>
-      <li><a href="../../category/typescript/">TypeScript</a></li>
-      <li><a href="../../category/microsoft-build-tools/">Microsoft Build Tools</a></li>
-      <li><a href="../../category/msbuild/">MSBuild</a></li>
-        </ul>
-      </nav>
     </div>
+  </div>
+</header>
     <main id="main" class="site-main">
-</div>
       <header class="page-header section" data-section="first">
         <div class="container">
           <h1 class="page-header__title">Microsoft Build Tools</h1>
@@ -67,7 +92,67 @@
         <div class="container">
           <div class="posts-feed" data-layout-grid="columns">
           <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" >
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/what-build-tools-are-migration-guide-move-without-breaking-anything.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=what%20build%20tools%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="What build tools are Migration Guide: Move Without Breaking Anything">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/what-build-tools-are-migration-guide-move-without-breaking-anything.html" class="post-card__content-link">
+                <h2 class="post-card__title">What build tools are Migration Guide: Move Without Breaking Anything</h2>
+                <p class="post-card__excerpt">Today's deep dive: What build tools are in Microsoft Build Tools — the headless installer delivering compilers and MSBuild without Visual Studio. Build servers get full build capab…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 24, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/scaling-installing-without-visual-studio-for-large-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=installing%20without%20visual%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Scaling Installing without visual studio for Large Projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/scaling-installing-without-visual-studio-for-large-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">Scaling Installing without visual studio for Large Projects</h2>
+                <p class="post-card__excerpt">Today's deep dive: Installing without visual studio in Microsoft Build Tools — the standalone installer flow. Clean machines become build-capable in one scripted command. Teams tha…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 22, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/workload-and-component-ids-essentials-12-tips-that-save-hours-with-real.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=workload%20and%20component%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Workload and component ids Essentials: 12 Tips That Save Hours (With Real Examples)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/workload-and-component-ids-essentials-12-tips-that-save-hours-with-real.html" class="post-card__content-link">
+                <h2 class="post-card__title">Workload and component ids Essentials: 12 Tips That Save Hours (With Real Examples)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Workload and component ids in Microsoft Build Tools — the ids that select exactly what gets installed. Precise ids keep agents lean and builds reproducible. Team…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 21, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
             <a href="../../microsoft-build-tools/visual-studio-build-tools-cicd-agents-without-full-ide.html" class="post-card__media" tabindex="-1">
               <picture class="post-card__figure">
                 <img class="post-card__image" width="16" height="9"
@@ -78,7 +163,7 @@
             <div class="post-card__content">
               <a href="../../microsoft-build-tools/visual-studio-build-tools-cicd-agents-without-full-ide.html" class="post-card__content-link">
                 <h2 class="post-card__title">Visual Studio Build Tools: CI/CD Build Agents Without the Full IDE</h2>
-                <p class="post-card__excerpt">You do not need a 30 GB Visual Studio installation on every build agent. The Visual Studio Build Tools deliver the compilers, MSBuild, SDKs, and workload components your pipelines &hellip;</p>
+                <p class="post-card__excerpt">You do not need a 30 GB Visual Studio installation on every build agent. The Visual Studio Build Tools deliver the compilers, MSBuild, SDKs, and workload components your pipelines …</p>
               </a>
               <div class="post-card__footer">
                 <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
@@ -86,12 +171,426 @@
               </div>
             </div>
           </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/20-c-build-tools-for-node-and-python-shortcuts-you-will-use-every-day.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=c%2B%2B%20build%20tools%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="20 C++ build tools for node and python Shortcuts You Will Use Every Day">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/20-c-build-tools-for-node-and-python-shortcuts-you-will-use-every-day.html" class="post-card__content-link">
+                <h2 class="post-card__title">20 C++ build tools for node and python Shortcuts You Will Use Every Day</h2>
+                <p class="post-card__excerpt">Today's deep dive: C++ build tools for node and python in Microsoft Build Tools — the native toolchain that node-gyp and pip builds require. Npm install and pip install stop failin…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 20, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/msbuild-included-pitfalls-what-the-docs-don-t-tell-you.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=msbuild%20included%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Msbuild included Pitfalls: What the Docs Don't Tell You">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/msbuild-included-pitfalls-what-the-docs-don-t-tell-you.html" class="post-card__content-link">
+                <h2 class="post-card__title">Msbuild included Pitfalls: What the Docs Don't Tell You</h2>
+                <p class="post-card__excerpt">Today's deep dive: Msbuild included in Microsoft Build Tools — the build engine shipped inside Build Tools. Solutions build identically to IDE machines on CI agents. Teams that tak…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 19, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/ci-agents-setup-migration-guide-move-without-breaking-anything.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=ci%20agents%20setup%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Ci agents setup Migration Guide: Move Without Breaking Anything">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/ci-agents-setup-migration-guide-move-without-breaking-anything.html" class="post-card__content-link">
+                <h2 class="post-card__title">Ci agents setup Migration Guide: Move Without Breaking Anything</h2>
+                <p class="post-card__excerpt">Today's deep dive: Ci agents setup in Microsoft Build Tools — preparing Azure DevOps and GitHub Actions runners. Self-hosted agents become reproducible, disposable build nodes. Tea…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 18, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/silent-install-commands-in-microsoft-build-tools-setup-tips-and-workflow.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=silent%20install%20commands%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Silent install commands in Microsoft Build Tools: Setup, Tips, and Workflows (With Real Examples)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/silent-install-commands-in-microsoft-build-tools-setup-tips-and-workflow.html" class="post-card__content-link">
+                <h2 class="post-card__title">Silent install commands in Microsoft Build Tools: Setup, Tips, and Workflows (With Real Examples)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Silent install commands in Microsoft Build Tools — unattended install with --quiet --wait and --norestart. Provisioning joins your infrastructure-as-code pipelin…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 17, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/modifying-installed-workloads-migration-guide-move-without-breaking-anyt.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=modifying%20installed%20workloads%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Modifying installed workloads Migration Guide: Move Without Breaking Anything">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/modifying-installed-workloads-migration-guide-move-without-breaking-anyt.html" class="post-card__content-link">
+                <h2 class="post-card__title">Modifying installed workloads Migration Guide: Move Without Breaking Anything</h2>
+                <p class="post-card__excerpt">Today's deep dive: Modifying installed workloads in Microsoft Build Tools — adding or removing components after install. Agents evolve with the projects they serve without full reb…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 16, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/offline-layout-installation-for-students-a-practical-introduction.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=offline%20layout%20installation%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Offline layout installation for Students: A Practical Introduction">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/offline-layout-installation-for-students-a-practical-introduction.html" class="post-card__content-link">
+                <h2 class="post-card__title">Offline layout installation for Students: A Practical Introduction</h2>
+                <p class="post-card__excerpt">Today's deep dive: Offline layout installation in Microsoft Build Tools — downloading packages for air-gapped networks. Secure networks still get identical, reproducible build capa…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 15, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/licensing-a-complete-guide-for-2026.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=licensing%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Licensing: A Complete Guide for 2026">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/licensing-a-complete-guide-for-2026.html" class="post-card__content-link">
+                <h2 class="post-card__title">Licensing: A Complete Guide for 2026</h2>
+                <p class="post-card__excerpt">Today's deep dive: Licensing in Microsoft Build Tools — Build Tools are free for dev and CI usage. No Visual Studio license is consumed on build agents. Teams that take it seriousl…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 14, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/advanced-side-by-side-versions-techniques-for-2026-with-real-examples.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=side-by-side%20versions%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Advanced Side-by-side versions Techniques for 2026 (With Real Examples)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/advanced-side-by-side-versions-techniques-for-2026-with-real-examples.html" class="post-card__content-link">
+                <h2 class="post-card__title">Advanced Side-by-side versions Techniques for 2026 (With Real Examples)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Side-by-side versions in Microsoft Build Tools — multiple Build Tools versions coexisting. Old and new solutions keep their exact toolchains. Teams that take it …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 13, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/a-field-guide-to-vc-tools-versioning.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=vc%20tools%20versioning%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="A Field Guide to Vc tools versioning">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/a-field-guide-to-vc-tools-versioning.html" class="post-card__content-link">
+                <h2 class="post-card__title">A Field Guide to Vc tools versioning</h2>
+                <p class="post-card__excerpt">Today's deep dive: Vc tools versioning in Microsoft Build Tools — the MSVC toolset versioning (14.4x) and side-by-side toolsets. Legacy C++ projects build with the exact compiler t…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 11, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/windows-sdk-components-from-first-steps-to-production.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=windows%20sdk%20components%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Windows sdk components: From First Steps to Production">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/windows-sdk-components-from-first-steps-to-production.html" class="post-card__content-link">
+                <h2 class="post-card__title">Windows sdk components: From First Steps to Production</h2>
+                <p class="post-card__excerpt">Today's deep dive: Windows sdk components in Microsoft Build Tools — SDK headers and libs that C++ and platform builds need. Matching SDK versions prevent cryptic missing-header fa…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 10, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/dotnet-sdk-components-for-beginners-5-things-to-master-first.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=dotnet%20sdk%20components%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Dotnet sdk components for Beginners: 5 Things to Master First">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/dotnet-sdk-components-for-beginners-5-things-to-master-first.html" class="post-card__content-link">
+                <h2 class="post-card__title">Dotnet sdk components for Beginners: 5 Things to Master First</h2>
+                <p class="post-card__excerpt">Today's deep dive: Dotnet sdk components in Microsoft Build Tools — the .NET SDK workload for building managed projects. One agent builds both native and managed solutions. Teams t…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 9, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/how-to-learn-containerized-build-agents-step-by-step.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=containerized%20build%20agents%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="How to learn Containerized build agents (Step-by-Step)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/how-to-learn-containerized-build-agents-step-by-step.html" class="post-card__content-link">
+                <h2 class="post-card__title">How to learn Containerized build agents (Step-by-Step)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Containerized build agents in Microsoft Build Tools — official mcr.microsoft.com images with Build Tools. Ephemeral, version-pinned builders with zero machine dr…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 8, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/7-nuget-caching-on-agents-best-practices-every-developer-should-know.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=nuget%20caching%20on%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="7 Nuget caching on agents Best Practices Every Developer Should Know">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/7-nuget-caching-on-agents-best-practices-every-developer-should-know.html" class="post-card__content-link">
+                <h2 class="post-card__title">7 Nuget caching on agents Best Practices Every Developer Should Know</h2>
+                <p class="post-card__excerpt">Today's deep dive: Nuget caching on agents in Microsoft Build Tools — restoring packages fast and safely. Restore time dominates build time when the cache is cold. Teams that take …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 7, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/disk-space-management-security-and-reliability-best-practices.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=disk%20space%20management%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Disk space management Security and Reliability Best Practices">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/disk-space-management-security-and-reliability-best-practices.html" class="post-card__content-link">
+                <h2 class="post-card__title">Disk space management Security and Reliability Best Practices</h2>
+                <p class="post-card__excerpt">Today's deep dive: Disk space management in Microsoft Build Tools — keeping agent disks healthy across versions. Full disks cause mid-build failures that look random. Teams that ta…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 6, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/the-smart-way-to-master-troubleshooting-missing-components.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=troubleshooting%20missing%20components%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="The Smart Way to master Troubleshooting missing components">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/the-smart-way-to-master-troubleshooting-missing-components.html" class="post-card__content-link">
+                <h2 class="post-card__title">The Smart Way to master Troubleshooting missing components</h2>
+                <p class="post-card__excerpt">Today's deep dive: Troubleshooting missing components in Microsoft Build Tools — diagnosing 'tool not found' and missing-targets errors. Most failures map to one missing component …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 5, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/10-vswhere-detection-best-practices-every-developer-should-know.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=vswhere%20detection%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="10 Vswhere detection Best Practices Every Developer Should Know">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/10-vswhere-detection-best-practices-every-developer-should-know.html" class="post-card__content-link">
+                <h2 class="post-card__title">10 Vswhere detection Best Practices Every Developer Should Know</h2>
+                <p class="post-card__excerpt">Today's deep dive: Vswhere detection in Microsoft Build Tools — locating VS and Build Tools instances programmatically. Scripts find the right toolchain without hardcoded paths. Te…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 4, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/15-winget-and-chocolatey-installs-shortcuts-you-will-use-every-day.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=winget%20and%20chocolatey%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="15 Winget and chocolatey installs Shortcuts You Will Use Every Day">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/15-winget-and-chocolatey-installs-shortcuts-you-will-use-every-day.html" class="post-card__content-link">
+                <h2 class="post-card__title">15 Winget and chocolatey installs Shortcuts You Will Use Every Day</h2>
+                <p class="post-card__excerpt">Today's deep dive: Winget and chocolatey installs in Microsoft Build Tools — package-manager based provisioning. Agents provision from a single declarative command. Teams that take…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 3, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/version-pinning-migration-guide-move-without-breaking-anything.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=version%20pinning%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Version pinning Migration Guide: Move Without Breaking Anything">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/version-pinning-migration-guide-move-without-breaking-anything.html" class="post-card__content-link">
+                <h2 class="post-card__title">Version pinning Migration Guide: Move Without Breaking Anything</h2>
+                <p class="post-card__excerpt">Today's deep dive: Version pinning in Microsoft Build Tools — holding toolchain versions fixed across time. Reproducible builds make regressions easy to bisect. Teams that take it …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">October 2, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/7-multi-agent-pipelines-best-practices-every-developer-should-know.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=multi-agent%20pipelines%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="7 Multi-agent pipelines Best Practices Every Developer Should Know">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/7-multi-agent-pipelines-best-practices-every-developer-should-know.html" class="post-card__content-link">
+                <h2 class="post-card__title">7 Multi-agent pipelines Best Practices Every Developer Should Know</h2>
+                <p class="post-card__excerpt">Today's deep dive: Multi-agent pipelines in Microsoft Build Tools — scaling builds across a pool of agents. Long queues disappear while agents stay identical. Teams that take it se…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">September 30, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../microsoft-build-tools/github-actions-runners-security-and-reliability-best-practices.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=github%20actions%20runners%20build%20automation%20server&w=474&h=274&c=7" loading="lazy"
+                     alt="Github actions runners Security and Reliability Best Practices">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../microsoft-build-tools/github-actions-runners-security-and-reliability-best-practices.html" class="post-card__content-link">
+                <h2 class="post-card__title">Github actions runners Security and Reliability Best Practices</h2>
+                <p class="post-card__excerpt">Today's deep dive: Github actions runners in Microsoft Build Tools — using Build Tools on self-hosted Windows runners. Private repos and licensed toolchains build on your own hardw…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/microsoft-build-tools/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Microsoft Build Tools</a>
+                <span class="post-card__meta post-card__meta--date">September 29, 2026</span>
+              </div>
+            </div>
+          </article>
           </div>
+          <nav class="pagination" aria-label="Pages"><span class="current">1</span><a href="../../category/microsoft-build-tools/page/2/">2</a><a href="../../category/microsoft-build-tools/page/3/">3</a><a href="../../category/microsoft-build-tools/page/4/">4</a></nav>
         </div>
       </section>
     </main>
-<footer class="site-footer"><nav class="site-footer__nav"><a href="../../">Home</a><a href="../../page/dmca.html">DMCA</a><a href="../../page/contact.html">Contact</a><a href="../../page/privacy-policy.html">Privacy Policy</a><a href="../../page/copyright.html">Copyright</a></nav><div class="site-footer__copyright">Copyright &copy; 2026 DevTools Journal</div></footer>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
   </div>
-  <script src="../../assets/kutukdev/js/main.js"></script>
+</footer>
+  </div>
+  <script defer src="../../assets/kutukdev/js/main.js"></script>
 </body>
 </html>

@@ -1,62 +1,87 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" data-header-style="modern">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
   <title>TypeScript — DevTools Journal</title>
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Microsoft developer tools, explained — DevTools Journal demo build. This demo is intentionally noindex/nofollow.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Articles, guides, and how-tos filed under TypeScript.">
+  <link rel="canonical" href="https://devtoolforge.github.io/category/typescript/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="TypeScript — DevTools Journal">
+  <meta property="og:description" content="Articles, guides, and how-tos filed under TypeScript.">
+  <meta property="og:url" content="https://devtoolforge.github.io/category/typescript/">
+  <meta property="og:image" content="../../assets/kutukdev/images/icon128.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TypeScript — DevTools Journal">
+  <meta name="twitter:description" content="Articles, guides, and how-tos filed under TypeScript.">
+  <meta name="twitter:image" content="../../assets/kutukdev/images/icon128.png">
     <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
-  <link rel="icon" href="../../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="shortcut icon" href="../../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
   <link rel="icon" href="../../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../../assets/kutukdev/images/icon128.png">
   <link rel="preload" as="style" href="../../assets/kutukdev/css/style.css">
   <link rel="stylesheet" href="../../assets/kutukdev/css/style.css">
   <link rel="preconnect" href="https://tse1.mm.bing.net">
-  <meta property="og:site_name" content="DevTools Journal">
-  <meta property="og:title" content="TypeScript — DevTools Journal">
-  <meta property="og:type" content="article">
-  <meta name="generator" content="DevTools Journal demo generator">
-
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/typescript/", "url": "https://devtoolforge.github.io/category/typescript/", "name": "TypeScript" } }] }
+  </script>
 </head>
 <body class="home-template">
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
   <div class="site" id="site">
-    <header class="site-header">
-      <div class="site-header__container">
-        <button class="site-header__hamburger" aria-label="Open menu"
-                aria-expanded="false" data-site-action-trigger="navigation">
-          <span></span><span></span><span></span>
-        </button>
-        <a class="site-header__logo" href="../../">DevTools Journal</a>
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
       </div>
-    </header>
-    <div class="site-actions" aria-hidden="true">
-      <div class="site-actions__backdrop"></div>
-      <nav class="site-actions__panel" aria-label="Main navigation">
-        <div class="site-actions__top">
-          <p class="site-actions__title">Menu</p>
-          <button class="site-actions__close" data-close-site-actions aria-label="Close menu">&times;</button>
-        </div>
-        <ul class="site-actions__menu">
-          <li><a href="../../">Home</a></li>
-      <li><a href="../../category/visual-studio/">Visual Studio</a></li>
-      <li><a href="../../category/visual-studio-code/">Visual Studio Code</a></li>
-      <li><a href="../../category/visual-studio-mac/">Visual Studio for Mac</a></li>
-      <li><a href="../../category/dotnet/">.NET</a></li>
-      <li><a href="../../category/dotnet-framework/">.NET Framework</a></li>
-      <li><a href="../../category/aspnet-core/">ASP.NET Core</a></li>
-      <li><a href="../../category/csharp/">C#</a></li>
-      <li><a href="../../category/fsharp/">F#</a></li>
-      <li><a href="../../category/typescript/">TypeScript</a></li>
-      <li><a href="../../category/microsoft-build-tools/">Microsoft Build Tools</a></li>
-      <li><a href="../../category/msbuild/">MSBuild</a></li>
-        </ul>
-      </nav>
     </div>
+  </div>
+</header>
     <main id="main" class="site-main">
-</div>
       <header class="page-header section" data-section="first">
         <div class="container">
           <h1 class="page-header__title">TypeScript</h1>
@@ -67,27 +92,47 @@
         <div class="container">
           <div class="posts-feed" data-layout-grid="columns">
           <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" >
-            <a href="../../typescript/typescript-6-0-road-to-typescript-7-what-developers-should-know.html" class="post-card__media" tabindex="-1">
+                   data-has-featured-image="true">
+            <a href="../../typescript/tsconfig-json-deep-dive-vs-declaration-files-which-should-you-use.html" class="post-card__media" tabindex="-1">
               <picture class="post-card__figure">
                 <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=typescript%20javascript%20code%20screen&w=474&h=274&c=7" loading="lazy"
-                     alt="TypeScript 6.0 and the Road to TypeScript 7: What Developers Should Know">
+                     src="https://tse1.mm.bing.net/th?q=tsconfig.json%20deep%20dive%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Tsconfig.json deep dive vs Declaration files: Which Should You Use?">
               </picture>
             </a>
             <div class="post-card__content">
-              <a href="../../typescript/typescript-6-0-road-to-typescript-7-what-developers-should-know.html" class="post-card__content-link">
-                <h2 class="post-card__title">TypeScript 6.0 and the Road to TypeScript 7: What Developers Should Know</h2>
-                <p class="post-card__excerpt">TypeScript is in the middle of the biggest platform shift in its history: TypeScript 6.0 is the final release built on the original JavaScript codebase, while TypeScript 7.0 comple&hellip;</p>
+              <a href="../../typescript/tsconfig-json-deep-dive-vs-declaration-files-which-should-you-use.html" class="post-card__content-link">
+                <h2 class="post-card__title">Tsconfig.json deep dive vs Declaration files: Which Should You Use?</h2>
+                <p class="post-card__excerpt">Today's deep dive: Tsconfig.json deep dive in TypeScript — the compiler options file shaping every build. Strict, correctly scoped configs prevent whole bug classes. Teams that tak…</p>
               </a>
               <div class="post-card__footer">
                 <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
-                <span class="post-card__meta post-card__meta--date">October 16, 2026</span>
+                <span class="post-card__meta post-card__meta--date">October 24, 2026</span>
               </div>
             </div>
           </article>
           <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" data-publish-offset="6300000">
+                   data-has-featured-image="true">
+            <a href="../../typescript/mastering-strict-mode-flags-from-basics-to-advanced.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=strict%20mode%20flags%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Mastering Strict mode flags: From Basics to Advanced">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/mastering-strict-mode-flags-from-basics-to-advanced.html" class="post-card__content-link">
+                <h2 class="post-card__title">Mastering Strict mode flags: From Basics to Advanced</h2>
+                <p class="post-card__excerpt">Today's deep dive: Strict mode flags in TypeScript — noImplicitAny, strictNullChecks, and friends. The strict family catches the majority of real-world type bugs. Teams that take i…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 23, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
             <a href="../../typescript/mastering-tsconfig-json-complete-typescript-configuration-guide.html" class="post-card__media" tabindex="-1">
               <picture class="post-card__figure">
                 <img class="post-card__image" width="16" height="9"
@@ -98,20 +143,454 @@
             <div class="post-card__content">
               <a href="../../typescript/mastering-tsconfig-json-complete-typescript-configuration-guide.html" class="post-card__content-link">
                 <h2 class="post-card__title">Mastering tsconfig.json: A Complete TypeScript Configuration Guide</h2>
-                <p class="post-card__excerpt">tsconfig.json is the control panel of every TypeScript project, yet most teams copy it from an old repository and never revisit it. The difference between a hand-me-down config and&hellip;</p>
+                <p class="post-card__excerpt">tsconfig.json is the control panel of every TypeScript project, yet most teams copy it from an old repository and never revisit it. The difference between a hand-me-down config and…</p>
               </a>
               <div class="post-card__footer">
                 <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
-                <span class="post-card__meta post-card__meta--date" data-dynamic-date></span>
+                <span class="post-card__meta post-card__meta--date">October 22, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/module-resolution-setup-configuration-and-optimization.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=module%20resolution%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Module resolution: Setup, Configuration, and Optimization">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/module-resolution-setup-configuration-and-optimization.html" class="post-card__content-link">
+                <h2 class="post-card__title">Module resolution: Setup, Configuration, and Optimization</h2>
+                <p class="post-card__excerpt">Today's deep dive: Module resolution in TypeScript — how imports map to files: node16, bundler, classic. Imports resolve consistently between editor, build, and bundler. Teams that…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 21, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/declaration-files-security-and-reliability-best-practices.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=declaration%20files%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Declaration files Security and Reliability Best Practices">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/declaration-files-security-and-reliability-best-practices.html" class="post-card__content-link">
+                <h2 class="post-card__title">Declaration files Security and Reliability Best Practices</h2>
+                <p class="post-card__excerpt">Today's deep dive: Declaration files in TypeScript — .d.ts ambient types describing untyped JS. Third-party JS becomes typed without touching its source. Teams that take it serious…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 20, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/definitelytyped-from-first-steps-to-production.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=definitelytyped%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Definitelytyped: From First Steps to Production">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/definitelytyped-from-first-steps-to-production.html" class="post-card__content-link">
+                <h2 class="post-card__title">Definitelytyped: From First Steps to Production</h2>
+                <p class="post-card__excerpt">Today's deep dive: Definitelytyped in TypeScript — the community @types repository. Thousands of libraries gain types via npm install -D @types/x. Teams that take it seriously spen…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 19, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/generics-cheat-sheet-7-shortcuts-and-commands.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=generics%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Generics Cheat Sheet: 7 Shortcuts and Commands">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/generics-cheat-sheet-7-shortcuts-and-commands.html" class="post-card__content-link">
+                <h2 class="post-card__title">Generics Cheat Sheet: 7 Shortcuts and Commands</h2>
+                <p class="post-card__excerpt">Today's deep dive: Generics in TypeScript — type parameters that keep functions and classes general. One implementation serves many types with full inference. Teams that take it se…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 18, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/level-up-your-typescript-skills-with-conditional-types.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=conditional%20types%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Level Up Your TypeScript Skills with Conditional types">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/level-up-your-typescript-skills-with-conditional-types.html" class="post-card__content-link">
+                <h2 class="post-card__title">Level Up Your TypeScript Skills with Conditional types</h2>
+                <p class="post-card__excerpt">Today's deep dive: Conditional types in TypeScript — types that branch on other types. Complex transformations stay DRY and compile-time checked. Teams that take it seriously spend…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 17, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/common-mapped-types-mistakes-and-how-to-fix-them.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=mapped%20types%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Common Mapped types Mistakes and How to Fix Them">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/common-mapped-types-mistakes-and-how-to-fix-them.html" class="post-card__content-link">
+                <h2 class="post-card__title">Common Mapped types Mistakes and How to Fix Them</h2>
+                <p class="post-card__excerpt">Today's deep dive: Mapped types in TypeScript — types generated by transforming each key of another type. Variants like readonly or optional versions stay in sync automatically. Te…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 16, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/typescript-6-0-road-to-typescript-7-what-developers-should-know.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=typescript%20javascript%20code%20screen&w=474&h=274&c=7" loading="lazy"
+                     alt="TypeScript 6.0 and the Road to TypeScript 7: What Developers Should Know">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/typescript-6-0-road-to-typescript-7-what-developers-should-know.html" class="post-card__content-link">
+                <h2 class="post-card__title">TypeScript 6.0 and the Road to TypeScript 7: What Developers Should Know</h2>
+                <p class="post-card__excerpt">TypeScript is in the middle of the biggest platform shift in its history: TypeScript 6.0 is the final release built on the original JavaScript codebase, while TypeScript 7.0 comple…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 16, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/7-template-literal-types-best-practices-every-developer-should-know.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=template%20literal%20types%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="7 Template literal types Best Practices Every Developer Should Know">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/7-template-literal-types-best-practices-every-developer-should-know.html" class="post-card__content-link">
+                <h2 class="post-card__title">7 Template literal types Best Practices Every Developer Should Know</h2>
+                <p class="post-card__excerpt">Today's deep dive: Template literal types in TypeScript — string types built from patterns. Route, event, and CSS names become compiler-checked. Teams that take it seriously spend …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 15, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/advanced-utility-types-techniques-for-2026.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=utility%20types%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Advanced Utility types Techniques for 2026">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/advanced-utility-types-techniques-for-2026.html" class="post-card__content-link">
+                <h2 class="post-card__title">Advanced Utility types Techniques for 2026</h2>
+                <p class="post-card__excerpt">Today's deep dive: Utility types in TypeScript — Partial, Pick, Omit, Record, ReturnType and friends. Common transformations arrive built-in, no custom code. Teams that take it ser…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 14, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/type-narrowing-for-beginners-20-things-to-master-first.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=type%20narrowing%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Type narrowing for Beginners: 20 Things to Master First">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/type-narrowing-for-beginners-20-things-to-master-first.html" class="post-card__content-link">
+                <h2 class="post-card__title">Type narrowing for Beginners: 20 Things to Master First</h2>
+                <p class="post-card__excerpt">Today's deep dive: Type narrowing in TypeScript — control-flow based type refinement. Unions shrink to the right member before you use it. Teams that take it seriously spend less t…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 13, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/level-up-your-typescript-skills-with-discriminated-unions.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=discriminated%20unions%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Level Up Your TypeScript Skills with Discriminated unions">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/level-up-your-typescript-skills-with-discriminated-unions.html" class="post-card__content-link">
+                <h2 class="post-card__title">Level Up Your TypeScript Skills with Discriminated unions</h2>
+                <p class="post-card__excerpt">Today's deep dive: Discriminated unions in TypeScript — unions with a shared literal kind field. State machines and results become self-documenting and exhaustive. Teams that take …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 12, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/unknown-vs-any-security-and-reliability-best-practices.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=unknown%20vs%20any%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Unknown vs any Security and Reliability Best Practices">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/unknown-vs-any-security-and-reliability-best-practices.html" class="post-card__content-link">
+                <h2 class="post-card__title">Unknown vs any Security and Reliability Best Practices</h2>
+                <p class="post-card__excerpt">Today's deep dive: Unknown vs any in TypeScript — safe top type vs disabling all checks. Unknown forces you to validate; any silently spreads unsafe types. Teams that take it serio…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 10, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/the-satisfies-operator-for-beginners-20-things-to-master-first.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=the%20satisfies%20operator%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="The satisfies operator for Beginners: 20 Things to Master First">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/the-satisfies-operator-for-beginners-20-things-to-master-first.html" class="post-card__content-link">
+                <h2 class="post-card__title">The satisfies operator for Beginners: 20 Things to Master First</h2>
+                <p class="post-card__excerpt">Today's deep dive: The satisfies operator in TypeScript — validating against a type while keeping literal inference. Config objects stay checked but keep precise key types. Teams t…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 9, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/enums-vs-const-objects-security-and-reliability-best-practices.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=enums%20vs%20const%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Enums vs const objects Security and Reliability Best Practices">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/enums-vs-const-objects-security-and-reliability-best-practices.html" class="post-card__content-link">
+                <h2 class="post-card__title">Enums vs const objects Security and Reliability Best Practices</h2>
+                <p class="post-card__excerpt">Today's deep dive: Enums vs const objects in TypeScript — runtime enum objects vs literal union types. Unions stay erased and tree-shakable; enums carry runtime weight. Teams that …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 8, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/debugging-namespaces-vs-modules-a-practical-approach.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=namespaces%20vs%20modules%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Debugging Namespaces vs modules: A Practical Approach">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/debugging-namespaces-vs-modules-a-practical-approach.html" class="post-card__content-link">
+                <h2 class="post-card__title">Debugging Namespaces vs modules: A Practical Approach</h2>
+                <p class="post-card__excerpt">Today's deep dive: Namespaces vs modules in TypeScript — legacy ambient namespaces vs ES modules. Modern code uses modules; namespaces remain for ambient d.ts. Teams that take it s…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 7, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/10-decorators-best-practices-every-developer-should-know.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=decorators%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="10 Decorators Best Practices Every Developer Should Know">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/10-decorators-best-practices-every-developer-should-know.html" class="post-card__content-link">
+                <h2 class="post-card__title">10 Decorators Best Practices Every Developer Should Know</h2>
+                <p class="post-card__excerpt">Today's deep dive: Decorators in TypeScript — annotations for classes and members (TC39 + legacy). Frameworks (Nest, TypeORM) build DI and ORM behavior on them. Teams that take it …</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 6, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/5-ways-to-optimize-runtime-validation-with-zod-faster.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=runtime%20validation%20with%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="5 Ways to optimize Runtime validation with zod Faster">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/5-ways-to-optimize-runtime-validation-with-zod-faster.html" class="post-card__content-link">
+                <h2 class="post-card__title">5 Ways to optimize Runtime validation with zod Faster</h2>
+                <p class="post-card__excerpt">Today's deep dive: Runtime validation with zod in TypeScript — schema parsing that produces typed values. External data (API, forms, env) gets checked before entering the app. Team…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 5, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/common-ts-node-tsx-and-runners-mistakes-and-how-to-fix-them.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=ts-node%20tsx%20and%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Common Ts-node tsx and runners Mistakes and How to Fix Them">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/common-ts-node-tsx-and-runners-mistakes-and-how-to-fix-them.html" class="post-card__content-link">
+                <h2 class="post-card__title">Common Ts-node tsx and runners Mistakes and How to Fix Them</h2>
+                <p class="post-card__excerpt">Today's deep dive: Ts-node tsx and runners in TypeScript — executing TS directly in dev. No compile step in the inner loop. Teams that take it seriously spend less time on avoidabl…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 4, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/esbuild-and-swc-builds-the-missing-manual.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=esbuild%20and%20swc%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Esbuild and swc builds: The Missing Manual">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/esbuild-and-swc-builds-the-missing-manual.html" class="post-card__content-link">
+                <h2 class="post-card__title">Esbuild and swc builds: The Missing Manual</h2>
+                <p class="post-card__excerpt">Today's deep dive: Esbuild and swc builds in TypeScript — fast bundlers/transpilers that strip types. Build times drop from minutes to milliseconds. Teams that take it seriously sp…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 3, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/project-references-anatomy-how-the-pieces-fit-together.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=project%20references%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="Project references Anatomy: How the Pieces Fit Together">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/project-references-anatomy-how-the-pieces-fit-together.html" class="post-card__content-link">
+                <h2 class="post-card__title">Project references Anatomy: How the Pieces Fit Together</h2>
+                <p class="post-card__excerpt">Today's deep dive: Project references in TypeScript — splitting builds into composable sub-projects. Incremental builds touch only changed parts of a monorepo. Teams that take it s…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 2, 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical"
+                   data-has-featured-image="true">
+            <a href="../../typescript/how-to-automate-incremental-builds-step-by-step.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=incremental%20builds%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+                     alt="How to automate Incremental builds (Step-by-Step)">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../typescript/how-to-automate-incremental-builds-step-by-step.html" class="post-card__content-link">
+                <h2 class="post-card__title">How to automate Incremental builds (Step-by-Step)</h2>
+                <p class="post-card__excerpt">Today's deep dive: Incremental builds in TypeScript — tsbuildinfo-based caching of compiler output. Re-checks on big repos shrink from minutes to seconds. Teams that take it seriou…</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/typescript/" class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</a>
+                <span class="post-card__meta post-card__meta--date">October 1, 2026</span>
               </div>
             </div>
           </article>
           </div>
+          <nav class="pagination" aria-label="Pages"><span class="current">1</span><a href="../../category/typescript/page/2/">2</a><a href="../../category/typescript/page/3/">3</a><span>&hellip;</span><a href="../../category/typescript/page/5/">5</a></nav>
         </div>
       </section>
     </main>
-<footer class="site-footer"><nav class="site-footer__nav"><a href="../../">Home</a><a href="../../page/dmca.html">DMCA</a><a href="../../page/contact.html">Contact</a><a href="../../page/privacy-policy.html">Privacy Policy</a><a href="../../page/copyright.html">Copyright</a></nav><div class="site-footer__copyright">Copyright &copy; 2026 DevTools Journal</div></footer>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
   </div>
-  <script src="../../assets/kutukdev/js/main.js"></script>
+</footer>
+  </div>
+  <script defer src="../../assets/kutukdev/js/main.js"></script>
 </body>
 </html>

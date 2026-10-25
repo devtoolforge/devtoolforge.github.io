@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>Nullable reference types Performance Tuning: Practical Tips That Work</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Today's deep dive: Nullable reference types in C# — compile-time null tracking with annotations and warnings. Null reference exceptions turn into red">
+  <link rel="canonical" href="https://devtoolforge.github.io/csharp/nullable-reference-types-performance-tuning-practical-tips-that-work.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-08-01T21:00:00+06:00">
+  <meta property="article:modified_time" content="2026-08-01T21:00:00+06:00">
+  <meta property="article:section" content="C#">
+  <meta property="og:updated_time" content="2026-08-01T21:00:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="5 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Nullable reference types Performance Tuning: Practical Tips That Work">
+  <meta property="og:description" content="Today's deep dive: Nullable reference types in C# — compile-time null tracking with annotations and warnings. Null reference exceptions turn into red">
+  <meta property="og:url" content="https://devtoolforge.github.io/csharp/nullable-reference-types-performance-tuning-practical-tips-that-work.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=nullable%20reference%20types%20csharp%20code&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nullable reference types Performance Tuning: Practical Tips That Work">
+  <meta name="twitter:description" content="Today's deep dive: Nullable reference types in C# — compile-time null tracking with annotations and warnings. Null reference exceptions turn into red">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=nullable%20reference%20types%20csharp%20code&amp;w=474&amp;h=274&amp;c=7">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/csharp/nullable-reference-types-performance-tuning-practical-tips-that-work.html" }, "headline": "Nullable reference types Performance Tuning: Practical Tips That Work", "description": "Today's deep dive: Nullable reference types in C# — compile-time null tracking with annotations and warnings. Null reference exceptions turn into red squiggles before production. T…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=nullable%20reference%20types%20csharp%20code&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-08-01T21:00:00+06:00", "dateModified": "2026-08-01T21:00:00+06:00", "wordCount": 1086, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/csharp/nullable-reference-types-performance-tuning-practical-tips-that-work.html#webpage", "url": "https://devtoolforge.github.io/csharp/nullable-reference-types-performance-tuning-practical-tips-that-work.html", "name": "Nullable reference types Performance Tuning: Practical Tips That Work", "datePublished": "2026-08-01T21:00:00+06:00", "dateModified": "2026-08-01T21:00:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/csharp/", "url": "https://devtoolforge.github.io/category/csharp/", "name": "C#" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/csharp/nullable-reference-types-performance-tuning-practical-tips-that-work.html", "url": "https://devtoolforge.github.io/csharp/nullable-reference-types-performance-tuning-practical-tips-that-work.html", "name": "Nullable reference types Performance Tuning: Practical Tips That Work" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure id="img-top" class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=nullable%20reference%20types%20csharp%20code&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=nullable%20reference%20types%20csharp%20code&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=nullable%20reference%20types%20csharp%20code&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="Nullable reference types Performance Tuning: Practical Tips That Work"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">Nullable reference types Performance Tuning: Practical Tips That Work</h1>
+            <p class="article-header__excerpt">Today's deep dive: Nullable reference types in C# — compile-time null tracking with annotations and warnings. Null reference exceptions turn into red squiggles before production. T…</p>
+            <div class="article-header__footer">
+              <a href="../category/csharp/" class="article-header__meta article-header__meta-tag-primary" rel="tag">C#</a>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-08-01T21:00:00+06:00">August 1, 2026</time>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section" data-canvas-grid="content">
+        <div class="container">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Today's deep dive: Nullable reference types in C# — compile-time null tracking with annotations and warnings. Null reference exceptions turn into red squiggles before production. Teams that take it seriously spend less time on avoidable problems and more time shipping features users actually notice. The key is treating it as a living part of the workflow rather than a one-time setup task.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-is-nullable-reference-types">What Is Nullable reference types?</a></li>
+<li><a href="#performance-considerations">Performance Considerations</a></li>
+<li><a href="#nullable-reference-types-vs-linq-best-practices">Nullable reference types vs Linq best practices</a></li>
+<li><a href="#advanced-tips">Advanced Tips</a></li>
+<li><a href="#quick-example">Quick Example</a></li>
+<li><a href="#a-practical-workflow">A Practical Workflow</a></li>
+<li><a href="#step-by-step-quickstart">Step-by-Step Quickstart</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#can-nullable-reference-types-be-automated">Can Nullable reference types be automated?</a></li>
+<li><a href="#what-are-the-most-common-mistakes-with-nullable-reference-types">What are the most common mistakes with Nullable reference types?</a></li>
+<li><a href="#how-long-does-it-take-to-get-comfortable-with-nullable-reference-types">How long does it take to get comfortable with Nullable reference types?</a></li>
+<li><a href="#do-i-need-nullable-reference-types-for-small-projects">Do I need Nullable reference types for small projects?</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ol></nav>
+<p>In this guide we cover nullable reference types end to end: the core concepts, the exact steps to set it up well, the mistakes that cost teams the most time, and the habits that keep the setup healthy. Everything here runs on the current 2026 toolchain, with commands you can copy as-is.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Topic</strong></td><td>Nullable reference types</td></tr>
+              <tr><td><strong>Area</strong></td><td>C#</td></tr>
+              <tr><td><strong>Skill level</strong></td><td>Intermediate to advanced</td></tr>
+              <tr><td><strong>Language</strong></td><td>C# 14 (with .NET 10, 2026)</td></tr>
+              <tr><td><strong>Runtime</strong></td><td>.NET 10 / .NET Framework 4.x for legacy</td></tr>
+              <tr><td><strong>Paradigm</strong></td><td>Object-oriented, functional, generic</td></tr>
+              <tr><td><strong>Tooling</strong></td><td>VS 2026, VS Code + C# Dev Kit, Rider</td></tr>
+              <tr><td><strong>Last verified</strong></td><td>October 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+<h2 id="what-is-nullable-reference-types">What Is Nullable reference types?</h2>
+<p>Nullable reference types, in one sentence: compile-time null tracking with annotations and warnings. In practice that means the details are worth getting right once, because everything downstream inherits the decision. Once the defaults are deliberate, the rest of the workflow tends to fall into place.</p>
+<p>The mental model is simple: one clear definition, one clear workflow, and configuration that matches reality. Most confusion around nullable reference types comes from mixing those layers — mixing definitions from different eras, or configs copied from projects with different needs. Keep them separate and the rest of this guide follows naturally.</p>
+<h2 id="performance-considerations">Performance Considerations</h2>
+<p>Change one thing at a time. Stacked optimizations hide which change actually helped and which added complexity for nothing. Re-run the same measurement after each adjustment to nullable reference types and keep a short log of results. When two changes interact, test them separately before combining, or you will ship mystery performance.</p>
+<p>Remove work before making work faster. The cheapest optimization for nullable reference types is usually doing less: fewer allocations, fewer passes, fewer round trips. Profile to find work that can be skipped entirely under normal conditions. Only then reach for caching, and only with an explicit invalidation plan.</p>
+<h2 id="nullable-reference-types-vs-linq-best-practices">Nullable reference types vs Linq best practices</h2>
+<p>They overlap enough that the question is usually about trade-offs rather than right and wrong. Nullable reference types optimizes for null reference exceptions turn into red squiggles before production; Linq best practices pushes harder on the opposite axis. List your constraints honestly — team experience, platform targets, and maintenance budget — and the answer usually picks itself.</p>
+<p>Start from the problem, not the tool. If your pain is null reference exceptions turn into red squiggles before production, Nullable reference types is the more direct route; if your team already lives in the other ecosystem, Linq best practices minimizes ramp-up cost. Whatever you choose, write down why, because the next person will ask.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=nullable%20reference%20types%20csharp%20code&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Nullable reference types Performance Tuning: Practical Tips That Work" style="border-radius:9px"></figure>
+<h2 id="advanced-tips">Advanced Tips</h2>
+<p>Once the fundamentals are second nature, these are the practices that separate good setups from great ones:</p>
+<ul>
+              <li>Record decisions next to the code they affect, in the same pull request that introduces them.</li>
+              <li>Build a tiny example project that demonstrates correct usage — it doubles as a smoke test when versions change.</li>
+              <li>Wrap external flakiness with retries and clear timeouts so failures are visible instead of mysterious.</li>
+              <li>Tip: Model absence with nullable types and check with is null patterns</li>
+            </ul>
+<h2 id="quick-example">Quick Example</h2>
+<p>Here is a compact, real-world csharp example you can adapt directly. It shows the configuration style we recommend for nullable reference types: explicit, commented where it matters, and free of magic.</p>
+<pre><code>public record Money(decimal Amount, string Currency);
+var a = new Money(10m, &quot;USD&quot;);
+var b = a with { Amount = 15m };</code></pre>
+<p>Copy it, run it once, then trim it to what your project actually needs. The worst version of any snippet is the one nobody on the team fully understands.</p>
+<h2 id="a-practical-workflow">A Practical Workflow</h2>
+<p>A repeatable workflow turns nullable reference types from a personality trait into a team capability:</p>
+<ol>
+              <li>Schedule a short review each quarter to prune what no longer earns its place.</li>
+              <li>Write the chosen setup down in the repository so the decision survives the next refactor.</li>
+              <li>Pick the smallest meaningful change you can ship and measure — momentum matters more than scope.</li>
+              <li>Automate the step so it runs without anyone remembering the manual command.</li>
+              <li>Audit the current state: list what nullable reference types touches in your project today.</li>
+            </ol>
+<p>This loop — audit, change, automate, verify — is deliberately generic. It fits C# at any scale and survives every tooling generation we have seen.</p>
+<h2 id="step-by-step-quickstart">Step-by-Step Quickstart</h2>
+<p>For readers who want the shortest possible path, here is the compressed version:</p>
+<ol>
+              <li>Add a check to CI so regressions in nullable reference types fail loudly instead of silently.</li>
+              <li>Add a check to CI so regressions in nullable reference types fail loudly instead of silently.</li>
+              <li>Write the chosen setup down in the repository so the decision survives the next refactor.</li>
+              <li>Document the rollback path before you need it, not during an incident.</li>
+              <li>Schedule a short review each quarter to prune what no longer earns its place.</li>
+              <li>Schedule a short review each quarter to prune what no longer earns its place.</li>
+            </ol>
+<p>Each step stands alone, so partial adoption already helps. Do them in order and the later ones get easier.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="can-nullable-reference-types-be-automated">Can Nullable reference types be automated?</h3>
+<p>Yes, and it should be. Start by scripting the steps in this guide, then wire them into CI so the automation runs without anyone remembering to.</p>
+<h3 id="what-are-the-most-common-mistakes-with-nullable-reference-types">What are the most common mistakes with Nullable reference types?</h3>
+<p>The big three: treating it as a one-time setup, letting local configuration drift from CI, and skipping documentation for the decisions you make. All three are covered above with concrete fixes.</p>
+<h3 id="how-long-does-it-take-to-get-comfortable-with-nullable-reference-types">How long does it take to get comfortable with Nullable reference types?</h3>
+<p>The basics take an afternoon; reliable habits take a few weeks of real use. The guide's checklist is designed to compress that ramp-up by focusing on what actually matters.</p>
+<h3 id="do-i-need-nullable-reference-types-for-small-projects">Do I need Nullable reference types for small projects?</h3>
+<p>More than you would expect. Small projects benefit disproportionately because there is no dedicated ops person to catch drift — the setup protects itself.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Nullable reference types rewards deliberate setup and punishes improvisation. Start with the checklist above, automate what you can, and revisit the configuration quarterly. The compounding effect is real: teams that invest here ship calmer, debug less, and onboard faster — and the gap widens every month.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=init-only%20setters%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Init-only setters: A Complete Guide for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/init-only-setters-a-complete-guide-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Init-only setters: A Complete Guide for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 31, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=switch%20expressions%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Switch expressions: From First Steps to Production" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/switch-expressions-from-first-steps-to-production.html" class="post-card__content-link">
+      <h3 class="post-card__title">Switch expressions: From First Steps to Production</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">August 2, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=required%20members%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Required members: Setup, Configuration, and Optimization" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/required-members-setup-configuration-and-optimization.html" class="post-card__content-link">
+      <h3 class="post-card__title">Required members: Setup, Configuration, and Optimization</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 30, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=pattern%20matching%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Pattern matching Troubleshooting: 12 Fixes for Everyday Problems" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/pattern-matching-troubleshooting-12-fixes-for-everyday-problems.html" class="post-card__content-link">
+      <h3 class="post-card__title">Pattern matching Troubleshooting: 12 Fixes for Everyday Problems</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">August 3, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=file-scoped%20namespaces%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Debugging File-scoped namespaces: A Practical Approach" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/debugging-file-scoped-namespaces-a-practical-approach.html" class="post-card__content-link">
+      <h3 class="post-card__title">Debugging File-scoped namespaces: A Practical Approach</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 29, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=primary%20constructors%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Primary constructors Cheat Sheet: 5 Shortcuts and Commands" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/primary-constructors-cheat-sheet-5-shortcuts-and-commands.html" class="post-card__content-link">
+      <h3 class="post-card__title">Primary constructors Cheat Sheet: 5 Shortcuts and Commands</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">August 4, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

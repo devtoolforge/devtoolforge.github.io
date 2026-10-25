@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>7 Template literal types Best Practices Every Developer Should Know</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Today's deep dive: Template literal types in TypeScript — string types built from patterns. Route, event, and CSS names become compiler-checked. Teams that">
+  <link rel="canonical" href="https://devtoolforge.github.io/typescript/7-template-literal-types-best-practices-every-developer-should-know.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-10-15T18:00:00+06:00">
+  <meta property="article:modified_time" content="2026-10-15T18:00:00+06:00">
+  <meta property="article:section" content="TypeScript">
+  <meta property="og:updated_time" content="2026-10-15T18:00:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="4 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="7 Template literal types Best Practices Every Developer Should Know">
+  <meta property="og:description" content="Today's deep dive: Template literal types in TypeScript — string types built from patterns. Route, event, and CSS names become compiler-checked. Teams that">
+  <meta property="og:url" content="https://devtoolforge.github.io/typescript/7-template-literal-types-best-practices-every-developer-should-know.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=template%20literal%20types%20typescript%20javascript%20code&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="7 Template literal types Best Practices Every Developer Should Know">
+  <meta name="twitter:description" content="Today's deep dive: Template literal types in TypeScript — string types built from patterns. Route, event, and CSS names become compiler-checked. Teams that">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=template%20literal%20types%20typescript%20javascript%20code&amp;w=474&amp;h=274&amp;c=7">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/typescript/7-template-literal-types-best-practices-every-developer-should-know.html" }, "headline": "7 Template literal types Best Practices Every Developer Should Know", "description": "Today's deep dive: Template literal types in TypeScript — string types built from patterns. Route, event, and CSS names become compiler-checked. Teams that take it seriously spend …", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=template%20literal%20types%20typescript%20javascript%20code&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-10-15T18:00:00+06:00", "dateModified": "2026-10-15T18:00:00+06:00", "wordCount": 984, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/typescript/7-template-literal-types-best-practices-every-developer-should-know.html#webpage", "url": "https://devtoolforge.github.io/typescript/7-template-literal-types-best-practices-every-developer-should-know.html", "name": "7 Template literal types Best Practices Every Developer Should Know", "datePublished": "2026-10-15T18:00:00+06:00", "dateModified": "2026-10-15T18:00:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/typescript/", "url": "https://devtoolforge.github.io/category/typescript/", "name": "TypeScript" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/typescript/7-template-literal-types-best-practices-every-developer-should-know.html", "url": "https://devtoolforge.github.io/typescript/7-template-literal-types-best-practices-every-developer-should-know.html", "name": "7 Template literal types Best Practices Every Developer Should Know" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure id="img-top" class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=template%20literal%20types%20typescript%20javascript%20code&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=template%20literal%20types%20typescript%20javascript%20code&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=template%20literal%20types%20typescript%20javascript%20code&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="7 Template literal types Best Practices Every Developer Should Know"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">7 Template literal types Best Practices Every Developer Should Know</h1>
+            <p class="article-header__excerpt">Today's deep dive: Template literal types in TypeScript — string types built from patterns. Route, event, and CSS names become compiler-checked. Teams that take it seriously spend …</p>
+            <div class="article-header__footer">
+              <a href="../category/typescript/" class="article-header__meta article-header__meta-tag-primary" rel="tag">TypeScript</a>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-10-15T18:00:00+06:00">October 15, 2026</time>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section" data-canvas-grid="content">
+        <div class="container">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Today's deep dive: Template literal types in TypeScript — string types built from patterns. Route, event, and CSS names become compiler-checked. Teams that take it seriously spend less time on avoidable problems and more time shipping features users actually notice. Teams that invest here early spend measurably less time firefighting later in the project.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-is-template-literal-types">What Is Template literal types?</a></li>
+<li><a href="#the-mechanics-of-template-literal-types">The Mechanics of Template literal types</a></li>
+<li><a href="#best-practices-for-template-literal-types">Best Practices for Template literal types</a></li>
+<li><a href="#performance-considerations">Performance Considerations</a></li>
+<li><a href="#advanced-tips">Advanced Tips</a></li>
+<li><a href="#quick-example">Quick Example</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#what-is-template-literal-types-2">What is Template literal types?</a></li>
+<li><a href="#how-long-does-it-take-to-get-comfortable-with-template-literal-types">How long does it take to get comfortable with Template literal types?</a></li>
+<li><a href="#what-are-the-most-common-mistakes-with-template-literal-types">What are the most common mistakes with Template literal types?</a></li>
+<li><a href="#do-i-need-template-literal-types-for-small-projects">Do I need Template literal types for small projects?</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ol></nav>
+<p>In this guide we cover template literal types end to end: the core concepts, the exact steps to set it up well, the mistakes that cost teams the most time, and the habits that keep the setup healthy. Everything here runs on the current 2026 toolchain, with commands you can copy as-is.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Topic</strong></td><td>Template literal types</td></tr>
+              <tr><td><strong>Area</strong></td><td>TypeScript</td></tr>
+              <tr><td><strong>Skill level</strong></td><td>Intermediate to advanced</td></tr>
+              <tr><td><strong>Language</strong></td><td>TypeScript 6.x (native tsgo compiler in preview)</td></tr>
+              <tr><td><strong>Compiles to</strong></td><td>JavaScript (ES2015+ targets)</td></tr>
+              <tr><td><strong>Runs on</strong></td><td>Node.js, Deno, Bun, all browsers</td></tr>
+              <tr><td><strong>Typing</strong></td><td>Structural, gradual, erased at runtime</td></tr>
+              <tr><td><strong>Last verified</strong></td><td>October 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+<h2 id="what-is-template-literal-types">What Is Template literal types?</h2>
+<p>Template literal types, in one sentence: string types built from patterns. In practice that means the details are worth getting right once, because everything downstream inherits the decision. Teams that invest here early spend measurably less time firefighting later in the project.</p>
+<p>The mental model is simple: one clear definition, one clear workflow, and configuration that matches reality. Most confusion around template literal types comes from mixing those layers — mixing definitions from different eras, or configs copied from projects with different needs. Keep them separate and the rest of this guide follows naturally.</p>
+<h2 id="the-mechanics-of-template-literal-types">The Mechanics of Template literal types</h2>
+<p>Type Route = `/api/${'v1'|'v2'}/${string}`. That is the core of it, and the steps below turn the idea into muscle memory:</p>
+<ol>
+              <li>Write the chosen setup down in the repository so the decision survives the next refactor.</li>
+              <li>Add a check to CI so regressions in template literal types fail loudly instead of silently.</li>
+              <li>Review the setup with the team and record one owner responsible for it.</li>
+              <li>Audit the current state: list what template literal types touches in your project today.</li>
+              <li>Automate the step so it runs without anyone remembering the manual command.</li>
+            </ol>
+<p>Notice how much of the value comes from the boring parts: writing things down, pinning versions, automating checks. That is not an accident — template literal types rewards exactly the habits that compound everywhere else in TypeScript.</p>
+<h2 id="best-practices-for-template-literal-types">Best Practices for Template literal types</h2>
+<p>These are the practices we see on teams where this area simply never causes drama:</p>
+<ul>
+              <li>Measure before and after changes to template literal types so decisions are driven by data rather than vibes.</li>
+              <li>Automate the boring parts of template literal types with scripts or tasks; humans are bad at remembering commands.</li>
+              <li>Start every project with a documented template literal types setup so the whole team follows the same conventions from day one.</li>
+              <li>Test the failure path, not just the happy path — most real incidents live there.</li>
+              <li>Pin versions and record why each choice was made, so upgrades are decisions instead of accidents.</li>
+            </ul>
+<p>None of these are hard individually. The discipline is doing them every time, which is why automation and CI checks carry so much of the load.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=template%20literal%20types%20typescript%20javascript%20code&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="7 Template literal types Best Practices Every Developer Should Know" style="border-radius:9px"></figure>
+<h2 id="performance-considerations">Performance Considerations</h2>
+<p>Remove work before making work faster. The cheapest optimization for template literal types is usually doing less: fewer allocations, fewer passes, fewer round trips. Profile to find work that can be skipped entirely under normal conditions. Only then reach for caching, and only with an explicit invalidation plan.</p>
+<p>Measure first. Capture baseline numbers for the scenario you care about before touching anything, because intuition about hot paths is famously wrong. For template literal types, that usually means timing the end-to-end operation, not the method you suspect, and recording memory alongside time. A ten-minute baseline turns a week of speculation into an afternoon of targeted work.</p>
+<h2 id="advanced-tips">Advanced Tips</h2>
+<p>Once the fundamentals are second nature, these are the practices that separate good setups from great ones:</p>
+<ul>
+              <li>Build a tiny example project that demonstrates correct usage — it doubles as a smoke test when versions change.</li>
+              <li>Record decisions next to the code they affect, in the same pull request that introduces them.</li>
+              <li>Wrap external flakiness with retries and clear timeouts so failures are visible instead of mysterious.</li>
+              <li>Tip: Constrain the variable parts for useful completion</li>
+            </ul>
+<h2 id="quick-example">Quick Example</h2>
+<p>Here is a compact, real-world typescript example you can adapt directly. It shows the configuration style we recommend for template literal types: explicit, commented where it matters, and free of magic.</p>
+<pre><code>const routes = {
+  home: &quot;/&quot;,
+  user: (id: string) =&gt; `/users/${id}`
+} satisfies Record&lt;string, string | ((...a: any[]) =&gt; string)&gt;;</code></pre>
+<p>Copy it, run it once, then trim it to what your project actually needs. The worst version of any snippet is the one nobody on the team fully understands.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="what-is-template-literal-types-2">What is Template literal types?</h3>
+<p>{W2} It is a foundational part of the {C} workflow, and understanding it pays off across almost every project you will touch.</p>
+<h3 id="how-long-does-it-take-to-get-comfortable-with-template-literal-types">How long does it take to get comfortable with Template literal types?</h3>
+<p>The basics take an afternoon; reliable habits take a few weeks of real use. The guide's checklist is designed to compress that ramp-up by focusing on what actually matters.</p>
+<h3 id="what-are-the-most-common-mistakes-with-template-literal-types">What are the most common mistakes with Template literal types?</h3>
+<p>The big three: treating it as a one-time setup, letting local configuration drift from CI, and skipping documentation for the decisions you make. All three are covered above with concrete fixes.</p>
+<h3 id="do-i-need-template-literal-types-for-small-projects">Do I need Template literal types for small projects?</h3>
+<p>More than you would expect. Small projects benefit disproportionately because there is no dedicated ops person to catch drift — the setup protects itself.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Template literal types rewards deliberate setup and punishes improvisation. Start with the checklist above, automate what you can, and revisit the configuration quarterly. The compounding effect is real: teams that invest here ship calmer, debug less, and onboard faster — and the gap widens every month.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=mapped%20types%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Common Mapped types Mistakes and How to Fix Them" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../typescript/common-mapped-types-mistakes-and-how-to-fix-them.html" class="post-card__content-link">
+      <h3 class="post-card__title">Common Mapped types Mistakes and How to Fix Them</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</span>
+      <span class="post-card__meta post-card__meta--date">October 16, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=utility%20types%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Advanced Utility types Techniques for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../typescript/advanced-utility-types-techniques-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Advanced Utility types Techniques for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</span>
+      <span class="post-card__meta post-card__meta--date">October 14, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=conditional%20types%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Level Up Your TypeScript Skills with Conditional types" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../typescript/level-up-your-typescript-skills-with-conditional-types.html" class="post-card__content-link">
+      <h3 class="post-card__title">Level Up Your TypeScript Skills with Conditional types</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</span>
+      <span class="post-card__meta post-card__meta--date">October 17, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=type%20narrowing%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Type narrowing for Beginners: 20 Things to Master First" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../typescript/type-narrowing-for-beginners-20-things-to-master-first.html" class="post-card__content-link">
+      <h3 class="post-card__title">Type narrowing for Beginners: 20 Things to Master First</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</span>
+      <span class="post-card__meta post-card__meta--date">October 13, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=generics%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Generics Cheat Sheet: 7 Shortcuts and Commands" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../typescript/generics-cheat-sheet-7-shortcuts-and-commands.html" class="post-card__content-link">
+      <h3 class="post-card__title">Generics Cheat Sheet: 7 Shortcuts and Commands</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</span>
+      <span class="post-card__meta post-card__meta--date">October 18, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=discriminated%20unions%20typescript%20javascript%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Level Up Your TypeScript Skills with Discriminated unions" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../typescript/level-up-your-typescript-skills-with-discriminated-unions.html" class="post-card__content-link">
+      <h3 class="post-card__title">Level Up Your TypeScript Skills with Discriminated unions</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">TypeScript</span>
+      <span class="post-card__meta post-card__meta--date">October 12, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

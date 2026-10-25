@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>8 Ways to learn Validation Faster</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Today's deep dive: Validation in ASP.NET Core — declarative input checks with data annotations or FluentValidation. Invalid data never reaches business">
+  <link rel="canonical" href="https://devtoolforge.github.io/aspnet-core/8-ways-to-learn-validation-faster.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-09-11T15:00:00+06:00">
+  <meta property="article:modified_time" content="2026-09-11T15:00:00+06:00">
+  <meta property="article:section" content="ASP.NET Core">
+  <meta property="og:updated_time" content="2026-09-11T15:00:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="5 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="8 Ways to learn Validation Faster">
+  <meta property="og:description" content="Today's deep dive: Validation in ASP.NET Core — declarative input checks with data annotations or FluentValidation. Invalid data never reaches business">
+  <meta property="og:url" content="https://devtoolforge.github.io/aspnet-core/8-ways-to-learn-validation-faster.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=validation%20web%20development%20server&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="8 Ways to learn Validation Faster">
+  <meta name="twitter:description" content="Today's deep dive: Validation in ASP.NET Core — declarative input checks with data annotations or FluentValidation. Invalid data never reaches business">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=validation%20web%20development%20server&amp;w=474&amp;h=274&amp;c=7">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/aspnet-core/8-ways-to-learn-validation-faster.html" }, "headline": "8 Ways to learn Validation Faster", "description": "Today's deep dive: Validation in ASP.NET Core — declarative input checks with data annotations or FluentValidation. Invalid data never reaches business logic, and error messages st…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=validation%20web%20development%20server&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-09-11T15:00:00+06:00", "dateModified": "2026-09-11T15:00:00+06:00", "wordCount": 1124, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/aspnet-core/8-ways-to-learn-validation-faster.html#webpage", "url": "https://devtoolforge.github.io/aspnet-core/8-ways-to-learn-validation-faster.html", "name": "8 Ways to learn Validation Faster", "datePublished": "2026-09-11T15:00:00+06:00", "dateModified": "2026-09-11T15:00:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/aspnet-core/", "url": "https://devtoolforge.github.io/category/aspnet-core/", "name": "ASP.NET Core" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/aspnet-core/8-ways-to-learn-validation-faster.html", "url": "https://devtoolforge.github.io/aspnet-core/8-ways-to-learn-validation-faster.html", "name": "8 Ways to learn Validation Faster" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure id="img-top" class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=validation%20web%20development%20server&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=validation%20web%20development%20server&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=validation%20web%20development%20server&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="8 Ways to learn Validation Faster"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">8 Ways to learn Validation Faster</h1>
+            <p class="article-header__excerpt">Today's deep dive: Validation in ASP.NET Core — declarative input checks with data annotations or FluentValidation. Invalid data never reaches business logic, and error messages st…</p>
+            <div class="article-header__footer">
+              <a href="../category/aspnet-core/" class="article-header__meta article-header__meta-tag-primary" rel="tag">ASP.NET Core</a>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-09-11T15:00:00+06:00">September 11, 2026</time>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section" data-canvas-grid="content">
+        <div class="container">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Today's deep dive: Validation in ASP.NET Core — declarative input checks with data annotations or FluentValidation. Invalid data never reaches business logic, and error messages stay consistent. Teams that take it seriously spend less time on avoidable problems and more time shipping features users actually notice. The good news is that the fundamentals have been stable for years, so the effort you invest compounds instead of expiring with the next release.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-is-validation">What Is Validation?</a></li>
+<li><a href="#why-bother-with-validation">Why Bother with Validation?</a></li>
+<li><a href="#best-practices-for-validation">Best Practices for Validation</a></li>
+<li><a href="#common-validation-mistakes">Common Validation Mistakes</a></li>
+<li><a href="#troubleshooting-validation">Troubleshooting Validation</a></li>
+<li><a href="#quick-example">Quick Example</a></li>
+<li><a href="#step-by-step-quickstart">Step-by-Step Quickstart</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#what-is-validation-2">What is Validation?</a></li>
+<li><a href="#can-validation-be-automated">Can Validation be automated?</a></li>
+<li><a href="#do-i-need-validation-for-small-projects">Do I need Validation for small projects?</a></li>
+<li><a href="#how-long-does-it-take-to-get-comfortable-with-validation">How long does it take to get comfortable with Validation?</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ol></nav>
+<p>In this guide we cover validation end to end: the core concepts, the exact steps to set it up well, the mistakes that cost teams the most time, and the habits that keep the setup healthy. Everything here runs on the current 2026 toolchain, with commands you can copy as-is.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Topic</strong></td><td>Validation</td></tr>
+              <tr><td><strong>Area</strong></td><td>ASP.NET Core</td></tr>
+              <tr><td><strong>Skill level</strong></td><td>Intermediate</td></tr>
+              <tr><td><strong>Framework</strong></td><td>ASP.NET Core 10 (on .NET 10 LTS)</td></tr>
+              <tr><td><strong>Hosting</strong></td><td>Kestrel, IIS, HTTP.sys, or containers</td></tr>
+              <tr><td><strong>Patterns</strong></td><td>MVC, Razor Pages, Minimal APIs, Blazor, gRPC, SignalR</td></tr>
+              <tr><td><strong>License</strong></td><td>MIT — open source</td></tr>
+              <tr><td><strong>Last verified</strong></td><td>October 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+<h2 id="what-is-validation">What Is Validation?</h2>
+<p>Validation, in one sentence: declarative input checks with data annotations or FluentValidation. In practice that means the details are worth getting right once, because everything downstream inherits the decision. It is one of the few practices that pays for itself within the first week of consistent use.</p>
+<p>The mental model is simple: one clear definition, one clear workflow, and configuration that matches reality. Most confusion around validation comes from mixing those layers — mixing definitions from different eras, or configs copied from projects with different needs. Keep them separate and the rest of this guide follows naturally.</p>
+<h2 id="why-bother-with-validation">Why Bother with Validation?</h2>
+<p>"Why bother" is a fair question for any tooling topic. Validation earns its keep in three concrete ways:</p>
+<ul>
+              <li>It lowers maintenance cost because every future change starts from a sane baseline.</li>
+              <li>It shortens feedback loops, so problems surface while the code is still in your head.</li>
+              <li>It cuts repetitive work out of the daily loop, which is where most of the hidden cost of tooling lives.</li>
+            </ul>
+<p>Notice what is missing from that list: fashion. None of these benefits expire with a release cycle, which is why validation keeps showing up in every serious ASP.NET Core conversation. The good news is that the fundamentals have been stable for years, so the effort you invest compounds instead of expiring with the next release.</p>
+<h2 id="best-practices-for-validation">Best Practices for Validation</h2>
+<p>These are the practices we see on teams where this area simply never causes drama:</p>
+<ul>
+              <li>Automate the boring parts of validation with scripts or tasks; humans are bad at remembering commands.</li>
+              <li>Test the failure path, not just the happy path — most real incidents live there.</li>
+              <li>Start every project with a documented validation setup so the whole team follows the same conventions from day one.</li>
+              <li>Review validation changes in code review with the same seriousness as application logic.</li>
+              <li>Keep one source of truth: if the docs and the actual configuration disagree, fix the docs immediately.</li>
+            </ul>
+<p>None of these are hard individually. The discipline is doing them every time, which is why automation and CI checks carry so much of the load.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=validation%20web%20development%20server&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="8 Ways to learn Validation Faster" style="border-radius:9px"></figure>
+<h2 id="common-validation-mistakes">Common Validation Mistakes</h2>
+<p>The same failure patterns show up again and again. Here are the four we meet most often, including the classic: Validating only on the client and trusting the server boundary.</p>
+<ul>
+              <li>Ignoring warnings that point at real problems because they have always been there.</li>
+              <li>Shipping changes without a rollback plan and improvising during the incident.</li>
+              <li>Treating validation as a one-time setup instead of a living part of the workflow.</li>
+              <li>Assuming the default configuration matches your project's real requirements.</li>
+            </ul>
+<p>Every one of these fixes is cheap when caught early and expensive when caught late. A quarterly review of validation — twenty minutes, honestly — catches most of them before they metastasize.</p>
+<h2 id="troubleshooting-validation">Troubleshooting Validation</h2>
+<p>When things break, symptoms cluster into a handful of patterns. Match yours here and jump straight to the fix:</p>
+<ul>
+              <li><strong>Performance collapsed after an upgrade</strong> — bisect the upgrade by rolling back one component at a time and re-measuring</li>
+              <li><strong>Errors mention a file or component you never touched</strong> — trace the first error in the log, not the last one — the real cause is almost always earlier</li>
+              <li><strong>It fails intermittently under load</strong> — look for shared state and timing assumptions that only break when things overlap</li>
+            </ul>
+<p>If none of these match, capture a full log before changing anything. For validation that log almost always names the failing layer, and the fix becomes obvious instead of guessed.</p>
+<h2 id="quick-example">Quick Example</h2>
+<p>Here is a compact, real-world json example you can adapt directly. It shows the configuration style we recommend for validation: explicit, commented where it matters, and free of magic.</p>
+<pre><code>{
+  &quot;ConnectionStrings&quot;: { &quot;Default&quot;: &quot;Server=.;Database=App;Trusted_Connection=True&quot; },
+  &quot;Logging&quot;: { &quot;LogLevel&quot;: { &quot;Default&quot;: &quot;Information&quot; } }
+}</code></pre>
+<p>Copy it, run it once, then trim it to what your project actually needs. The worst version of any snippet is the one nobody on the team fully understands.</p>
+<h2 id="step-by-step-quickstart">Step-by-Step Quickstart</h2>
+<p>For readers who want the shortest possible path, here is the compressed version:</p>
+<ol>
+              <li>Write the chosen setup down in the repository so the decision survives the next refactor.</li>
+              <li>Review the setup with the team and record one owner responsible for it.</li>
+              <li>Schedule a short review each quarter to prune what no longer earns its place.</li>
+              <li>Write the chosen setup down in the repository so the decision survives the next refactor.</li>
+              <li>Audit the current state: list what validation touches in your project today.</li>
+              <li>Pick the smallest meaningful change you can ship and measure — momentum matters more than scope.</li>
+            </ol>
+<p>Each step stands alone, so partial adoption already helps. Do them in order and the later ones get easier.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="what-is-validation-2">What is Validation?</h3>
+<p>{W2} It is a foundational part of the {C} workflow, and understanding it pays off across almost every project you will touch.</p>
+<h3 id="can-validation-be-automated">Can Validation be automated?</h3>
+<p>Yes, and it should be. Start by scripting the steps in this guide, then wire them into CI so the automation runs without anyone remembering to.</p>
+<h3 id="do-i-need-validation-for-small-projects">Do I need Validation for small projects?</h3>
+<p>More than you would expect. Small projects benefit disproportionately because there is no dedicated ops person to catch drift — the setup protects itself.</p>
+<h3 id="how-long-does-it-take-to-get-comfortable-with-validation">How long does it take to get comfortable with Validation?</h3>
+<p>The basics take an afternoon; reliable habits take a few weeks of real use. The guide's checklist is designed to compress that ramp-up by focusing on what actually matters.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Validation rewards deliberate setup and punishes improvisation. Start with the checklist above, automate what you can, and revisit the configuration quarterly. The compounding effect is real: teams that invest here ship calmer, debug less, and onboard faster — and the gap widens every month.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=model%20binding%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="15 Ways to master Model binding Faster" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/15-ways-to-master-model-binding-faster.html" class="post-card__content-link">
+      <h3 class="post-card__title">15 Ways to master Model binding Faster</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">September 12, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=filters%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Filters Essentials: 7 Tips That Save Hours" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/filters-essentials-7-tips-that-save-hours.html" class="post-card__content-link">
+      <h3 class="post-card__title">Filters Essentials: 7 Tips That Save Hours</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">September 10, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=minimal%20apis%20vs%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Minimal apis vs controllers Explained: What It Is and How It Works" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/minimal-apis-vs-controllers-explained-what-it-is-and-how-it-works.html" class="post-card__content-link">
+      <h3 class="post-card__title">Minimal apis vs controllers Explained: What It Is and How It Works</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">September 13, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=di%20lifetimes%20in%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Practical Di lifetimes in web apps for Everyday ASP.NET Core Work" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/practical-di-lifetimes-in-web-apps-for-everyday-asp-net-core-work.html" class="post-card__content-link">
+      <h3 class="post-card__title">Practical Di lifetimes in web apps for Everyday ASP.NET Core Work</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">September 9, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=middleware%20pipeline%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Middleware pipeline: From First Steps to Production" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/middleware-pipeline-from-first-steps-to-production.html" class="post-card__content-link">
+      <h3 class="post-card__title">Middleware pipeline: From First Steps to Production</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">September 14, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=configuration%20per%20environment%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Scaling Configuration per environment for Large Projects" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/scaling-configuration-per-environment-for-large-projects.html" class="post-card__content-link">
+      <h3 class="post-card__title">Scaling Configuration per environment for Large Projects</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">September 8, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

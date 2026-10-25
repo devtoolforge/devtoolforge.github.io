@@ -12,7 +12,7 @@
   if (header && actions) {
     var triggers = header.querySelectorAll('[data-site-action-trigger]');
     var closer = actions.querySelector('[data-close-site-actions]');
-    var panel = actions.querySelector('.site-actions__panel');
+    var panel = actions.querySelector('.site-actions__panel, .site-actions__container');
 
     function open() {
       closeAll();

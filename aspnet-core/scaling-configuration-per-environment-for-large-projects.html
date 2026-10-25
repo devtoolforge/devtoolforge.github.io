@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>Scaling Configuration per environment for Large Projects</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Today's deep dive: Configuration per environment in ASP.NET Core — Development, Staging, Production config layers. Secrets and endpoints differ per">
+  <link rel="canonical" href="https://devtoolforge.github.io/aspnet-core/scaling-configuration-per-environment-for-large-projects.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-09-08T19:30:00+06:00">
+  <meta property="article:modified_time" content="2026-09-08T19:30:00+06:00">
+  <meta property="article:section" content="ASP.NET Core">
+  <meta property="og:updated_time" content="2026-09-08T19:30:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="5 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Scaling Configuration per environment for Large Projects">
+  <meta property="og:description" content="Today's deep dive: Configuration per environment in ASP.NET Core — Development, Staging, Production config layers. Secrets and endpoints differ per">
+  <meta property="og:url" content="https://devtoolforge.github.io/aspnet-core/scaling-configuration-per-environment-for-large-projects.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=configuration%20per%20environment%20web%20development%20server&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Scaling Configuration per environment for Large Projects">
+  <meta name="twitter:description" content="Today's deep dive: Configuration per environment in ASP.NET Core — Development, Staging, Production config layers. Secrets and endpoints differ per">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=configuration%20per%20environment%20web%20development%20server&amp;w=474&amp;h=274&amp;c=7">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/aspnet-core/scaling-configuration-per-environment-for-large-projects.html" }, "headline": "Scaling Configuration per environment for Large Projects", "description": "Today's deep dive: Configuration per environment in ASP.NET Core — Development, Staging, Production config layers. Secrets and endpoints differ per environment without code changes…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=configuration%20per%20environment%20web%20development%20server&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-09-08T19:30:00+06:00", "dateModified": "2026-09-08T19:30:00+06:00", "wordCount": 1068, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/aspnet-core/scaling-configuration-per-environment-for-large-projects.html#webpage", "url": "https://devtoolforge.github.io/aspnet-core/scaling-configuration-per-environment-for-large-projects.html", "name": "Scaling Configuration per environment for Large Projects", "datePublished": "2026-09-08T19:30:00+06:00", "dateModified": "2026-09-08T19:30:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/aspnet-core/", "url": "https://devtoolforge.github.io/category/aspnet-core/", "name": "ASP.NET Core" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/aspnet-core/scaling-configuration-per-environment-for-large-projects.html", "url": "https://devtoolforge.github.io/aspnet-core/scaling-configuration-per-environment-for-large-projects.html", "name": "Scaling Configuration per environment for Large Projects" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure id="img-top" class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=configuration%20per%20environment%20web%20development%20server&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=configuration%20per%20environment%20web%20development%20server&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=configuration%20per%20environment%20web%20development%20server&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="Scaling Configuration per environment for Large Projects"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">Scaling Configuration per environment for Large Projects</h1>
+            <p class="article-header__excerpt">Today's deep dive: Configuration per environment in ASP.NET Core — Development, Staging, Production config layers. Secrets and endpoints differ per environment without code changes…</p>
+            <div class="article-header__footer">
+              <a href="../category/aspnet-core/" class="article-header__meta article-header__meta-tag-primary" rel="tag">ASP.NET Core</a>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-09-08T19:30:00+06:00">September 8, 2026</time>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section" data-canvas-grid="content">
+        <div class="container">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Today's deep dive: Configuration per environment in ASP.NET Core — Development, Staging, Production config layers. Secrets and endpoints differ per environment without code changes. Teams that take it seriously spend less time on avoidable problems and more time shipping features users actually notice. Small teams benefit as much as large ones, often faster because they can change habits quickly.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-is-configuration-per-environment">What Is Configuration per environment?</a></li>
+<li><a href="#why-bother-with-configuration-per-environment">Why Bother with Configuration per environment?</a></li>
+<li><a href="#common-configuration-per-environment-mistakes">Common Configuration per environment Mistakes</a></li>
+<li><a href="#performance-considerations">Performance Considerations</a></li>
+<li><a href="#troubleshooting-configuration-per-environment">Troubleshooting Configuration per environment</a></li>
+<li><a href="#version-notes-for-2026">Version Notes for 2026</a></li>
+<li><a href="#step-by-step-quickstart">Step-by-Step Quickstart</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#is-configuration-per-environment-still-relevant-in-2026">Is Configuration per environment still relevant in 2026?</a></li>
+<li><a href="#what-are-the-most-common-mistakes-with-configuration-per-environment">What are the most common mistakes with Configuration per environment?</a></li>
+<li><a href="#can-configuration-per-environment-be-automated">Can Configuration per environment be automated?</a></li>
+<li><a href="#what-is-configuration-per-environment-2">What is Configuration per environment?</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ol></nav>
+<p>In this guide we cover configuration per environment end to end: the core concepts, the exact steps to set it up well, the mistakes that cost teams the most time, and the habits that keep the setup healthy. Everything here runs on the current 2026 toolchain, with commands you can copy as-is.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Topic</strong></td><td>Configuration per environment</td></tr>
+              <tr><td><strong>Area</strong></td><td>ASP.NET Core</td></tr>
+              <tr><td><strong>Skill level</strong></td><td>Intermediate</td></tr>
+              <tr><td><strong>Framework</strong></td><td>ASP.NET Core 10 (on .NET 10 LTS)</td></tr>
+              <tr><td><strong>Hosting</strong></td><td>Kestrel, IIS, HTTP.sys, or containers</td></tr>
+              <tr><td><strong>Patterns</strong></td><td>MVC, Razor Pages, Minimal APIs, Blazor, gRPC, SignalR</td></tr>
+              <tr><td><strong>License</strong></td><td>MIT — open source</td></tr>
+              <tr><td><strong>Last verified</strong></td><td>October 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+<h2 id="what-is-configuration-per-environment">What Is Configuration per environment?</h2>
+<p>Configuration per environment, in one sentence: Development, Staging, Production config layers. In practice that means the details are worth getting right once, because everything downstream inherits the decision. Teams that invest here early spend measurably less time firefighting later in the project.</p>
+<p>The mental model is simple: one clear definition, one clear workflow, and configuration that matches reality. Most confusion around configuration per environment comes from mixing those layers — mixing definitions from different eras, or configs copied from projects with different needs. Keep them separate and the rest of this guide follows naturally.</p>
+<h2 id="why-bother-with-configuration-per-environment">Why Bother with Configuration per environment?</h2>
+<p>"Why bother" is a fair question for any tooling topic. Configuration per environment earns its keep in three concrete ways:</p>
+<ul>
+              <li>It makes onboarding dramatically easier: new developers find rails instead of folklore.</li>
+              <li>It improves code consistency across the team, making reviews faster and friendlier.</li>
+              <li>It keeps dependencies and toolchains healthy, which quietly prevents future emergencies.</li>
+            </ul>
+<p>Notice what is missing from that list: fashion. None of these benefits expire with a release cycle, which is why configuration per environment keeps showing up in every serious ASP.NET Core conversation. The key is treating it as a living part of the workflow rather than a one-time setup task.</p>
+<h2 id="common-configuration-per-environment-mistakes">Common Configuration per environment Mistakes</h2>
+<p>The same failure patterns show up again and again. Here are the four we meet most often, including the classic: Storing production connection strings in committed JSON files.</p>
+<ul>
+              <li>Assuming the default configuration matches your project's real requirements.</li>
+              <li>Letting local settings drift from CI until nobody knows which one is right.</li>
+              <li>Ignoring warnings that point at real problems because they have always been there.</li>
+              <li>Skipping documentation for decisions, forcing archaeology six months later.</li>
+            </ul>
+<p>Every one of these fixes is cheap when caught early and expensive when caught late. A quarterly review of configuration per environment — twenty minutes, honestly — catches most of them before they metastasize.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=configuration%20per%20environment%20web%20development%20server&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Scaling Configuration per environment for Large Projects" style="border-radius:9px"></figure>
+<h2 id="performance-considerations">Performance Considerations</h2>
+<p>Change one thing at a time. Stacked optimizations hide which change actually helped and which added complexity for nothing. Re-run the same measurement after each adjustment to configuration per environment and keep a short log of results. When two changes interact, test them separately before combining, or you will ship mystery performance.</p>
+<p>Measure first. Capture baseline numbers for the scenario you care about before touching anything, because intuition about hot paths is famously wrong. For configuration per environment, that usually means timing the end-to-end operation, not the method you suspect, and recording memory alongside time. A ten-minute baseline turns a week of speculation into an afternoon of targeted work.</p>
+<h2 id="troubleshooting-configuration-per-environment">Troubleshooting Configuration per environment</h2>
+<p>When things break, symptoms cluster into a handful of patterns. Match yours here and jump straight to the fix:</p>
+<ul>
+              <li><strong>It works on one machine and fails on another</strong> — diff the versions and configuration first — environment drift explains most of these bugs</li>
+              <li><strong>Performance collapsed after an upgrade</strong> — bisect the upgrade by rolling back one component at a time and re-measuring</li>
+              <li><strong>Errors mention a file or component you never touched</strong> — trace the first error in the log, not the last one — the real cause is almost always earlier</li>
+            </ul>
+<p>If none of these match, capture a full log before changing anything. For configuration per environment that log almost always names the failing layer, and the fix becomes obvious instead of guessed.</p>
+<h2 id="version-notes-for-2026">Version Notes for 2026</h2>
+<p>Compatibility rarely breaks loudly. Small behavior changes in configuration per environment accumulate until something subtle fails in production weeks later. Keep a changelog of your own: which versions you adopted, when, and what you had to adjust. That log becomes the fastest diagnostic when old behavior needs explaining.</p>
+<h2 id="step-by-step-quickstart">Step-by-Step Quickstart</h2>
+<p>For readers who want the shortest possible path, here is the compressed version:</p>
+<ol>
+              <li>Audit the current state: list what configuration per environment touches in your project today.</li>
+              <li>Schedule a short review each quarter to prune what no longer earns its place.</li>
+              <li>Add a check to CI so regressions in configuration per environment fail loudly instead of silently.</li>
+              <li>Add a check to CI so regressions in configuration per environment fail loudly instead of silently.</li>
+              <li>Write the chosen setup down in the repository so the decision survives the next refactor.</li>
+              <li>Review the setup with the team and record one owner responsible for it.</li>
+            </ol>
+<p>Each step stands alone, so partial adoption already helps. Do them in order and the later ones get easier.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="is-configuration-per-environment-still-relevant-in-2026">Is Configuration per environment still relevant in 2026?</h3>
+<p>Yes — more than ever. The 2026 toolchain builds directly on these fundamentals, and the practices in this article are the ones current documentation assumes you already follow.</p>
+<h3 id="what-are-the-most-common-mistakes-with-configuration-per-environment">What are the most common mistakes with Configuration per environment?</h3>
+<p>The big three: treating it as a one-time setup, letting local configuration drift from CI, and skipping documentation for the decisions you make. All three are covered above with concrete fixes.</p>
+<h3 id="can-configuration-per-environment-be-automated">Can Configuration per environment be automated?</h3>
+<p>Yes, and it should be. Start by scripting the steps in this guide, then wire them into CI so the automation runs without anyone remembering to.</p>
+<h3 id="what-is-configuration-per-environment-2">What is Configuration per environment?</h3>
+<p>{W2} It is a foundational part of the {C} workflow, and understanding it pays off across almost every project you will touch.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The takeaway is unglamorous but true: consistency beats cleverness. Keep the Configuration per environment setup documented, automated, and reviewed, and it will quietly repay the effort for the life of the project.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=di%20lifetimes%20in%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Practical Di lifetimes in web apps for Everyday ASP.NET Core Work" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/practical-di-lifetimes-in-web-apps-for-everyday-asp-net-core-work.html" class="post-card__content-link">
+      <h3 class="post-card__title">Practical Di lifetimes in web apps for Everyday ASP.NET Core Work</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">September 9, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=logging%20and%20structured%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Logging and structured events Essentials: 5 Tips That Save Hours" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/logging-and-structured-events-essentials-5-tips-that-save-hours.html" class="post-card__content-link">
+      <h3 class="post-card__title">Logging and structured events Essentials: 5 Tips That Save Hours</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">September 7, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=filters%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Filters Essentials: 7 Tips That Save Hours" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/filters-essentials-7-tips-that-save-hours.html" class="post-card__content-link">
+      <h3 class="post-card__title">Filters Essentials: 7 Tips That Save Hours</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">September 10, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=ef%20core%20migrations%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Scaling Ef core migrations for Large Projects" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/scaling-ef-core-migrations-for-large-projects.html" class="post-card__content-link">
+      <h3 class="post-card__title">Scaling Ef core migrations for Large Projects</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">September 6, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=validation%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="8 Ways to learn Validation Faster" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/8-ways-to-learn-validation-faster.html" class="post-card__content-link">
+      <h3 class="post-card__title">8 Ways to learn Validation Faster</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">September 11, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=identity%20and%20user%20web%20development%20server&w=474&h=274&c=7" loading="lazy"
+         alt="Identity and user management: A Complete Guide for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../aspnet-core/identity-and-user-management-a-complete-guide-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Identity and user management: A Complete Guide for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">ASP.NET Core</span>
+      <span class="post-card__meta post-card__meta--date">September 4, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

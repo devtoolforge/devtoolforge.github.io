@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>Default interface methods in C#: Setup, Tips, and Workflows</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="Today's deep dive: Default interface methods in C# — interfaces shipping implementation members. Interfaces evolve without breaking every implementer. Teams">
+  <link rel="canonical" href="https://devtoolforge.github.io/csharp/default-interface-methods-in-c-setup-tips-and-workflows.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-07-19T16:30:00+06:00">
+  <meta property="article:modified_time" content="2026-07-19T16:30:00+06:00">
+  <meta property="article:section" content="C#">
+  <meta property="og:updated_time" content="2026-07-19T16:30:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="4 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Default interface methods in C#: Setup, Tips, and Workflows">
+  <meta property="og:description" content="Today's deep dive: Default interface methods in C# — interfaces shipping implementation members. Interfaces evolve without breaking every implementer. Teams">
+  <meta property="og:url" content="https://devtoolforge.github.io/csharp/default-interface-methods-in-c-setup-tips-and-workflows.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=default%20interface%20methods%20csharp%20code&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Default interface methods in C#: Setup, Tips, and Workflows">
+  <meta name="twitter:description" content="Today's deep dive: Default interface methods in C# — interfaces shipping implementation members. Interfaces evolve without breaking every implementer. Teams">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=default%20interface%20methods%20csharp%20code&amp;w=474&amp;h=274&amp;c=7">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/csharp/default-interface-methods-in-c-setup-tips-and-workflows.html" }, "headline": "Default interface methods in C#: Setup, Tips, and Workflows", "description": "Today's deep dive: Default interface methods in C# — interfaces shipping implementation members. Interfaces evolve without breaking every implementer. Teams that take it seriously …", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=default%20interface%20methods%20csharp%20code&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-07-19T16:30:00+06:00", "dateModified": "2026-07-19T16:30:00+06:00", "wordCount": 958, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/csharp/default-interface-methods-in-c-setup-tips-and-workflows.html#webpage", "url": "https://devtoolforge.github.io/csharp/default-interface-methods-in-c-setup-tips-and-workflows.html", "name": "Default interface methods in C#: Setup, Tips, and Workflows", "datePublished": "2026-07-19T16:30:00+06:00", "dateModified": "2026-07-19T16:30:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/csharp/", "url": "https://devtoolforge.github.io/category/csharp/", "name": "C#" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/csharp/default-interface-methods-in-c-setup-tips-and-workflows.html", "url": "https://devtoolforge.github.io/csharp/default-interface-methods-in-c-setup-tips-and-workflows.html", "name": "Default interface methods in C#: Setup, Tips, and Workflows" } }] }
+  </script>
+</head>
+<body class="home-template">
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
+      <header class="article-header section" data-layout-grid="custom"
+              data-theme="highlight" data-section="first" data-has-featured-image="true">
+        <div class="article-header__inner">
+          <figure id="img-top" class="article-header__figure">
+            <img class="article-header__image" width="1200" height="630"
+                 src="https://tse1.mm.bing.net/th?q=default%20interface%20methods%20csharp%20code&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=default%20interface%20methods%20csharp%20code&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=default%20interface%20methods%20csharp%20code&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="Default interface methods in C#: Setup, Tips, and Workflows"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
+          </figure>
+          <div class="article-header__content">
+            <h1 class="article-header__title">Default interface methods in C#: Setup, Tips, and Workflows</h1>
+            <p class="article-header__excerpt">Today's deep dive: Default interface methods in C# — interfaces shipping implementation members. Interfaces evolve without breaking every implementer. Teams that take it seriously …</p>
+            <div class="article-header__footer">
+              <a href="../category/csharp/" class="article-header__meta article-header__meta-tag-primary" rel="tag">C#</a>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-07-19T16:30:00+06:00">July 19, 2026</time>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="article-main section" data-canvas-grid="content">
+        <div class="container">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>Today's deep dive: Default interface methods in C# — interfaces shipping implementation members. Interfaces evolve without breaking every implementer. Teams that take it seriously spend less time on avoidable problems and more time shipping features users actually notice. Once the defaults are deliberate, the rest of the workflow tends to fall into place.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#what-is-default-interface-methods">What Is Default interface methods?</a></li>
+<li><a href="#best-practices-for-default-interface-methods">Best Practices for Default interface methods</a></li>
+<li><a href="#performance-considerations">Performance Considerations</a></li>
+<li><a href="#tooling-and-ecosystem">Tooling and Ecosystem</a></li>
+<li><a href="#default-interface-methods-vs-operator-overloading-wisely">Default interface methods vs Operator overloading wisely</a></li>
+<li><a href="#version-notes-for-2026">Version Notes for 2026</a></li>
+<li><a href="#quick-example">Quick Example</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#is-default-interface-methods-still-relevant-in-2026">Is Default interface methods still relevant in 2026?</a></li>
+<li><a href="#can-default-interface-methods-be-automated">Can Default interface methods be automated?</a></li>
+<li><a href="#what-is-default-interface-methods-2">What is Default interface methods?</a></li>
+<li><a href="#what-are-the-most-common-mistakes-with-default-interface-methods">What are the most common mistakes with Default interface methods?</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ol></nav>
+<p>In this guide we cover default interface methods end to end: the core concepts, the exact steps to set it up well, the mistakes that cost teams the most time, and the habits that keep the setup healthy. Everything here runs on the current 2026 toolchain, with commands you can copy as-is.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
+              <tbody>
+              <tr><td><strong>Topic</strong></td><td>Default interface methods</td></tr>
+              <tr><td><strong>Area</strong></td><td>C#</td></tr>
+              <tr><td><strong>Skill level</strong></td><td>Intermediate</td></tr>
+              <tr><td><strong>Language</strong></td><td>C# 14 (with .NET 10, 2026)</td></tr>
+              <tr><td><strong>Runtime</strong></td><td>.NET 10 / .NET Framework 4.x for legacy</td></tr>
+              <tr><td><strong>Paradigm</strong></td><td>Object-oriented, functional, generic</td></tr>
+              <tr><td><strong>Tooling</strong></td><td>VS 2026, VS Code + C# Dev Kit, Rider</td></tr>
+              <tr><td><strong>Last verified</strong></td><td>October 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+<h2 id="what-is-default-interface-methods">What Is Default interface methods?</h2>
+<p>Default interface methods, in one sentence: interfaces shipping implementation members. In practice that means the details are worth getting right once, because everything downstream inherits the decision. Everything below assumes the current 2026 toolchain, but the reasoning generalizes to older versions too.</p>
+<p>The mental model is simple: one clear definition, one clear workflow, and configuration that matches reality. Most confusion around default interface methods comes from mixing those layers — mixing definitions from different eras, or configs copied from projects with different needs. Keep them separate and the rest of this guide follows naturally.</p>
+<h2 id="best-practices-for-default-interface-methods">Best Practices for Default interface methods</h2>
+<p>These are the practices we see on teams where this area simply never causes drama:</p>
+<ul>
+              <li>Test the failure path, not just the happy path — most real incidents live there.</li>
+              <li>Automate the boring parts of default interface methods with scripts or tasks; humans are bad at remembering commands.</li>
+              <li>Start every project with a documented default interface methods setup so the whole team follows the same conventions from day one.</li>
+              <li>Pin versions and record why each choice was made, so upgrades are decisions instead of accidents.</li>
+              <li>Measure before and after changes to default interface methods so decisions are driven by data rather than vibes.</li>
+            </ul>
+<p>None of these are hard individually. The discipline is doing them every time, which is why automation and CI checks carry so much of the load.</p>
+<h2 id="performance-considerations">Performance Considerations</h2>
+<p>Remove work before making work faster. The cheapest optimization for default interface methods is usually doing less: fewer allocations, fewer passes, fewer round trips. Profile to find work that can be skipped entirely under normal conditions. Only then reach for caching, and only with an explicit invalidation plan.</p>
+<p>Change one thing at a time. Stacked optimizations hide which change actually helped and which added complexity for nothing. Re-run the same measurement after each adjustment to default interface methods and keep a short log of results. When two changes interact, test them separately before combining, or you will ship mystery performance.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=default%20interface%20methods%20csharp%20code&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Default interface methods in C#: Setup, Tips, and Workflows" style="border-radius:9px"></figure>
+<h2 id="tooling-and-ecosystem">Tooling and Ecosystem</h2>
+<p>Tool choice is less important than tool consistency. Whether your team standardizes on LINQPad, BenchmarkDotNet, Roslyn analyzers, xUnit or alternatives, everyone should run the same versions from the same configuration. That single decision eliminates the works-on-my-machine class of default interface methods problems.</p>
+<h2 id="default-interface-methods-vs-operator-overloading-wisely">Default interface methods vs Operator overloading wisely</h2>
+<p>They overlap enough that the question is usually about trade-offs rather than right and wrong. Default interface methods optimizes for interfaces evolve without breaking every implementer; Operator overloading wisely pushes harder on the opposite axis. List your constraints honestly — team experience, platform targets, and maintenance budget — and the answer usually picks itself.</p>
+<p>Start from the problem, not the tool. If your pain is interfaces evolve without breaking every implementer, Default interface methods is the more direct route; if your team already lives in the other ecosystem, Operator overloading wisely minimizes ramp-up cost. Whatever you choose, write down why, because the next person will ask.</p>
+<h2 id="version-notes-for-2026">Version Notes for 2026</h2>
+<p>Version churn is the quiet tax on every C# project. Pin the versions default interface methods depends on, record why each was chosen, and upgrade on your schedule — deliberately, with a reviewed test pass — rather than reactively when something breaks. The 2026 toolchain is stable for current workloads, which makes disciplined pinning easier than it used to be.</p>
+<h2 id="quick-example">Quick Example</h2>
+<p>Here is a compact, real-world csharp example you can adapt directly. It shows the configuration style we recommend for default interface methods: explicit, commented where it matters, and free of magic.</p>
+<pre><code>int[] squares = [.. Enumerable.Range(1, 8).Select(i =&gt; i * i)];</code></pre>
+<p>Copy it, run it once, then trim it to what your project actually needs. The worst version of any snippet is the one nobody on the team fully understands.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="is-default-interface-methods-still-relevant-in-2026">Is Default interface methods still relevant in 2026?</h3>
+<p>Yes — more than ever. The 2026 toolchain builds directly on these fundamentals, and the practices in this article are the ones current documentation assumes you already follow.</p>
+<h3 id="can-default-interface-methods-be-automated">Can Default interface methods be automated?</h3>
+<p>Yes, and it should be. Start by scripting the steps in this guide, then wire them into CI so the automation runs without anyone remembering to.</p>
+<h3 id="what-is-default-interface-methods-2">What is Default interface methods?</h3>
+<p>{W2} It is a foundational part of the {C} workflow, and understanding it pays off across almost every project you will touch.</p>
+<h3 id="what-are-the-most-common-mistakes-with-default-interface-methods">What are the most common mistakes with Default interface methods?</h3>
+<p>The big three: treating it as a one-time setup, letting local configuration drift from CI, and skipping documentation for the decisions you make. All three are covered above with concrete fixes.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The takeaway is unglamorous but true: consistency beats cleverness. Keep the Default interface methods setup documented, automated, and reviewed, and it will quietly repay the effort for the life of the project.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=delegates%20events%20and%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Delegates events and lambdas for Beginners: 20 Things to Master First" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/delegates-events-and-lambdas-for-beginners-20-things-to-master-first.html" class="post-card__content-link">
+      <h3 class="post-card__title">Delegates events and lambdas for Beginners: 20 Things to Master First</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 20, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=structs%20vs%20classes%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Structs vs classes: A Complete Guide for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/structs-vs-classes-a-complete-guide-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Structs vs classes: A Complete Guide for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 18, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=attributes%20and%20reflection%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Attributes and reflection: Setup, Configuration, and Optimization" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/attributes-and-reflection-setup-configuration-and-optimization.html" class="post-card__content-link">
+      <h3 class="post-card__title">Attributes and reflection: Setup, Configuration, and Optimization</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 20, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=ref%20struct%20and%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="A Field Guide to Ref struct and readonly struct" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/a-field-guide-to-ref-struct-and-readonly-struct.html" class="post-card__content-link">
+      <h3 class="post-card__title">A Field Guide to Ref struct and readonly struct</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 18, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=source%20generators%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Fix It Fast: A Source generators Error Handbook in C#" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/fix-it-fast-a-source-generators-error-handbook-in-c.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fix It Fast: A Source generators Error Handbook in C#</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 21, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=idisposable%20and%20using%20csharp%20code&w=474&h=274&c=7" loading="lazy"
+         alt="Idisposable and using Essentials: 7 Tips That Save Hours" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../csharp/idisposable-and-using-essentials-7-tips-that-save-hours.html" class="post-card__content-link">
+      <h3 class="post-card__title">Idisposable and using Essentials: 7 Tips That Save Hours</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">C#</span>
+      <span class="post-card__meta post-card__meta--date">July 17, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
+</body>
+</html>

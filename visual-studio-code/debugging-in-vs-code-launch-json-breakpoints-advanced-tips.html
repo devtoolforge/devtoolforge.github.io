@@ -1,88 +1,163 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" data-header-style="modern">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
   <title>Debugging in VS Code: launch.json, Breakpoints, and Advanced Tips</title>
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Microsoft developer tools, explained — DevTools Journal demo build. This demo is intentionally noindex/nofollow.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="description" content="VS Code's debugger is one of its best features and one of its least explored. Beyond F5 lies a configuration system (launch.json) that reproduces any runtime">
+  <link rel="canonical" href="https://devtoolforge.github.io/visual-studio-code/debugging-in-vs-code-launch-json-breakpoints-advanced-tips.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-10-24T12:00:00+06:00">
+  <meta property="article:modified_time" content="2026-10-24T12:00:00+06:00">
+  <meta property="article:section" content="Visual Studio Code">
+  <meta property="og:updated_time" content="2026-10-24T12:00:00+06:00">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="DevTools Journal Editorial">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="4 minutes">
+  <meta property="og:site_name" content="DevTools Journal">
+  <meta property="og:title" content="Debugging in VS Code: launch.json, Breakpoints, and Advanced Tips">
+  <meta property="og:description" content="VS Code's debugger is one of its best features and one of its least explored. Beyond F5 lies a configuration system (launch.json) that reproduces any runtime">
+  <meta property="og:url" content="https://devtoolforge.github.io/visual-studio-code/debugging-in-vs-code-launch-json-breakpoints-advanced-tips.html">
+  <meta property="og:image" content="https://tse1.mm.bing.net/th?q=debugging%20code%20breakpoint%20monitor&amp;w=474&amp;h=274&amp;c=7">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Debugging in VS Code: launch.json, Breakpoints, and Advanced Tips">
+  <meta name="twitter:description" content="VS Code's debugger is one of its best features and one of its least explored. Beyond F5 lies a configuration system (launch.json) that reproduces any runtime">
+  <meta name="twitter:image" content="https://tse1.mm.bing.net/th?q=debugging%20code%20breakpoint%20monitor&amp;w=474&amp;h=274&amp;c=7">
     <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
-  <link rel="icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
   <link rel="icon" href="../assets/kutukdev/images/icon96.png" sizes="96x96">
+  <link rel="icon" href="../assets/kutukdev/images/icon128.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="../assets/kutukdev/images/icon128.png">
+  <meta name="msapplication-TileImage" content="../assets/kutukdev/images/icon128.png">
   <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
   <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
   <link rel="preconnect" href="https://tse1.mm.bing.net">
-  <meta property="og:site_name" content="DevTools Journal">
-  <meta property="og:title" content="Debugging in VS Code: launch.json, Breakpoints, and Advanced Tips">
-  <meta property="og:type" content="article">
-  <meta name="generator" content="DevTools Journal demo generator">
+  <style>:root{--ghost-accent-color:#e60073;}</style>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BlogPosting", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://devtoolforge.github.io/visual-studio-code/debugging-in-vs-code-launch-json-breakpoints-advanced-tips.html" }, "headline": "Debugging in VS Code: launch.json, Breakpoints, and Advanced Tips", "description": "VS Code's debugger is one of its best features and one of its least explored. Beyond F5 lies a configuration system (launch.json) that reproduces any runtime environment, breakpoin…", "image": { "@type": "ImageObject", "url": "https://tse1.mm.bing.net/th?q=debugging%20code%20breakpoint%20monitor&w=474&h=274&c=7", "width": 1200, "height": 630 }, "datePublished": "2026-10-24T12:00:00+06:00", "dateModified": "2026-10-24T12:00:00+06:00", "wordCount": 904, "author": { "@type": "Person", "name": "DevTools Journal Editorial", "url": "https://devtoolforge.github.io/" }, "publisher": { "@type": "Organization", "name": "DevTools Journal", "logo": { "@type": "ImageObject", "url": "https://devtoolforge.github.io/assets/kutukdev/images/icon128.png", "width": 128, "height": 128 } } }
+  </script>
 
   <script type="application/ld+json">
-{ "@context": "https://schema.org", "@type": "BlogPosting", "headline": "Debugging in VS Code: launch.json, Breakpoints, and Advanced Tips", "description": "VS Code's debugger is one of its best features and one of its least explored. Beyond F5 lies a configuration system (launch.json) that reproduces any runtime en", "image": "https://tse1.mm.bing.net/th?q=debugging%20code%20breakpoint%20monitor&w=474&h=274&c=7", "datePublished": "2026-10-25", "dateModified": "2026-10-25", "wordCount": 603, "author": {"@type": "Organization", "name": "DevTools Journal"}, "publisher": {"@type": "Organization", "name": "DevTools Journal"} }
+  { "@context": "https://schema.org", "@graph": [ { "@type": ["Person", "Organization"], "@id": "https://devtoolforge.github.io/#person", "name": "DevTools Journal Editorial" }, { "@type": "WebSite", "@id": "https://devtoolforge.github.io/#website", "url": "https://devtoolforge.github.io/", "name": "DevTools Journal", "publisher": { "@id": "https://devtoolforge.github.io/#person" }, "inLanguage": "en_US" }, { "@type": "WebPage", "@id": "https://devtoolforge.github.io/visual-studio-code/debugging-in-vs-code-launch-json-breakpoints-advanced-tips.html#webpage", "url": "https://devtoolforge.github.io/visual-studio-code/debugging-in-vs-code-launch-json-breakpoints-advanced-tips.html", "name": "Debugging in VS Code: launch.json, Breakpoints, and Advanced Tips", "datePublished": "2026-10-24T12:00:00+06:00", "dateModified": "2026-10-24T12:00:00+06:00", "isPartOf": { "@id": "https://devtoolforge.github.io/#website" }, "inLanguage": "en_US" } ] }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/", "url": "https://devtoolforge.github.io/", "name": "Home" } }, { "@type": "ListItem", "position": 2, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/category/visual-studio-code/", "url": "https://devtoolforge.github.io/category/visual-studio-code/", "name": "Visual Studio Code" } }, { "@type": "ListItem", "position": 3, "item": { "@type": "WebPage", "id": "https://devtoolforge.github.io/visual-studio-code/debugging-in-vs-code-launch-json-breakpoints-advanced-tips.html", "url": "https://devtoolforge.github.io/visual-studio-code/debugging-in-vs-code-launch-json-breakpoints-advanced-tips.html", "name": "Debugging in VS Code: launch.json, Breakpoints, and Advanced Tips" } }] }
   </script>
 </head>
 <body class="home-template">
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
   <div class="site" id="site">
-    <header class="site-header">
-      <div class="site-header__container">
-        <button class="site-header__hamburger" aria-label="Open menu"
-                aria-expanded="false" data-site-action-trigger="navigation">
-          <span></span><span></span><span></span>
-        </button>
-        <a class="site-header__logo" href="../">DevTools Journal</a>
+    <header id="site-header" class="site-header">
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <button class="site-header__hamburger" data-site-action-trigger="navigation"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="site-actions-navigation">
+      <span></span>
+    </button>
+    <a href="../" rel="home" class="site-header__logo">
+      <span class="site-header__logo-text">DevTools Journal</span>
+    </a>
+  </div>
+  <div class="site-actions">
+    <span class="site-actions__backdrop" data-close-site-actions></span>
+    <span class="site-actions__bg"></span>
+    <div class="site-actions__container">
+      <div id="site-actions-navigation" class="site-actions__navigation">
+<nav class="nav-secondary">
+  <ul class="nav-secondary__menu">
+    <li class="nav-secondary__menu-item">
+      <a class="nav-secondary__menu-link" href="../">
+        <span class="nav-secondary__menu-title">Home</span>
+      </a>
+    </li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio/"><span class="nav-secondary__menu-title">Visual Studio</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-code/"><span class="nav-secondary__menu-title">Visual Studio Code</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/visual-studio-mac/"><span class="nav-secondary__menu-title">Visual Studio for Mac</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet/"><span class="nav-secondary__menu-title">.NET</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/dotnet-framework/"><span class="nav-secondary__menu-title">.NET Framework</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/aspnet-core/"><span class="nav-secondary__menu-title">ASP.NET Core</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/csharp/"><span class="nav-secondary__menu-title">C#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/fsharp/"><span class="nav-secondary__menu-title">F#</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/typescript/"><span class="nav-secondary__menu-title">TypeScript</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/microsoft-build-tools/"><span class="nav-secondary__menu-title">Microsoft Build Tools</span></a></li>
+      <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link capital" href="../category/msbuild/"><span class="nav-secondary__menu-title">MSBuild</span></a></li>
+  </ul>
+</nav>
       </div>
-    </header>
-    <div class="site-actions" aria-hidden="true">
-      <div class="site-actions__backdrop"></div>
-      <nav class="site-actions__panel" aria-label="Main navigation">
-        <div class="site-actions__top">
-          <p class="site-actions__title">Menu</p>
-          <button class="site-actions__close" data-close-site-actions aria-label="Close menu">&times;</button>
-        </div>
-        <ul class="site-actions__menu">
-          <li><a href="../">Home</a></li>
-      <li><a href="../category/visual-studio/">Visual Studio</a></li>
-      <li><a href="../category/visual-studio-code/">Visual Studio Code</a></li>
-      <li><a href="../category/visual-studio-mac/">Visual Studio for Mac</a></li>
-      <li><a href="../category/dotnet/">.NET</a></li>
-      <li><a href="../category/dotnet-framework/">.NET Framework</a></li>
-      <li><a href="../category/aspnet-core/">ASP.NET Core</a></li>
-      <li><a href="../category/csharp/">C#</a></li>
-      <li><a href="../category/fsharp/">F#</a></li>
-      <li><a href="../category/typescript/">TypeScript</a></li>
-      <li><a href="../category/microsoft-build-tools/">Microsoft Build Tools</a></li>
-      <li><a href="../category/msbuild/">MSBuild</a></li>
-        </ul>
-      </nav>
     </div>
+  </div>
+</header>
     <main id="main" class="site-main">
+      <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'b50f5d09fd452bf8ea13a3da7764252a', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/b50f5d09fd452bf8ea13a3da7764252a"></script>
+</center>
+      <article class="article post featured">
       <header class="article-header section" data-layout-grid="custom"
               data-theme="highlight" data-section="first" data-has-featured-image="true">
         <div class="article-header__inner">
-          <figure class="article-header__figure">
+          <figure id="img-top" class="article-header__figure">
             <img class="article-header__image" width="1200" height="630"
-                 src="https://tse1.mm.bing.net/th?q=debugging%20code%20breakpoint%20monitor&w=474&h=274&c=7" alt="Debugging in VS Code: launch.json, Breakpoints, and Advanced Tips">
+                 src="https://tse1.mm.bing.net/th?q=debugging%20code%20breakpoint%20monitor&w=474&h=274&c=7"
+                 srcset="https://tse1.mm.bing.net/th?q=debugging%20code%20breakpoint%20monitor&w=474&h=274&c=7 360w, https://tse1.mm.bing.net/th?q=debugging%20code%20breakpoint%20monitor&w=474&h=274&c=7 480w"
+                 sizes="(min-width: 1280px) 580px, (min-width: 1000px) calc(50vw - 60px), 100vw"
+                 alt="Debugging in VS Code: launch.json, Breakpoints, and Advanced Tips"
+                 loading="eager"
+                 onload="this.setAttribute('data-loaded', true)"
+                 data-loaded="true">
           </figure>
           <div class="article-header__content">
             <h1 class="article-header__title">Debugging in VS Code: launch.json, Breakpoints, and Advanced Tips</h1>
-            <p class="article-header__excerpt">VS Code's debugger is one of its best features and one of its least explored. Beyond F5 lies a configuration system (launch.json) that reproduces any runtime environment, breakpoint types that watch data instead of lines, and techniques — logpoints, conditional hits, compound debugging, remote containers — that turn debugging from print-statement archaeology into a precise instrument.</p>
+            <p class="article-header__excerpt">VS Code's debugger is one of its best features and one of its least explored. Beyond F5 lies a configuration system (launch.json) that reproduces any runtime environment, breakpoin…</p>
             <div class="article-header__footer">
               <a href="../category/visual-studio-code/" class="article-header__meta article-header__meta-tag-primary" rel="tag">Visual Studio Code</a>
-              <span class="article-header__meta article-header__meta--date" data-dynamic-date></span>
+              <time class="article-header__meta article-header__meta--date" datetime="2026-10-24T12:00:00+06:00">October 24, 2026</time>
             </div>
           </div>
         </div>
       </header>
-      <div class="article-main section">
+      <div class="article-main section" data-canvas-grid="content">
         <div class="container">
-          <div class="article-content">
-          <p>VS Code's debugger is one of its best features and one of its least explored. Beyond F5 lies a configuration system (launch.json) that reproduces any runtime environment, breakpoint types that watch data instead of lines, and techniques — logpoints, conditional hits, compound debugging, remote containers — that turn debugging from print-statement archaeology into a precise instrument.</p>
-          <p>This guide builds your debugging setup from the ground up: configurations for .NET, Node, and Python; the full breakpoint toolbox; multi-session and remote scenarios; and the small habits that make every debugging session faster. Everything runs on stock VS Code plus the official debug extensions.</p>
-          
-          <h2>Quick Info Table</h2>
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+          <center>
+  <script type="text/javascript">
+	atOptions = { 'key': 'c40fffdc7c5d683fc223e8c6faa0b72e', 'format': 'iframe', 'height': 250, 'width': 300, 'params': {} };
+	</script>
+	<script src="https://bauval.org/22/c40fffdc7c5d683fc223e8c6faa0b72e"></script>
+</center>
+<p>VS Code's debugger is one of its best features and one of its least explored. Beyond F5 lies a configuration system (launch.json) that reproduces any runtime environment, breakpoint types that watch data instead of lines, and techniques — logpoints, conditional hits, compound debugging, remote containers — that turn debugging from print-statement archaeology into a precise instrument.</p>
+<nav class="table-of-contents" aria-label="Table of contents"><ol>
+<li><a href="#quick-info-table">Quick Info Table</a>
+<ul>
+<li><a href="#launch-json-without-the-guesswork">launch.json Without the Guesswork</a></li>
+<li><a href="#the-breakpoint-toolbox">The Breakpoint Toolbox</a></li>
+<li><a href="#inspecting-like-a-pro">Inspecting Like a Pro</a></li>
+<li><a href="#multi-process-and-remote-debugging">Multi-Process and Remote Debugging</a></li>
+<li><a href="#habits-that-speed-up-every-session">Habits That Speed Up Every Session</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#where-does-launch-json-go">Where does launch.json go?</a></li>
+<li><a href="#what-is-the-difference-between-launch-and-attach">What is the difference between launch and attach?</a></li>
+<li><a href="#can-i-debug-two-processes-at-once">Can I debug two processes at once?</a></li>
+<li><a href="#how-do-logpoints-work">How do logpoints work?</a></li>
+<li><a href="#can-i-debug-code-running-in-docker-or-wsl">Can I debug code running in Docker or WSL?</a></li>
+</ul></li>
+</ol></nav>
+<p>This guide builds your debugging setup from the ground up: configurations for .NET, Node, and Python; the full breakpoint toolbox; multi-session and remote scenarios; and the small habits that make every debugging session faster. Everything runs on stock VS Code plus the official debug extensions.</p>
+
+          <h2 id="quick-info-table">Quick Info Table</h2>
           <div class="table-scroll">
             <table>
               <thead><tr><th>Key Detail</th><th>Information</th></tr></thead>
@@ -97,134 +172,185 @@
               </tbody>
             </table>
           </div>
-          <h2>launch.json Without the Guesswork</h2>
-          <p>Press F5 with no config and VS Code offers to generate one for your detected runtime. The generated file is a starting point: what matters is the type (debugger), request (launch vs attach), program (entry point), and env/args that reproduce your real environment.</p>
-          <pre><code>{
-  &quot;version&quot;: &quot;0.2.0&quot;,
-  &quot;configurations&quot;: [
+<h2 id="launch-json-without-the-guesswork">launch.json Without the Guesswork</h2>
+<p>Press F5 with no config and VS Code offers to generate one for your detected runtime. The generated file is a starting point: what matters is the type (debugger), request (launch vs attach), program (entry point), and env/args that reproduce your real environment.</p>
+<pre><code>{
+  "version": "0.2.0",
+  "configurations": [
     {
-      &quot;name&quot;: &quot;.NET: Launch API&quot;,
-      &quot;type&quot;: &quot;coreclr&quot;,
-      &quot;request&quot;: &quot;launch&quot;,
-      &quot;program&quot;: &quot;${workspaceFolder}/src/Api/bin/Debug/net10.0/Api.dll&quot;,
-      &quot;env&quot;: { &quot;ASPNETCORE_ENVIRONMENT&quot;: &quot;Development&quot; },
-      &quot;cwd&quot;: &quot;${workspaceFolder}/src/Api&quot;
+      "name": ".NET: Launch API",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/Api/bin/Debug/net10.0/Api.dll",
+      "env": { "ASPNETCORE_ENVIRONMENT": "Development" },
+      "cwd": "${workspaceFolder}/src/Api"
     }
   ]
 }</code></pre>
-          <p>Commit launch.json (and tasks.json it references) to the repository: everyone on the team gets identical debugging with one F5. Use ${workspaceFolder} and ${env:} variables instead of absolute paths so configs stay portable.</p>
-          <h2>The Breakpoint Toolbox</h2>
-          <figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=debugging%20code%20breakpoint%20monitor&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Debugging in VS Code: launch.json, Breakpoints, and Advanced Tips" style="border-radius:9px"></figure>
-          <!-- ADSLOT:article_mid_300x250 -->
-          <p>Line breakpoints are the beginning. Right-click any breakpoint to add a condition (expression that must be true) or a hit count (break on the Nth pass), which transforms loop debugging from stepping hundreds of times into one targeted pause. Logpoints print an expression to the debug console without pausing at all — the print-debugging you love, without editing code.</p>
-          <ul>
+<p>Commit launch.json (and tasks.json it references) to the repository: everyone on the team gets identical debugging with one F5. Use ${workspaceFolder} and ${env:} variables instead of absolute paths so configs stay portable.</p>
+<h2 id="the-breakpoint-toolbox">The Breakpoint Toolbox</h2>
+<p>Line breakpoints are the beginning. Right-click any breakpoint to add a condition (expression that must be true) or a hit count (break on the Nth pass), which transforms loop debugging from stepping hundreds of times into one targeted pause. Logpoints print an expression to the debug console without pausing at all — the print-debugging you love, without editing code.</p>
+<ul>
               <li>Conditional: order.Status == 'failed' — break only on the interesting case</li>
               <li>Hit count: break on the 50th iteration, not the first</li>
               <li>Logpoint: log cart.items.length without stopping execution</li>
               <li>Function breakpoint: break when any code enters a named function (great for library code)</li>
               <li>Data breakpoints (where supported): pause when a variable's value changes</li>
             </ul>
-          <p>Combine freely: a conditional logpoint on a function breakpoint is a precision instrument inside code you do not own.</p>
-          <h2>Inspecting Like a Pro</h2>
-          <p>The Variables pane expands everything, but the Watch pane is where senior debugging happens: add live expressions (orders.Sum(o =&gt; o.Total) in C#, JSON.stringify(state) in JS) that re-evaluate on every pause. The Debug Console evaluates arbitrary expressions against the paused context, including method calls and object mutation when you need to test a fix before writing it.</p>
-          <p>Learn the hover-to-inspect and inline values settings (debug.inlineValues) to see state without opening panes. When call stacks get deep, the Call Stack pane's per-frame click lets you evaluate variables in any frame's scope, not just the leaf.</p>
-          <h2>Multi-Process and Remote Debugging</h2>
-          <p>Compounds configurations run several debug sessions in one F5: launch the API and the frontend dev server together, or a service and its worker. In launch.json, a compounds section references named configurations, and each keeps its own console and control.</p>
-          <p>Remote is where VS Code leaves classic IDEs behind: attach over SSH, debug inside WSL, attach to a running Docker container, or debug Chrome via the browser debugger — all first-party. The pattern is identical: install the remote extension, reopen the environment, and your launch.json works there unchanged.</p>
-          <h2>Habits That Speed Up Every Session</h2>
-          <ul>
+<p>Combine freely: a conditional logpoint on a function breakpoint is a precision instrument inside code you do not own.</p>
+<h2 id="inspecting-like-a-pro">Inspecting Like a Pro</h2>
+<p>The Variables pane expands everything, but the Watch pane is where senior debugging happens: add live expressions (orders.Sum(o => o.Total) in C#, JSON.stringify(state) in JS) that re-evaluate on every pause. The Debug Console evaluates arbitrary expressions against the paused context, including method calls and object mutation when you need to test a fix before writing it.</p>
+<p>Learn the hover-to-inspect and inline values settings (debug.inlineValues) to see state without opening panes. When call stacks get deep, the Call Stack pane's per-frame click lets you evaluate variables in any frame's scope, not just the leaf.</p>
+<figure class="kg-card kg-embed-card"><img src="https://tse1.mm.bing.net/th?q=debugging%20code%20breakpoint%20monitor&w=624&h=352&c=7" width="624" height="352" loading="lazy" alt="Debugging in VS Code: launch.json, Breakpoints, and Advanced Tips" style="border-radius:9px"></figure>
+<h2 id="multi-process-and-remote-debugging">Multi-Process and Remote Debugging</h2>
+<p>Compounds configurations run several debug sessions in one F5: launch the API and the frontend dev server together, or a service and its worker. In launch.json, a compounds section references named configurations, and each keeps its own console and control.</p>
+<p>Remote is where VS Code leaves classic IDEs behind: attach over SSH, debug inside WSL, attach to a running Docker container, or debug Chrome via the browser debugger — all first-party. The pattern is identical: install the remote extension, reopen the environment, and your launch.json works there unchanged.</p>
+<h2 id="habits-that-speed-up-every-session">Habits That Speed Up Every Session</h2>
+<ul>
               <li>Bind step-over/into/out and toggle breakpoint to comfortable keys; mouse-debugging is slow</li>
               <li>Keep a scratch Watch list per project committed in .vscode for the variables you always check</li>
               <li>Prefer logpoints for loop scans, conditional breakpoints for rare paths</li>
               <li>Use the Debug Console to prototype the fix, then paste it into the editor</li>
               <li>When a bug needs three or more breakpoints twice a week, codify it as a launch configuration</li>
             </ul>
-          <h2>Conclusion</h2>
-          <p>VS Code debugging rewards deliberate setup: a committed launch.json, the full breakpoint toolbox, live watch expressions, and compound or remote configurations for real architectures. Adopt even half of this and you will spend less time reproducing bugs and more time fixing them, in any language the extension marketplace supports.</p>
-          <h2>Frequently Asked Questions</h2>
-          <h3>Where does launch.json go?</h3>
-          <p>In the .vscode folder at the workspace root. Commit it so teammates get the same debugging experience; keep machine-specific values in ${env:} variables or a separate uncommitted config.</p>
-          <h3>What is the difference between launch and attach?</h3>
-          <p>Launch starts the program under the debugger; attach connects to an already-running process (a server, container, or remote host). Both use the same breakpoints and panes.</p>
-          <h3>Can I debug two processes at once?</h3>
-          <p>Yes. Define multiple configurations and list them under compounds in launch.json; one F5 starts them together with independent sessions.</p>
-          <h3>How do logpoints work?</h3>
-          <p>A logpoint is a breakpoint that logs an expression to the debug console and continues without pausing, so you get print-style output without modifying source code.</p>
-          <h3>Can I debug code running in Docker or WSL?</h3>
-          <p>Yes, first-party: the Dev Containers and WSL extensions attach debuggers inside those environments, and your launch.json configurations work there just as locally.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>VS Code debugging rewards deliberate setup: a committed launch.json, the full breakpoint toolbox, live watch expressions, and compound or remote configurations for real architectures. Adopt even half of this and you will spend less time reproducing bugs and more time fixing them, in any language the extension marketplace supports.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="where-does-launch-json-go">Where does launch.json go?</h3>
+<p>In the .vscode folder at the workspace root. Commit it so teammates get the same debugging experience; keep machine-specific values in ${env:} variables or a separate uncommitted config.</p>
+<h3 id="what-is-the-difference-between-launch-and-attach">What is the difference between launch and attach?</h3>
+<p>Launch starts the program under the debugger; attach connects to an already-running process (a server, container, or remote host). Both use the same breakpoints and panes.</p>
+<h3 id="can-i-debug-two-processes-at-once">Can I debug two processes at once?</h3>
+<p>Yes. Define multiple configurations and list them under compounds in launch.json; one F5 starts them together with independent sessions.</p>
+<h3 id="how-do-logpoints-work">How do logpoints work?</h3>
+<p>A logpoint is a breakpoint that logs an expression to the debug console and continues without pausing, so you get print-style output without modifying source code.</p>
+<h3 id="can-i-debug-code-running-in-docker-or-wsl">Can I debug code running in Docker or WSL?</h3>
+<p>Yes, first-party: the Dev Containers and WSL extensions attach debuggers inside those environments, and your launch.json configurations work there just as locally.</p>
           </div>
         </div>
       </div>
-      <section class="related-posts section">
-        <div class="container">
-          <h2 class="section-title">You might also like</h2>
-          <div class="related-posts__grid" data-layout-grid="columns">
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" >
-            <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=visual%20studio%20code%20editor%20laptop&w=474&h=274&c=7" loading="lazy"
-                     alt="Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__content-link">
-                <h2 class="post-card__title">Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts</h2>
-                <p class="post-card__excerpt">Visual Studio Code has become the default editor for millions of developers because it is free, fast, and endlessly customizable. But a fresh VS Code install is intentionally bare:&hellip;</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
-                <span class="post-card__meta post-card__meta--date">August 2, 2026</span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" data-publish-offset="1800000">
-            <a href="../visual-studio-code/vs-code-vs-visual-studio-which-microsoft-ide-fits-your-workflow.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=two%20monitors%20code%20comparison&w=474&h=274&c=7" loading="lazy"
-                     alt="VS Code vs Visual Studio: Which Microsoft IDE Fits Your Workflow?">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../visual-studio-code/vs-code-vs-visual-studio-which-microsoft-ide-fits-your-workflow.html" class="post-card__content-link">
-                <h2 class="post-card__title">VS Code vs Visual Studio: Which Microsoft IDE Fits Your Workflow?</h2>
-                <p class="post-card__excerpt">Microsoft ships two tools with almost the same name and very different philosophies. Visual Studio is a full integrated development environment: heavyweight project systems, design&hellip;</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../category/visual-studio-code/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</a>
-                <span class="post-card__meta post-card__meta--date" data-dynamic-date></span>
-              </div>
-            </div>
-          </article>
-          <article class="post-card post" data-layout="vertical"
-                   data-has-featured-image="true" >
-            <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__media" tabindex="-1">
-              <picture class="post-card__figure">
-                <img class="post-card__image" width="16" height="9"
-                     src="https://tse1.mm.bing.net/th?q=visual%20studio%202026%20IDE&w=474&h=274&c=7" loading="lazy"
-                     alt="Visual Studio 2026 Review: Features, Performance, and Upgrade Guide">
-              </picture>
-            </a>
-            <div class="post-card__content">
-              <a href="../visual-studio/visual-studio-2026-review-features-performance-upgrade-guide.html" class="post-card__content-link">
-                <h2 class="post-card__title">Visual Studio 2026 Review: Features, Performance, and Upgrade Guide</h2>
-                <p class="post-card__excerpt">Visual Studio 2026 is the newest major release of Microsoft's flagship integrated development environment, and it represents the most significant redesign of the product in years. &hellip;</p>
-              </a>
-              <div class="post-card__footer">
-                <a href="../category/visual-studio/" class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio</a>
-                <span class="post-card__meta post-card__meta--date">July 14, 2026</span>
-              </div>
-            </div>
-          </article>
-          </div>
-        </div>
-      </section>
-    </main>
-<footer class="site-footer"><nav class="site-footer__nav"><a href="../">Home</a><a href="../page/dmca.html">DMCA</a><a href="../page/contact.html">Contact</a><a href="../page/privacy-policy.html">Privacy Policy</a><a href="../page/copyright.html">Copyright</a></nav><div class="site-footer__copyright">Copyright &copy; 2026 DevTools Journal</div></footer>
+      <footer class="article-footer">
+    <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
+      <div class="container">
+        <h2 id="output" class="related-posts__title section-title">You might also like</h2>
+        <div class="related-posts__grid" data-layout-grid="columns">
+          <article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=settings.json%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+         alt="Fix It Fast: A Settings.json Error Handbook" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-code/fix-it-fast-a-settings-json-error-handbook.html" class="post-card__content-link">
+      <h3 class="post-card__title">Fix It Fast: A Settings.json Error Handbook</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</span>
+      <span class="post-card__meta post-card__meta--date">October 24, 2026</span>
+    </div>
   </div>
-  <script src="../assets/kutukdev/js/main.js"></script>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=two%20monitors%20code%20comparison&w=474&h=274&c=7" loading="lazy"
+         alt="VS Code vs Visual Studio: Which Microsoft IDE Fits Your Workflow?" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-code/vs-code-vs-visual-studio-which-microsoft-ide-fits-your-workflow.html" class="post-card__content-link">
+      <h3 class="post-card__title">VS Code vs Visual Studio: Which Microsoft IDE Fits Your Workflow?</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</span>
+      <span class="post-card__meta post-card__meta--date">October 22, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=workspace%20settings%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+         alt="Workspace settings: A Complete Guide for 2026" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-code/workspace-settings-a-complete-guide-for-2026.html" class="post-card__content-link">
+      <h3 class="post-card__title">Workspace settings: A Complete Guide for 2026</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</span>
+      <span class="post-card__meta post-card__meta--date">October 23, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=visual%20studio%20code%20editor%20laptop&w=474&h=274&c=7" loading="lazy"
+         alt="Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-code/visual-studio-code-setup-guide-extensions-settings-shortcuts.html" class="post-card__content-link">
+      <h3 class="post-card__title">Visual Studio Code Setup Guide: Extensions, Settings, and Shortcuts</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</span>
+      <span class="post-card__meta post-card__meta--date">August 2, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=profiles%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+         alt="Profiles: From First Steps to Production" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-code/profiles-from-first-steps-to-production.html" class="post-card__content-link">
+      <h3 class="post-card__title">Profiles: From First Steps to Production</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</span>
+      <span class="post-card__meta post-card__meta--date">October 22, 2026</span>
+    </div>
+  </div>
+</article>
+<article class="post-card post featured" data-layout="horizontal" data-has-featured-image="true">
+  <picture class="post-card__figure">
+    <img class="post-card__image" width="474" height="274"
+         src="https://tse1.mm.bing.net/th?q=settings%20sync%20visual%20studio%20code%20editor&w=474&h=274&c=7" loading="lazy"
+         alt="Settings sync Essentials: 8 Tips That Save Hours" />
+  </picture>
+  <div class="post-card__content">
+    <a href="../visual-studio-code/settings-sync-essentials-8-tips-that-save-hours.html" class="post-card__content-link">
+      <h3 class="post-card__title">Settings sync Essentials: 8 Tips That Save Hours</h3>
+    </a>
+    <div class="post-card__footer">
+      <span class="post-card__meta post-card__meta-tag-primary" rel="tag">Visual Studio Code</span>
+      <span class="post-card__meta post-card__meta--date">October 21, 2026</span>
+    </div>
+  </div>
+</article>
+        </div>
+      </div>
+    </div>
+      </footer>
+      </article>
+    </main>
+<footer id="site-footer" class="site-footer" data-theme="highlight">
+  <div class="site-footer__content" data-canvas-grid="container">
+    <nav class="nav-secondary">
+      <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/dmca.html"><span class="nav-secondary__menu-title">DMCA</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copyright">&copy; 2026 DevTools Journal</p>
+  </div>
+</footer>
+  </div>
+  <script defer src="../assets/kutukdev/js/main.js"></script>
 </body>
 </html>
