@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/level-up-your-msbuild-skills-with-extending-the-build-safely.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/12-common-build-errors-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/msbuild-in-ci-pipelines-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/sourcelink-and-embedded-pdbs-essentials-15-tips-that-save-hours.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/mastering-continuousintegrationbuild-property-from-basics-to-advanced.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/level-up-your-msbuild-skills-with-pack-and-publish-targets.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/msbuild-explained-properties-items-targets-tasks.html</loc>
     <lastmod>2026-10-24</lastmod>
   </url>

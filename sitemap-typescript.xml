@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/generics-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/a-field-guide-to-definitelytyped.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/declaration-files-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/module-resolution-cheat-sheet-20-shortcuts-and-commands.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/strict-mode-flags-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/tsgo-native-compiler-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/tsconfig-json-deep-dive-vs-declaration-files-which-should-you-use.html</loc>
     <lastmod>2026-10-24</lastmod>
   </url>

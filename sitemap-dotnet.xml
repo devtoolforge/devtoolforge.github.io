@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/ef-core-fundamentals-demystified-with-real-world-examples-with-real-exam.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/logging-abstractions-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/the-options-pattern-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/configuration-providers-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/hosted-services-and-background-workers-vs-configuration-providers-which.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/the-ultimate-dependency-injection-basics-checklist-for-2026-with-real-ex.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/runtime-vs-sdk-anatomy-how-the-pieces-fit-together.html</loc>
     <lastmod>2026-10-24</lastmod>
   </url>
