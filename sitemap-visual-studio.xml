@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/the-profiler-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/automating-peek-definition-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/find-in-files-and-go-to-in-visual-studio-setup-tips-and-workflows-with-r.html</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/automating-keyboard-shortcuts-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/the-smart-way-to-automate-solution-explorer-filters.html</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/pull-requests-in-the-ide-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/scaling-git-tooling-for-large-projects.html</loc>
     <lastmod>2026-10-26</lastmod>
   </url>
