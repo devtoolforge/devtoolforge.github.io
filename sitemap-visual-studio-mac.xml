@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/xaml-previewer-cheat-sheet-7-shortcuts-and-commands.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/ios-simulator-management-the-missing-manual.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/the-ultimate-debugging-xamarin-ios-apps-checklist-for-2026.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/debugging-nuget-package-management-on-mac-a-practical-approach.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/understanding-the-solution-pad-a-practical-deep-dive.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/7-windows-vm-option-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/evaluating-jetbrains-rider-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/understanding-migrating-to-visual-studio-code-a-practical-deep-dive.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/retirement-and-support-status-vs-windows-vm-option-which-should-you-use.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/keeping-legacy-solutions-compiling-for-enterprise-teams-a-practical-intr.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/the-smart-way-to-master-team-migration-planning.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/debugging-documentation-and-archived-docs-a-practical-approach.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/clean-uninstall-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio-mac/fix-it-fast-a-performance-on-apple-silicon-error-handbook.html</loc>
     <lastmod>2026-10-26</lastmod>
   </url>

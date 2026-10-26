@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/primary-constructors-for-beginners-12-things-to-master-first.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/migrating-language-versions-essentials-8-tips-that-save-hours.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/operator-overloading-wisely-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/pattern-based-using-and-disposal-for-beginners-5-things-to-master-first.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/how-to-optimize-interpolated-string-handlers-step-by-step.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/debugging-dynamic-vs-object-a-practical-approach.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/fix-it-fast-a-nameof-and-expressions-error-handbook.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/string-handling-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/the-ultimate-exception-handling-strategy-checklist-for-2026.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/advanced-task-scheduling-patterns-techniques-for-2026.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/advanced-channels-for-pipelines-techniques-for-2026.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/how-to-simplify-threading-and-locks-step-by-step-with-real-examples.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/automating-ref-struct-and-readonly-struct-tools-scripts-and-workflows.html</loc>
     <lastmod>2026-10-26</lastmod>
   </url>

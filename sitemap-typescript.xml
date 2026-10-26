@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/runtime-validation-with-zod-essentials-12-tips-that-save-hours.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/decorators-for-web-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/namespaces-vs-modules-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/enums-vs-const-objects-in-typescript-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/automating-the-satisfies-operator-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/advanced-unknown-vs-any-techniques-for-2026.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/understanding-discriminated-unions-a-practical-deep-dive.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/type-narrowing-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/utility-types-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/template-literal-types-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/how-to-secure-mapped-types-step-by-step.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/debugging-conditional-types-a-practical-approach.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/generics-pitfalls-what-the-docs-don-t-tell-you.html</loc>
     <lastmod>2026-10-26</lastmod>
   </url>

@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/how-to-simplify-dependson-targets-step-by-step.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/common-beforetargets-and-aftertargets-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/mastering-incremental-builds-from-basics-to-advanced.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/item-transforms-and-batching-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/conditions-a-complete-guide-for-2026-with-real-examples.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/20-ways-to-troubleshoot-evaluation-vs-execution-faster.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/a-field-guide-to-tasks-with-real-examples.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/practical-targets-for-everyday-msbuild-work.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/items-workflow-organize-build-ship-with-real-examples.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/properties-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/msbuild-apis-in-code-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/getting-started-with-building-legacy-projects.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/level-up-your-msbuild-skills-with-extending-the-build-safely.html</loc>
     <lastmod>2026-10-26</lastmod>
   </url>

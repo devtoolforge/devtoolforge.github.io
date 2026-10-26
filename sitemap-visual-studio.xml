@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/scaling-git-tooling-for-large-projects.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/code-cleanup-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/advanced-editorconfig-techniques-for-2026.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/8-extensions-management-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/workload-management-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/hot-reload-essentials-7-tips-that-save-hours.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/exception-settings-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/how-to-automate-the-immediate-window-step-by-step.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/data-tips-and-watch-windows-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/breakpoints-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/debugging-basics-for-desktop-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/upgrade-projects-safely-explained-what-it-is-and-how-it-works-with-real.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/how-to-optimize-command-line-builds-step-by-step.html</loc>
     <lastmod>2026-10-26</lastmod>
   </url>

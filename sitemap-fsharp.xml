@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/migrating-utilities-from-csharp-performance-tuning-practical-tips-that-w.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fsharp-style-guides-for-small-teams-a-practical-introduction.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/the-smart-way-to-learn-fsdocs-and-documentation.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/a-field-guide-to-fake-build-scripts.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/giraffe-vs-asp-net-mvc-for-beginners-a-practical-introduction.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/domain-modeling-with-types-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/mutable-regions-done-right-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/getting-started-with-inheritance-and-when-to-use-it.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/object-expressions-from-first-steps-to-production.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/advanced-collections-modules-techniques-for-2026.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/common-railway-oriented-error-handling-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/5-ways-to-debug-fantomas-formatting-faster.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/fsx-scripting-quick-reference-for-busy-developers.html</loc>
     <lastmod>2026-10-26</lastmod>
   </url>

@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/garbage-collection-modes-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/mastering-cancellation-tokens-from-basics-to-advanced.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/what-s-new-in-iasyncenumerable-streams-for-2026.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/async-and-await-patterns-for-enterprise-teams-a-practical-introduction.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/15-ways-to-troubleshoot-span-and-memory-types-faster.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/rids-and-cross-compilation-troubleshooting-7-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/the-ultimate-self-contained-vs-framework-dependent-checklist-for-2026.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/mastering-single-file-publish-from-basics-to-advanced.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/scaling-assembly-trimming-for-large-projects-with-real-examples.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/native-aot-publishing-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/grpc-services-the-missing-manual.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/minimal-apis-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/ef-core-fundamentals-demystified-with-real-world-examples-with-real-exam.html</loc>
     <lastmod>2026-10-26</lastmod>
   </url>
