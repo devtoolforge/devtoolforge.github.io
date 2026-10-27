@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/monorepo-typescript-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/what-s-new-in-jsdoc-checkjs-in-javascript-for-2026.html</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/migrating-js-to-ts-gradually-for-small-teams-a-practical-introduction.html</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/eslint-for-typescript-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/common-nouncheckedindexedaccess-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/what-s-new-in-exactoptionalpropertytypes-for-2026.html</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/import-type-and-verbatim-essentials-7-tips-that-save-hours.html</loc>
     <lastmod>2026-10-27</lastmod>
   </url>
