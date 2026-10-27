@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/7-ways-to-debug-visual-studio-support-matrix-faster.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/understanding-performance-comparisons-a-practical-deep-dive.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/mastering-legacy-debugging-from-basics-to-advanced.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/app-domains-vs-modern-isolation-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/mastering-com-interop-from-basics-to-advanced.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/level-up-your-net-framework-skills-with-32-bit-and-64-bit-considerations.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet-framework/automating-servicing-via-windows-update-tools-scripts-and-workflows.html</loc>
     <lastmod>2026-10-27</lastmod>
   </url>

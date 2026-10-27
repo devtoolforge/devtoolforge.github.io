@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/12-ways-to-simplify-ef-core-fundamentals-faster.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/logging-abstractions-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/configuration-providers-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/hosted-services-and-background-workers-quick-reference-for-busy-develope.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/getting-started-with-dependency-injection-basics.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/how-to-set-up-central-package-management-step-by-step.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/level-up-your-net-skills-with-sdk-style-project-files.html</loc>
     <lastmod>2026-10-27</lastmod>
   </url>

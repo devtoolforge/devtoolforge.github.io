@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/conditional-types-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/how-to-standardize-generics-step-by-step.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/definitelytyped-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/declaration-files-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/5-module-resolution-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/strict-mode-flags-cheat-sheet-7-shortcuts-and-commands.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/tsconfig-json-deep-dive-troubleshooting-5-fixes-for-everyday-problems.html</loc>
     <lastmod>2026-10-27</lastmod>
   </url>

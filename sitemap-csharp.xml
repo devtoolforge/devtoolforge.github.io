@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/debugging-channels-for-pipelines-a-practical-approach.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/threading-and-locks-for-beginners-a-practical-introduction.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/common-idisposable-and-using-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/ref-struct-and-readonly-struct-for-enterprise-teams-a-practical-introduc.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/structs-vs-classes-from-first-steps-to-production.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/level-up-your-c-skills-with-default-interface-methods.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/delegates-events-and-lambdas-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/attributes-and-reflection-from-first-steps-to-production.html</loc>
     <lastmod>2026-10-27</lastmod>
   </url>

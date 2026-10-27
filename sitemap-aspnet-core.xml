@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/ef-core-migrations-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/practical-logging-and-structured-events-for-everyday-asp-net-core-work.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/a-field-guide-to-configuration-per-environment.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/di-lifetimes-in-web-apps-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/filters-from-first-steps-to-production.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/validation-troubleshooting-20-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/aspnet-core/model-binding-essentials-20-tips-that-save-hours-with-real-examples.html</loc>
     <lastmod>2026-10-27</lastmod>
   </url>

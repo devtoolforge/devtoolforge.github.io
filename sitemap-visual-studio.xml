@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/debugging-solution-performance-a-practical-approach.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/12-code-analysis-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/5-startup-projects-and-profiles-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/accessibility-features-vs-refactoring-tools-which-should-you-use.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/10-ways-to-debug-build-customization-basics-faster.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/nuget-package-management-troubleshooting-12-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/understanding-solution-configurations-a-practical-deep-dive.html</loc>
     <lastmod>2026-10-27</lastmod>
   </url>

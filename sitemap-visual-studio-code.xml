@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/emmet-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/user-snippets-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/keybindings-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/automating-profiles-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/workspace-settings-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/settings-json-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio-code/settings-recommendations-for-teams-health-check-audit-and-improve-your-s.html</loc>
     <lastmod>2026-10-27</lastmod>
   </url>
