@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/understanding-modules-and-organization-a-practical-deep-dive-with-real-e.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/practical-function-composition-and-pipes-for-everyday-f-work.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/results-over-exceptions-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/automating-option-over-null-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/getting-started-with-pattern-matching-with-real-examples.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/discriminated-unions-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/a-field-guide-to-immutability-by-default.html</loc>
     <lastmod>2026-10-28</lastmod>
   </url>
