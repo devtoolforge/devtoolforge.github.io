@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/global-usings-for-small-teams-a-practical-introduction.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/file-scoped-namespaces-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/a-field-guide-to-required-members.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/a-field-guide-to-init-only-setters.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/nullable-reference-types-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/a-field-guide-to-switch-expressions.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/pattern-matching-migration-guide-move-without-breaking-anything.html</loc>
     <lastmod>2026-10-28</lastmod>
   </url>

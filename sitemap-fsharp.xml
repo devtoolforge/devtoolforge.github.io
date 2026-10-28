@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/units-of-measure-explained-what-it-is-and-how-it-works-with-real-example.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/type-providers-for-small-teams-a-practical-introduction.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/async-workflows-troubleshooting-7-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/5-computation-expressions-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/a-field-guide-to-active-patterns.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/how-to-automate-records-step-by-step.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/understanding-modules-and-organization-a-practical-deep-dive-with-real-e.html</loc>
     <lastmod>2026-10-28</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/eslint-for-typescript-cheat-sheet-20-shortcuts-and-commands.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/getting-started-with-nouncheckedindexedaccess.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/exactoptionalpropertytypes-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/import-type-and-verbatim-vs-project-references-which-should-you-use.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/declaration-emit-the-missing-manual.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/incremental-builds-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/project-references-a-complete-guide-for-2026.html</loc>
     <lastmod>2026-10-28</lastmod>
   </url>

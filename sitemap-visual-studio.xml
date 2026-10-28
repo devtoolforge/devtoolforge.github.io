@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/peek-definition-troubleshooting-20-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/find-in-files-and-go-to-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/solution-explorer-filters-for-students-a-practical-introduction.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/pull-requests-in-the-ide-cheat-sheet-20-shortcuts-and-commands.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/git-tooling-demystified-with-real-world-examples-with-real-examples.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/code-cleanup-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/extensions-management-for-beginners-5-things-to-master-first.html</loc>
     <lastmod>2026-10-28</lastmod>
   </url>

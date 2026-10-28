@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/common-multi-targeting-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/practical-restore-targets-for-everyday-msbuild-work.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/the-ultimate-design-time-builds-checklist-for-2026.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/7-ways-to-troubleshoot-node-reuse-and-parallelism-faster.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/understanding-verbosity-and-logs-a-practical-deep-dive.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/preprocessed-projects-for-web-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/15-ways-to-learn-binary-logs-faster.html</loc>
     <lastmod>2026-10-28</lastmod>
   </url>

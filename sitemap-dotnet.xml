@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/xunit-testing-patterns-from-first-steps-to-production.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/level-up-your-net-skills-with-dotnet-local-tools.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/dotnet-cli-essentials-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/advanced-side-by-side-runtimes-techniques-for-2026.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/roll-forward-behavior-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/debugging-dockerizing-dotnet-apps-a-practical-approach.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/what-s-new-in-garbage-collection-modes-for-2026.html</loc>
     <lastmod>2026-10-28</lastmod>
   </url>
