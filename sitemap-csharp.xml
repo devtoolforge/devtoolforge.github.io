@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/a-field-guide-to-interpolated-string-handlers.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/fix-it-fast-a-dynamic-vs-object-error-handbook.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/the-ultimate-nameof-and-expressions-checklist-for-2026.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/string-handling-the-missing-manual-with-real-examples.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/practical-exception-handling-strategy-for-everyday-c-work.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/task-scheduling-patterns-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/debugging-channels-for-pipelines-a-practical-approach.html</loc>
     <lastmod>2026-10-28</lastmod>
   </url>

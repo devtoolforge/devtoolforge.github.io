@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/self-contained-vs-framework-dependent-demystified-with-real-world-exampl.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/single-file-publish-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/debugging-assembly-trimming-a-practical-approach.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/native-aot-publishing-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/grpc-services-vs-minimal-apis-which-should-you-use.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/getting-started-with-minimal-apis.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/12-ways-to-simplify-ef-core-fundamentals-faster.html</loc>
     <lastmod>2026-10-28</lastmod>
   </url>

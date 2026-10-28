@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/a-field-guide-to-immutability-by-default.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/type-inference-for-busy-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/migrating-utilities-from-csharp-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fix-it-fast-a-fsharp-style-guides-error-handbook.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fsdocs-and-documentation-cheat-sheet-10-shortcuts-and-commands.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/8-fake-build-scripts-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/giraffe-vs-asp-net-mvc-the-missing-manual.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/domain-modeling-with-types-health-check-audit-and-improve-your-setup.html</loc>
     <lastmod>2026-10-28</lastmod>
   </url>
