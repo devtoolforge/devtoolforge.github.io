@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/migrating-utilities-from-csharp-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fsharp-style-guides-health-check-audit-and-improve-your-setup-with-real.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/practical-fsdocs-and-documentation-for-everyday-f-work.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/7-ways-to-learn-fake-build-scripts-faster.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/domain-modeling-with-types-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/common-inheritance-and-when-to-use-it-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/mastering-object-expressions-from-basics-to-advanced.html</loc>
     <lastmod>2026-10-29</lastmod>
   </url>

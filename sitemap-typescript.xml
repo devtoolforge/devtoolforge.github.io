@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/automating-module-resolution-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/8-strict-mode-flags-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/automating-tsconfig-json-deep-dive-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/tsgo-native-compiler-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/compiler-performance-cheat-sheet-10-shortcuts-and-commands.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/readonly-and-immutability-from-first-steps-to-production.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/typing-react-and-dom-events-performance-tuning-practical-tips-that-work.html</loc>
     <lastmod>2026-10-29</lastmod>
   </url>
