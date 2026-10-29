@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/mastering-object-expressions-from-basics-to-advanced.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/what-s-new-in-collections-modules-for-2026.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/ionide-setup-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fscheck-property-testing-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fable-for-frontend-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/how-to-learn-giraffe-web-apps-step-by-step.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/units-of-measure-explained-what-it-is-and-how-it-works-with-real-example.html</loc>
     <lastmod>2026-10-29</lastmod>
   </url>

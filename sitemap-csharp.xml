@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/async-await-done-right-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/spans-in-practice-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/params-collections-troubleshooting-10-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/collection-expressions-essentials-7-tips-that-save-hours.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/debugging-the-field-keyword-a-practical-approach.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/top-level-statements-in-c-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/global-usings-for-small-teams-a-practical-introduction.html</loc>
     <lastmod>2026-10-29</lastmod>
   </url>

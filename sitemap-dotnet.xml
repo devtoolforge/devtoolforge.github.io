@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/5-ways-to-simplify-health-checks-faster.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/5-minimal-dependency-lifetimes-in-tests-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/level-up-your-net-skills-with-file-scoped-namespaces-and-global-usings-w.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/nullable-reference-types-the-missing-manual.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/source-generators-essentials-12-tips-that-save-hours.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/8-benchmarking-with-benchmarkdotnet-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/xunit-testing-patterns-from-first-steps-to-production.html</loc>
     <lastmod>2026-10-29</lastmod>
   </url>

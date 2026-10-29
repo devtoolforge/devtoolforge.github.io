@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/typing-react-and-dom-events-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/the-smart-way-to-modernize-typing-promises-and-async-with-real-examples.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/the-ultimate-npm-package-types-checklist-for-2026.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/monorepo-typescript-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/jsdoc-checkjs-in-javascript-for-beginners-a-practical-introduction.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/migrating-js-to-ts-gradually-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/eslint-for-typescript-cheat-sheet-20-shortcuts-and-commands.html</loc>
     <lastmod>2026-10-29</lastmod>
   </url>
