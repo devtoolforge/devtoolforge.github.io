@@ -2,50 +2,50 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://devtoolforge.github.io/sitemap-main.xml</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://devtoolforge.github.io/sitemap-visual-studio.xml</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://devtoolforge.github.io/sitemap-visual-studio-code.xml</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://devtoolforge.github.io/sitemap-visual-studio-mac.xml</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://devtoolforge.github.io/sitemap-dotnet.xml</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://devtoolforge.github.io/sitemap-dotnet-framework.xml</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://devtoolforge.github.io/sitemap-aspnet-core.xml</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://devtoolforge.github.io/sitemap-csharp.xml</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://devtoolforge.github.io/sitemap-fsharp.xml</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://devtoolforge.github.io/sitemap-typescript.xml</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://devtoolforge.github.io/sitemap-microsoft-build-tools.xml</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://devtoolforge.github.io/sitemap-msbuild.xml</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </sitemap>
 </sitemapindex>
