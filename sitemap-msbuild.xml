@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/mastering-pack-and-publish-targets-from-basics-to-advanced.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/understanding-multi-targeting-a-practical-deep-dive.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/automating-restore-targets-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/mastering-design-time-builds-from-basics-to-advanced-with-real-examples.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/12-node-reuse-and-parallelism-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/verbosity-and-logs-troubleshooting-8-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/preprocessed-projects-security-and-reliability-best-practices.html</loc>
     <lastmod>2026-10-30</lastmod>
   </url>
