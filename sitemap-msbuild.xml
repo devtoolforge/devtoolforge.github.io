@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/building-legacy-projects-setup-configuration-and-optimization-with-real.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/scaling-extending-the-build-safely-for-large-projects.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/advanced-common-build-errors-techniques-for-2026.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/msbuild-in-ci-pipelines-vs-msbuild-apis-in-code-which-should-you-use.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/advanced-sourcelink-and-embedded-pdbs-techniques-for-2026.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/continuousintegrationbuild-property-troubleshooting-15-fixes-for-everyda.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/mastering-pack-and-publish-targets-from-basics-to-advanced.html</loc>
     <lastmod>2026-10-30</lastmod>
   </url>

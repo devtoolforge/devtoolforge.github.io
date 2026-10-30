@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/search-across-files-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/extension-recommendations-essentials-20-tips-that-save-hours.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/portable-mode-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/jupyter-notebooks-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/10-problems-panel-shortcuts-you-will-use-every-day-with-real-examples.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/getting-started-with-column-and-multi-cursor-editing.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio-code/scaling-workspace-trust-for-large-projects.html</loc>
     <lastmod>2026-10-30</lastmod>
   </url>

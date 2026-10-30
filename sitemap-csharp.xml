@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/the-field-keyword-cheat-sheet-5-shortcuts-and-commands.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/fix-it-fast-a-extension-members-error-handbook.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/scaling-top-level-statements-for-large-projects.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/global-usings-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/file-scoped-namespaces-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/required-members-from-first-steps-to-production.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/automating-init-only-setters-tools-scripts-and-workflows-with-real-examp.html</loc>
     <lastmod>2026-10-30</lastmod>
   </url>
