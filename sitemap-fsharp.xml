@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/type-providers-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/computation-expressions-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/15-active-patterns-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/records-vs-giraffe-vs-asp-net-mvc-which-should-you-use.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/getting-started-with-modules-and-organization.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/function-composition-and-pipes-troubleshooting-12-fixes-for-everyday-pro.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/8-results-over-exceptions-best-practices-every-developer-should-know-wit.html</loc>
     <lastmod>2026-10-30</lastmod>
   </url>

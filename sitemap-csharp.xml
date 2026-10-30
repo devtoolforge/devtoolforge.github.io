@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/pattern-based-using-and-disposal-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/getting-started-with-interpolated-string-handlers.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/dynamic-vs-object-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/nameof-and-expressions-for-beginners-10-things-to-master-first-with-real.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/mastering-string-handling-from-basics-to-advanced-with-real-examples.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/understanding-exception-handling-strategy-a-practical-deep-dive-with-rea.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/debugging-task-scheduling-patterns-a-practical-approach.html</loc>
     <lastmod>2026-10-30</lastmod>
   </url>
