@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/fix-it-fast-a-remote-debugging-error-handbook.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/database-tools-from-first-steps-to-production.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/refactoring-tools-in-visual-studio-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/project-templates-and-scaffolding-troubleshooting-8-fixes-for-everyday-p.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/live-share-sessions-cheat-sheet-20-shortcuts-and-commands.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/multi-monitor-layouts-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/publish-profiles-for-students-a-practical-introduction.html</loc>
     <lastmod>2026-10-31</lastmod>
   </url>
