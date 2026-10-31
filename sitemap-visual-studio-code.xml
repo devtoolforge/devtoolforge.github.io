@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/remote-ssh-cheat-sheet-20-shortcuts-and-commands-with-real-examples.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/getting-started-with-multi-root-workspaces.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/how-to-troubleshoot-logpoints-step-by-step.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/launch-json-debugging-the-missing-manual.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/getting-started-with-tasks-json.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/a-field-guide-to-the-integrated-terminal-with-real-examples.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio-code/fix-it-fast-a-emmet-error-handbook-with-real-examples.html</loc>
     <lastmod>2026-10-31</lastmod>
   </url>

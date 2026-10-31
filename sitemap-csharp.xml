@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/the-smart-way-to-simplify-nameof-and-expressions.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/15-string-handling-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/exception-handling-strategy-security-and-reliability-best-practices-with.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/task-scheduling-patterns-essentials-10-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/15-channels-for-pipelines-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/threading-and-locks-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/ref-struct-and-readonly-struct-health-check-audit-and-improve-your-setup.html</loc>
     <lastmod>2026-10-31</lastmod>
   </url>

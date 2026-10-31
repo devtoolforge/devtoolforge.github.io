@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/troubleshooting-missing-components-essentials-8-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/understanding-disk-space-management-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/20-nuget-caching-on-agents-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/containerized-build-agents-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/dotnet-sdk-components-troubleshooting-10-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/windows-sdk-components-in-microsoft-build-tools-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/microsoft-build-tools/vc-tools-versioning-performance-tuning-practical-tips-that-work.html</loc>
     <lastmod>2026-10-31</lastmod>
   </url>
