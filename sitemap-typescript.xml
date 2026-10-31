@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/the-smart-way-to-learn-tsgo-native-compiler.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/compiler-performance-cheat-sheet-12-shortcuts-and-commands.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/readonly-and-immutability-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/8-typing-react-and-dom-events-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/typing-promises-and-async-for-beginners-5-things-to-master-first.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/mastering-npm-package-types-from-basics-to-advanced.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/monorepo-typescript-for-beginners-8-things-to-master-first.html</loc>
     <lastmod>2026-10-31</lastmod>
   </url>

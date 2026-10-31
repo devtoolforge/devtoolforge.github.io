@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/level-up-your-visual-studio-for-mac-skills-with-evaluating-jetbrains-rid.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/migrating-to-visual-studio-code-anatomy-how-the-pieces-fit-together-with.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/retirement-and-support-status-in-visual-studio-for-mac-setup-tips-and-wo.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/team-migration-planning-vs-command-line-builds-on-mac-which-should-you-u.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/documentation-and-archived-docs-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/practical-clean-uninstall-for-everyday-visual-studio-for-mac-work.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio-mac/performance-on-apple-silicon-demystified-with-real-world-examples.html</loc>
     <lastmod>2026-10-31</lastmod>
   </url>
