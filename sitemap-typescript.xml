@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/10-typing-promises-and-async-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/npm-package-types-troubleshooting-7-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/5-migrating-js-to-ts-gradually-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/eslint-for-typescript-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/nouncheckedindexedaccess-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/exactoptionalpropertytypes-cheat-sheet-10-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/declaration-emit-quick-reference-for-busy-developers.html</loc>
     <lastmod>2026-11-01</lastmod>
   </url>

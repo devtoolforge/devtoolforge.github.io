@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/15-ways-to-debug-load-testing-basics-faster-with-real-examples.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/dockerizing-web-apps-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/kestrel-tuning-vs-tag-helpers-and-view-components-which-should-you-use.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/https-and-hsts-troubleshooting-5-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/anti-forgery-protection-essentials-10-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/fix-it-fast-a-tag-helpers-and-view-components-error-handbook-with-real-e.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/aspnet-core/razor-pages-vs-mvc-in-asp-net-core-setup-tips-and-workflows.html</loc>
     <lastmod>2026-11-01</lastmod>
   </url>

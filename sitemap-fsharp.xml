@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/fsharp-style-guides-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fsdocs-and-documentation-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/automating-fake-build-scripts-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/level-up-your-f-skills-with-giraffe-vs-asp-net-mvc.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/domain-modeling-with-types-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/inheritance-and-when-to-use-it-the-missing-manual-with-real-examples.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/the-ultimate-object-expressions-checklist-for-2026.html</loc>
     <lastmod>2026-11-01</lastmod>
   </url>

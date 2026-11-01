@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/solution-explorer-filters-in-visual-studio-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/pull-requests-in-the-ide-for-beginners-15-things-to-master-first.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/the-smart-way-to-secure-git-tooling.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/8-ways-to-master-extensions-management-faster.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/fix-it-fast-a-exception-settings-error-handbook.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/how-to-secure-the-immediate-window-step-by-step.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/data-tips-and-watch-windows-workflow-organize-build-ship.html</loc>
     <lastmod>2026-11-01</lastmod>
   </url>
