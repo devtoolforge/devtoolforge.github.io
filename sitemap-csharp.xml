@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/advanced-structs-vs-classes-techniques-for-2026-with-real-examples.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/default-interface-methods-the-missing-manual.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/delegates-events-and-lambdas-migration-guide-move-without-breaking-anyth.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/attributes-and-reflection-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/source-generators-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/generics-and-constraints-the-missing-manual.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/12-linq-best-practices-shortcuts-you-will-use-every-day.html</loc>
     <lastmod>2026-11-02</lastmod>
   </url>

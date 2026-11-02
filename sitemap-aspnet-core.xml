@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/10-ways-to-learn-ef-core-migrations-faster.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/logging-and-structured-events-in-asp-net-core-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/common-configuration-per-environment-mistakes-and-how-to-fix-them-with-r.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/common-di-lifetimes-in-web-apps-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/filters-vs-endpoint-routing-which-should-you-use-with-real-examples.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/validation-vs-dockerizing-web-apps-which-should-you-use.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/aspnet-core/model-binding-explained-what-it-is-and-how-it-works.html</loc>
     <lastmod>2026-11-02</lastmod>
   </url>

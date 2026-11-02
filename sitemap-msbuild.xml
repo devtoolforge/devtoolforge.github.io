@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/what-s-new-in-property-functions-for-2026.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/custom-tasks-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/the-ultimate-sdk-style-imports-checklist-for-2026-with-real-examples.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/directory-build-targets-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/directory-build-props-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/common-dependson-targets-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/beforetargets-and-aftertargets-quick-reference-for-busy-developers.html</loc>
     <lastmod>2026-11-02</lastmod>
   </url>
