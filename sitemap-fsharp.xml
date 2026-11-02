@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/inheritance-and-when-to-use-it-for-desktop-developers-a-practical-introd.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/object-expressions-for-desktop-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/collections-modules-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/debugging-fantomas-formatting-a-practical-approach.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fsx-scripting-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/ionide-setup-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/automating-interop-with-csharp-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fscheck-property-testing-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fable-for-frontend-in-f-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/giraffe-web-apps-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/units-of-measure-vs-fsharp-style-guides-which-should-you-use.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/async-workflows-vs-fscheck-property-testing-which-should-you-use.html</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/7-computation-expressions-best-practices-every-developer-should-know.html</loc>
     <lastmod>2026-11-02</lastmod>
   </url>
