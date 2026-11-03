@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/performance-measurement-vs-dotnet-local-tools-which-should-you-use.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/the-ultimate-feature-flags-checklist-for-2026.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/health-checks-the-missing-manual.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/7-ways-to-learn-minimal-dependency-lifetimes-in-tests-faster.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/file-scoped-namespaces-and-global-usings-workflow-organize-build-ship-wi.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/nullable-reference-types-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/a-field-guide-to-source-generators-in-net.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>

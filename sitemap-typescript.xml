@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/advanced-mapped-types-techniques-for-2026.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/conditional-types-in-typescript-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/generics-from-first-steps-to-production-with-real-examples.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/definitelytyped-in-typescript-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/declaration-files-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/how-to-learn-module-resolution-step-by-step-with-real-examples.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/tsconfig-json-deep-dive-in-typescript-setup-tips-and-workflows.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
