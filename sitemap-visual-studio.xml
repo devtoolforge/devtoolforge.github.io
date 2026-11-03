@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/hot-reload-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/advanced-exception-settings-techniques-for-2026-with-real-examples.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/the-immediate-window-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/data-tips-and-watch-windows-essentials-12-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/10-breakpoints-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/debugging-basics-security-and-reliability-best-practices-with-real-examp.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/common-upgrade-projects-safely-mistakes-and-how-to-fix-them.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>

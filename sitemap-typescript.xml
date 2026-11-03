@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/understanding-jsdoc-checkjs-in-javascript-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/migrating-js-to-ts-gradually-vs-unknown-vs-any-which-should-you-use.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/a-field-guide-to-eslint-for-typescript.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/nouncheckedindexedaccess-cheat-sheet-7-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/20-exactoptionalpropertytypes-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/import-type-and-verbatim-for-beginners-20-things-to-master-first.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/fix-it-fast-a-declaration-emit-error-handbook.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>

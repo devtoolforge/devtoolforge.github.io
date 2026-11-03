@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/the-smart-way-to-debug-roll-forward-behavior.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/dockerizing-dotnet-apps-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/garbage-collection-modes-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/mastering-cancellation-tokens-from-basics-to-advanced-with-real-examples.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/advanced-iasyncenumerable-streams-techniques-for-2026.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/5-ways-to-modernize-async-and-await-patterns-faster.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/scaling-span-and-memory-types-for-large-projects-with-real-examples.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/the-ultimate-rids-and-cross-compilation-checklist-for-2026.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>

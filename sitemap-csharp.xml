@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/nullable-reference-types-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/switch-expressions-vs-ref-struct-and-readonly-struct-which-should-you-us.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/pattern-matching-the-missing-manual-in-c.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/primary-constructors-for-beginners-7-things-to-master-first-with-real-ex.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/records-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/automating-migrating-language-versions-tools-scripts-and-workflows-with.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/operator-overloading-wisely-cheat-sheet-5-shortcuts-and-commands-with-re.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>

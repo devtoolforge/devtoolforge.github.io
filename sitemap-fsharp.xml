@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/common-fsharp-style-guides-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/advanced-fsdocs-and-documentation-techniques-for-2026.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/understanding-fake-build-scripts-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fix-it-fast-a-giraffe-vs-asp-net-mvc-error-handbook.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/practical-domain-modeling-with-types-for-everyday-f-work-with-real-examp.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/mastering-mutable-regions-done-right-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/inheritance-and-when-to-use-it-for-desktop-developers-a-practical-introd.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
