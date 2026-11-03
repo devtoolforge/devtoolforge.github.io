@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/tsconfig-json-deep-dive-in-typescript-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/practical-compiler-performance-for-everyday-typescript-work.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/understanding-readonly-and-immutability-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/typing-react-and-dom-events-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/7-ways-to-speed-up-typing-promises-and-async-faster.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/what-s-new-in-monorepo-typescript-for-2026.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/understanding-jsdoc-checkjs-in-javascript-a-practical-deep-dive.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>

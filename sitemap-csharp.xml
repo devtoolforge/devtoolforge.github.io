@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/extension-members-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/automating-top-level-statements-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/global-usings-essentials-20-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/scaling-file-scoped-namespaces-for-large-projects.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/the-ultimate-required-members-checklist-for-2026.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/the-smart-way-to-modernize-init-only-setters.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/nullable-reference-types-a-complete-guide-for-2026.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>

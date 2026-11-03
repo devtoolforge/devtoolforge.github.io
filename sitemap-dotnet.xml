@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/a-field-guide-to-source-generators-in-net.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/15-benchmarking-with-benchmarkdotnet-best-practices-every-developer-shou.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/practical-xunit-testing-patterns-for-everyday-net-work.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/getting-started-with-dotnet-local-tools-with-real-examples.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/scaling-dotnet-cli-essentials-for-large-projects.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/getting-started-with-side-by-side-runtimes.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/the-smart-way-to-debug-roll-forward-behavior.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>

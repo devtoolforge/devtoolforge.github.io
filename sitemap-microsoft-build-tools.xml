@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/fix-it-fast-a-side-by-side-versions-error-handbook.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/licensing-in-microsoft-build-tools-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/mastering-offline-layout-installation-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/modifying-installed-workloads-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/silent-install-commands-for-small-teams-a-practical-introduction-with-re.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/ci-agents-setup-cheat-sheet-5-shortcuts-and-commands-with-real-examples.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/microsoft-build-tools/c-build-tools-for-node-and-python-explained-what-it-is-and-how-it-works.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
