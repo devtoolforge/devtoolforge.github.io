@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/the-gac-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/machine-config-and-server-settings-troubleshooting-8-fixes-for-everyday.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/app-config-vs-appsettings-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/what-s-new-in-wcf-and-corewcf-for-2026.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/web-forms-reality-cheat-sheet-20-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/automating-windows-workflow-foundation-reality-tools-scripts-and-workflo.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet-framework/wpf-migration-vs-machine-config-and-server-settings-which-should-you-use.html</loc>
     <lastmod>2026-11-04</lastmod>
   </url>

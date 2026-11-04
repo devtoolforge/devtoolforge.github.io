@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/item-transforms-and-batching-essentials-15-tips-that-save-hours-with-rea.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/conditions-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/tasks-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/getting-started-with-targets.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/items-essentials-10-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/a-field-guide-to-properties.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/msbuild-apis-in-code-a-complete-guide-for-2026-with-real-examples.html</loc>
     <lastmod>2026-11-04</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/cleanup-strategies-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/monitoring-agents-vs-windows-sdk-components-which-should-you-use.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/secrets-on-build-agents-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/how-to-set-up-build-performance-on-agents-step-by-step.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/testing-agent-changes-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/azure-devops-agents-for-beginners-15-things-to-master-first.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/microsoft-build-tools/github-actions-runners-the-missing-manual.html</loc>
     <lastmod>2026-11-04</lastmod>
   </url>

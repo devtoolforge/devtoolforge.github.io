@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/getting-started-with-fake-build-scripts.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/common-giraffe-vs-asp-net-mvc-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/domain-modeling-with-types-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/mutable-regions-done-right-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/practical-inheritance-and-when-to-use-it-for-everyday-f-work.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/10-object-expressions-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/collections-modules-for-web-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/level-up-your-f-skills-with-railway-oriented-error-handling.html</loc>
     <lastmod>2026-11-04</lastmod>
   </url>

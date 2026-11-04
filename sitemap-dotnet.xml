@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/automating-ef-core-fundamentals-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/common-logging-abstractions-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/the-options-pattern-the-missing-manual.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/configuration-providers-troubleshooting-10-fixes-for-everyday-problems-w.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/automating-hosted-services-and-background-workers-tools-scripts-and-work.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/dependency-injection-basics-for-beginners-8-things-to-master-first-with.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/practical-central-package-management-for-everyday-net-work.html</loc>
     <lastmod>2026-11-04</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/blazor-overview-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/grpc-in-asp-net-core-cheat-sheet-10-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/8-signalr-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/api-versioning-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/understanding-openapi-and-swagger-ui-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/the-ultimate-health-checks-checklist-for-2026-with-real-examples.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/aspnet-core/12-ways-to-secure-error-handling-and-problem-details-faster.html</loc>
     <lastmod>2026-11-04</lastmod>
   </url>

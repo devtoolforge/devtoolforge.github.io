@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/12-settings-sync-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/diagnostic-tools-window-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/accessibility-features-migration-guide-move-without-breaking-anything-wi.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/build-customization-basics-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/mastering-nuget-package-management-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/7-solution-configurations-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/remote-debugging-from-first-steps-to-production.html</loc>
     <lastmod>2026-11-04</lastmod>
   </url>
