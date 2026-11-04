@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/rids-and-cross-compilation-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/understanding-self-contained-vs-framework-dependent-a-practical-deep-div.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/single-file-publish-in-net-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/assembly-trimming-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/the-ultimate-grpc-services-checklist-for-2026.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/minimal-apis-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/automating-ef-core-fundamentals-tools-scripts-and-workflows.html</loc>
     <lastmod>2026-11-04</lastmod>
   </url>

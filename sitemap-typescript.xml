@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/mastering-jsdoc-checkjs-in-javascript-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/fix-it-fast-a-migrating-js-to-ts-gradually-error-handbook.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/how-to-standardize-eslint-for-typescript-step-by-step.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/nouncheckedindexedaccess-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/exactoptionalpropertytypes-the-missing-manual.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/import-type-and-verbatim-troubleshooting-7-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/how-to-speed-up-incremental-builds-step-by-step.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/project-references-workflow-organize-build-ship.html</loc>
     <lastmod>2026-11-04</lastmod>
   </url>

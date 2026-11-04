@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/custom-tasks-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/fix-it-fast-a-sdk-style-imports-error-handbook.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/practical-directory-build-targets-for-everyday-msbuild-work.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/12-ways-to-simplify-dependson-targets-faster.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/beforetargets-and-aftertargets-troubleshooting-8-fixes-for-everyday-prob.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/scaling-incremental-builds-for-large-projects.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/item-transforms-and-batching-essentials-15-tips-that-save-hours-with-rea.html</loc>
     <lastmod>2026-11-04</lastmod>
   </url>
