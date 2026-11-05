@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/validation-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/8-endpoint-routing-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/how-to-master-middleware-pipeline-step-by-step.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/forwarding-and-url-generation-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/15-background-jobs-in-web-apps-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/10-ways-to-optimize-dockerizing-web-apps-faster.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/aspnet-core/getting-started-with-hosting-behind-iis-or-nginx.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>

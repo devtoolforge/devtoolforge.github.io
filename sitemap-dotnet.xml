@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/dockerizing-dotnet-apps-troubleshooting-5-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/garbage-collection-modes-for-desktop-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/cancellation-tokens-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/8-iasyncenumerable-streams-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/async-and-await-patterns-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/span-and-memory-types-for-solo-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/rids-and-cross-compilation-anatomy-how-the-pieces-fit-together.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>

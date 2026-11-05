@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/debugging-required-members-a-practical-approach.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/scaling-init-only-setters-for-large-projects.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/nullable-reference-types-vs-nameof-and-expressions-which-should-you-use.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/level-up-your-c-skills-with-switch-expressions.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/pattern-matching-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/primary-constructors-the-missing-manual.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/20-records-best-practices-every-developer-should-know.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>

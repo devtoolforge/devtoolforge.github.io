@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/a-field-guide-to-compiler-performance.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/automating-readonly-and-immutability-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/typing-react-and-dom-events-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/typing-promises-and-async-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/npm-package-types-essentials-7-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/getting-started-with-monorepo-typescript.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/mastering-jsdoc-checkjs-in-javascript-from-basics-to-advanced.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>

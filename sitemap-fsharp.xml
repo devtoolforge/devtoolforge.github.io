@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/the-smart-way-to-speed-up-active-patterns.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/records-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/modules-and-organization-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/function-composition-and-pipes-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/results-over-exceptions-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/option-over-null-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/pattern-matching-health-check-audit-and-improve-your-setup.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
