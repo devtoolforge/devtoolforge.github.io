@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/what-s-new-in-performance-measurement-for-2026.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/debugging-feature-flags-a-practical-approach.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/health-checks-workflow-organize-build-ship-with-real-examples.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/minimal-dependency-lifetimes-in-tests-troubleshooting-5-fixes-for-everyd.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/advanced-file-scoped-namespaces-and-global-usings-techniques-for-2026.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/mastering-source-generators-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/advanced-benchmarking-with-benchmarkdotnet-techniques-for-2026.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>

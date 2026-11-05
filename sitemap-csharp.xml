@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/generics-and-constraints-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/what-s-new-in-linq-best-practices-for-2026.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/a-field-guide-to-iasyncenumerable.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/automating-async-await-done-right-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/spans-in-practice-vs-channels-for-pipelines-which-should-you-use.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/params-collections-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/common-collection-expressions-mistakes-and-how-to-fix-them.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>

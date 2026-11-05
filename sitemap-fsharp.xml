@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/understanding-railway-oriented-error-handling-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fantomas-formatting-for-beginners-12-things-to-master-first.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/level-up-your-f-skills-with-fsx-scripting.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/ionide-setup-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/interop-with-csharp-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/5-fscheck-property-testing-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/scaling-fable-for-frontend-for-large-projects-with-real-examples.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
