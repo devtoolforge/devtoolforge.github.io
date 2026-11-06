@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/workload-manager-for-busy-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/hot-restart-for-ios-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/common-macos-and-mac-catalyst-projects-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/debugging-xamarin-ios-apps-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/practical-the-solution-pad-for-everyday-visual-studio-for-mac-work.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/windows-vm-option-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/evaluating-jetbrains-rider-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio-mac/common-migrating-to-visual-studio-code-mistakes-and-how-to-fix-them.html</loc>
     <lastmod>2026-11-06</lastmod>
   </url>
