@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/dependency-injection-basics-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/central-package-management-vs-nullable-reference-types-which-should-you.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/sdk-style-project-files-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/lts-and-sts-releases-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/runtime-vs-sdk-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/version-pinning-and-rollbacks-for-beginners-15-things-to-master-first.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/what-s-new-in-performance-measurement-for-2026.html</loc>
     <lastmod>2026-11-06</lastmod>
   </url>

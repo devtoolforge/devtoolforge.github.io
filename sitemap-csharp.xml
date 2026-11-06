@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/getting-started-with-threading-and-locks.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/idisposable-and-using-cheat-sheet-20-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/ref-struct-and-readonly-struct-vs-structs-vs-classes-which-should-you-us.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/structs-vs-classes-from-first-steps-to-production-with-real-examples.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/delegates-events-and-lambdas-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/attributes-and-reflection-troubleshooting-12-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/generics-and-constraints-migration-guide-move-without-breaking-anything.html</loc>
     <lastmod>2026-11-06</lastmod>
   </url>

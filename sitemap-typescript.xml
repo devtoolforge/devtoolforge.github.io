@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/scaling-esbuild-and-swc-builds-for-large-projects.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/20-ts-node-tsx-and-runners-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/runtime-validation-with-zod-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/how-to-troubleshoot-decorators-step-by-step.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/getting-started-with-namespaces-vs-modules.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/enums-vs-const-objects-for-beginners-15-things-to-master-first.html</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/the-satisfies-operator-migration-guide-move-without-breaking-anything.html</loc>
     <lastmod>2026-11-06</lastmod>
   </url>
