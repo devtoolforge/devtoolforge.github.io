@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/health-checks-cheat-sheet-8-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/error-handling-and-problem-details-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/static-files-and-wwwroot-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/response-compression-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/output-caching-and-response-caching-essentials-12-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/15-rate-limiting-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/aspnet-core/practical-cors-for-everyday-asp-net-core-work.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>

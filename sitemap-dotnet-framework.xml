@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/ef6-vs-ef-core-cheat-sheet-12-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/the-smart-way-to-automate-packages-config-vs-packagereference.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/10-ways-to-learn-strong-naming-faster.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/advanced-binding-redirects-techniques-for-2026-with-real-examples.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/the-gac-for-beginners-5-things-to-master-first.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/machine-config-and-server-settings-for-beginners-15-things-to-master-fir.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet-framework/app-config-vs-appsettings-migration-guide-move-without-breaking-anything.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>

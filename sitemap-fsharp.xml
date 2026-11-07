@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/a-field-guide-to-migrating-utilities-from-csharp.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/what-s-new-in-fsharp-style-guides-for-2026.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/a-field-guide-to-fsdocs-and-documentation-with-real-examples.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fake-build-scripts-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/giraffe-vs-asp-net-mvc-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/understanding-mutable-regions-done-right-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/inheritance-and-when-to-use-it-performance-tuning-practical-tips-that-wo.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>

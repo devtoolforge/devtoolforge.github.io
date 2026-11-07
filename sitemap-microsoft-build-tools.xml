@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/12-licensing-shortcuts-you-will-use-every-day-with-real-examples.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/common-offline-layout-installation-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/modifying-installed-workloads-security-and-reliability-best-practices-wi.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/common-silent-install-commands-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/ci-agents-setup-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/a-field-guide-to-msbuild-included.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/microsoft-build-tools/what-s-new-in-c-build-tools-for-node-and-python-for-2026.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>

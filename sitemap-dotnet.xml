@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/8-central-package-management-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/sdk-style-project-files-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/global-json-the-missing-manual.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/scaling-lts-and-sts-releases-for-large-projects.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/runtime-vs-sdk-for-beginners-a-practical-introduction.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/what-s-new-in-version-pinning-and-rollbacks-for-2026.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/performance-measurement-a-complete-guide-for-2026.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>

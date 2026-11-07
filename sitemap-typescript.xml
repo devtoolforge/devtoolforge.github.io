@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/namespaces-vs-modules-in-typescript-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/the-smart-way-to-secure-enums-vs-const-objects.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/12-the-satisfies-operator-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/fix-it-fast-a-unknown-vs-any-error-handbook.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/discriminated-unions-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/a-field-guide-to-type-narrowing-with-real-examples.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/template-literal-types-anatomy-how-the-pieces-fit-together.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>

@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/structs-vs-classes-troubleshooting-15-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/advanced-default-interface-methods-techniques-for-2026.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/delegates-events-and-lambdas-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/attributes-and-reflection-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/source-generators-demystified-with-real-world-examples-in-c.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/generics-and-constraints-for-beginners-a-practical-introduction.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/linq-best-practices-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/iasyncenumerable-cheat-sheet-15-shortcuts-and-commands.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>
