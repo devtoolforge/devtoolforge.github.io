@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/interop-with-csharp-troubleshooting-20-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fscheck-property-testing-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fable-for-frontend-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/giraffe-web-apps-for-solo-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/units-of-measure-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/scaling-type-providers-for-large-projects.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/practical-async-workflows-for-everyday-f-work.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>

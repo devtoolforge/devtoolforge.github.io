@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/scaling-module-resolution-for-large-projects.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/practical-strict-mode-flags-for-everyday-typescript-work.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/tsgo-native-compiler-for-solo-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/compiler-performance-quick-reference-for-busy-developers-with-real-examp.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/15-readonly-and-immutability-shortcuts-you-will-use-every-day-with-real.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/practical-typing-react-and-dom-events-for-everyday-typescript-work.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/fix-it-fast-a-typing-promises-and-async-error-handbook.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/level-up-your-msbuild-skills-with-msbuild-apis-in-code.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/building-legacy-projects-workflow-organize-build-ship-with-real-examples.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/understanding-extending-the-build-safely-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/common-build-errors-essentials-12-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/msbuild-in-ci-pipelines-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/sourcelink-and-embedded-pdbs-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/scaling-continuousintegrationbuild-property-for-large-projects.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>
