@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/iasyncenumerable-cheat-sheet-15-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/scaling-async-await-done-right-for-large-projects.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/spans-in-practice-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/level-up-your-c-skills-with-params-collections.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/collection-expressions-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/the-field-keyword-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/getting-started-with-extension-members.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>

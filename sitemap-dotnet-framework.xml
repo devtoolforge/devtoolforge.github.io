@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/app-config-vs-appsettings-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/wcf-and-corewcf-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/web-forms-reality-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/how-to-optimize-windows-workflow-foundation-reality-step-by-step.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/what-s-new-in-winforms-on-modern-dotnet-for-2026.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/windows-compatibility-pack-for-busy-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet-framework/try-convert-cheat-sheet-20-shortcuts-and-commands.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>

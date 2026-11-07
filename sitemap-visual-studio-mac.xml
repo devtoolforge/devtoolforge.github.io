@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/migrating-to-visual-studio-code-the-missing-manual-with-real-examples.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/team-migration-planning-for-beginners-12-things-to-master-first.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/20-ways-to-master-documentation-and-archived-docs-faster.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/a-field-guide-to-clean-uninstall.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/performance-on-apple-silicon-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/source-control-workflows-in-visual-studio-for-mac-setup-tips-and-workflo.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio-mac/debugger-tips-on-mac-explained-what-it-is-and-how-it-works-with-real-exa.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>

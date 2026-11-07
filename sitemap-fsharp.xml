@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/inheritance-and-when-to-use-it-performance-tuning-practical-tips-that-wo.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/level-up-your-f-skills-with-object-expressions.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/the-ultimate-railway-oriented-error-handling-checklist-for-2026.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fantomas-formatting-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fsx-scripting-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/the-smart-way-to-automate-ionide-setup.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/interop-with-csharp-troubleshooting-20-fixes-for-everyday-problems.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>

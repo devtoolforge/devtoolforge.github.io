@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/practical-cors-for-everyday-asp-net-core-work.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/a-field-guide-to-authorization-policies.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/jwt-authentication-the-missing-manual.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/level-up-your-asp-net-core-skills-with-identity-and-user-management.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/ef-core-migrations-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/logging-and-structured-events-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/configuration-per-environment-migration-guide-move-without-breaking-anyt.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/aspnet-core/advanced-di-lifetimes-in-web-apps-techniques-for-2026.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>
