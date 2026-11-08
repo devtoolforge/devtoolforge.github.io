@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/design-time-builds-for-students-a-practical-introduction.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/node-reuse-and-parallelism-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/verbosity-and-logs-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/binary-logs-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/level-up-your-msbuild-skills-with-property-functions.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/inline-tasks-troubleshooting-5-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/a-field-guide-to-custom-tasks.html</loc>
     <lastmod>2026-11-08</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/dynamic-vs-object-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/a-field-guide-to-nameof-and-expressions.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/12-string-handling-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/advanced-exception-handling-strategy-techniques-for-2026.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/threading-and-locks-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/idisposable-and-using-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/structs-vs-classes-troubleshooting-15-fixes-for-everyday-problems.html</loc>
     <lastmod>2026-11-08</lastmod>
   </url>

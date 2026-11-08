@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/records-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/level-up-your-f-skills-with-modules-and-organization.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/results-over-exceptions-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/15-option-over-null-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/mastering-pattern-matching-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/immutability-by-default-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/type-inference-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/a-field-guide-to-migrating-utilities-from-csharp.html</loc>
     <lastmod>2026-11-08</lastmod>
   </url>

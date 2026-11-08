@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/incremental-builds-for-web-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/project-references-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/a-field-guide-to-esbuild-and-swc-builds-with-real-examples.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/ts-node-tsx-and-runners-vs-incremental-builds-which-should-you-use.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/8-runtime-validation-with-zod-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/decorators-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/namespaces-vs-modules-in-typescript-setup-tips-and-workflows.html</loc>
     <lastmod>2026-11-08</lastmod>
   </url>
