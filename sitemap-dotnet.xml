@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/how-to-simplify-logging-abstractions-step-by-step.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/the-options-pattern-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/configuration-providers-vs-assembly-trimming-which-should-you-use.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/hosted-services-and-background-workers-migration-guide-move-without-brea.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/dependency-injection-basics-the-missing-manual-with-real-examples.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/central-package-management-migration-guide-move-without-breaking-anythin.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/advanced-global-json-techniques-for-2026.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/lts-and-sts-releases-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/getting-started-with-runtime-vs-sdk.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/version-pinning-and-rollbacks-for-busy-developers-a-practical-introducti.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/scaling-performance-measurement-for-large-projects-with-real-examples.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/feature-flags-the-missing-manual.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/mastering-health-checks-from-basics-to-advanced.html</loc>
     <lastmod>2026-11-09</lastmod>
   </url>

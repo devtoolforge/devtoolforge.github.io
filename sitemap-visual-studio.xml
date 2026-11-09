@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/startup-projects-and-profiles-in-visual-studio-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/build-customization-basics-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/nuget-package-management-vs-pull-requests-in-the-ide-which-should-you-us.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/solution-configurations-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/database-tools-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/the-ultimate-refactoring-tools-checklist-for-2026.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/project-templates-and-scaffolding-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/5-live-share-sessions-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/unit-test-explorer-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/10-copilot-integration-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/intellicode-essentials-7-tips-that-save-hours-with-real-examples.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/memory-snapshots-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/the-profiler-for-busy-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/common-peek-definition-mistakes-and-how-to-fix-them.html</loc>
     <lastmod>2026-11-09</lastmod>
   </url>

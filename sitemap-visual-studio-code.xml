@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/advanced-launch-json-debugging-techniques-for-2026.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/fix-it-fast-a-tasks-json-error-handbook-with-real-examples.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/the-integrated-terminal-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/emmet-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/user-snippets-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/what-s-new-in-keybindings-for-2026.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/a-field-guide-to-profiles.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/workspace-settings-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/how-to-speed-up-settings-json-step-by-step.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/debug-console-and-repl-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/terminal-tasks-on-save-for-small-teams-a-practical-introduction-with-rea.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/practical-auto-save-and-file-watching-for-everyday-visual-studio-code-wo.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/timeline-view-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio-code/extension-recommendations-pitfalls-what-the-docs-don-t-tell-you.html</loc>
     <lastmod>2026-11-09</lastmod>
   </url>

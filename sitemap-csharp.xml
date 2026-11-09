@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/exception-handling-strategy-the-missing-manual.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/channels-for-pipelines-for-web-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/12-threading-and-locks-shortcuts-you-will-use-every-day-with-real-exampl.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/idisposable-and-using-the-missing-manual-with-real-examples.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/level-up-your-c-skills-with-ref-struct-and-readonly-struct.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/structs-vs-classes-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/default-interface-methods-vs-top-level-statements-which-should-you-use.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/the-smart-way-to-speed-up-delegates-events-and-lambdas.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/how-to-automate-attributes-and-reflection-step-by-step.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/generics-and-constraints-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/linq-best-practices-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/the-smart-way-to-debug-iasyncenumerable.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/async-await-done-right-for-beginners-8-things-to-master-first.html</loc>
     <lastmod>2026-11-09</lastmod>
   </url>

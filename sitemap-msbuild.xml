@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/common-build-errors-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/practical-msbuild-in-ci-pipelines-for-everyday-msbuild-work-with-real-ex.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/a-field-guide-to-sourcelink-and-embedded-pdbs.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/practical-continuousintegrationbuild-property-for-everyday-msbuild-work.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/20-ways-to-modernize-pack-and-publish-targets-faster-with-real-examples.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/multi-targeting-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/how-to-master-design-time-builds-step-by-step.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/node-reuse-and-parallelism-for-enterprise-teams-a-practical-introduction.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/practical-verbosity-and-logs-for-everyday-msbuild-work-with-real-example.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/preprocessed-projects-the-missing-manual.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/binary-logs-for-beginners-12-things-to-master-first.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/property-functions-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/inline-tasks-pitfalls-what-the-docs-don-t-tell-you.html</loc>
     <lastmod>2026-11-09</lastmod>
   </url>

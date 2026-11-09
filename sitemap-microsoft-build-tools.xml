@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/debugging-testing-agent-changes-a-practical-approach.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/debugging-multi-agent-pipelines-a-practical-approach.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/version-pinning-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/winget-and-chocolatey-installs-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/mastering-vswhere-detection-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/what-s-new-in-troubleshooting-missing-components-for-2026.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/disk-space-management-cheat-sheet-12-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/automating-nuget-caching-on-agents-tools-scripts-and-workflows-with-real.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/containerized-build-agents-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/dotnet-sdk-components-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/15-windows-sdk-components-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/side-by-side-versions-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/microsoft-build-tools/licensing-troubleshooting-20-fixes-for-everyday-problems.html</loc>
     <lastmod>2026-11-09</lastmod>
   </url>

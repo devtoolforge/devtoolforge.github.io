@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/fsx-scripting-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/interop-with-csharp-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fscheck-property-testing-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/type-providers-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/getting-started-with-async-workflows.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/active-patterns-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/records-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/modules-and-organization-migration-guide-move-without-breaking-anything-x.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/function-composition-and-pipes-a-complete-guide-for-2026-with-real-examp.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/debugging-results-over-exceptions-a-practical-approach.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/option-over-null-in-f-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/pattern-matching-troubleshooting-12-fixes-for-everyday-problems-in-f.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/discriminated-unions-explained-what-it-is-and-how-it-works.html</loc>
     <lastmod>2026-11-09</lastmod>
   </url>
