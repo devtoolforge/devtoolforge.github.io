@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/discriminated-unions-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/immutability-by-default-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/scaling-type-inference-for-large-projects.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/migrating-utilities-from-csharp-troubleshooting-12-fixes-for-everyday-pr.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/the-ultimate-fsharp-style-guides-checklist-for-2026.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fake-build-scripts-cheat-sheet-20-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/the-smart-way-to-speed-up-giraffe-vs-asp-net-mvc.html</loc>
     <lastmod>2026-11-09</lastmod>
   </url>
