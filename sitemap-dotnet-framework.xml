@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/fix-it-fast-a-clickonce-deployment-error-handbook.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/the-smart-way-to-simplify-windows-services-on-framework.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/common-iis-and-asp-net-hosting-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/visual-studio-support-matrix-in-net-framework-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/performance-comparisons-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/debugging-legacy-debugging-a-practical-approach.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet-framework/app-domains-vs-modern-isolation-quick-reference-for-busy-developers.html</loc>
     <lastmod>2026-11-10</lastmod>
   </url>

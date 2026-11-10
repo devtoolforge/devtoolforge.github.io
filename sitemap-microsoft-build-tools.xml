@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/what-build-tools-are-for-beginners-20-things-to-master-first.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/automating-when-to-use-full-visual-studio-instead-tools-scripts-and-work.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/advanced-cleanup-strategies-techniques-for-2026-with-real-examples.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/mastering-monitoring-agents-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/fix-it-fast-a-secrets-on-build-agents-error-handbook.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/understanding-build-performance-on-agents-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/microsoft-build-tools/debugging-testing-agent-changes-a-practical-approach.html</loc>
     <lastmod>2026-11-10</lastmod>
   </url>

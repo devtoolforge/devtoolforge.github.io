@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/background-jobs-in-web-apps-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/dockerizing-web-apps-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/kestrel-tuning-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/level-up-your-asp-net-core-skills-with-https-and-hsts.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/anti-forgery-protection-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/a-field-guide-to-tag-helpers-and-view-components.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/aspnet-core/how-to-master-blazor-overview-step-by-step-with-real-examples.html</loc>
     <lastmod>2026-11-10</lastmod>
   </url>

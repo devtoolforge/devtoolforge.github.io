@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/span-and-memory-types-for-desktop-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/what-s-new-in-self-contained-vs-framework-dependent-for-2026.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/automating-assembly-trimming-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/native-aot-publishing-in-net-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/automating-grpc-services-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/ef-core-fundamentals-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/how-to-simplify-logging-abstractions-step-by-step.html</loc>
     <lastmod>2026-11-10</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/migrating-js-to-ts-gradually-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/common-eslint-for-typescript-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/mastering-nouncheckedindexedaccess-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/mastering-exactoptionalpropertytypes-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/import-type-and-verbatim-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/declaration-emit-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/incremental-builds-workflow-organize-build-ship-in-typescript.html</loc>
     <lastmod>2026-11-10</lastmod>
   </url>
