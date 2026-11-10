@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/xaml-previewer-for-beginners-a-practical-introduction.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/macos-and-mac-catalyst-projects-migration-guide-move-without-breaking-an.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/ios-simulator-management-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/debugging-debugging-xamarin-ios-apps-a-practical-approach.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/nuget-package-management-on-mac-essentials-12-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/what-s-new-in-the-solution-pad-for-2026.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio-mac/automating-windows-vm-option-tools-scripts-and-workflows.html</loc>
     <lastmod>2026-11-10</lastmod>
   </url>

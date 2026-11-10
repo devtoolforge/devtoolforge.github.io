@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/active-patterns-for-beginners-10-things-to-master-first.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/records-essentials-8-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/understanding-modules-and-organization-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/results-over-exceptions-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/the-ultimate-option-over-null-checklist-for-2026.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/pattern-matching-cheat-sheet-15-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/discriminated-unions-migration-guide-move-without-breaking-anything.html</loc>
     <lastmod>2026-11-10</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/getting-started-with-spans-in-practice-with-real-examples.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/params-collections-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/mastering-collection-expressions-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/the-field-keyword-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/debugging-extension-members-a-practical-approach-with-real-examples.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/top-level-statements-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/file-scoped-namespaces-anatomy-how-the-pieces-fit-together-with-real-exa.html</loc>
     <lastmod>2026-11-10</lastmod>
   </url>

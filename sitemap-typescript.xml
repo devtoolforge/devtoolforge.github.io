@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/10-ways-to-learn-declaration-files-faster.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/mastering-module-resolution-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/getting-started-with-strict-mode-flags.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/tsconfig-json-deep-dive-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/8-tsgo-native-compiler-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/getting-started-with-compiler-performance.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/the-smart-way-to-automate-readonly-and-immutability.html</loc>
     <lastmod>2026-11-10</lastmod>
   </url>

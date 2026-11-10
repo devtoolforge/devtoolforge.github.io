@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/verbosity-and-logs-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/preprocessed-projects-for-beginners-8-things-to-master-first.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/binary-logs-vs-multi-targeting-which-should-you-use.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/inline-tasks-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/scaling-custom-tasks-for-large-projects.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/sdk-style-imports-for-beginners-15-things-to-master-first.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/directory-build-props-vs-directory-build-targets-which-should-you-use.html</loc>
     <lastmod>2026-11-10</lastmod>
   </url>

@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/a-field-guide-to-the-gac.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/machine-config-and-server-settings-performance-tuning-practical-tips-tha.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/practical-app-config-vs-appsettings-for-everyday-net-framework-work.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/windows-workflow-foundation-reality-for-beginners-15-things-to-master-fi.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/mastering-wpf-migration-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/try-convert-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/migration-assessment-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet-framework/modern-net-vs-framework-vs-app-config-vs-appsettings-which-should-you-us.html</loc>
     <lastmod>2026-11-10</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/file-scoped-namespaces-and-global-usings-anatomy-how-the-pieces-fit-toge.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/nullable-reference-types-essentials-8-tips-that-save-hours-with-real-exa.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/source-generators-for-enterprise-teams-a-practical-introduction-in-net.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/benchmarking-with-benchmarkdotnet-in-net-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/debugging-xunit-testing-patterns-a-practical-approach.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/dotnet-local-tools-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/dotnet-cli-essentials-setup-configuration-and-optimization.html</loc>
     <lastmod>2026-11-10</lastmod>
   </url>

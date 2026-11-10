@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/jwt-authentication-for-busy-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/mastering-identity-and-user-management-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/ef-core-migrations-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/logging-and-structured-events-vs-grpc-in-asp-net-core-which-should-you-u.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/configuration-per-environment-setup-configuration-and-optimization-with.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/level-up-your-asp-net-core-skills-with-di-lifetimes-in-web-apps.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/aspnet-core/15-filters-best-practices-every-developer-should-know.html</loc>
     <lastmod>2026-11-10</lastmod>
   </url>
