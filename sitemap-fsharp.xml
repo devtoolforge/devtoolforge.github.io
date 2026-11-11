@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/interop-with-csharp-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/practical-fable-for-frontend-for-everyday-f-work.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/level-up-your-f-skills-with-giraffe-web-apps.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/practical-type-providers-for-everyday-f-work.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/async-workflows-for-beginners-8-things-to-master-first.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/a-field-guide-to-computation-expressions.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/active-patterns-for-beginners-10-things-to-master-first.html</loc>
     <lastmod>2026-11-11</lastmod>
   </url>

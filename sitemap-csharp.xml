@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/fix-it-fast-a-structs-vs-classes-error-handbook.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/practical-default-interface-methods-for-everyday-c-work.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/delegates-events-and-lambdas-in-c-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/5-ways-to-simplify-attributes-and-reflection-faster.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/the-ultimate-source-generators-checklist-for-2026.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/advanced-iasyncenumerable-techniques-for-2026-with-real-examples.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/getting-started-with-spans-in-practice-with-real-examples.html</loc>
     <lastmod>2026-11-11</lastmod>
   </url>

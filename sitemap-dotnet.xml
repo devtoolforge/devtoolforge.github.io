@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/lts-and-sts-releases-in-net-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/5-version-pinning-and-rollbacks-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/performance-measurement-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/feature-flags-vs-iasyncenumerable-streams-which-should-you-use.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/the-ultimate-health-checks-checklist-for-2026.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/minimal-dependency-lifetimes-in-tests-explained-what-it-is-and-how-it-wo.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/file-scoped-namespaces-and-global-usings-anatomy-how-the-pieces-fit-toge.html</loc>
     <lastmod>2026-11-11</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/a-field-guide-to-live-share-sessions.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/automating-publish-profiles-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/copilot-integration-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/10-intellicode-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/memory-snapshots-troubleshooting-12-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/the-profiler-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/the-ultimate-peek-definition-checklist-for-2026.html</loc>
     <lastmod>2026-11-11</lastmod>
   </url>

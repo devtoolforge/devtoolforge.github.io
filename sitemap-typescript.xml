@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/the-satisfies-operator-for-beginners-15-things-to-master-first.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/unknown-vs-any-cheat-sheet-8-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/type-narrowing-essentials-10-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/utility-types-in-typescript-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/getting-started-with-mapped-types.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/generics-essentials-15-tips-that-save-hours-with-real-examples.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/10-ways-to-learn-declaration-files-faster.html</loc>
     <lastmod>2026-11-11</lastmod>
   </url>
