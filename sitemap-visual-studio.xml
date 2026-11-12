@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/upgrade-projects-safely-troubleshooting-15-fixes-for-everyday-problems-w.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/practical-command-line-builds-for-everyday-visual-studio-work.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/fix-it-fast-a-settings-sync-error-handbook.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/diagnostic-tools-window-troubleshooting-5-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/solution-performance-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/level-up-your-visual-studio-skills-with-code-analysis-with-real-examples.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/startup-projects-and-profiles-the-missing-manual.html</loc>
     <lastmod>2026-11-11</lastmod>
   </url>

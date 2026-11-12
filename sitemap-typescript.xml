@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/monorepo-typescript-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/jsdoc-checkjs-in-javascript-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/the-ultimate-migrating-js-to-ts-gradually-checklist-for-2026.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/eslint-for-typescript-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/nouncheckedindexedaccess-migration-guide-move-without-breaking-anything-x.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/12-ways-to-debug-incremental-builds-faster.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/project-references-explained-what-it-is-and-how-it-works.html</loc>
     <lastmod>2026-11-11</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/middleware-pipeline-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/forwarding-and-url-generation-for-web-developers-a-practical-introductio.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/debugging-background-jobs-in-web-apps-a-practical-approach.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/practical-load-testing-basics-for-everyday-asp-net-core-work.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/integration-testing-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/dockerizing-web-apps-the-missing-manual.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/aspnet-core/kestrel-tuning-for-beginners-8-things-to-master-first.html</loc>
     <lastmod>2026-11-11</lastmod>
   </url>

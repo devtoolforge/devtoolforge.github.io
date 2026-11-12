@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/assembly-trimming-in-net-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/grpc-services-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/minimal-apis-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/20-ef-core-fundamentals-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/logging-abstractions-for-solo-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/12-the-options-pattern-shortcuts-you-will-use-every-day-with-real-exampl.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/configuration-providers-the-missing-manual.html</loc>
     <lastmod>2026-11-11</lastmod>
   </url>
