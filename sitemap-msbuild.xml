@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/design-time-builds-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/the-smart-way-to-debug-verbosity-and-logs.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/property-functions-essentials-7-tips-that-save-hours-with-real-examples.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/advanced-inline-tasks-techniques-for-2026.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/custom-tasks-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/7-ways-to-standardize-sdk-style-imports-faster.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/mastering-directory-build-targets-from-basics-to-advanced.html</loc>
     <lastmod>2026-11-12</lastmod>
   </url>
