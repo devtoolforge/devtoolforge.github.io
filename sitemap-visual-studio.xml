@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/common-hot-reload-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/exception-settings-cheat-sheet-10-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/the-immediate-window-in-visual-studio-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/data-tips-and-watch-windows-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/15-breakpoints-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/upgrade-projects-safely-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/understanding-command-line-builds-a-practical-deep-dive.html</loc>
     <lastmod>2026-11-13</lastmod>
   </url>

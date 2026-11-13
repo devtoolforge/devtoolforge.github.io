@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/fable-for-frontend-for-busy-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/how-to-simplify-giraffe-web-apps-step-by-step.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/type-providers-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/async-workflows-for-beginners-15-things-to-master-first-with-real-exampl.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/computation-expressions-for-beginners-a-practical-introduction.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/5-active-patterns-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/records-for-beginners-15-things-to-master-first.html</loc>
     <lastmod>2026-11-13</lastmod>
   </url>

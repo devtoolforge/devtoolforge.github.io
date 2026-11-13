@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/strict-mode-flags-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/scaling-tsconfig-json-deep-dive-for-large-projects.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/the-ultimate-tsgo-native-compiler-checklist-for-2026-with-real-examples.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/mastering-compiler-performance-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/common-readonly-and-immutability-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/typing-react-and-dom-events-troubleshooting-8-fixes-for-everyday-problem.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/typing-promises-and-async-for-busy-developers-a-practical-introduction.html</loc>
     <lastmod>2026-11-13</lastmod>
   </url>

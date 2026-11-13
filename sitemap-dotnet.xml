@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/span-and-memory-types-cheat-sheet-15-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/level-up-your-net-skills-with-rids-and-cross-compilation.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/self-contained-vs-framework-dependent-setup-configuration-and-optimizati.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/single-file-publish-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/what-s-new-in-assembly-trimming-for-2026.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/native-aot-publishing-for-beginners-8-things-to-master-first.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/10-grpc-services-best-practices-every-developer-should-know-with-real-ex.html</loc>
     <lastmod>2026-11-13</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/msbuild-in-ci-pipelines-troubleshooting-12-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/sourcelink-and-embedded-pdbs-troubleshooting-7-fixes-for-everyday-proble.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/a-field-guide-to-continuousintegrationbuild-property.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/pack-and-publish-targets-for-beginners-7-things-to-master-first-with-rea.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/the-ultimate-multi-targeting-checklist-for-2026.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/what-s-new-in-restore-targets-for-2026.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/the-smart-way-to-speed-up-design-time-builds.html</loc>
     <lastmod>2026-11-13</lastmod>
   </url>
