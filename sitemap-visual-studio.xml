@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/accessibility-features-for-beginners-a-practical-introduction.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/build-customization-basics-for-beginners-20-things-to-master-first.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/fix-it-fast-a-nuget-package-management-error-handbook.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/automating-solution-configurations-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/remote-debugging-for-students-a-practical-introduction-with-real-example.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/database-tools-workflow-organize-build-ship-with-real-examples.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/project-templates-and-scaffolding-for-enterprise-teams-a-practical-intro.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/live-share-sessions-workflow-organize-build-ship.html</loc>
     <lastmod>2026-11-13</lastmod>
   </url>
