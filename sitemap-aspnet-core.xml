@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/what-s-new-in-filters-for-2026.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/automating-model-binding-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/endpoint-routing-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/common-minimal-apis-vs-controllers-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/forwarding-and-url-generation-performance-tuning-practical-tips-that-wor.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/background-jobs-in-web-apps-vs-razor-pages-vs-mvc-which-should-you-use-w.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/aspnet-core/load-testing-basics-for-busy-developers-a-practical-introduction.html</loc>
     <lastmod>2026-11-13</lastmod>
   </url>

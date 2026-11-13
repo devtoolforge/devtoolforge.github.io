@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/records-for-beginners-15-things-to-master-first.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/modules-and-organization-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/function-composition-and-pipes-cheat-sheet-5-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/results-over-exceptions-in-f-setup-tips-and-workflows-with-real-examples.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/pattern-matching-setup-configuration-and-optimization-in-f.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/type-inference-troubleshooting-7-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/migrating-utilities-from-csharp-essentials-7-tips-that-save-hours.html</loc>
     <lastmod>2026-11-13</lastmod>
   </url>

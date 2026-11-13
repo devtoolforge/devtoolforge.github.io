@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/typing-promises-and-async-for-busy-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/15-monorepo-typescript-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/jsdoc-checkjs-in-javascript-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/level-up-your-typescript-skills-with-migrating-js-to-ts-gradually-with-r.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/eslint-for-typescript-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/advanced-nouncheckedindexedaccess-techniques-for-2026.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/practical-exactoptionalpropertytypes-for-everyday-typescript-work.html</loc>
     <lastmod>2026-11-13</lastmod>
   </url>

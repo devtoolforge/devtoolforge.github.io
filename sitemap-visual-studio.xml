@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/understanding-command-line-builds-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/settings-sync-in-visual-studio-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/diagnostic-tools-window-for-beginners-7-things-to-master-first.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/solution-performance-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/practical-code-analysis-for-everyday-visual-studio-work.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/startup-projects-and-profiles-explained-what-it-is-and-how-it-works-with.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/accessibility-features-for-beginners-a-practical-introduction.html</loc>
     <lastmod>2026-11-13</lastmod>
   </url>
