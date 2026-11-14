@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/memory-snapshots-essentials-5-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/understanding-the-profiler-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/peek-definition-troubleshooting-12-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/scaling-find-in-files-and-go-to-for-large-projects.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/keyboard-shortcuts-troubleshooting-10-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/fix-it-fast-a-solution-explorer-filters-error-handbook.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/pull-requests-in-the-ide-explained-what-it-is-and-how-it-works.html</loc>
     <lastmod>2026-11-14</lastmod>
   </url>

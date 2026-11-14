@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/fix-it-fast-a-channels-for-pipelines-error-handbook.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/threading-and-locks-cheat-sheet-8-shortcuts-and-commands-with-real-examp.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/how-to-learn-idisposable-and-using-step-by-step.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/ref-struct-and-readonly-struct-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/default-interface-methods-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/delegates-events-and-lambdas-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/attributes-and-reflection-for-solo-developers-a-practical-introduction.html</loc>
     <lastmod>2026-11-14</lastmod>
   </url>

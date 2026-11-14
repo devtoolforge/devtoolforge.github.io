@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/common-sdk-style-imports-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/7-ways-to-standardize-directory-build-targets-faster.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/beforetargets-and-aftertargets-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/level-up-your-msbuild-skills-with-incremental-builds.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/conditions-for-enterprise-teams-a-practical-introduction.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/evaluation-vs-execution-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/tasks-setup-configuration-and-optimization.html</loc>
     <lastmod>2026-11-14</lastmod>
   </url>

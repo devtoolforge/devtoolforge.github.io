@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/enums-vs-const-objects-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/the-satisfies-operator-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/how-to-standardize-unknown-vs-any-step-by-step.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/discriminated-unions-demystified-with-real-world-examples-in-typescript.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/5-type-narrowing-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/fix-it-fast-a-utility-types-error-handbook-with-real-examples.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/mapped-types-migration-guide-move-without-breaking-anything.html</loc>
     <lastmod>2026-11-14</lastmod>
   </url>
