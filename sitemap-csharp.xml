@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/pattern-based-using-and-disposal-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/interpolated-string-handlers-performance-tuning-practical-tips-that-work-x.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/dynamic-vs-object-essentials-20-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/what-s-new-in-nameof-and-expressions-for-2026.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/string-handling-for-beginners-20-things-to-master-first-with-real-exampl.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/automating-task-scheduling-patterns-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/fix-it-fast-a-channels-for-pipelines-error-handbook.html</loc>
     <lastmod>2026-11-14</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/ef-core-fundamentals-vs-feature-flags-which-should-you-use.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/a-field-guide-to-configuration-providers.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/hosted-services-and-background-workers-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/mastering-central-package-management-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/sdk-style-project-files-cheat-sheet-8-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/global-json-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/understanding-runtime-vs-sdk-a-practical-deep-dive.html</loc>
     <lastmod>2026-11-14</lastmod>
   </url>

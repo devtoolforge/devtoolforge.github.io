@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/scaling-import-type-and-verbatim-for-large-projects.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/the-ultimate-declaration-emit-checklist-for-2026.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/project-references-essentials-10-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/esbuild-and-swc-builds-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/ts-node-tsx-and-runners-cheat-sheet-12-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/runtime-validation-with-zod-vs-enums-vs-const-objects-which-should-you-u.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/enums-vs-const-objects-performance-tuning-practical-tips-that-work.html</loc>
     <lastmod>2026-11-14</lastmod>
   </url>
