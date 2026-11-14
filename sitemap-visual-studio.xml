@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/pull-requests-in-the-ide-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/git-tooling-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/code-cleanup-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/editorconfig-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/scaling-extensions-management-for-large-projects.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/a-field-guide-to-workload-management.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/common-hot-reload-mistakes-and-how-to-fix-them.html</loc>
     <lastmod>2026-11-14</lastmod>
   </url>

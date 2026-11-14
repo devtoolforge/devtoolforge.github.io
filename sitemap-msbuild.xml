@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/tasks-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/targets-for-solo-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/items-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/properties-for-busy-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/10-building-legacy-projects-best-practices-every-developer-should-know-w.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/common-build-errors-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/msbuild-in-ci-pipelines-troubleshooting-12-fixes-for-everyday-problems.html</loc>
     <lastmod>2026-11-14</lastmod>
   </url>

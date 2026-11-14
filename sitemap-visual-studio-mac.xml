@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/workload-manager-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/maui-development-after-retirement-the-missing-manual.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/unit-testing-on-mac-essentials-8-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/what-s-new-in-hot-restart-for-ios-for-2026.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/xaml-previewer-from-first-steps-to-production-with-real-examples.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/ios-simulator-management-for-beginners-20-things-to-master-first.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio-mac/debugging-xamarin-ios-apps-explained-what-it-is-and-how-it-works.html</loc>
     <lastmod>2026-11-14</lastmod>
   </url>

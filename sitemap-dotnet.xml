@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/advanced-dotnet-local-tools-techniques-for-2026.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/side-by-side-runtimes-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/roll-forward-behavior-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/common-dockerizing-dotnet-apps-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/garbage-collection-modes-essentials-20-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/cancellation-tokens-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/15-iasyncenumerable-streams-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/span-and-memory-types-cheat-sheet-15-shortcuts-and-commands.html</loc>
     <lastmod>2026-11-14</lastmod>
   </url>

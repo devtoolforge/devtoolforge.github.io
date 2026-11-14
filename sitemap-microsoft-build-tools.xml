@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/common-containerized-build-agents-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/dotnet-sdk-components-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/8-side-by-side-versions-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/a-field-guide-to-offline-layout-installation.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/8-silent-install-commands-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/ci-agents-setup-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/microsoft-build-tools/practical-msbuild-included-for-everyday-microsoft-build-tools-work.html</loc>
     <lastmod>2026-11-14</lastmod>
   </url>

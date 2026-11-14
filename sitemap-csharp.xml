@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/attributes-and-reflection-for-solo-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/source-generators-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/practical-generics-and-constraints-for-everyday-c-work.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/linq-best-practices-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/7-iasyncenumerable-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/async-await-done-right-demystified-with-real-world-examples-with-real-ex.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/spans-in-practice-cheat-sheet-12-shortcuts-and-commands.html</loc>
     <lastmod>2026-11-14</lastmod>
   </url>
