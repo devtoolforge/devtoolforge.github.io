@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/10-ways-to-learn-self-contained-vs-framework-dependent-faster.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/automating-single-file-publish-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/assembly-trimming-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/20-ways-to-learn-native-aot-publishing-faster.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/grpc-services-in-net-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/automating-minimal-apis-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/ef-core-fundamentals-vs-feature-flags-which-should-you-use.html</loc>
     <lastmod>2026-11-15</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/practical-silent-install-commands-for-everyday-microsoft-build-tools-wor.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/level-up-your-microsoft-build-tools-skills-with-ci-agents-setup.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/msbuild-included-anatomy-how-the-pieces-fit-together-with-real-examples.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/workload-and-component-ids-troubleshooting-5-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/the-smart-way-to-debug-installing-without-visual-studio.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/automating-what-build-tools-are-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/microsoft-build-tools/when-to-use-full-visual-studio-instead-setup-configuration-and-optimizat.html</loc>
     <lastmod>2026-11-15</lastmod>
   </url>

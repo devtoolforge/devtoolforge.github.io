@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/sourcelink-and-embedded-pdbs-a-complete-guide-for-2026-with-real-example.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/fix-it-fast-a-continuousintegrationbuild-property-error-handbook.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/pack-and-publish-targets-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/debugging-restore-targets-a-practical-approach.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/design-time-builds-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/debugging-node-reuse-and-parallelism-a-practical-approach-with-real-exam.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/verbosity-and-logs-explained-what-it-is-and-how-it-works.html</loc>
     <lastmod>2026-11-15</lastmod>
   </url>
