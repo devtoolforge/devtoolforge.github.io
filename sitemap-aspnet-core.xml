@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/signalr-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/fix-it-fast-a-api-versioning-error-handbook-with-real-examples.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/openapi-and-swagger-ui-workflow-organize-build-ship-with-real-examples.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/static-files-and-wwwroot-troubleshooting-10-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/response-compression-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/output-caching-and-response-caching-pitfalls-what-the-docs-don-t-tell-yo.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/aspnet-core/how-to-standardize-rate-limiting-step-by-step.html</loc>
     <lastmod>2026-11-15</lastmod>
   </url>

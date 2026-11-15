@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/dockerizing-dotnet-apps-the-missing-manual.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/common-garbage-collection-modes-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/cancellation-tokens-setup-configuration-and-optimization-with-real-examp.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/how-to-simplify-iasyncenumerable-streams-step-by-step.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/scaling-async-and-await-patterns-for-large-projects.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/span-and-memory-types-for-beginners-20-things-to-master-first.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/10-ways-to-learn-self-contained-vs-framework-dependent-faster.html</loc>
     <lastmod>2026-11-15</lastmod>
   </url>

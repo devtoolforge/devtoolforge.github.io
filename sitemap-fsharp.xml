@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/level-up-your-f-skills-with-mutable-regions-done-right.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/inheritance-and-when-to-use-it-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/what-s-new-in-object-expressions-for-2026.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/20-collections-modules-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/10-fantomas-formatting-shortcuts-you-will-use-every-day-with-real-exampl.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fsx-scripting-for-beginners-10-things-to-master-first.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/ionide-setup-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/interop-with-csharp-for-beginners-7-things-to-master-first.html</loc>
     <lastmod>2026-11-15</lastmod>
   </url>

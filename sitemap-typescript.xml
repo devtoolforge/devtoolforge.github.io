@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/automating-tsconfig-json-deep-dive-tools-scripts-and-workflows-with-real.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/tsgo-native-compiler-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/8-compiler-performance-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/readonly-and-immutability-the-missing-manual.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/level-up-your-typescript-skills-with-typing-react-and-dom-events.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/typing-promises-and-async-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/npm-package-types-explained-what-it-is-and-how-it-works.html</loc>
     <lastmod>2026-11-15</lastmod>
   </url>
