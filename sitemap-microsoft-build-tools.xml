@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/fix-it-fast-a-multi-agent-pipelines-error-handbook.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/version-pinning-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/15-vswhere-detection-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/troubleshooting-missing-components-health-check-audit-and-improve-your-s.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/how-to-master-disk-space-management-step-by-step.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/nuget-caching-on-agents-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/microsoft-build-tools/common-containerized-build-agents-mistakes-and-how-to-fix-them-with-real.html</loc>
     <lastmod>2026-11-15</lastmod>
   </url>

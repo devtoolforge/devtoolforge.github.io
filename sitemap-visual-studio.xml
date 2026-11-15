@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/hot-reload-explained-what-it-is-and-how-it-works-with-real-examples.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/exception-settings-the-missing-manual-with-real-examples.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/the-immediate-window-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/understanding-data-tips-and-watch-windows-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/5-ways-to-secure-breakpoints-faster.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/mastering-upgrade-projects-safely-from-basics-to-advanced-with-real-exam.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/debugging-command-line-builds-a-practical-approach.html</loc>
     <lastmod>2026-11-15</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/com-interop-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/32-bit-and-64-bit-considerations-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/a-field-guide-to-servicing-via-windows-update.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/runtime-repair-for-beginners-20-things-to-master-first-with-real-example.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/msbuild-on-framework-projects-performance-tuning-practical-tips-that-wor.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/ef6-vs-ef-core-in-net-framework-setup-tips-and-workflows-with-real-examp.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet-framework/packages-config-vs-packagereference-essentials-8-tips-that-save-hours.html</loc>
     <lastmod>2026-11-15</lastmod>
   </url>

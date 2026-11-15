@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/debugging-load-testing-basics-a-practical-approach.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/8-https-and-hsts-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/anti-forgery-protection-for-beginners-15-things-to-master-first.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/getting-started-with-tag-helpers-and-view-components.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/blazor-overview-cheat-sheet-10-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/practical-grpc-in-asp-net-core-for-everyday-asp-net-core-work.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/aspnet-core/signalr-quick-reference-for-busy-developers.html</loc>
     <lastmod>2026-11-15</lastmod>
   </url>

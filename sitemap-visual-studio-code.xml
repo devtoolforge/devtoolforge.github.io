@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/problems-panel-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/column-and-multi-cursor-editing-in-visual-studio-code-setup-tips-and-wor.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/workspace-trust-troubleshooting-10-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/understanding-markdown-preview-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/8-ways-to-learn-git-integration-faster.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/how-to-modernize-zen-mode-and-layouts-step-by-step.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio-code/fix-it-fast-a-command-palette-error-handbook.html</loc>
     <lastmod>2026-11-15</lastmod>
   </url>

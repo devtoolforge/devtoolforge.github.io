@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/command-line-builds-on-mac-quick-reference-for-busy-developers-with-real.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/cloning-to-a-windows-machine-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/solution-migration-checklist-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/scaling-provisioning-and-certificates-for-large-projects.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/level-up-your-visual-studio-for-mac-skills-with-android-emulator-managem.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/keybinding-schemes-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio-mac/updater-channels-setup-configuration-and-optimization-with-real-examples.html</loc>
     <lastmod>2026-11-15</lastmod>
   </url>

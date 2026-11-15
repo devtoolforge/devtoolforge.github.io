@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/minimal-dependency-lifetimes-in-tests-quick-reference-for-busy-developer.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/7-file-scoped-namespaces-and-global-usings-best-practices-every-develope.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/nullable-reference-types-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/common-dotnet-cli-essentials-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/side-by-side-runtimes-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/the-ultimate-roll-forward-behavior-checklist-for-2026.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/dockerizing-dotnet-apps-the-missing-manual.html</loc>
     <lastmod>2026-11-15</lastmod>
   </url>
