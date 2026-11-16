@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/modules-and-organization-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/function-composition-and-pipes-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/what-s-new-in-results-over-exceptions-for-2026.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/option-over-null-for-beginners-8-things-to-master-first.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/debugging-pattern-matching-a-practical-approach.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/discriminated-unions-essentials-8-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/type-inference-pitfalls-what-the-docs-don-t-tell-you.html</loc>
     <lastmod>2026-11-16</lastmod>
   </url>

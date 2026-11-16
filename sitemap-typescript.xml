@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/runtime-validation-with-zod-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/decorators-cheat-sheet-7-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/namespaces-vs-modules-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/scaling-enums-vs-const-objects-for-large-projects.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/the-satisfies-operator-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/discriminated-unions-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/type-narrowing-cheat-sheet-15-shortcuts-and-commands.html</loc>
     <lastmod>2026-11-16</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/task-scheduling-patterns-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/scaling-channels-for-pipelines-for-large-projects.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/threading-and-locks-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/5-idisposable-and-using-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/ref-struct-and-readonly-struct-essentials-10-tips-that-save-hours-with-r.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/structs-vs-classes-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/delegates-events-and-lambdas-demystified-with-real-world-examples.html</loc>
     <lastmod>2026-11-16</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/lts-and-sts-releases-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/runtime-vs-sdk-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/5-ways-to-simplify-version-pinning-and-rollbacks-faster.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/mastering-performance-measurement-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/feature-flags-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/health-checks-cheat-sheet-7-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/minimal-dependency-lifetimes-in-tests-quick-reference-for-busy-developer.html</loc>
     <lastmod>2026-11-16</lastmod>
   </url>
