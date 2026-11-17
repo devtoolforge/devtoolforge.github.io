@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/task-scheduling-patterns-migration-guide-move-without-breaking-anything-x.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/channels-for-pipelines-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/threading-and-locks-in-c-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/ref-struct-and-readonly-struct-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/understanding-structs-vs-classes-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/delegates-events-and-lambdas-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/attributes-and-reflection-for-small-teams-a-practical-introduction.html</loc>
     <lastmod>2026-11-17</lastmod>
   </url>

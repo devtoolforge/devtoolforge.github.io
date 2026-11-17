@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/mastering-sourcelink-and-embedded-pdbs-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/pack-and-publish-targets-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/mastering-multi-targeting-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/restore-targets-cheat-sheet-5-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/design-time-builds-for-beginners-5-things-to-master-first.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/node-reuse-and-parallelism-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/automating-verbosity-and-logs-tools-scripts-and-workflows.html</loc>
     <lastmod>2026-11-17</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/project-references-cheat-sheet-12-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/runtime-validation-with-zod-cheat-sheet-7-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/7-namespaces-vs-modules-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/enums-vs-const-objects-security-and-reliability-best-practices-with-real.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/the-satisfies-operator-vs-declaration-emit-which-should-you-use.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/practical-unknown-vs-any-for-everyday-typescript-work.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/discriminated-unions-for-small-teams-a-practical-introduction.html</loc>
     <lastmod>2026-11-17</lastmod>
   </url>
