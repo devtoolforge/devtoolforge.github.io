@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/discriminated-unions-for-small-teams-a-practical-introduction.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/type-narrowing-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/utility-types-essentials-20-tips-that-save-hours-with-real-examples.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/the-smart-way-to-master-mapped-types.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/conditional-types-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/how-to-master-generics-step-by-step.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/automating-definitelytyped-tools-scripts-and-workflows.html</loc>
     <lastmod>2026-11-17</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/xunit-testing-patterns-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/dotnet-local-tools-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/how-to-standardize-dotnet-cli-essentials-step-by-step.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/practical-side-by-side-runtimes-for-everyday-net-work.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/roll-forward-behavior-for-beginners-5-things-to-master-first.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/understanding-dockerizing-dotnet-apps-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/7-ways-to-speed-up-garbage-collection-modes-faster.html</loc>
     <lastmod>2026-11-17</lastmod>
   </url>
