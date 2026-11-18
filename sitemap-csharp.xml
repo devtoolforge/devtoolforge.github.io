@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/the-ultimate-operator-overloading-wisely-checklist-for-2026.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/understanding-pattern-based-using-and-disposal-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/interpolated-string-handlers-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/dynamic-vs-object-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/nameof-and-expressions-for-beginners-a-practical-introduction.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/the-ultimate-exception-handling-strategy-checklist-for-2026-with-real-ex.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/task-scheduling-patterns-migration-guide-move-without-breaking-anything-x.html</loc>
     <lastmod>2026-11-18</lastmod>
   </url>
