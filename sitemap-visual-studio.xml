@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/mastering-solution-configurations-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/debugging-refactoring-tools-a-practical-approach.html</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/the-ultimate-project-templates-and-scaffolding-checklist-for-2026.html</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/live-share-sessions-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/multi-monitor-layouts-vs-breakpoints-which-should-you-use-with-real-exam.html</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/15-publish-profiles-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/how-to-secure-unit-test-explorer-step-by-step.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/copilot-integration-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/7-ways-to-debug-intellicode-faster.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/a-field-guide-to-memory-snapshots.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/peek-definition-for-beginners-15-things-to-master-first.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/find-in-files-and-go-to-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/debugging-keyboard-shortcuts-a-practical-approach-with-real-examples.html</loc>
     <lastmod>2026-11-18</lastmod>
   </url>
