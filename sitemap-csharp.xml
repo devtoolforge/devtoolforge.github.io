@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/init-only-setters-troubleshooting-12-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/nullable-reference-types-from-first-steps-to-production-with-real-exampl.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/switch-expressions-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/12-ways-to-set-up-pattern-matching-faster.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/primary-constructors-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/a-field-guide-to-records.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/migrating-language-versions-pitfalls-what-the-docs-don-t-tell-you.html</loc>
     <lastmod>2026-11-19</lastmod>
   </url>
