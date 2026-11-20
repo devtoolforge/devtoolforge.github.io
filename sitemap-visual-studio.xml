@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/20-intellicode-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/memory-snapshots-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/the-profiler-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/peek-definition-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/keyboard-shortcuts-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/pull-requests-in-the-ide-workflow-organize-build-ship-with-real-examples.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/what-s-new-in-git-tooling-for-2026.html</loc>
     <lastmod>2026-11-20</lastmod>
   </url>

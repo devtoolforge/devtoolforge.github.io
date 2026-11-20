@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/practical-the-satisfies-operator-for-everyday-typescript-work.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/unknown-vs-any-troubleshooting-8-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/discriminated-unions-cheat-sheet-20-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/type-narrowing-cheat-sheet-5-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/utility-types-for-desktop-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/template-literal-types-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/what-s-new-in-generics-for-2026.html</loc>
     <lastmod>2026-11-20</lastmod>
   </url>

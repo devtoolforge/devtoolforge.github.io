@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/7-assembly-trimming-best-practices-every-developer-should-know-with-real.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/native-aot-publishing-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/minimal-apis-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/ef-core-fundamentals-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/scaling-configuration-providers-for-large-projects-with-real-examples.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/hosted-services-and-background-workers-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/central-package-management-explained-what-it-is-and-how-it-works.html</loc>
     <lastmod>2026-11-20</lastmod>
   </url>
