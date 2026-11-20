@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/xunit-testing-patterns-vs-logging-abstractions-which-should-you-use.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/understanding-dotnet-local-tools-a-practical-deep-dive-with-real-example.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/15-ways-to-simplify-dotnet-cli-essentials-faster.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/side-by-side-runtimes-for-beginners-8-things-to-master-first.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/roll-forward-behavior-the-missing-manual-with-real-examples.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/5-dockerizing-dotnet-apps-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/cancellation-tokens-security-and-reliability-best-practices-with-real-ex.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/iasyncenumerable-streams-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/span-and-memory-types-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/common-rids-and-cross-compilation-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/self-contained-vs-framework-dependent-explained-what-it-is-and-how-it-wo.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/single-file-publish-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/7-assembly-trimming-best-practices-every-developer-should-know-with-real.html</loc>
     <lastmod>2026-11-20</lastmod>
   </url>
