@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/dotnet-cli-essentials-for-beginners-20-things-to-master-first.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/roll-forward-behavior-for-beginners-8-things-to-master-first.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/garbage-collection-modes-for-beginners-5-things-to-master-first.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/iasyncenumerable-streams-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/how-to-secure-span-and-memory-types-step-by-step.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/how-to-master-rids-and-cross-compilation-step-by-step.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/a-field-guide-to-grpc-services-with-real-examples.html</loc>
     <lastmod>2026-11-21</lastmod>
   </url>

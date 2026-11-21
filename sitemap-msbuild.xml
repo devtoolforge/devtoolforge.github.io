@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/sourcelink-and-embedded-pdbs-for-beginners-8-things-to-master-first.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/advanced-continuousintegrationbuild-property-techniques-for-2026.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/mastering-restore-targets-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/a-field-guide-to-design-time-builds.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/advanced-node-reuse-and-parallelism-techniques-for-2026-with-real-exampl.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/preprocessed-projects-for-students-a-practical-introduction.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/binary-logs-health-check-audit-and-improve-your-setup-with-real-examples.html</loc>
     <lastmod>2026-11-21</lastmod>
   </url>

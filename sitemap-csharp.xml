@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/mastering-source-generators-from-basics-to-advanced-in-c.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/generics-and-constraints-troubleshooting-15-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/async-await-done-right-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/params-collections-in-c-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/collection-expressions-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/extension-members-essentials-5-tips-that-save-hours-with-real-examples.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/the-smart-way-to-learn-top-level-statements.html</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
