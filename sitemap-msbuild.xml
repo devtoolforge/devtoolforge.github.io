@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/dependson-targets-essentials-5-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/5-ways-to-troubleshoot-beforetargets-and-aftertargets-faster.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/understanding-incremental-builds-a-practical-deep-dive-in-msbuild.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/conditions-essentials-12-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/tasks-troubleshooting-15-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/how-to-secure-targets-step-by-step-with-real-examples.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/the-smart-way-to-master-items.html</loc>
     <lastmod>2026-11-21</lastmod>
   </url>

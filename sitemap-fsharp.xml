@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/active-patterns-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/records-workflow-organize-build-ship-in-f.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/scaling-function-composition-and-pipes-for-large-projects.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/scaling-results-over-exceptions-for-large-projects.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/option-over-null-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/a-field-guide-to-pattern-matching.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/fix-it-fast-a-discriminated-unions-error-handbook.html</loc>
     <lastmod>2026-11-21</lastmod>
   </url>

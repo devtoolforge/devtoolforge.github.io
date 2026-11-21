@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/migrating-language-versions-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/operator-overloading-wisely-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/pattern-based-using-and-disposal-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/the-ultimate-interpolated-string-handlers-checklist-for-2026.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/7-ways-to-optimize-dynamic-vs-object-faster.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/nameof-and-expressions-health-check-audit-and-improve-your-setup-with-re.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/string-handling-a-complete-guide-for-2026.html</loc>
     <lastmod>2026-11-21</lastmod>
   </url>

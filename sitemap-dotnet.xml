@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/feature-flags-troubleshooting-12-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/scaling-health-checks-for-large-projects.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/minimal-dependency-lifetimes-in-tests-security-and-reliability-best-prac.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/the-ultimate-file-scoped-namespaces-and-global-usings-checklist-for-2026.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/nullable-reference-types-explained-what-it-is-and-how-it-works-in-net.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/benchmarking-with-benchmarkdotnet-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/xunit-testing-patterns-vs-logging-abstractions-which-should-you-use.html</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
