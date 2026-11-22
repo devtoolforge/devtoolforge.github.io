@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/advanced-minimal-dependency-lifetimes-in-tests-techniques-for-2026.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/file-scoped-namespaces-and-global-usings-cheat-sheet-8-shortcuts-and-com.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/20-ways-to-speed-up-nullable-reference-types-faster.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/automating-source-generators-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/benchmarking-with-benchmarkdotnet-health-check-audit-and-improve-your-se.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/xunit-testing-patterns-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/dotnet-cli-essentials-for-beginners-20-things-to-master-first.html</loc>
     <lastmod>2026-11-22</lastmod>
   </url>
