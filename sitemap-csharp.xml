@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/required-members-explained-what-it-is-and-how-it-works-with-real-example.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/init-only-setters-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/nullable-reference-types-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/understanding-pattern-matching-a-practical-deep-dive-in-c.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/debugging-primary-constructors-a-practical-approach.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/operator-overloading-wisely-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/pattern-based-using-and-disposal-security-and-reliability-best-practices-x.html</loc>
     <lastmod>2026-11-22</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/native-aot-publishing-troubleshooting-10-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/12-grpc-services-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/level-up-your-net-skills-with-minimal-apis.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/a-field-guide-to-ef-core-fundamentals.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/configuration-providers-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/hosted-services-and-background-workers-setup-configuration-and-optimizat.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/dependency-injection-basics-for-beginners-7-things-to-master-first.html</loc>
     <lastmod>2026-11-22</lastmod>
   </url>

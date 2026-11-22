@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/conditional-types-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/generics-the-missing-manual.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/what-s-new-in-definitelytyped-for-2026.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/a-field-guide-to-declaration-files.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/strict-mode-flags-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/tsgo-native-compiler-troubleshooting-15-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/typing-react-and-dom-events-demystified-with-real-world-examples.html</loc>
     <lastmod>2026-11-22</lastmod>
   </url>

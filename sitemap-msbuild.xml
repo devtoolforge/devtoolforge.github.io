@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/getting-started-with-restore-targets-with-real-examples.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/mastering-design-time-builds-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/8-ways-to-troubleshoot-node-reuse-and-parallelism-faster.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/preprocessed-projects-vs-building-legacy-projects-which-should-you-use.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/custom-tasks-quick-reference-for-busy-developers-with-real-examples.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/sdk-style-imports-troubleshooting-10-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/fix-it-fast-a-directory-build-props-error-handbook.html</loc>
     <lastmod>2026-11-22</lastmod>
   </url>

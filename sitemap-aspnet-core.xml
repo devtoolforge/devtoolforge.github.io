@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/dockerizing-web-apps-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/hosting-behind-iis-or-nginx-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/https-and-hsts-essentials-7-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/20-ways-to-speed-up-anti-forgery-protection-faster.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/tag-helpers-and-view-components-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/razor-pages-vs-mvc-vs-background-jobs-in-web-apps-which-should-you-use.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/aspnet-core/grpc-in-asp-net-core-anatomy-how-the-pieces-fit-together-with-real-examp.html</loc>
     <lastmod>2026-11-22</lastmod>
   </url>
