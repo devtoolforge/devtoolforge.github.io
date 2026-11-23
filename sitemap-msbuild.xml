@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/property-functions-essentials-10-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/how-to-simplify-inline-tasks-step-by-step.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/custom-tasks-workflow-organize-build-ship-with-real-examples.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/automating-directory-build-props-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/beforetargets-and-aftertargets-migration-guide-move-without-breaking-any.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/incremental-builds-the-missing-manual.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/debugging-evaluation-vs-execution-a-practical-approach.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/fix-it-fast-a-tasks-error-handbook-with-real-examples.html</loc>
     <lastmod>2026-11-23</lastmod>
   </url>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/function-composition-and-pipes-cheat-sheet-12-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/option-over-null-troubleshooting-20-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/pattern-matching-from-first-steps-to-production-in-f.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/the-smart-way-to-standardize-immutability-by-default-with-real-examples.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/type-inference-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fsharp-style-guides-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/fake-build-scripts-essentials-7-tips-that-save-hours.html</loc>
     <lastmod>2026-11-23</lastmod>
   </url>

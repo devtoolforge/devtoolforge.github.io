@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/8-version-pinning-and-rollbacks-best-practices-every-developer-should-kn.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/the-smart-way-to-standardize-performance-measurement.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/feature-flags-in-net-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/debugging-minimal-dependency-lifetimes-in-tests-a-practical-approach.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/source-generators-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/getting-started-with-dotnet-local-tools.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/a-field-guide-to-dotnet-cli-essentials.html</loc>
     <lastmod>2026-11-23</lastmod>
   </url>
