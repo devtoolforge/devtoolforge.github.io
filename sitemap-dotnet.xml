@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/a-field-guide-to-dotnet-cli-essentials.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/side-by-side-runtimes-for-solo-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/15-roll-forward-behavior-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/dockerizing-dotnet-apps-in-net-setup-tips-and-workflows-with-real-exampl.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/debugging-garbage-collection-modes-a-practical-approach.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/cancellation-tokens-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/common-iasyncenumerable-streams-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/async-and-await-patterns-troubleshooting-7-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/the-ultimate-span-and-memory-types-checklist-for-2026.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/rids-and-cross-compilation-essentials-7-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/scaling-single-file-publish-for-large-projects.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/common-assembly-trimming-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/native-aot-publishing-troubleshooting-10-fixes-for-everyday-problems.html</loc>
     <lastmod>2026-11-23</lastmod>
   </url>

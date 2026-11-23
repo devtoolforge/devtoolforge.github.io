@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/fake-build-scripts-essentials-7-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/giraffe-vs-asp-net-mvc-for-beginners-10-things-to-master-first.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/domain-modeling-with-types-troubleshooting-20-fixes-for-everyday-problem.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/advanced-mutable-regions-done-right-techniques-for-2026.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/inheritance-and-when-to-use-it-for-beginners-8-things-to-master-first.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/object-expressions-cheat-sheet-5-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/common-collections-modules-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/12-ways-to-set-up-railway-oriented-error-handling-faster.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fantomas-formatting-quick-reference-for-busy-developers-with-real-exampl.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fsx-scripting-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/common-ionide-setup-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/practical-interop-with-csharp-for-everyday-f-work.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/fscheck-property-testing-the-missing-manual-with-real-examples.html</loc>
     <lastmod>2026-11-23</lastmod>
   </url>
