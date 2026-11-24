@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/level-up-your-net-framework-skills-with-4-8-1-and-support-status-with-re.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/testing-legacy-migrations-troubleshooting-8-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/advanced-license-and-lifecycle-tracking-techniques-for-2026-with-real-ex.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/debugging-known-migration-blockers-a-practical-approach.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/12-ways-to-debug-iis-and-asp-net-hosting-faster.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/level-up-your-net-framework-skills-with-visual-studio-support-matrix.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/performance-comparisons-in-net-framework-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/how-to-master-legacy-debugging-step-by-step.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/com-interop-a-complete-guide-for-2026-with-real-examples.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/32-bit-and-64-bit-considerations-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/runtime-repair-essentials-12-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/what-s-new-in-targeting-and-developer-packs-for-2026.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet-framework/ef6-vs-ef-core-anatomy-how-the-pieces-fit-together.html</loc>
     <lastmod>2026-11-24</lastmod>
   </url>

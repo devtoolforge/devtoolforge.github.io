@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/tasks-in-msbuild-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/targets-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/properties-for-students-a-practical-introduction.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/the-smart-way-to-debug-building-legacy-projects.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/continuousintegrationbuild-property-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/pack-and-publish-targets-troubleshooting-15-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/multi-targeting-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/restore-targets-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/design-time-builds-cheat-sheet-10-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/10-node-reuse-and-parallelism-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/preprocessed-projects-troubleshooting-15-fixes-for-everyday-problems-wit.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/binary-logs-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/property-functions-essentials-10-tips-that-save-hours.html</loc>
     <lastmod>2026-11-24</lastmod>
   </url>

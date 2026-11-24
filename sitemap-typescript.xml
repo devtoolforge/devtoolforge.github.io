@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/understanding-utility-types-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/template-literal-types-vs-import-type-and-verbatim-which-should-you-use.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/mastering-mapped-types-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/conditional-types-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/generics-for-beginners-7-things-to-master-first-with-real-examples.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/common-declaration-files-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/module-resolution-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/automating-strict-mode-flags-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/tsconfig-json-deep-dive-for-beginners-8-things-to-master-first.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/tsgo-native-compiler-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/compiler-performance-essentials-7-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/readonly-and-immutability-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/fix-it-fast-a-typing-react-and-dom-events-error-handbook.html</loc>
     <lastmod>2026-11-24</lastmod>
   </url>

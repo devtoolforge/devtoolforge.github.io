@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/15-ways-to-automate-remote-ssh-faster.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/automating-logpoints-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/launch-json-debugging-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/what-s-new-in-tasks-json-for-2026.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/debugging-the-integrated-terminal-a-practical-approach.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/scaling-emmet-for-large-projects.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/user-snippets-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/scaling-keybindings-for-large-projects.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/the-smart-way-to-standardize-settings-sync.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/common-profiles-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/understanding-settings-json-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/settings-recommendations-for-teams-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-code/terminal-tasks-on-save-in-visual-studio-code-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio-code/timeline-view-workflow-organize-build-ship-with-real-examples.html</loc>
     <lastmod>2026-11-24</lastmod>
   </url>

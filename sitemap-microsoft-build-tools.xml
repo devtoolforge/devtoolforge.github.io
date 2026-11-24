@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/the-smart-way-to-secure-side-by-side-versions.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/modifying-installed-workloads-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/how-to-debug-silent-install-commands-step-by-step.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/ci-agents-setup-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/installing-without-visual-studio-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/what-build-tools-are-troubleshooting-7-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/when-to-use-full-visual-studio-instead-for-enterprise-teams-a-practical.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/advanced-cleanup-strategies-techniques-for-2026.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/the-ultimate-monitoring-agents-checklist-for-2026.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/secrets-on-build-agents-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/build-performance-on-agents-for-desktop-developers-a-practical-introduct.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/mastering-testing-agent-changes-from-basics-to-advanced-with-real-exampl.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/microsoft-build-tools/azure-devops-agents-quick-reference-for-busy-developers.html</loc>
     <lastmod>2026-11-24</lastmod>
   </url>

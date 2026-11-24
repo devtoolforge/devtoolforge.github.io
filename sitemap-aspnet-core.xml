@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/practical-forwarding-and-url-generation-for-everyday-asp-net-core-work-w.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/background-jobs-in-web-apps-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/the-smart-way-to-learn-integration-testing.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/15-ways-to-automate-dockerizing-web-apps-faster.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/hosting-behind-iis-or-nginx-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/kestrel-tuning-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/advanced-anti-forgery-protection-techniques-for-2026.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/tag-helpers-and-view-components-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/razor-pages-vs-mvc-for-beginners-5-things-to-master-first.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/the-smart-way-to-secure-blazor-overview.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/the-ultimate-signalr-checklist-for-2026-with-real-examples.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/aspnet-core/scaling-api-versioning-for-large-projects.html</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/aspnet-core/openapi-and-swagger-ui-essentials-15-tips-that-save-hours.html</loc>
     <lastmod>2026-11-24</lastmod>
   </url>
