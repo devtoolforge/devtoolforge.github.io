@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/7-ways-to-master-find-in-files-and-go-to-faster-with-real-examples.html</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/solution-explorer-filters-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/git-tooling-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/scaling-code-cleanup-for-large-projects.html</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/editorconfig-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/debugging-extensions-management-a-practical-approach.html</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/workload-management-vs-extensions-management-which-should-you-use.html</loc>
     <lastmod>2026-11-24</lastmod>
   </url>
