@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/how-to-learn-extension-members-step-by-step-with-real-examples.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/getting-started-with-top-level-statements.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/required-members-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/nullable-reference-types-essentials-20-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/switch-expressions-essentials-10-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/pattern-matching-cheat-sheet-20-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/practical-primary-constructors-for-everyday-c-work.html</loc>
     <lastmod>2026-11-25</lastmod>
   </url>

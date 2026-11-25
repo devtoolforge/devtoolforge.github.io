@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/directory-build-props-essentials-5-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/what-s-new-in-beforetargets-and-aftertargets-for-2026.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/5-incremental-builds-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/item-transforms-and-batching-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/evaluation-vs-execution-health-check-audit-and-improve-your-setup.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/tasks-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/understanding-items-a-practical-deep-dive.html</loc>
     <lastmod>2026-11-25</lastmod>
   </url>

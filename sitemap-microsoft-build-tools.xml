@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/automating-windows-sdk-components-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/vc-tools-versioning-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/side-by-side-versions-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/8-ways-to-secure-licensing-faster.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/debugging-modifying-installed-workloads-a-practical-approach.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/silent-install-commands-troubleshooting-12-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/microsoft-build-tools/practical-c-build-tools-for-node-and-python-for-everyday-microsoft-build.html</loc>
     <lastmod>2026-11-25</lastmod>
   </url>

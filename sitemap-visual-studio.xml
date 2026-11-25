@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/debugging-code-analysis-a-practical-approach.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/automating-accessibility-features-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/how-to-learn-build-customization-basics-step-by-step.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/nuget-package-management-cheat-sheet-10-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/advanced-solution-configurations-techniques-for-2026.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/remote-debugging-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/database-tools-explained-what-it-is-and-how-it-works-with-real-examples.html</loc>
     <lastmod>2026-11-25</lastmod>
   </url>
