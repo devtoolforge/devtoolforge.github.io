@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/central-package-management-vs-nullable-reference-types-which-should-you-x.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/global-json-in-net-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/runtime-vs-sdk-essentials-10-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/performance-measurement-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/feature-flags-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/health-checks-workflow-organize-build-ship-in-net.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/mastering-minimal-dependency-lifetimes-in-tests-from-basics-to-advanced.html</loc>
     <lastmod>2026-11-26</lastmod>
   </url>

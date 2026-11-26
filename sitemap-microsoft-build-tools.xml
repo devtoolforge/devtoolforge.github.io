@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/12-ways-to-simplify-disk-space-management-faster.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/nuget-caching-on-agents-explained-what-it-is-and-how-it-works.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/12-ways-to-troubleshoot-containerized-build-agents-faster.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/the-ultimate-dotnet-sdk-components-checklist-for-2026.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/side-by-side-versions-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/microsoft-build-tools/licensing-vs-silent-install-commands-which-should-you-use-with-real-exam.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/microsoft-build-tools/offline-layout-installation-security-and-reliability-best-practices.html</loc>
     <lastmod>2026-11-26</lastmod>
   </url>

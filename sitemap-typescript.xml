@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/definitelytyped-demystified-with-real-world-examples.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/practical-declaration-files-for-everyday-typescript-work-with-real-examp.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/a-field-guide-to-tsconfig-json-deep-dive.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/level-up-your-typescript-skills-with-tsgo-native-compiler.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/compiler-performance-troubleshooting-12-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/how-to-set-up-typing-react-and-dom-events-step-by-step.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/scaling-typing-promises-and-async-for-large-projects.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/monorepo-typescript-security-and-reliability-best-practices-with-real-ex.html</loc>
     <lastmod>2026-11-26</lastmod>
   </url>

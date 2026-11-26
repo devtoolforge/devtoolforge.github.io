@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/msbuild/evaluation-vs-execution-security-and-reliability-best-practices-with-rea.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/tasks-cheat-sheet-10-shortcuts-and-commands-with-real-examples.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/scaling-items-for-large-projects.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/8-ways-to-speed-up-properties-faster.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/7-ways-to-troubleshoot-msbuild-apis-in-code-faster.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/msbuild/extending-the-build-safely-migration-guide-move-without-breaking-anythin.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/msbuild/fix-it-fast-a-common-build-errors-error-handbook.html</loc>
     <lastmod>2026-11-26</lastmod>
   </url>

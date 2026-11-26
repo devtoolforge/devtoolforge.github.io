@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/fscheck-property-testing-cheat-sheet-10-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fable-for-frontend-essentials-8-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/15-giraffe-web-apps-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/units-of-measure-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/how-to-optimize-type-providers-step-by-step.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/async-workflows-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/the-smart-way-to-speed-up-computation-expressions.html</loc>
     <lastmod>2026-11-26</lastmod>
   </url>

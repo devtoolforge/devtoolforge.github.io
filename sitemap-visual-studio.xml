@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/a-field-guide-to-unit-test-explorer.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/the-ultimate-copilot-integration-checklist-for-2026.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/the-profiler-in-visual-studio-setup-tips-and-workflows.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/advanced-find-in-files-and-go-to-techniques-for-2026.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/solution-explorer-filters-setup-configuration-and-optimization.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/practical-pull-requests-in-the-ide-for-everyday-visual-studio-work.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/git-tooling-vs-solution-performance-which-should-you-use.html</loc>
     <lastmod>2026-11-26</lastmod>
   </url>
