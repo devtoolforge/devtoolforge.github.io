@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/the-smart-way-to-speed-up-computation-expressions.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/8-records-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/function-composition-and-pipes-security-and-reliability-best-practices.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/how-to-automate-results-over-exceptions-step-by-step.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fix-it-fast-a-option-over-null-error-handbook.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/common-pattern-matching-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/the-ultimate-immutability-by-default-checklist-for-2026.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/12-ways-to-optimize-type-inference-faster.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fsharp-style-guides-for-beginners-12-things-to-master-first-with-real-ex.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fake-build-scripts-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/advanced-giraffe-vs-asp-net-mvc-techniques-for-2026.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/domain-modeling-with-types-troubleshooting-7-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/8-mutable-regions-done-right-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/automating-inheritance-and-when-to-use-it-tools-scripts-and-workflows.html</loc>
     <lastmod>2026-11-26</lastmod>
   </url>

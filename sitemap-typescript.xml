@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/monorepo-typescript-security-and-reliability-best-practices-with-real-ex.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/migrating-js-to-ts-gradually-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/5-ways-to-speed-up-import-type-and-verbatim-faster.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/project-references-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/a-field-guide-to-ts-node-tsx-and-runners.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/runtime-validation-with-zod-migration-guide-move-without-breaking-anythi.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/decorators-troubleshooting-12-fixes-for-everyday-problems.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/namespaces-vs-modules-for-beginners-15-things-to-master-first.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/the-satisfies-operator-cheat-sheet-5-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/unknown-vs-any-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/7-discriminated-unions-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/utility-types-cheat-sheet-8-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/mapped-types-for-students-a-practical-introduction.html</loc>
     <lastmod>2026-11-26</lastmod>
   </url>

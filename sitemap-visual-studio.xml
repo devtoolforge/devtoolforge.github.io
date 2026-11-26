@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio/git-tooling-vs-solution-performance-which-should-you-use.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/code-cleanup-the-missing-manual-with-real-examples.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/editorconfig-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/extensions-management-for-beginners-20-things-to-master-first.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/10-hot-reload-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/the-immediate-window-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/data-tips-and-watch-windows-performance-tuning-practical-tips-that-work.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/how-to-simplify-breakpoints-step-by-step.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/level-up-your-visual-studio-skills-with-debugging-basics-with-real-examp.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/common-command-line-builds-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/8-settings-sync-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio/solution-performance-for-beginners-5-things-to-master-first.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio/debugging-code-analysis-a-practical-approach.html</loc>
     <lastmod>2026-11-26</lastmod>
   </url>

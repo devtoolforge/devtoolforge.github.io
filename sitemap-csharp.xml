@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/the-smart-way-to-learn-dynamic-vs-object.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/15-nameof-and-expressions-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/automating-string-handling-tools-scripts-and-workflows.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/common-exception-handling-strategy-mistakes-and-how-to-fix-them.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/level-up-your-c-skills-with-channels-for-pipelines.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/idisposable-and-using-the-missing-manual.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/5-ref-struct-and-readonly-struct-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/attributes-and-reflection-from-first-steps-to-production-with-real-examp.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/the-smart-way-to-set-up-generics-and-constraints.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/iasyncenumerable-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/spans-in-practice-cheat-sheet-8-shortcuts-and-commands-with-real-example.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/how-to-standardize-params-collections-step-by-step.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/5-collection-expressions-shortcuts-you-will-use-every-day.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/how-to-learn-extension-members-step-by-step-with-real-examples.html</loc>
     <lastmod>2026-11-26</lastmod>
   </url>

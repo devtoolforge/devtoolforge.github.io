@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/mastering-minimal-dependency-lifetimes-in-tests-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/the-smart-way-to-master-source-generators-with-real-examples.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/debugging-dotnet-local-tools-a-practical-approach.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/dotnet-cli-essentials-essentials-5-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/how-to-set-up-side-by-side-runtimes-step-by-step-with-real-examples.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/roll-forward-behavior-quick-reference-for-busy-developers.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/garbage-collection-modes-troubleshooting-15-fixes-for-everyday-problems-x.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/10-ways-to-master-cancellation-tokens-faster.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/iasyncenumerable-streams-anatomy-how-the-pieces-fit-together.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/12-span-and-memory-types-best-practices-every-developer-should-know.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/a-field-guide-to-rids-and-cross-compilation.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/single-file-publish-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/how-to-standardize-assembly-trimming-step-by-step.html</loc>
     <lastmod>2026-11-26</lastmod>
   </url>
