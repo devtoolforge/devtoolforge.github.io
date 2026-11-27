@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/advanced-unit-testing-on-mac-techniques-for-2026.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/hot-restart-for-ios-pitfalls-what-the-docs-don-t-tell-you.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/macos-and-mac-catalyst-projects-pitfalls-what-the-docs-don-t-tell-you-wi.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/ios-simulator-management-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/how-to-troubleshoot-debugging-xamarin-ios-apps-step-by-step.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/visual-studio-mac/nuget-package-management-on-mac-troubleshooting-20-fixes-for-everyday-pr.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/visual-studio-mac/windows-vm-option-troubleshooting-8-fixes-for-everyday-problems.html</loc>
     <lastmod>2026-11-27</lastmod>
   </url>
