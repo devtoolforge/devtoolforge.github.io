@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/typescript/debugging-the-satisfies-operator-a-practical-approach.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/how-to-speed-up-unknown-vs-any-step-by-step.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/utility-types-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/a-field-guide-to-mapped-types.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/advanced-generics-techniques-for-2026.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/typescript/definitelytyped-cheat-sheet-10-shortcuts-and-commands.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/typescript/automating-declaration-files-tools-scripts-and-workflows.html</loc>
     <lastmod>2026-11-28</lastmod>
   </url>

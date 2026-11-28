@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/csharp/init-only-setters-migration-guide-move-without-breaking-anything.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/switch-expressions-for-beginners-12-things-to-master-first.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/pattern-matching-for-desktop-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/primary-constructors-performance-tuning-practical-tips-that-work-with-re.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/the-ultimate-records-checklist-for-2026.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/csharp/migrating-language-versions-for-busy-developers-a-practical-introduction.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/csharp/the-smart-way-to-learn-operator-overloading-wisely.html</loc>
     <lastmod>2026-11-28</lastmod>
   </url>

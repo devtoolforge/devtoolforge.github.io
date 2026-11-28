@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/visual-studio-support-matrix-vs-packages-config-vs-packagereference-whic.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/performance-comparisons-from-first-steps-to-production.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/legacy-debugging-for-beginners-7-things-to-master-first.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/20-ways-to-standardize-app-domains-vs-modern-isolation-faster.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/level-up-your-net-framework-skills-with-com-interop.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet-framework/getting-started-with-servicing-via-windows-update.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet-framework/targeting-and-developer-packs-pitfalls-what-the-docs-don-t-tell-you.html</loc>
     <lastmod>2026-11-28</lastmod>
   </url>

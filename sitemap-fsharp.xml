@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/fsharp/giraffe-vs-asp-net-mvc-essentials-15-tips-that-save-hours.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/mutable-regions-done-right-a-complete-guide-for-2026.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/debugging-object-expressions-a-practical-approach.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/mastering-collections-modules-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/railway-oriented-error-handling-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/fsharp/fantomas-formatting-workflow-organize-build-ship.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/fsharp/ionide-setup-for-beginners-5-things-to-master-first-with-real-examples.html</loc>
     <lastmod>2026-11-28</lastmod>
   </url>

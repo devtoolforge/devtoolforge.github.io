@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://devtoolforge.github.io/dotnet/the-options-pattern-vs-cancellation-tokens-which-should-you-use.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/how-to-modernize-configuration-providers-step-by-step.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/mastering-hosted-services-and-background-workers-from-basics-to-advanced.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/understanding-sdk-style-project-files-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/understanding-global-json-a-practical-deep-dive.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://devtoolforge.github.io/dotnet/what-s-new-in-lts-and-sts-releases-for-2026.html</loc>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
     <loc>https://devtoolforge.github.io/dotnet/version-pinning-and-rollbacks-from-first-steps-to-production.html</loc>
     <lastmod>2026-11-28</lastmod>
   </url>
